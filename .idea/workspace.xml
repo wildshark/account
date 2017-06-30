@@ -2,147 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c504eb96-3b0a-4d1b-9d60-133f7fab0fe0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/images/backgrounds/bodyBg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/images/backgrounds/default.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/images/backgrounds/titleRowBg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/images/gallery/imgbox1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/images/gallery/imgbox2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/images/gallery/imgbox3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/images/gallery/imgbox4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/images/gallery/imgbox5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/alpha.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/breadcrumb.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/css-border-bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/demo/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/demo/av1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/demo/av2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/demo/av3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/demo/av4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/demo/av5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/demo/demo-image1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/demo/demo-image2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/demo/demo-image3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/demo/envelope.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/glyphicons-halflings-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/glyphicons-halflings.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/gritter.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/hue.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/16/book.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/16/cabinet.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/16/calendar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/16/client.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/16/database.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/16/download.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/16/graph.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/16/home.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/16/lock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/16/mail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/16/pdf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/16/people.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/16/piechart.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/16/search.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/16/shopping-bag.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/16/survey.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/16/tag.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/16/user.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/16/wallet.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/16/web.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/32/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/32/book.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/32/cabinet.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/32/calendar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/32/client.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/32/dashboard.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/32/database.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/32/download.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/32/graph.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/32/home.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/32/lock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/32/mail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/32/pdf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/32/people.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/32/piechart.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/32/search.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/32/shopping-bag.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/32/survey.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/32/tag.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/32/user.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/32/wallet.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/icons/32/web.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/larrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/line.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/login-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/menu-active.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/rarrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/saturation.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/select2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/spinner.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/img/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/config.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dashboard.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/conn.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/login.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/expenditure/add.expenditure.record.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/get.account.query.function.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/login.me.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/transaction.function.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/css/bootstrap-responsive.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/css/colorpicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/css/datepicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/css/fullcalendar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/css/jquery.gritter.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/css/maruti-login.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/css/maruti-media.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/css/maruti-style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/css/select2.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/css/uniform.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/form.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/header.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/home.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/bootstrap-colorpicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/bootstrap-datepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/excanvas.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/fullcalendar.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/jquery.dataTables.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/jquery.flot.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/jquery.flot.pie.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/jquery.flot.resize.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/jquery.gritter.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/jquery.peity.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/jquery.ui.custom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/jquery.uniform.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/jquery.validate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/jquery.wizard.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/maruti.calendar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/maruti.charts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/maruti.chat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/maruti.dashboard.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/maruti.form_common.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/maruti.form_validation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/maruti.interface.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/maruti.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/maruti.login.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/maruti.popover.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/maruti.tables.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/maruti.wizard.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/js/select2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/login.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/master.menu.top.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/top.menu.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/transaction.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/book/cash.book.details.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/book/expenditure.details.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/default.views.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/book/cash.book.details.php" afterPath="$PROJECT_DIR$/views/book/cash.book.details.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -283,9 +143,11 @@
       <file leaf-file-name="cash.book.details.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/book/cash.book.details.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3520">
-              <caret line="176" column="0" lean-forward="true" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="2060">
+              <caret line="103" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+              <folding>
+                <element signature="e#6#95#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -576,12 +438,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1498739917099</updated>
-      <workItem from="1498739918958" duration="34800000" />
+      <workItem from="1498739918958" duration="34903000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34800000" />
+    <option name="totallyTimeSpent" value="34903000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -917,9 +779,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/book/cash.book.details.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3520">
-          <caret line="176" column="0" lean-forward="true" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="2060">
+          <caret line="103" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#95#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
