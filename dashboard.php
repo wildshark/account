@@ -66,6 +66,22 @@ if (empty($_SESSION['userID'])){
             include_once "template/form.php";
             break;
 
+        case "ious";
+            include_once "config/config.php";
+            include_once "modules/get.account.query.function.php";
+            $page->contenttitle="Fees Entry";
+            $page->views="views/ledger/ious.ledger.php";
+            include_once "template/form.php";
+            break;
+
+        case "advance.payment";
+            include_once "config/config.php";
+            include_once "modules/get.account.query.function.php";
+            $page->contenttitle="Fees Entry";
+            $page->views="views/ledger/advance.payments.ledger.php";
+            include_once "template/form.php";
+            break;
+
         default:
             include_once "config/config.php";
             include_once "template/home.php";

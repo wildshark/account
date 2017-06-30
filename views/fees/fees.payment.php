@@ -64,23 +64,11 @@ function summary_cashbook($conn){
             <div class="widget-content nopadding">
                 <form class="form-horizontal">
                     <div class="control-group">
-                        <label class="control-label">Ref. No# </label>
+                        <label class="control-label">Admission Number </label>
                         <div class="controls">
-                            <input name="ref" type="text" class="span11" />
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label">Description </label>
-                        <div class="controls">
-                            <input name="detail" type="text" class="span11" />
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label">Amount </label>
-                        <div class="controls">
-                            <div class="input-append">
-                                <input name="amount" type="text" placeholder="0.000" class="span11">
-                                <span class="add-on">GHc</span> </div>
+                            <select name="q">
+                                <?php student_list($conn)?>
+                            </select>
                         </div>
                     </div>
                     <div class="form-actions">
@@ -104,7 +92,13 @@ function summary_cashbook($conn){
             <div class="widget-content tab-content">
                 <div id="tab1" class="tab-pane active">
                     <p>And is full of waffle to It has multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end. </p>
+                    <div class="span6">
+                        <lable>Name: </lable>
 
+                    </div>
+                    <div class="span6">
+
+                    </div>
                 </div>
                 <div id="tab2" class="tab-pane">
                     <p> waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end. </p>

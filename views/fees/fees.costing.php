@@ -14,6 +14,7 @@ function get_fees_list($conn){
                <td>".$r['school']."</td>
                <td>".$r['course']."</td>
                <td>".$r['amount']."</td>
+               <td><a href='transaction.php?transaction=delete&c=fees&data=".$r['feesID']."' class='tip-top' data-original-title='Delete'><i class='icon-remove'></i></a></td>
             </tr>
         ";
     }
@@ -76,6 +77,7 @@ function get_fees_list($conn){
                     <tr>
                         <th>Browser</th>
                         <th>Visits</th>
+                        <th>Amount</th>
                         <th></th>
                     </tr>
                     </thead>

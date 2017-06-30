@@ -40,3 +40,11 @@ function course_list($conn){
         echo "<option value='".$l['courseID']."'>".$l['course']."</option>";
     }
 }
+
+function student_list($conn){
+    $list="SELECT * FROM student_profile";
+    $list=$conn->query($list);
+    while ($l=$list->fetch_assoc()){
+        echo "<option value='".$l['studentID']."'>".$l['studentName']."</option>";
+    }
+}

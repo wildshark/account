@@ -18,6 +18,7 @@ function payment($conn){
             <td>".$c['ticketID']."</td>
             <td>".$c['yearID']."</td>
             <td>".$c['amount']."</td>
+            <td><a href='transaction.php?transaction=delete&c=pay&data=".$c['GL_ID']."' class='tip-top' data-original-title='Delete'><i class='icon-remove'></i></a></td>
         </tr>
     ";
     }
@@ -166,6 +167,7 @@ function summary_cashbook($conn){
                         <th>Trans No#</th>
                         <th>Session</th>
                         <th>Amount</th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>
