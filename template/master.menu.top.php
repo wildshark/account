@@ -11,9 +11,9 @@
     <li class="active"><a href="account.php?user=dashboard"><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
     <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>School Fees</span></a>
         <ul>
-            <li><a href="form-common.html">Fees Payment</a></li>
+            <li><a href="account.php?user=fees.payment">Fees Payment</a></li>
             <li><a href="form-validation.html">Fees Ledger</a></li>
-            <li><a href="form-wizard.html">Setup</a></li>
+            <li><a href="account.php?user=fees.costing">Setup</a></li>
         </ul>
     </li>
     <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Payroll</span> <span class="label label-important">3</span></a>

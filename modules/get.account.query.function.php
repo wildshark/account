@@ -24,3 +24,19 @@ function expenses_list($conn){
         echo "<option value='".$l['TranCatID']."'>".$l['ledger']."</option>";
     }
 }
+
+function school_list($conn){
+    $list="SELECT * FROM school";
+    $list=$conn->query($list);
+    while ($l=$list->fetch_assoc()){
+        echo "<option value='".$l['schoolID']."'>".$l['school']."</option>";
+    }
+}
+
+function course_list($conn){
+    $list="SELECT * FROM course";
+    $list=$conn->query($list);
+    while ($l=$list->fetch_assoc()){
+        echo "<option value='".$l['courseID']."'>".$l['course']."</option>";
+    }
+}

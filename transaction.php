@@ -12,4 +12,14 @@ switch ($_GET["transaction"]){
         include_once "config/config.php";
         include_once "modules/expenditure/add.expenditure.record.php";
         break;
+
+    case "voucher";
+        include_once "config/config.php";
+        include_once "modules/payment/add.pay.voucher.php";
+        break;
+
+     case "fees.e";
+        include_once "config/config.php";
+        include_once "modules/fees/add.fees.record.php";
+        break;
 }
