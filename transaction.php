@@ -28,6 +28,11 @@ switch ($_GET["transaction"]){
         include_once "modules/delete.record.php";
         break;
 
+    case"fees.payment";
+        include_once "config/config.php";
+        include_once "modules/fees/add.fees.payment.php";
+        break;
+
     case "search";
         include_once "config/config.php";
         include_once "modules/fees/search.fees.history.php";

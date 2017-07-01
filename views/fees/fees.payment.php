@@ -101,9 +101,13 @@ function summary_cashbook($conn){
                     </div>
                 </div>
                 <div id="tab2" class="tab-pane">
-                    <p> waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end. </p>
+                    <p> waffle to pad out the comment. Usually, </p>
                     <form class="form-horizontal">
                         <div class="span6">
+                            <div class="control-group">
+                                <label>Date picker (dd-mm)</label>
+                                    <input name="date" type="text" data-date="01-02-2013" data-date-format="dd-mm-yyyy" value="01-02-2013" class="datepicker span11">
+                            </div>
                             <div class="control-group">
                                 <label>Course </label>
                                 <select name="course">
@@ -112,7 +116,7 @@ function summary_cashbook($conn){
                             </div>
                             <div class="control-group">
                                 <label>Payment Type </label>
-                                <select name="course">
+                                <select name="pay">
                                     <option value="1">Cash </option>
                                     <option value="2">Bank</option>
                                 </select>
@@ -140,7 +144,7 @@ function summary_cashbook($conn){
 
                         <div class="form-actions">
                             <input type="hidden" name="ticket" value="">
-                            <input type="hidden" name="transaction" value="search">
+                            <input type="hidden" name="transaction" value="fees.payment">
                             <button type="submit" class="btn btn-success">Save</button>
                         </div>
                     </form>
