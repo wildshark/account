@@ -23,12 +23,15 @@ function payment($conn){
     ";
     }
 }
+
 function summary_cashbook($conn){
     $cash="SELECT * FROM get_sum_gl_qoute";
     $cash=$conn->query($cash);
     $c=$cash->fetch_assoc();
     $debit=$c['qDr'];
     $credit=$c['qCr'];
+    $cash=$c['cCr'];
+    $bank=$c['bCr'];
     $bal=$debit-$credit;
     $x=ticket_generator($length=4)."-".date('Y')."-".date('dm');
     $_GET['ticketID']=$x;
@@ -44,6 +47,14 @@ function summary_cashbook($conn){
         <tr>
             <td>Transaction ID# </td>
             <td>".date('Y')."-".date('dm')."</td>
+        </tr>
+        <tr>
+            <td>Payment via Bank</td>
+            <td>".$bank."</td>
+        </tr>
+        <tr>
+            <td>Payment via Cash</td>
+            <td>".$cash."</td>
         </tr>
         <tr>
             <td>Bill Unpaid</td>
@@ -64,11 +75,9 @@ function summary_cashbook($conn){
             <div class="widget-content nopadding">
                 <form class="form-horizontal">
                     <div class="control-group">
-                        <label class="control-label">Date </label>
+                        <label class="control-label">Date (dd-mm-yyy)</label>
                         <div class="controls">
-                            <div  data-date="01-01-2017" class="input-append date datepicker">
-                                <input name="date" type="date" value="01-01-2017"  data-date-format="dd-mm-yyyy" class="span11" >
-                                <span class="add-on"><i class="icon-th"></i></span> </div>
+                            <input name="date" type="text" data-date="01-02-2013" data-date-format="dd-mm-yyyy" value="<?php echo date("d-m-Y");?>" class="datepicker span11">
                         </div>
                     </div>
                     <div class="control-group">
@@ -90,7 +99,7 @@ function summary_cashbook($conn){
                         <label class="control-label">Transaction Type </label>
                         <div class="controls">
                             <select name="type">
-                                <?php expenses_list($conn)?>
+                                <?php expenses_due_for_payment_list($conn)?>
                             </select>
                         </div>
                     </div>

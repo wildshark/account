@@ -12,14 +12,14 @@
     <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>School Fees</span></a>
         <ul>
             <li><a href="account.php?user=fees.payment">Fees Payment</a></li>
-            <li><a href="form-validation.html">Fees Ledger</a></li>
+            <li><a href="account.php?user=fees.ledger">Fees Ledger</a></li>
             <li><a href="account.php?user=fees.costing">Setup</a></li>
         </ul>
     </li>
     <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Payroll</span> <span class="label label-important">3</span></a>
         <ul>
-            <li><a href="form-common.html">Payroll Entry</a></li>
-            <li><a href="form-validation.html">Staff Account</a></li>
+            <li><a href="account.php?user=staff.payroll">Payroll Entry</a></li>
+            <li><a href="account.php?user=staff.profile">Staff Account</a></li>
             <li><a href="form-wizard.html">Setup</a></li>
         </ul>
     </li>
@@ -36,8 +36,8 @@
     </li>
     <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Account</span> <span class="label label-important">3</span></a>
         <ul>
-            <li><a href="form-common.html">Capital And Investments</a></li>
-            <li><a href="form-validation.html">Salary Control Ledger</a></li>
+            <li><a href="account.php?user=capital.investments">Capital And Investments</a></li>
+            <li><a href="form-valid">Salary Control Ledger</a></li>
             <li><a href="form-wizard.html">Investment</a></li>
             <li><a href="form-wizard.html">Trial Balance</a></li>
         </ul>

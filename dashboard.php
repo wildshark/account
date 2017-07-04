@@ -77,8 +77,32 @@ if (empty($_SESSION['userID'])){
         case "advance.payment";
             include_once "config/config.php";
             include_once "modules/get.account.query.function.php";
-            $page->contenttitle="Fees Entry";
+            $page->contenttitle="Advance Payment";
             $page->views="views/ledger/advance.payments.ledger.php";
+            include_once "template/form.php";
+            break;
+
+        case "fees.ledger";
+            include_once "config/config.php";
+            include_once "modules/get.account.query.function.php";
+            $page->contenttitle="Fees Ledger ";
+            $page->views="views/ledger/fees.ledger.book.php";
+            include_once "template/form.php";
+            break;
+
+        case "capital.investments";
+            include_once "config/config.php";
+            include_once "modules/get.account.query.function.php";
+            $page->contenttitle="Capital Investments ";
+            $page->views="views/book/income.capital.book.php";
+            include_once "template/form.php";
+            break;
+
+        case"staff.profile";
+            include_once "config/config.php";
+            include_once "modules/get.account.query.function.php";
+            $page->contenttitle="Staff Profile ";
+            $page->views="views/payroll/staff.profile.php";
             include_once "template/form.php";
             break;
 

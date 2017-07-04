@@ -30,7 +30,7 @@ if ($payType==1){
 
         //if payment type is cash
         $sql = "INSERT INTO general_legder (tranDate,GL_date,ticketID,tranCatID,description,refNo,semesterID,yearID,bookID,tranTypeID,profitlossID,balanceSheetID,cashCr,qouteCr)
-    VALUES ('$t_date','$date','$ticketID','$tranID', '$details','$ref','$semester','$yearId','$t_book','3','$t_profit','$t_balSheet','$amount','$amount')";
+    VALUES ('$t_date','$date','$ticketID','$tranID', '$details','$ref','$semester','$yearId','$t_book','1','$t_profit','$t_balSheet','$amount','$amount')";
         if ($conn->query($sql) === TRUE) {
             echo "New record created successfully";
         } else {
@@ -40,7 +40,7 @@ if ($payType==1){
 
     //if payment type is bank
     $sql = "INSERT INTO general_legder (tranDate,GL_date,ticketID,tranCatID,description,refNo,semesterID,yearID,bookID,tranTypeID,profitlossID,balanceSheetID,bankCr,qouteCr)
-    VALUES ('$t_date','$date','$ticketID','$tranID', '$details','$ref','$semester','$yearId','$t_book','3','$t_profit','$t_balSheet','$amount','$amount')";
+    VALUES ('$t_date','$date','$ticketID','$tranID', '$details','$ref','$semester','$yearId','$t_book','2','$t_profit','$t_balSheet','$amount','$amount')";
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
     } else {

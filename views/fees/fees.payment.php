@@ -6,60 +6,69 @@
  * Time: 6:16 PM
  */
 
+if (empty($_SESSION['name'])){
+    $name='Null';
+}else{
+    $name=$_SESSION['name'];
+}
+if (empty($_SESSION['admission'])){
+   $admission='Null';
+}else{
+    $admission=$_SESSION['admission'];
+}
+if (empty($_SESSION['studentID'])){
+    $student='Null';
+}else{
+    $student=$_SESSION['studentID'];
+}
+if (empty($_SESSION['fees'])){
+    $fees='Null';
+}else{
+    $fees=$_SESSION['fees'];
+}
+if (empty($_SESSION['paid'])){
+    $paid='Null';
+}else{
+    $paid=$_SESSION['paid'];
+}
+if (empty($_SESSION['bal'])){
+    $bal='Null';
+}else{
+    $bal=$_SESSION['bal'];
+}
 
-function payment($conn){
-    $cash="SELECT * FROM get_payment_voucher";
+function fees_details($conn,$student){
+    $cash="SELECT * FROM get_fees_payment_history WHERE studentID='$student'";
     $cash=$conn->query($cash);
     while ($c=$cash->fetch_assoc()){
+
+        if ($c['payTypeID']==1){
+            $payType="Cash";
+        }elseif ($c['payTypeID']==2){
+            $payType="Bank";
+        }
+
         echo "
         <tr class='gradeX'>
-            <td class='center'>".$c['GL_date']."</td>
-            <td>".$c['description']."</td>
+            <td class='center'>".$c['payDate']."</td>
+            <td>".$c['course']."</td>
+            <td>".$c['stud_level']."</td>
+            <td>".$c['sch_session']."</td>
             <td>".$c['refNo']."</td>
-            <td>".$c['ticketID']."</td>
-            <td>".$c['yearID']."</td>
-            <td>".$c['amount']."</td>
+            <td>".$payType."</td>
+            <td>".$c['paid_amount']."</td>
+            <td><a href='transaction.php?transaction=delete&c=fees.pay&data=".$c['payID']."' class='tip-top' data-original-title='Delete'><i class='icon-remove'></i></a></td>       
         </tr>
     ";
     }
 }
-function summary_cashbook($conn){
-    $cash="SELECT * FROM get_sum_gl_qoute";
-    $cash=$conn->query($cash);
-    $c=$cash->fetch_assoc();
-    $debit=$c['qDr'];
-    $credit=$c['qCr'];
-    $bal=$debit-$credit;
-    $x=ticket_generator($length=4)."-".date('Y')."-".date('dm');
-    $_GET['ticketID']=$x;
-    echo "
-        <tr>
-            <td>Date</td>
-            <td>".date('d-m-Y')."</td>
-        </tr>
-        <tr>
-            <td>Time</td>
-            <td>".date('h:i:sa')."</td>
-        </tr>
-        <tr>
-            <td>Transaction ID# </td>
-            <td>".date('Y')."-".date('dm')."</td>
-        </tr>
-        <tr>
-            <td>Bill Unpaid</td>
-            <td>".$bal."</td>
-        </tr>
-        
-    ";
-}
-
 
 ?>
 <div class="row-fluid">
     <div class="span5">
         <div class="widget-box">
             <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-                <h5>Personal-info</h5>
+                <h5>Search Personal-info</h5>
             </div>
             <div class="widget-content nopadding">
                 <form class="form-horizontal">
@@ -92,26 +101,48 @@ function summary_cashbook($conn){
             <div class="widget-content tab-content">
                 <div id="tab1" class="tab-pane active">
                     <p>And is full of waffle to It has multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end. </p>
-                    <div class="span6">
-                        <lable>Name: </lable>
-
-                    </div>
-                    <div class="span6">
-
-                    </div>
+                    <form class="form-horizontal">
+                        <div class="span6">
+                            <div class="control-group">
+                                <label>Name: <b><?php echo $name;?></b> </label>
+                            </div>
+                            <div class="control-group">
+                                <label>Admission No#: <b><?php echo $admission;?></b> </label>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label>Name: <b><?php echo $fees;?></b> </label>
+                            </div>
+                            <div class="control-group">
+                                <label>Name: <b><?php echo $paid;?></b> </label>
+                            </div>
+                            <div class="control-group">
+                                <label>Name: <b><?php echo $bal;?></b> </label>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div id="tab2" class="tab-pane">
                     <p> waffle to pad out the comment. Usually, </p>
                     <form class="form-horizontal">
                         <div class="span6">
                             <div class="control-group">
-                                <label>Date picker (dd-mm)</label>
-                                    <input name="date" type="text" data-date="01-02-2013" data-date-format="dd-mm-yyyy" value="01-02-2013" class="datepicker span11">
+                                <label>Student Name </label>
+                                <input name="student" type="text" disabled value="<?php echo $name;?>" class="span11" />
                             </div>
+
                             <div class="control-group">
                                 <label>Course </label>
                                 <select name="course">
                                     <?php course_list($conn);?>
+                                </select>
+                            </div>
+                            <div class="control-group">
+                                <label>Payment Type </label>
+                                <select name="semester">
+                                    <option value="1">1st Semester </option>
+                                    <option value="2">2nd Semester </option>
                                 </select>
                             </div>
                             <div class="control-group">
@@ -125,12 +156,16 @@ function summary_cashbook($conn){
                         </div>
                         <div class="span6">
                             <div class="control-group">
+                                <label>Date picker (dd-mm)</label>
+                                <input name="date" type="text" data-date="01-02-2013" data-date-format="dd-mm-yyyy" value="<?php echo date("d-m-Y");?>" class="datepicker span11">
+                            </div>
+                            <div class="control-group">
                                 <label>Ref. No# </label>
                                 <input name="ref" type="text" class="span11" />
                             </div>
                             <div class="control-group">
                                 <label>Description </label>
-                                <input name="detail" type="text" class="span11" />
+                                <input name="description" type="text" class="span11" />
                             </div>
                             <div class="control-group">
                                 <label >Amount </label>
@@ -141,9 +176,8 @@ function summary_cashbook($conn){
                                 </div>
                             </div>
                         </div>
-
                         <div class="form-actions">
-                            <input type="hidden" name="ticket" value="">
+                            <input type="hidden" name="ticket" value="<?php echo $student;?>">
                             <input type="hidden" name="transaction" value="fees.payment">
                             <button type="submit" class="btn btn-success">Save</button>
                         </div>
@@ -163,7 +197,7 @@ function summary_cashbook($conn){
         <div class="widget-box">
             <div class="widget-title">
                 <span class="icon"><i class="icon-th"></i></span>
-                <h5>Data table</h5>
+                <h5>Fees Payment Details</h5>
             </div>
             <div class="widget-content nopadding">
                 <table class="table table-bordered data-table">
@@ -171,14 +205,16 @@ function summary_cashbook($conn){
                     <tr>
                         <th>Date</th>
                         <th>Details</th>
-                        <th>Ref. No#</th>
-                        <th>Trans No#</th>
+                        <th>level</th>
                         <th>Session</th>
-                        <th>Amount</th>
+                        <th>Ref. No#</th>
+                        <th>Trans.Type#</th>
+                        <th>Paid</th>
+                        <th><i class="icon-resize-vertical"></i></th>
                     </tr>
                     </thead>
                     <tbody>
-                    <?php payment($conn)?>
+                    <?php fees_details($conn,$student)?>
                     </tbody>
                 </table>
             </div>

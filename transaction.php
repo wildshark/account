@@ -33,9 +33,24 @@ switch ($_GET["transaction"]){
         include_once "modules/fees/add.fees.payment.php";
         break;
 
+    case"capital";
+        include_once "config/config.php";
+        include_once "modules/payment/add.income.capital.php";
+        break;
+
+    case"drawings";
+        include_once "config/config.php";
+        include_once "modules/payment/drawings.income.capital.php";
+        break;
+
     case "search";
         include_once "config/config.php";
         include_once "modules/fees/search.fees.history.php";
+        break;
+
+    case "staff";
+        include_once "config/config.php";
+        include_once "modules/profile/add.staff.profile.php";
         break;
 
 }

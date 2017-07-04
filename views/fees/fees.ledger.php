@@ -2,12 +2,12 @@
 /**
  * Created by PhpStorm.
  * User: Andrew Quaye
- * Date: 30-Jun-17
- * Time: 5:04 PM
+ * Date: 01-Jul-17
+ * Time: 10:17 AM
  */
 
-function bankbook($conn){
-    $cash="SELECT * FROM get_bankbook";
+function cashbook($conn,$student){
+    $cash="SELECT * FROM fees_payment WHERE studentID='$student' ";
     $cash=$conn->query($cash);
     while ($c=$cash->fetch_assoc()){
         echo "
@@ -15,14 +15,14 @@ function bankbook($conn){
             <td class='center'>".$c['GL_date']."</td>
             <td>".$c['description']."</td>
             <td>".$c['refNo']."</td>
-            <td>".$c['bankDr']."</td>
-            <td>".$c['bankCr']."</td>
+            <td>".$c['cashDr']."</td>
+            <td>".$c['cashCr']."</td>
         </tr>
     ";
     }
 }
-function summary_bnkbook($conn){
-    $cash="SELECT * FROM get_sum_bankbook";
+function summary_book($conn){
+    $cash="SELECT * FROM get_sum_cashbook";
     $cash=$conn->query($cash);
     $c=$cash->fetch_assoc();
     $debit=$c['Debit'];
@@ -68,7 +68,7 @@ function summary_bnkbook($conn){
                     </tr>
                     </thead>
                     <tbody>
-                    <?php summary_bnkbook($conn)?>
+                    <?php summary_cashbook($conn)?>
                     </tbody>
                 </table>
             </div>
@@ -94,7 +94,7 @@ function summary_bnkbook($conn){
                     </tr>
                     </thead>
                     <tbody>
-                    <?php bankbook($conn)?>
+                    <?php cashbook($conn)?>
                     </tbody>
                 </table>
             </div>
