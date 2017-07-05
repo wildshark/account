@@ -77,6 +77,15 @@ function position_list($conn){
     $list="SELECT * FROM get_position_list";
     $list=$conn->query($list);
     while ($l=$list->fetch_assoc()){
-        echo "<option value='".$l['bankID']."'>".$l['bank']."</option>";
+        echo "<option value='".$l['positionID']."'>".$l['position']."</option>";
+    }
+}
+
+function staff_list($conn){
+    //get_staff_profile_list
+    $list="SELECT * FROM get_staff_profile_list";
+    $list=$conn->query($list);
+    while ($l=$list->fetch_assoc()){
+        echo "<option value='".$l['staff_profile_ID']."'>".$l['staffName']."</option>";
     }
 }

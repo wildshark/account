@@ -106,6 +106,14 @@ if (empty($_SESSION['userID'])){
             include_once "template/form.php";
             break;
 
+        case"staff.payroll";
+            include_once "config/config.php";
+            include_once "modules/get.account.query.function.php";
+            $page->contenttitle="Staff Payroll";
+            $page->views="views/payroll/staff.payroll.php";
+            include_once "template/form.php";
+            break;
+
         default:
             include_once "config/config.php";
             include_once "template/home.php";

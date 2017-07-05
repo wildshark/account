@@ -50,7 +50,16 @@ switch ($_GET["transaction"]){
 
     case "staff";
         include_once "config/config.php";
-        include_once "modules/profile/add.staff.profile.php";
+        include_once "modules/payroll/add.staff.profile.php";
         break;
 
+    case"payroll";
+    //calculate payroll
+        include_once "config/config.php";
+        include_once "modules/payroll/calculate.payroll.php";
+        break;
+    case "payout";
+        include_once "config/config.php";
+        include_once "modules/payroll/add.staff.payroll.php";
+        break;
 }
