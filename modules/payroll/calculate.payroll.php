@@ -6,13 +6,15 @@
  * Time: 5:17 PM
  */
 $staffID=$_GET['q'];
+$date=$_GET['date'];
+
 //entry S.S.F
 $ssfValue='0.05';
 //entry S.C.P
 $salaryCostPercent='0.125';
 
 if (empty($staffID)){
-   echo "stop";// header("location:" .$_SERVER['HTTP_REFERER']);
+    header("location:" .$_SERVER['HTTP_REFERER']);
 }else{
     $_SESSION['staffID']=$staffID;
 
@@ -25,12 +27,36 @@ if (empty($staffID)){
     $allowance=$s['allowance'];
     $acctName=$s['acctName'];
     $acctNo=$s['acctNumber'];
-    $bank=$s['bank'];
-    $bankID=$s['bank'];
-
+    $bank=$s['bankID'];
+    $bankID=$s['bankID'];
+    //check and get bank details
     $getBank=$conn->query("SELECT * FROM bank_list WHERE bankID='$bank'");
     $b=$getBank->fetch_assoc();
     $bank=$b['bank'];
+
+    //chack and get loan details
+    echo $getLoan="SELECT * FROM get_loan_calculator WHERE statusID='1' AND staffID='$staffID'";
+    $getLoan=$conn->query($getLoan);
+    $l=$getLoan->fetch_assoc();
+    $loanDate=$l['loanDate'];
+    $loanPayAmount=$l['pay_amount'];
+    $loan=$l['loan'];
+    $paid_loan=$l['amount'];
+    $loanBal=$l['loan_bal'];
+    if ($loanBal == 0 or empty($loanBal)){
+        $_SESSION['loanDate']=$loanDate ="";
+        $_SESSION['loan']=$loan="0.00";
+        $_SESSION['loan_paid']=$paid_loan="0.00";
+        $_SESSION['due_amount']=$loanPayAmount="0.00";
+        $_SESSION['loanBal']=$loanBal="0.00";
+    }else{
+        $_SESSION['loanDate']=$loanDate;
+        $_SESSION['loan']=$loan;
+        $_SESSION['loan_paid']=$paid_loan;
+        $_SESSION['due_amount']=$loanPayAmount;
+        $_SESSION['loanBal']=$loanBal;
+    }
+
 
     //calculate SSF
     $ssf=$basic*$ssfValue;
@@ -51,6 +77,8 @@ if (empty($staffID)){
         $GH2765 = ($taxable_salary - (216 + 108 + 151)) * 0.172;
         $total_paye=$GH108+$GH151+$GH2765;
         $net_salary=$taxable_salary-$total_paye;
+
+        $_SESSION['date']=$date;
 
         $_SESSION['name']=$name;
         $_SESSION['basic']=$basic;
@@ -74,6 +102,5 @@ if (empty($staffID)){
         $_SESSION['TotalSalaryCost']=$TotalSalaryCost;
 
         header("location:" .$_SERVER['HTTP_REFERER']);
-
     }
 }

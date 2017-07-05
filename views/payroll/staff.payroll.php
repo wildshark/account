@@ -12,12 +12,12 @@ if (empty($_SESSION['name'])){
     $name=$_SESSION['name'];
 }
 if (empty($_SESSION['basic'])){
-    $basic='Null';
+    $basic='0.00';
 }else{
     $basic=$_SESSION['basic'];
 }
 if (empty($_SESSION['allowance'])){
-    $allowance='Null';
+    $allowance='0.00';
 }else{
     $allowance=$_SESSION['allowance'];
 }
@@ -37,54 +37,79 @@ if (empty($_SESSION['bank'])){
     $bank=$_SESSION['bank'];
 }
 if (empty($_SESSION['ssf'])){
-    $ssf='Null';
+    $ssf='0.00';
 }else{
     $ssf=$_SESSION['ssf'];
 }
 if (empty($_SESSION['sub_total'])){
-    $sub_total='Null';
+    $sub_total='0.00';
 }else{
     $sub_total=$_SESSION['sub_total'];
 }
 if (empty($_SESSION['c261'])){
-    $GH216='Null';
+    $GH216='0.00';
 }else{
     $GH216=$_SESSION['c261'];
 }
 if (empty($_SESSION['c108'])){
-    $GH108='Null';
+    $GH108='0.00';
 }else{
     $GH108=$_SESSION['c108'];
 }
 if (empty($_SESSION['c151'])){
-    $GH151='Null';
+    $GH151='0.00';
 }else{
     $GH151=$_SESSION['c151'];
 }
 if (empty($_SESSION['c2765'])){
-    $GH2765='Null';
+    $GH2765='0.00';
 }else{
     $GH2765=$_SESSION['c2765'];
 }
 if (empty($_SESSION['total_paye'])){
-    $total_paye='Null';
+    $total_paye='0.00';
 }else{
     $total_paye=$_SESSION['c2765'];
 }
 if (empty($_SESSION['net_salary'])){
-    $net_salary='Null';
+    $net_salary='0.00';
 }else{
     $net_salary=$_SESSION['net_salary'];
 }
 if (empty($_SESSION['taxable_salary'])){
-    $taxable_salary='Null';
+    $taxable_salary='0.00';
 }else{
     $taxable_salary=$_SESSION['taxable_salary'];
 }
 if (empty($_SESSION['TotalSalaryCost'])){
-    $TotalSalaryCost='Null';
+    $TotalSalaryCost='0.00';
 }else{
     $TotalSalaryCost=$_SESSION['TotalSalaryCost'];
+}
+if (empty($_SESSION['loanDate'])){
+    $loanDate="";
+}else{
+    $loanDate=$_SESSION['loanDate'];
+}
+if (empty($_SESSION['loan'])){
+    $loan='0.00';
+}else{
+    $loan=$_SESSION['loan'];
+}
+if (empty($_SESSION['loan_paid'])){
+    $paid_loan='0.00';
+}else{
+    $paid_loan=$_SESSION['loan_paid'];
+}
+if (empty($_SESSION['due_amount'])){
+    $due_amount='0.00';
+}else{
+    $due_amount=$_SESSION['due_amount'];
+}
+if (empty($_SESSION['loanBal'])){
+    $loanBal='0.00';
+}else{
+    $loanBal=$_SESSION['loanBal'];
 }
 function fees_details($conn,$student){
     $cash="SELECT * FROM get_fees_payment_history WHERE studentID='$student'";
@@ -121,6 +146,12 @@ function fees_details($conn,$student){
             </div>
             <div class="widget-content nopadding">
                 <form class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label">Pay Date (dd-mm-yyy)</label>
+                        <div class="controls">
+                            <input name="date" type="text" data-date="<?php echo date("d-m-Y")?>" data-date-format="dd-mm-yyyy" value="<?php echo date("d-m-Y");?>" class="datepicker span11">
+                        </div>
+                    </div>
                     <div class="control-group">
                         <label class="control-label">Staff Name </label>
                         <div class="controls">
@@ -165,7 +196,7 @@ function fees_details($conn,$student){
     </div>
 </div>
 <div class="row-fluid">
-    <div class="span4">
+    <div class="span3">
         <div class="widget-box">
             <div class="widget-title">
 				<span class="icon">
@@ -207,7 +238,7 @@ function fees_details($conn,$student){
             </div>
         </div>
     </div>
-    <div class="span4">
+    <div class="span3">
         <div class="widget-box">
             <div class="widget-title">
 				<span class="icon">
@@ -249,7 +280,7 @@ function fees_details($conn,$student){
             </div>
         </div>
     </div>
-    <div class="span4">
+    <div class="span3">
         <div class="widget-box">
             <div class="widget-title">
 				<span class="icon">
@@ -285,6 +316,48 @@ function fees_details($conn,$student){
                     <tr>
                         <td><a href="#">Account Number</a></td>
                         <td><?php echo $acctNo;?></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="span3">
+        <div class="widget-box">
+            <div class="widget-title">
+				<span class="icon">
+					<i class="icon-file"></i>
+				</span>
+                <h5>Visited Pages</h5>
+            </div>
+            <div class="widget-content nopadding">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Page</th>
+                        <th>Visits</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a href="#">Date</a></td>
+                        <td><?php echo $loanDate;?></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Loan Amount</a></td>
+                        <td><?php echo $loan;?></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Paid Amount</a></td>
+                        <td><?php echo $paid_loan;?></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Due Payment</a></td>
+                        <td><?php echo $due_amount;?></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Balance</a></td>
+                        <td><?php echo $loanBal;?></td>
                     </tr>
                     </tbody>
                 </table>
