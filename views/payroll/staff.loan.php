@@ -66,6 +66,7 @@
                 <td class='center'>" . $l['paid'] . "</td>
                 <td class='center'>" . $l['loan_bal'] . "</td>
                 <td>" . $l['nMonth'] . "</td>
+                <td><a href='transaction.php?transaction=delete&c=staff.loan&data=".$l['staff_loan_ID']."' class='tip-top' data-original-title='Delete'><i class='icon-remove'></i></a></td>
             </tr>      
         ";
          }
@@ -115,6 +116,7 @@
                         <input type="hidden" name="ticket" value="1">
                         <input type="hidden" name="user" value="staff.loan">
                         <button type="submit" class="btn btn-success">Save</button>
+                        <a href="account.php?user=staff.loan"  class="btn btn-success">New</a>
                     </div>
                 </form>
             </div>
@@ -223,10 +225,10 @@
                                     </thead>
                                     <tbody>
                                     <?php
-                                    if ($_GET["ticket"] == 1){
-                                        loan_data($conn,$staffID);
-                                    }else{
+                                    if (empty($_GET["ticket"])){
                                         loan_data($conn);
+                                    }else{
+                                        loan_data($conn,$staffID);
                                     }
                                     ?>
                                     </tbody>
@@ -310,10 +312,10 @@
                                     </thead>
                                     <tbody>
                                     <?php
-                                    if ($_GET['ticket'] == 1){
-                                        loan_payment($conn,$staffID);
-                                    }else{
+                                    if (empty($_GET['ticket'])){
                                         loan_payment($conn);
+                                    }else{
+                                        loan_payment($conn,$staffID);
                                     }
                                     ?>
                                     </tbody>

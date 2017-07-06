@@ -63,6 +63,11 @@ function fees_details($conn,$student){
     }
 }
 
+$student_data=$conn->query("SELECT * FROM get_student_profile WHERE studentID='$student'");
+$d=$student_data->fetch_assoc();
+$course=$d['course'];
+$school=$d['school'];
+$yearID=$d['admissionYear']
 ?>
 <div class="row-fluid">
     <div class="span5">
@@ -95,12 +100,10 @@ function fees_details($conn,$student){
                 <ul class="nav nav-tabs">
                     <li class="active"><a data-toggle="tab" href="#tab1">Payment History</a></li>
                     <li><a data-toggle="tab" href="#tab2">Payment Slip</a></li>
-                    <li><a data-toggle="tab" href="#tab3">Last Payment</a></li>
                 </ul>
             </div>
             <div class="widget-content tab-content">
                 <div id="tab1" class="tab-pane active">
-                    <p>And is full of waffle to It has multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end. </p>
                     <form class="form-horizontal">
                         <div class="span6">
                             <div class="control-group">
@@ -109,16 +112,22 @@ function fees_details($conn,$student){
                             <div class="control-group">
                                 <label>Admission No#: <b><?php echo $admission;?></b> </label>
                             </div>
+                            <div class="control-group">
+                                <label>Course : <b><?php echo $course;?></b> </label>
+                            </div>
+                            <div class="control-group">
+                                <label>School : <b><?php echo $school;?></b> </label>
+                            </div>
                         </div>
                         <div class="span6">
                             <div class="control-group">
-                                <label>Name: <b><?php echo $fees;?></b> </label>
+                                <label>Total Fees: <b><?php echo $fees;?></b> </label>
                             </div>
                             <div class="control-group">
-                                <label>Name: <b><?php echo $paid;?></b> </label>
+                                <label>Total Payment: <b><?php echo $paid;?></b> </label>
                             </div>
                             <div class="control-group">
-                                <label>Name: <b><?php echo $bal;?></b> </label>
+                                <label>Balance: <b><?php echo $bal;?></b> </label>
                             </div>
                         </div>
                     </form>
@@ -182,11 +191,6 @@ function fees_details($conn,$student){
                             <button type="submit" class="btn btn-success">Save</button>
                         </div>
                     </form>
-
-                </div>
-                <div id="tab3" class="tab-pane">
-                    <p>full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end. </p>
-
                 </div>
             </div>
         </div>

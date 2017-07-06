@@ -17,6 +17,10 @@ if (empty($_SESSION['userID'])){
 
         case "dashboard";
             include_once "config/config.php";
+            $page->chart= "modules/dashboard.chart.php";
+            include_once "modules/get.account.query.function.php";
+            include_once "modules/dashboard.function.php";
+            $page->views="views/dashboard.views.php";
             include_once "template/home.php";
             break;
 

@@ -39,3 +39,8 @@ if ($_GET['c']=="staff.loan"){
     header("location: ". $_SERVER['HTTP_REFERER']);
 }
 
+if ($_GET['c']=="paid.loan"){
+    $data=$conn->query("DELETE FROM `loan_details` WHERE (`staff_loan_ID`='$id')");
+    header("location: ". $_SERVER['HTTP_REFERER']);
+
+}

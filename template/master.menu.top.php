@@ -16,26 +16,25 @@
             <li><a href="account.php?user=fees.costing">Setup</a></li>
         </ul>
     </li>
-    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Payroll</span> <span class="label label-important">3</span></a>
+    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Payroll</span></a>
         <ul>
             <li><a href="account.php?user=staff.payroll">Payroll</a></li>
             <li><a href="account.php?user=staff.loan">Staff Loan</a></li>
             <li><a href="account.php?user=staff.profile">Staff Account</a></li>
-            <li><a href="form-wizard.html">Setup</a></li>
         </ul>
     </li>
     <li><a href="account.php?user=expenditure"><i class="icon icon-inbox"></i> <span>Expenditure</span></a> </li>
     <li><a href="account.php?user=pay.voucher"><i class="icon icon-th"></i> <span>Pay Voucher</span></a></li>
     <li><a href="account.php?user=cash.book"><i class="icon icon-fullscreen"></i> <span>Cash Book</span></a></li>
     <li><a href="account.php?user=bank.book"><i class="icon icon-tint"></i> <span>Bank Book</span></a></li>
-    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Ledger</span> <span class="label label-important">3</span></a>
+    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Ledger</span></a>
         <ul>
             <li><a href="account.php?user=ious">ious</a></li>
             <li><a href="account.php?user=advance.payment">Advance Payment</a></li>
             <li><a href="form-wizard.html">Form with Wizard</a></li>
         </ul>
     </li>
-    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Account</span> <span class="label label-important">3</span></a>
+    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Account</span></a>
         <ul>
             <li><a href="account.php?user=capital.investments">Capital And Investments</a></li>
             <li><a href="form-valid">Salary Control Ledger</a></li>
