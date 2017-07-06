@@ -114,6 +114,14 @@ if (empty($_SESSION['userID'])){
             include_once "template/form.php";
             break;
 
+        case "staff.loan";
+            include_once "config/config.php";
+            include_once "modules/get.account.query.function.php";
+            $page->contenttitle="Staff Loan";
+            $page->views="views/payroll/staff.loan.php";
+            include_once "template/form.php";
+            break;
+
         default:
             include_once "config/config.php";
             include_once "template/home.php";

@@ -123,34 +123,34 @@
     <view id="83" parent="2" name="get_loan_detail">
       <Comment>VIEW</Comment>
     </view>
-    <view id="84" parent="2" name="get_payment_voucher">
+    <view id="84" parent="2" name="get_loan_payment">
       <Comment>VIEW</Comment>
     </view>
-    <view id="85" parent="2" name="get_payroll">
+    <view id="85" parent="2" name="get_payment_voucher">
       <Comment>VIEW</Comment>
     </view>
-    <view id="86" parent="2" name="get_position_list">
+    <view id="86" parent="2" name="get_payroll">
       <Comment>VIEW</Comment>
     </view>
-    <view id="87" parent="2" name="get_salary_control">
+    <view id="87" parent="2" name="get_position_list">
       <Comment>VIEW</Comment>
     </view>
-    <view id="88" parent="2" name="get_staff_profile_list">
+    <view id="88" parent="2" name="get_salary_control">
       <Comment>VIEW</Comment>
     </view>
-    <view id="89" parent="2" name="get_student_profile">
+    <view id="89" parent="2" name="get_staff_profile_list">
       <Comment>VIEW</Comment>
     </view>
-    <view id="90" parent="2" name="get_sum_bankbook">
+    <view id="90" parent="2" name="get_student_profile">
       <Comment>VIEW</Comment>
     </view>
-    <view id="91" parent="2" name="get_sum_cashbook">
+    <view id="91" parent="2" name="get_sum_bankbook">
       <Comment>VIEW</Comment>
     </view>
-    <view id="92" parent="2" name="get_sum_gl_qoute">
+    <view id="92" parent="2" name="get_sum_cashbook">
       <Comment>VIEW</Comment>
     </view>
-    <view id="93" parent="2" name="get_unpaid_loan">
+    <view id="93" parent="2" name="get_sum_gl_qoute">
       <Comment>VIEW</Comment>
     </view>
     <view id="94" parent="2" name="ious">
@@ -471,1352 +471,1379 @@
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="164" parent="56" name="date">
+    <column id="164" parent="56" name="semester">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="165" parent="56" name="amount">
+    <column id="165" parent="56" name="yearID">
       <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="166" parent="56" name="date">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="167" parent="56" name="amount">
+      <Position>7</Position>
       <DataType>decimal(16,2)|0</DataType>
       <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
     </column>
-    <key id="166" parent="56" name="PRIMARY">
+    <index id="168" parent="56" name="staff_loan_ID">
+      <ColNames>staff_loan_ID</ColNames>
+    </index>
+    <key id="169" parent="56" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>loanID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="167" parent="57" name="payrollID">
+    <column id="170" parent="57" name="payrollID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="168" parent="57" name="payDate">
+    <column id="171" parent="57" name="payDate">
       <Position>2</Position>
       <DataType>varchar(15)|0</DataType>
     </column>
-    <column id="169" parent="57" name="staffID">
+    <column id="172" parent="57" name="staffID">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="170" parent="57" name="basic">
+    <column id="173" parent="57" name="basic">
       <Position>4</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="171" parent="57" name="ssf">
+    <column id="174" parent="57" name="ssf">
       <Position>5</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="172" parent="57" name="allowance">
+    <column id="175" parent="57" name="allowance">
       <Position>6</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="173" parent="57" name="year">
+    <column id="176" parent="57" name="year">
       <Position>7</Position>
       <DataType>varchar(5)|0</DataType>
     </column>
-    <column id="174" parent="57" name="semester">
+    <column id="177" parent="57" name="semester">
       <Position>8</Position>
       <DataType>varchar(5)|0</DataType>
     </column>
-    <column id="175" parent="57" name="bankID">
+    <column id="178" parent="57" name="bankID">
       <Position>9</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="176" parent="57" name="acctName">
+    <column id="179" parent="57" name="acctName">
       <Position>10</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="177" parent="57" name="AcctNo">
+    <column id="180" parent="57" name="AcctNo">
       <Position>11</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="178" parent="57" name="GH216Free">
+    <column id="181" parent="57" name="GH216Free">
       <Position>12</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="179" parent="57" name="GH108">
+    <column id="182" parent="57" name="GH108">
       <Position>13</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="180" parent="57" name="GH151">
+    <column id="183" parent="57" name="GH151">
       <Position>14</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="181" parent="57" name="GH2765">
+    <column id="184" parent="57" name="GH2765">
       <Position>15</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="182" parent="57" name="salary">
+    <column id="185" parent="57" name="salary">
       <Position>16</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <key id="183" parent="57" name="PRIMARY">
+    <key id="186" parent="57" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>payrollID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="184" parent="58" name="positionID">
+    <column id="187" parent="58" name="positionID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="185" parent="58" name="position">
+    <column id="188" parent="58" name="position">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="186" parent="58" name="statusId">
+    <column id="189" parent="58" name="statusId">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <DefaultExpression>&apos;1&apos;</DefaultExpression>
     </column>
-    <key id="187" parent="58" name="PRIMARY">
+    <key id="190" parent="58" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>positionID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="188" parent="59" name="profitLossID">
+    <column id="191" parent="59" name="profitLossID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="189" parent="59" name="types">
+    <column id="192" parent="59" name="types">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="190" parent="59" name="statusID">
+    <column id="193" parent="59" name="statusID">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <DefaultExpression>&apos;1&apos;</DefaultExpression>
     </column>
-    <key id="191" parent="59" name="PRIMARY">
+    <key id="194" parent="59" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>profitLossID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="192" parent="60" name="schoolID">
+    <column id="195" parent="60" name="schoolID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="193" parent="60" name="school">
+    <column id="196" parent="60" name="school">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="194" parent="60" name="PRIMARY">
+    <key id="197" parent="60" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>schoolID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="195" parent="61" name="yearID">
+    <column id="198" parent="61" name="yearID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="196" parent="61" name="year">
+    <column id="199" parent="61" name="year">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="197" parent="61" name="PRIMARY">
+    <key id="200" parent="61" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>yearID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="198" parent="62" name="staff_loan_ID">
+    <column id="201" parent="62" name="staff_loan_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="199" parent="62" name="tranDate">
+    <column id="202" parent="62" name="tranDate">
       <Position>2</Position>
       <DataType>varchar(30)|0</DataType>
     </column>
-    <column id="200" parent="62" name="loanDate">
+    <column id="203" parent="62" name="loanDate">
       <Position>3</Position>
       <DataType>varchar(20)|0</DataType>
     </column>
-    <column id="201" parent="62" name="staffID">
+    <column id="204" parent="62" name="staffID">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="202" parent="62" name="detail">
+    <column id="205" parent="62" name="detail">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="203" parent="62" name="pay_amount">
+    <column id="206" parent="62" name="yearID">
       <Position>6</Position>
-      <DataType>decimal(16,2)|0</DataType>
-      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+      <DataType>int(11)|0</DataType>
     </column>
-    <column id="204" parent="62" name="loan">
+    <column id="207" parent="62" name="semester">
       <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="208" parent="62" name="pay_amount">
+      <Position>8</Position>
       <DataType>decimal(16,2)|0</DataType>
       <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
     </column>
-    <column id="205" parent="62" name="statusID">
-      <Position>8</Position>
+    <column id="209" parent="62" name="loan">
+      <Position>9</Position>
+      <DataType>decimal(16,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="210" parent="62" name="paidDateUpdate">
+      <Position>10</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="211" parent="62" name="paid">
+      <Position>11</Position>
+      <DataType>decimal(16,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="212" parent="62" name="statusID">
+      <Position>12</Position>
       <DataType>int(11)|0</DataType>
       <DefaultExpression>&apos;1&apos;</DefaultExpression>
     </column>
-    <key id="206" parent="62" name="PRIMARY">
+    <key id="213" parent="62" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>staff_loan_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="207" parent="63" name="staff_profile_ID">
+    <column id="214" parent="63" name="staff_profile_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="208" parent="63" name="employDate">
+    <column id="215" parent="63" name="employDate">
       <Position>2</Position>
       <DataType>varchar(15)|0</DataType>
     </column>
-    <column id="209" parent="63" name="staffID">
+    <column id="216" parent="63" name="staffID">
       <Position>3</Position>
       <DataType>varchar(15)|0</DataType>
     </column>
-    <column id="210" parent="63" name="staffName">
+    <column id="217" parent="63" name="staffName">
       <Position>4</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="211" parent="63" name="positionID">
+    <column id="218" parent="63" name="positionID">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="212" parent="63" name="workStatus">
+    <column id="219" parent="63" name="workStatus">
       <Position>6</Position>
       <DataType>varchar(5)|0</DataType>
     </column>
-    <column id="213" parent="63" name="basicPay">
+    <column id="220" parent="63" name="basicPay">
       <Position>7</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="214" parent="63" name="allowance">
+    <column id="221" parent="63" name="allowance">
       <Position>8</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="215" parent="63" name="bankID">
+    <column id="222" parent="63" name="bankID">
       <Position>9</Position>
       <DataType>int(4)|0</DataType>
     </column>
-    <column id="216" parent="63" name="acctName">
+    <column id="223" parent="63" name="acctName">
       <Position>10</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="217" parent="63" name="acctNumber">
+    <column id="224" parent="63" name="acctNumber">
       <Position>11</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <key id="218" parent="63" name="PRIMARY">
+    <key id="225" parent="63" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>staff_profile_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="219" parent="64" name="studentID">
+    <column id="226" parent="64" name="studentID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="220" parent="64" name="studentName">
+    <column id="227" parent="64" name="studentName">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="221" parent="64" name="AdmissionNo">
+    <column id="228" parent="64" name="AdmissionNo">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="222" parent="64" name="Mobile">
+    <column id="229" parent="64" name="Mobile">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="223" parent="64" name="schoolID">
+    <column id="230" parent="64" name="schoolID">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="224" parent="64" name="couresID">
+    <column id="231" parent="64" name="couresID">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <key id="225" parent="64" name="PRIMARY">
+    <key id="232" parent="64" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>studentID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="226" parent="65" name="userID">
+    <column id="233" parent="65" name="userID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="227" parent="65" name="userName">
+    <column id="234" parent="65" name="userName">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="228" parent="65" name="userPasswd">
+    <column id="235" parent="65" name="userPasswd">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="229" parent="65" name="statusID">
+    <column id="236" parent="65" name="statusID">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <DefaultExpression>&apos;1&apos;</DefaultExpression>
     </column>
-    <key id="230" parent="65" name="PRIMARY">
+    <key id="237" parent="65" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>userID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="231" parent="66" name="TranCatID">
+    <column id="238" parent="66" name="TranCatID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="232" parent="66" name="ledger">
+    <column id="239" parent="66" name="ledger">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="233" parent="66" name="bookID">
+    <column id="240" parent="66" name="bookID">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="234" parent="66" name="profitLossID">
+    <column id="241" parent="66" name="profitLossID">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="235" parent="66" name="balanceSheetID">
+    <column id="242" parent="66" name="balanceSheetID">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="236" parent="66" name="statusID">
+    <column id="243" parent="66" name="statusID">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="237" parent="67" name="tranCatID">
+    <column id="244" parent="67" name="tranCatID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="238" parent="67" name="Qoute">
+    <column id="245" parent="67" name="Qoute">
       <Position>2</Position>
       <DataType>decimal(38,2)|0</DataType>
     </column>
-    <column id="239" parent="67" name="Paid">
+    <column id="246" parent="67" name="Paid">
       <Position>3</Position>
       <DataType>decimal(38,2)|0</DataType>
     </column>
-    <column id="240" parent="67" name="bal">
+    <column id="247" parent="67" name="bal">
       <Position>4</Position>
       <DataType>decimal(17,2)|0</DataType>
     </column>
-    <column id="241" parent="67" name="ledger">
+    <column id="248" parent="67" name="ledger">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="242" parent="68" name="bankID">
+    <column id="249" parent="68" name="bankID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="243" parent="68" name="bank">
+    <column id="250" parent="68" name="bank">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="244" parent="68" name="swift">
+    <column id="251" parent="68" name="swift">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="245" parent="68" name="statusID">
+    <column id="252" parent="68" name="statusID">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="246" parent="69" name="GL_ID">
+    <column id="253" parent="69" name="GL_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="247" parent="69" name="tranDate">
+    <column id="254" parent="69" name="tranDate">
       <Position>2</Position>
       <DataType>varchar(15)|0</DataType>
     </column>
-    <column id="248" parent="69" name="GL_date">
+    <column id="255" parent="69" name="GL_date">
       <Position>3</Position>
       <DataType>varchar(15)|0</DataType>
     </column>
-    <column id="249" parent="69" name="bookID">
+    <column id="256" parent="69" name="bookID">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="250" parent="69" name="tranCatID">
+    <column id="257" parent="69" name="tranCatID">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="251" parent="69" name="description">
+    <column id="258" parent="69" name="description">
       <Position>6</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="252" parent="69" name="refNo">
+    <column id="259" parent="69" name="refNo">
       <Position>7</Position>
       <DataType>varchar(100)|0</DataType>
     </column>
-    <column id="253" parent="69" name="bankDr">
+    <column id="260" parent="69" name="bankDr">
       <Position>8</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="254" parent="69" name="bankCr">
+    <column id="261" parent="69" name="bankCr">
       <Position>9</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="255" parent="69" name="tranTypeID">
+    <column id="262" parent="69" name="tranTypeID">
       <Position>10</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="256" parent="69" name="yearID">
+    <column id="263" parent="69" name="yearID">
       <Position>11</Position>
       <DataType>varchar(11)|0</DataType>
     </column>
-    <column id="257" parent="69" name="semesterID">
+    <column id="264" parent="69" name="semesterID">
       <Position>12</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="258" parent="69" name="staffID">
+    <column id="265" parent="69" name="staffID">
       <Position>13</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="259" parent="69" name="profitlossID">
+    <column id="266" parent="69" name="profitlossID">
       <Position>14</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="260" parent="69" name="balanceSheetID">
+    <column id="267" parent="69" name="balanceSheetID">
       <Position>15</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="261" parent="69" name="salaryControlID">
+    <column id="268" parent="69" name="salaryControlID">
       <Position>16</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="262" parent="69" name="supplerID">
+    <column id="269" parent="69" name="supplerID">
       <Position>17</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="263" parent="69" name="userID">
+    <column id="270" parent="69" name="userID">
       <Position>18</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="264" parent="70" name="GL_ID">
+    <column id="271" parent="70" name="GL_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="265" parent="70" name="tranDate">
+    <column id="272" parent="70" name="tranDate">
       <Position>2</Position>
       <DataType>varchar(15)|0</DataType>
     </column>
-    <column id="266" parent="70" name="GL_date">
+    <column id="273" parent="70" name="GL_date">
       <Position>3</Position>
       <DataType>varchar(15)|0</DataType>
     </column>
-    <column id="267" parent="70" name="ticketID">
+    <column id="274" parent="70" name="ticketID">
       <Position>4</Position>
       <DataType>varchar(20)|0</DataType>
     </column>
-    <column id="268" parent="70" name="bookID">
+    <column id="275" parent="70" name="bookID">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="269" parent="70" name="tranCatID">
+    <column id="276" parent="70" name="tranCatID">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="270" parent="70" name="description">
+    <column id="277" parent="70" name="description">
       <Position>7</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="271" parent="70" name="refNo">
+    <column id="278" parent="70" name="refNo">
       <Position>8</Position>
       <DataType>varchar(100)|0</DataType>
     </column>
-    <column id="272" parent="70" name="qouteDr">
+    <column id="279" parent="70" name="qouteDr">
       <Position>9</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="273" parent="70" name="qouteCr">
+    <column id="280" parent="70" name="qouteCr">
       <Position>10</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="274" parent="70" name="cashDr">
+    <column id="281" parent="70" name="cashDr">
       <Position>11</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="275" parent="70" name="cashCr">
+    <column id="282" parent="70" name="cashCr">
       <Position>12</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="276" parent="70" name="bankDr">
+    <column id="283" parent="70" name="bankDr">
       <Position>13</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="277" parent="70" name="bankCr">
+    <column id="284" parent="70" name="bankCr">
       <Position>14</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="278" parent="70" name="tranTypeID">
+    <column id="285" parent="70" name="tranTypeID">
       <Position>15</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="279" parent="70" name="yearID">
+    <column id="286" parent="70" name="yearID">
       <Position>16</Position>
       <DataType>varchar(11)|0</DataType>
     </column>
-    <column id="280" parent="70" name="semesterID">
+    <column id="287" parent="70" name="semesterID">
       <Position>17</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="281" parent="70" name="staffID">
+    <column id="288" parent="70" name="staffID">
       <Position>18</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="282" parent="70" name="profitlossID">
+    <column id="289" parent="70" name="profitlossID">
       <Position>19</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="283" parent="70" name="balanceSheetID">
+    <column id="290" parent="70" name="balanceSheetID">
       <Position>20</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="284" parent="70" name="salaryControlID">
+    <column id="291" parent="70" name="salaryControlID">
       <Position>21</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="285" parent="70" name="capital">
+    <column id="292" parent="70" name="capital">
       <Position>22</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="286" parent="70" name="drawings">
+    <column id="293" parent="70" name="drawings">
       <Position>23</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="287" parent="70" name="supplerID">
+    <column id="294" parent="70" name="supplerID">
       <Position>24</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="288" parent="70" name="userID">
+    <column id="295" parent="70" name="userID">
       <Position>25</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="289" parent="71" name="GL_ID">
+    <column id="296" parent="71" name="GL_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="290" parent="71" name="tranDate">
+    <column id="297" parent="71" name="tranDate">
       <Position>2</Position>
       <DataType>varchar(15)|0</DataType>
     </column>
-    <column id="291" parent="71" name="GL_date">
+    <column id="298" parent="71" name="GL_date">
       <Position>3</Position>
       <DataType>varchar(15)|0</DataType>
     </column>
-    <column id="292" parent="71" name="bookID">
+    <column id="299" parent="71" name="bookID">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="293" parent="71" name="tranCatID">
+    <column id="300" parent="71" name="tranCatID">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="294" parent="71" name="description">
+    <column id="301" parent="71" name="description">
       <Position>6</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="295" parent="71" name="refNo">
+    <column id="302" parent="71" name="refNo">
       <Position>7</Position>
       <DataType>varchar(100)|0</DataType>
     </column>
-    <column id="296" parent="71" name="tranTypeID">
+    <column id="303" parent="71" name="tranTypeID">
       <Position>8</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="297" parent="71" name="cashDr">
+    <column id="304" parent="71" name="cashDr">
       <Position>9</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="298" parent="71" name="cashCr">
+    <column id="305" parent="71" name="cashCr">
       <Position>10</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="299" parent="71" name="yearID">
+    <column id="306" parent="71" name="yearID">
       <Position>11</Position>
       <DataType>varchar(11)|0</DataType>
     </column>
-    <column id="300" parent="71" name="semesterID">
+    <column id="307" parent="71" name="semesterID">
       <Position>12</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="301" parent="71" name="staffID">
+    <column id="308" parent="71" name="staffID">
       <Position>13</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="302" parent="71" name="profitlossID">
+    <column id="309" parent="71" name="profitlossID">
       <Position>14</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="303" parent="71" name="balanceSheetID">
+    <column id="310" parent="71" name="balanceSheetID">
       <Position>15</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="304" parent="71" name="salaryControlID">
+    <column id="311" parent="71" name="salaryControlID">
       <Position>16</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="305" parent="71" name="supplerID">
+    <column id="312" parent="71" name="supplerID">
       <Position>17</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="306" parent="71" name="userID">
+    <column id="313" parent="71" name="userID">
       <Position>18</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="307" parent="72" name="TranCatID">
+    <column id="314" parent="72" name="TranCatID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="308" parent="72" name="ACCT_book">
+    <column id="315" parent="72" name="ACCT_book">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="309" parent="72" name="PL_book">
+    <column id="316" parent="72" name="PL_book">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="310" parent="72" name="BS_book">
+    <column id="317" parent="72" name="BS_book">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="311" parent="72" name="ledger">
+    <column id="318" parent="72" name="ledger">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="312" parent="73" name="GL_ID">
+    <column id="319" parent="73" name="GL_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="313" parent="73" name="tranDate">
+    <column id="320" parent="73" name="tranDate">
       <Position>2</Position>
       <DataType>varchar(15)|0</DataType>
     </column>
-    <column id="314" parent="73" name="GL_date">
+    <column id="321" parent="73" name="GL_date">
       <Position>3</Position>
       <DataType>varchar(15)|0</DataType>
     </column>
-    <column id="315" parent="73" name="description">
+    <column id="322" parent="73" name="description">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="316" parent="73" name="refNo">
+    <column id="323" parent="73" name="refNo">
       <Position>5</Position>
       <DataType>varchar(100)|0</DataType>
     </column>
-    <column id="317" parent="73" name="qouteDr">
+    <column id="324" parent="73" name="qouteDr">
       <Position>6</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="318" parent="73" name="qouteCr">
+    <column id="325" parent="73" name="qouteCr">
       <Position>7</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="319" parent="73" name="tranTypeID">
+    <column id="326" parent="73" name="tranTypeID">
       <Position>8</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="320" parent="73" name="yearID">
+    <column id="327" parent="73" name="yearID">
       <Position>9</Position>
       <DataType>varchar(11)|0</DataType>
     </column>
-    <column id="321" parent="73" name="semesterID">
+    <column id="328" parent="73" name="semesterID">
       <Position>10</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="322" parent="73" name="staffID">
+    <column id="329" parent="73" name="staffID">
       <Position>11</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="323" parent="73" name="profitlossID">
+    <column id="330" parent="73" name="profitlossID">
       <Position>12</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="324" parent="73" name="balanceSheetID">
+    <column id="331" parent="73" name="balanceSheetID">
       <Position>13</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="325" parent="73" name="supplerID">
+    <column id="332" parent="73" name="supplerID">
       <Position>14</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="326" parent="73" name="userID">
+    <column id="333" parent="73" name="userID">
       <Position>15</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="327" parent="73" name="ticketID">
+    <column id="334" parent="73" name="ticketID">
       <Position>16</Position>
       <DataType>varchar(20)|0</DataType>
     </column>
-    <column id="328" parent="73" name="tranCatID">
+    <column id="335" parent="73" name="tranCatID">
       <Position>17</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="329" parent="73" name="bookID">
+    <column id="336" parent="73" name="bookID">
       <Position>18</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="330" parent="74" name="TranCatID">
+    <column id="337" parent="74" name="TranCatID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="331" parent="74" name="ledger">
+    <column id="338" parent="74" name="ledger">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="332" parent="74" name="bookID">
+    <column id="339" parent="74" name="bookID">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="333" parent="74" name="profitLossID">
+    <column id="340" parent="74" name="profitLossID">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="334" parent="74" name="balanceSheetID">
+    <column id="341" parent="74" name="balanceSheetID">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="335" parent="74" name="statusID">
+    <column id="342" parent="74" name="statusID">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="336" parent="75" name="tranCatID">
+    <column id="343" parent="75" name="tranCatID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="337" parent="75" name="Qoute">
+    <column id="344" parent="75" name="Qoute">
       <Position>2</Position>
       <DataType>decimal(38,2)|0</DataType>
     </column>
-    <column id="338" parent="75" name="Paid">
+    <column id="345" parent="75" name="Paid">
       <Position>3</Position>
       <DataType>decimal(38,2)|0</DataType>
     </column>
-    <column id="339" parent="75" name="bal">
+    <column id="346" parent="75" name="bal">
       <Position>4</Position>
       <DataType>decimal(17,2)|0</DataType>
     </column>
-    <column id="340" parent="76" name="studentID">
+    <column id="347" parent="76" name="studentID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="341" parent="76" name="fees">
+    <column id="348" parent="76" name="fees">
       <Position>2</Position>
       <DataType>decimal(38,2)|0</DataType>
     </column>
-    <column id="342" parent="76" name="paid">
+    <column id="349" parent="76" name="paid">
       <Position>3</Position>
       <DataType>decimal(60,2)|0</DataType>
     </column>
-    <column id="343" parent="76" name="bal">
+    <column id="350" parent="76" name="bal">
       <Position>4</Position>
       <DataType>decimal(61,2)|0</DataType>
     </column>
-    <column id="344" parent="77" name="studentID">
+    <column id="351" parent="77" name="studentID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="345" parent="77" name="stud_level">
+    <column id="352" parent="77" name="stud_level">
       <Position>2</Position>
       <DataType>varchar(7)|0</DataType>
     </column>
-    <column id="346" parent="77" name="semesterID">
+    <column id="353" parent="77" name="semesterID">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="347" parent="77" name="sch_session">
+    <column id="354" parent="77" name="sch_session">
       <Position>4</Position>
       <DataType>varchar(8)|0</DataType>
     </column>
-    <column id="348" parent="77" name="amount">
+    <column id="355" parent="77" name="amount">
       <Position>5</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="349" parent="77" name="paid">
+    <column id="356" parent="77" name="paid">
       <Position>6</Position>
       <DataType>decimal(38,2)|0</DataType>
     </column>
-    <column id="350" parent="77" name="studentName">
+    <column id="357" parent="77" name="studentName">
       <Position>7</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="351" parent="77" name="AdmissionNo">
+    <column id="358" parent="77" name="AdmissionNo">
       <Position>8</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="352" parent="78" name="studentID">
+    <column id="359" parent="78" name="studentID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="353" parent="78" name="fees">
+    <column id="360" parent="78" name="fees">
       <Position>2</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="354" parent="78" name="Paid">
+    <column id="361" parent="78" name="Paid">
       <Position>3</Position>
       <DataType>decimal(38,2)|0</DataType>
     </column>
-    <column id="355" parent="78" name="semesterID">
+    <column id="362" parent="78" name="semesterID">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="356" parent="78" name="sch_session">
+    <column id="363" parent="78" name="sch_session">
       <Position>5</Position>
       <DataType>varchar(8)|0</DataType>
     </column>
-    <column id="357" parent="78" name="stud_level">
+    <column id="364" parent="78" name="stud_level">
       <Position>6</Position>
       <DataType>varchar(7)|0</DataType>
     </column>
-    <column id="358" parent="79" name="payID">
+    <column id="365" parent="79" name="payID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="359" parent="79" name="tranDate">
+    <column id="366" parent="79" name="tranDate">
       <Position>2</Position>
       <DataType>varchar(30)|0</DataType>
     </column>
-    <column id="360" parent="79" name="payDate">
+    <column id="367" parent="79" name="payDate">
       <Position>3</Position>
       <DataType>varchar(20)|0</DataType>
     </column>
-    <column id="361" parent="79" name="studentID">
+    <column id="368" parent="79" name="studentID">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="362" parent="79" name="courseID">
+    <column id="369" parent="79" name="courseID">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="363" parent="79" name="payTypeID">
+    <column id="370" parent="79" name="payTypeID">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="364" parent="79" name="stud_level">
+    <column id="371" parent="79" name="stud_level">
       <Position>7</Position>
       <DataType>varchar(7)|0</DataType>
     </column>
-    <column id="365" parent="79" name="semesterID">
+    <column id="372" parent="79" name="semesterID">
       <Position>8</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="366" parent="79" name="sch_session">
+    <column id="373" parent="79" name="sch_session">
       <Position>9</Position>
       <DataType>varchar(8)|0</DataType>
     </column>
-    <column id="367" parent="79" name="refNo">
+    <column id="374" parent="79" name="refNo">
       <Position>10</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="368" parent="79" name="paid_amount">
+    <column id="375" parent="79" name="paid_amount">
       <Position>11</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="369" parent="79" name="course">
+    <column id="376" parent="79" name="course">
       <Position>12</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="370" parent="80" name="feesID">
+    <column id="377" parent="80" name="feesID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="371" parent="80" name="school">
+    <column id="378" parent="80" name="school">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="372" parent="80" name="course">
+    <column id="379" parent="80" name="course">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="373" parent="80" name="amount">
+    <column id="380" parent="80" name="amount">
       <Position>4</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="374" parent="81" name="GL_ID">
+    <column id="381" parent="81" name="GL_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="375" parent="81" name="tranDate">
+    <column id="382" parent="81" name="tranDate">
       <Position>2</Position>
       <DataType>varchar(15)|0</DataType>
     </column>
-    <column id="376" parent="81" name="GL_date">
+    <column id="383" parent="81" name="GL_date">
       <Position>3</Position>
       <DataType>varchar(15)|0</DataType>
     </column>
-    <column id="377" parent="81" name="ticketID">
+    <column id="384" parent="81" name="ticketID">
       <Position>4</Position>
       <DataType>varchar(20)|0</DataType>
     </column>
-    <column id="378" parent="81" name="bookID">
+    <column id="385" parent="81" name="bookID">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="379" parent="81" name="tranCatID">
+    <column id="386" parent="81" name="tranCatID">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="380" parent="81" name="description">
+    <column id="387" parent="81" name="description">
       <Position>7</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="381" parent="81" name="refNo">
+    <column id="388" parent="81" name="refNo">
       <Position>8</Position>
       <DataType>varchar(100)|0</DataType>
     </column>
-    <column id="382" parent="81" name="cost">
+    <column id="389" parent="81" name="cost">
       <Position>9</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="383" parent="81" name="qouteCr">
+    <column id="390" parent="81" name="qouteCr">
       <Position>10</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="384" parent="81" name="cashCr">
+    <column id="391" parent="81" name="cashCr">
       <Position>11</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="385" parent="81" name="bankCr">
+    <column id="392" parent="81" name="bankCr">
       <Position>12</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="386" parent="81" name="paid">
+    <column id="393" parent="81" name="paid">
       <Position>13</Position>
       <DataType>decimal(17,2)|0</DataType>
     </column>
-    <column id="387" parent="81" name="yearID">
+    <column id="394" parent="81" name="yearID">
       <Position>14</Position>
       <DataType>varchar(11)|0</DataType>
     </column>
-    <column id="388" parent="81" name="semesterID">
+    <column id="395" parent="81" name="semesterID">
       <Position>15</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="389" parent="82" name="staff_loan_ID">
+    <column id="396" parent="82" name="staff_loan_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="390" parent="82" name="tranDate">
+    <column id="397" parent="82" name="tranDate">
       <Position>2</Position>
       <DataType>varchar(30)|0</DataType>
     </column>
-    <column id="391" parent="82" name="loanDate">
+    <column id="398" parent="82" name="loanDate">
       <Position>3</Position>
       <DataType>varchar(20)|0</DataType>
     </column>
-    <column id="392" parent="82" name="staffID">
+    <column id="399" parent="82" name="staffID">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="393" parent="82" name="detail">
+    <column id="400" parent="82" name="detail">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="394" parent="82" name="pay_amount">
+    <column id="401" parent="82" name="pay_amount">
       <Position>6</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="395" parent="82" name="loan">
+    <column id="402" parent="82" name="loan">
       <Position>7</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="396" parent="82" name="statusID">
+    <column id="403" parent="82" name="statusID">
       <Position>8</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="397" parent="82" name="amount">
+    <column id="404" parent="82" name="paid">
       <Position>9</Position>
-      <DataType>decimal(38,2)|0</DataType>
+      <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="398" parent="82" name="loan_bal">
+    <column id="405" parent="82" name="nMonth">
       <Position>10</Position>
-      <DataType>decimal(39,2)|0</DataType>
+      <DataType>decimal(23,6)|0</DataType>
     </column>
-    <column id="399" parent="83" name="staff_loan_ID">
+    <column id="406" parent="82" name="loan_bal">
+      <Position>11</Position>
+      <DataType>decimal(17,2)|0</DataType>
+    </column>
+    <column id="407" parent="82" name="staffName">
+      <Position>12</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="408" parent="83" name="staff_loan_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="400" parent="83" name="staffID">
+    <column id="409" parent="83" name="staffID">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="401" parent="83" name="amount">
+    <column id="410" parent="83" name="amount">
       <Position>3</Position>
       <DataType>decimal(38,2)|0</DataType>
     </column>
-    <column id="402" parent="84" name="GL_ID">
+    <column id="411" parent="84" name="loanID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="403" parent="84" name="tranDate">
+    <column id="412" parent="84" name="staff_loan_ID">
       <Position>2</Position>
-      <DataType>varchar(15)|0</DataType>
+      <DataType>int(11)|0</DataType>
     </column>
-    <column id="404" parent="84" name="GL_date">
+    <column id="413" parent="84" name="staffID">
       <Position>3</Position>
-      <DataType>varchar(15)|0</DataType>
+      <DataType>int(11)|0</DataType>
     </column>
-    <column id="405" parent="84" name="ticketID">
+    <column id="414" parent="84" name="semester">
       <Position>4</Position>
-      <DataType>varchar(20)|0</DataType>
+      <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="406" parent="84" name="bookID">
+    <column id="415" parent="84" name="yearID">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="407" parent="84" name="tranCatID">
+    <column id="416" parent="84" name="date">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="417" parent="84" name="amount">
+      <Position>7</Position>
+      <DataType>decimal(16,2)|0</DataType>
+    </column>
+    <column id="418" parent="84" name="staffName">
+      <Position>8</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="419" parent="85" name="GL_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="420" parent="85" name="tranDate">
+      <Position>2</Position>
+      <DataType>varchar(15)|0</DataType>
+    </column>
+    <column id="421" parent="85" name="GL_date">
+      <Position>3</Position>
+      <DataType>varchar(15)|0</DataType>
+    </column>
+    <column id="422" parent="85" name="ticketID">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="423" parent="85" name="bookID">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="424" parent="85" name="tranCatID">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="408" parent="84" name="description">
+    <column id="425" parent="85" name="description">
       <Position>7</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="409" parent="84" name="refNo">
+    <column id="426" parent="85" name="refNo">
       <Position>8</Position>
       <DataType>varchar(100)|0</DataType>
     </column>
-    <column id="410" parent="84" name="cashCr">
+    <column id="427" parent="85" name="cashCr">
       <Position>9</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="411" parent="84" name="bankCr">
+    <column id="428" parent="85" name="bankCr">
       <Position>10</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="412" parent="84" name="amount">
+    <column id="429" parent="85" name="amount">
       <Position>11</Position>
       <DataType>decimal(17,2)|0</DataType>
     </column>
-    <column id="413" parent="84" name="tranTypeID">
+    <column id="430" parent="85" name="tranTypeID">
       <Position>12</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="414" parent="84" name="yearID">
+    <column id="431" parent="85" name="yearID">
       <Position>13</Position>
       <DataType>varchar(11)|0</DataType>
     </column>
-    <column id="415" parent="84" name="semesterID">
+    <column id="432" parent="85" name="semesterID">
       <Position>14</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="416" parent="84" name="supplerID">
+    <column id="433" parent="85" name="supplerID">
       <Position>15</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="417" parent="84" name="userID">
+    <column id="434" parent="85" name="userID">
       <Position>16</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="418" parent="85" name="payrollID">
+    <column id="435" parent="86" name="payrollID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="419" parent="85" name="year">
+    <column id="436" parent="86" name="year">
       <Position>2</Position>
       <DataType>varchar(5)|0</DataType>
     </column>
-    <column id="420" parent="85" name="semester">
+    <column id="437" parent="86" name="semester">
       <Position>3</Position>
       <DataType>varchar(5)|0</DataType>
     </column>
-    <column id="421" parent="85" name="payDate">
+    <column id="438" parent="86" name="payDate">
       <Position>4</Position>
       <DataType>varchar(15)|0</DataType>
     </column>
-    <column id="422" parent="85" name="staffID">
+    <column id="439" parent="86" name="staffID">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="423" parent="85" name="basic">
+    <column id="440" parent="86" name="basic">
       <Position>6</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="424" parent="85" name="ssf">
+    <column id="441" parent="86" name="ssf">
       <Position>7</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="425" parent="85" name="Sub_Total">
+    <column id="442" parent="86" name="Sub_Total">
       <Position>8</Position>
       <DataType>decimal(11,2)|0</DataType>
     </column>
-    <column id="426" parent="85" name="allowance">
+    <column id="443" parent="86" name="allowance">
       <Position>9</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="427" parent="85" name="GH216Free">
+    <column id="444" parent="86" name="GH216Free">
       <Position>10</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="428" parent="85" name="GH108">
+    <column id="445" parent="86" name="GH108">
       <Position>11</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="429" parent="85" name="GH151">
+    <column id="446" parent="86" name="GH151">
       <Position>12</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="430" parent="85" name="GH2765">
+    <column id="447" parent="86" name="GH2765">
       <Position>13</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="431" parent="85" name="Taxable_salary">
+    <column id="448" parent="86" name="Taxable_salary">
       <Position>14</Position>
       <DataType>decimal(12,2)|0</DataType>
     </column>
-    <column id="432" parent="85" name="Totalpaye">
+    <column id="449" parent="86" name="Totalpaye">
       <Position>15</Position>
       <DataType>decimal(12,2)|0</DataType>
     </column>
-    <column id="433" parent="85" name="net_salary">
+    <column id="450" parent="86" name="net_salary">
       <Position>16</Position>
       <DataType>decimal(13,2)|0</DataType>
     </column>
-    <column id="434" parent="85" name="salary">
+    <column id="451" parent="86" name="salary">
       <Position>17</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="435" parent="85" name="bankID">
+    <column id="452" parent="86" name="bankID">
       <Position>18</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="436" parent="85" name="acctName">
+    <column id="453" parent="86" name="acctName">
       <Position>19</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="437" parent="85" name="AcctNo">
+    <column id="454" parent="86" name="AcctNo">
       <Position>20</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="438" parent="86" name="positionID">
+    <column id="455" parent="87" name="positionID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="439" parent="86" name="position">
+    <column id="456" parent="87" name="position">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="440" parent="86" name="statusId">
+    <column id="457" parent="87" name="statusId">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="441" parent="87" name="TaxableSalary">
+    <column id="458" parent="88" name="TaxableSalary">
       <Position>1</Position>
       <DataType>decimal(34,2)|0</DataType>
     </column>
-    <column id="442" parent="87" name="TotalPaye">
+    <column id="459" parent="88" name="TotalPaye">
       <Position>2</Position>
       <DataType>decimal(34,2)|0</DataType>
     </column>
-    <column id="443" parent="87" name="NetSalary">
+    <column id="460" parent="88" name="NetSalary">
       <Position>3</Position>
       <DataType>decimal(35,2)|0</DataType>
     </column>
-    <column id="444" parent="87" name="year">
+    <column id="461" parent="88" name="year">
       <Position>4</Position>
       <DataType>varchar(5)|0</DataType>
     </column>
-    <column id="445" parent="87" name="semester">
+    <column id="462" parent="88" name="semester">
       <Position>5</Position>
       <DataType>varchar(5)|0</DataType>
     </column>
-    <column id="446" parent="87" name="payDate">
+    <column id="463" parent="88" name="payDate">
       <Position>6</Position>
       <DataType>varchar(15)|0</DataType>
     </column>
-    <column id="447" parent="88" name="staff_profile_ID">
+    <column id="464" parent="89" name="staff_profile_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="448" parent="88" name="staffName">
+    <column id="465" parent="89" name="staffName">
       <Position>2</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="449" parent="88" name="basicPay">
+    <column id="466" parent="89" name="basicPay">
       <Position>3</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="450" parent="88" name="allowance">
+    <column id="467" parent="89" name="allowance">
       <Position>4</Position>
       <DataType>decimal(16,2)|0</DataType>
     </column>
-    <column id="451" parent="88" name="bankID">
+    <column id="468" parent="89" name="bankID">
       <Position>5</Position>
       <DataType>int(4)|0</DataType>
     </column>
-    <column id="452" parent="88" name="acctName">
+    <column id="469" parent="89" name="acctName">
       <Position>6</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="453" parent="88" name="acctNumber">
+    <column id="470" parent="89" name="acctNumber">
       <Position>7</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="454" parent="88" name="staffID">
+    <column id="471" parent="89" name="staffID">
       <Position>8</Position>
       <DataType>varchar(15)|0</DataType>
     </column>
-    <column id="455" parent="89" name="studentID">
+    <column id="472" parent="90" name="studentID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="456" parent="89" name="studentName">
+    <column id="473" parent="90" name="studentName">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="457" parent="89" name="AdmissionNo">
+    <column id="474" parent="90" name="AdmissionNo">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="458" parent="89" name="Mobile">
+    <column id="475" parent="90" name="Mobile">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="459" parent="89" name="schoolID">
+    <column id="476" parent="90" name="schoolID">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="460" parent="89" name="couresID">
+    <column id="477" parent="90" name="couresID">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="461" parent="90" name="Debit">
+    <column id="478" parent="91" name="Debit">
       <Position>1</Position>
       <DataType>decimal(38,2)|0</DataType>
     </column>
-    <column id="462" parent="90" name="Credit">
+    <column id="479" parent="91" name="Credit">
       <Position>2</Position>
       <DataType>decimal(38,2)|0</DataType>
     </column>
-    <column id="463" parent="90" name="NoTran">
+    <column id="480" parent="91" name="NoTran">
       <Position>3</Position>
       <DataType>bigint(21)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="464" parent="91" name="Debit">
+    <column id="481" parent="92" name="Debit">
       <Position>1</Position>
       <DataType>decimal(38,2)|0</DataType>
     </column>
-    <column id="465" parent="91" name="Credit">
+    <column id="482" parent="92" name="Credit">
       <Position>2</Position>
       <DataType>decimal(38,2)|0</DataType>
     </column>
-    <column id="466" parent="91" name="NoTran">
+    <column id="483" parent="92" name="NoTran">
       <Position>3</Position>
       <DataType>bigint(21)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="467" parent="92" name="gl_ID">
+    <column id="484" parent="93" name="gl_ID">
       <Position>1</Position>
       <DataType>bigint(21)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="468" parent="92" name="qDr">
+    <column id="485" parent="93" name="qDr">
       <Position>2</Position>
       <DataType>decimal(38,2)|0</DataType>
     </column>
-    <column id="469" parent="92" name="qCr">
+    <column id="486" parent="93" name="qCr">
       <Position>3</Position>
       <DataType>decimal(38,2)|0</DataType>
     </column>
-    <column id="470" parent="92" name="cCr">
+    <column id="487" parent="93" name="cCr">
       <Position>4</Position>
       <DataType>decimal(38,2)|0</DataType>
     </column>
-    <column id="471" parent="92" name="bCr">
+    <column id="488" parent="93" name="bCr">
       <Position>5</Position>
       <DataType>decimal(38,2)|0</DataType>
     </column>
-    <column id="472" parent="93" name="staff_loan_ID">
-      <Position>1</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="473" parent="93" name="tranDate">
-      <Position>2</Position>
-      <DataType>varchar(30)|0</DataType>
-    </column>
-    <column id="474" parent="93" name="loanDate">
-      <Position>3</Position>
-      <DataType>varchar(20)|0</DataType>
-    </column>
-    <column id="475" parent="93" name="staffID">
-      <Position>4</Position>
-      <DataType>int(11)|0</DataType>
-    </column>
-    <column id="476" parent="93" name="detail">
-      <Position>5</Position>
-      <DataType>varchar(255)|0</DataType>
-    </column>
-    <column id="477" parent="93" name="pay_amount">
-      <Position>6</Position>
-      <DataType>decimal(16,2)|0</DataType>
-    </column>
-    <column id="478" parent="93" name="loan">
-      <Position>7</Position>
-      <DataType>decimal(16,2)|0</DataType>
-    </column>
-    <column id="479" parent="93" name="statusID">
-      <Position>8</Position>
-      <DataType>int(11)|0</DataType>
-    </column>
-    <column id="480" parent="93" name="loanID">
-      <Position>9</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="481" parent="93" name="paid">
-      <Position>10</Position>
-      <DataType>decimal(38,2)|0</DataType>
-    </column>
-    <column id="482" parent="94" name="tranCatID">
+    <column id="489" parent="94" name="tranCatID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="483" parent="94" name="cost">
+    <column id="490" parent="94" name="cost">
       <Position>2</Position>
       <DataType>decimal(38,2)|0</DataType>
     </column>
-    <column id="484" parent="94" name="paid">
+    <column id="491" parent="94" name="paid">
       <Position>3</Position>
       <DataType>decimal(39,2)|0</DataType>
     </column>
-    <column id="485" parent="94" name="bal">
+    <column id="492" parent="94" name="bal">
       <Position>4</Position>
       <DataType>decimal(18,2)|0</DataType>
     </column>
-    <column id="486" parent="94" name="ledger">
+    <column id="493" parent="94" name="ledger">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
     </column>

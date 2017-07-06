@@ -62,4 +62,12 @@ switch ($_GET["transaction"]){
         include_once "config/config.php";
         include_once "modules/payroll/add.staff.payroll.php";
         break;
+    case "loan";
+        include_once "config/config.php";
+        include_once "modules/payroll/add.staff.loan.php";
+        break;
+    case "pay.loan";
+        include_once "config/config.php";
+        include_once "modules/payroll/add.staff.pay.loan.php";
+        break;
 }

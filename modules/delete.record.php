@@ -29,3 +29,13 @@ if ($_GET['c']=="fees.pay"){
     $data=$conn->query("DELETE FROM `fees_payment` WHERE (`payID`='$id')");
     header("location: ". $_SERVER['HTTP_REFERER']);
 }
+
+if ($_GET['c']=="staff.loan"){
+
+    //delete from staff loan
+    $data=$conn->query("DELETE FROM `staff_loan` WHERE (`staff_loan_ID`='$id')");
+    //delete from loan details
+    $data=$conn->query("DELETE FROM `loan_details` WHERE (`staff_loan_ID`='$id')");
+    header("location: ". $_SERVER['HTTP_REFERER']);
+}
+

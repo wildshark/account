@@ -29,6 +29,7 @@ if (empty($staffID)){
     $acctNo=$s['acctNumber'];
     $bank=$s['bankID'];
     $bankID=$s['bankID'];
+
     //check and get bank details
     $getBank=$conn->query("SELECT * FROM bank_list WHERE bankID='$bank'");
     $b=$getBank->fetch_assoc();
@@ -38,11 +39,12 @@ if (empty($staffID)){
     echo $getLoan="SELECT * FROM get_loan_calculator WHERE statusID='1' AND staffID='$staffID'";
     $getLoan=$conn->query($getLoan);
     $l=$getLoan->fetch_assoc();
-    $loanDate=$l['loanDate'];
+    $loanDate= $date;
     $loanPayAmount=$l['pay_amount'];
     $loan=$l['loan'];
     $paid_loan=$l['amount'];
     $loanBal=$l['loan_bal'];
+
     if ($loanBal == 0 or empty($loanBal)){
         $_SESSION['loanDate']=$loanDate ="";
         $_SESSION['loan']=$loan="0.00";
@@ -56,7 +58,6 @@ if (empty($staffID)){
         $_SESSION['due_amount']=$loanPayAmount;
         $_SESSION['loanBal']=$loanBal;
     }
-
 
     //calculate SSF
     $ssf=$basic*$ssfValue;

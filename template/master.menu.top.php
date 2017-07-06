@@ -18,7 +18,8 @@
     </li>
     <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Payroll</span> <span class="label label-important">3</span></a>
         <ul>
-            <li><a href="account.php?user=staff.payroll">Payroll Entry</a></li>
+            <li><a href="account.php?user=staff.payroll">Payroll</a></li>
+            <li><a href="account.php?user=staff.loan">Staff Loan</a></li>
             <li><a href="account.php?user=staff.profile">Staff Account</a></li>
             <li><a href="form-wizard.html">Setup</a></li>
         </ul>
