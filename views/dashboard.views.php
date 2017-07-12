@@ -13,7 +13,6 @@ while($row =$result->fetch_assoc())
     $data_set1[] = array(intval($row['GL_date']),intval($row['bankDr']));
 }
 
-
 ?>
 <div class="row-fluid">
     <div class="widget-box">
@@ -27,7 +26,6 @@ while($row =$result->fetch_assoc())
             <div class="row-fluid">
                 <div class="span8">
                     <?php include_once $page->chart;?>
-
                 </div>
                 <div class="span4">
                     <ul class="stat-boxes2">

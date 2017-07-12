@@ -7,9 +7,10 @@
  */
 
 function data_sheet_ious($conn){
-    $data="SELECT * FROM ious";
+    $data="SELECT * FROM get_advance_payment";
     $data=$conn->query($data);
     while ($r=$data->fetch_assoc()){
+        $_SESSION['ledger']=$r['ledger']; //use at view.ledger as title line 130 and 133 dashboard
         echo "
             <tr>
                <td></td>
@@ -17,6 +18,10 @@ function data_sheet_ious($conn){
                <td>".$r['cost']."</td>
                <td>".$r['paid']."</td>
                <td>".$r['bal']."</td>
+               <td>
+                   <a href='account.php?user=view.ledger&data=".$r['tranCatID']."&book=".$r['ledger']."' class='btn btn-mini btn-primary left'>View Details</a>
+                   <a href='account.php?user=pay.voucher' class='btn btn-mini btn-primary left'>Make Payment</a>
+               </td>
             </tr>
         ";
     }
@@ -37,9 +42,10 @@ function data_sheet_ious($conn){
                     <tr>
                         <th><i class="icon-resize-vertical"></i></th>
                         <th>Ledger</th>
-                        <th>Amount</th>
-                        <th>Paid</th>
-                        <th>Balance</th>
+                        <th>Debt</th>
+                        <th>Credit</th>
+                        <th>Advance</th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>

@@ -8,16 +8,17 @@
 
 
 $date=$_GET['date'];
-$tranID=$_GET['type'];
-$details=$_GET['detail'];
 $ref=$_GET['ref'];
-$amount=$_GET['amount'];
 $semester=$_GET['semester'];
-$yearId=date("Y");
-$ticketID=$_GET['ticket'];
+$tranID=$_GET['expenses'];
+$details=$_GET['detail'];
 $payType=$_GET['pay'];
+ $amount=$_GET['amount'];
+ $yearId=date("Y");
+ $ticketID=$_GET['ticket'];
 
-$sql="SELECT * FROM chart_of_account WHERE TranCatID='$tranID'";
+
+$sql="SELECT * FROM get_chart_of_account WHERE TranCatID='$tranID'";
 $sql=$conn->query($sql);
 $r=$sql->fetch_assoc();
 

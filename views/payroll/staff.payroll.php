@@ -111,27 +111,25 @@ if (empty($_SESSION['loanBal'])){
 }else{
     $loanBal=$_SESSION['loanBal'];
 }
-function fees_details($conn,$student){
-    $cash="SELECT * FROM get_fees_payment_history WHERE studentID='$student'";
-    $cash=$conn->query($cash);
-    while ($c=$cash->fetch_assoc()){
-
-        if ($c['payTypeID']==1){
-            $payType="Cash";
-        }elseif ($c['payTypeID']==2){
-            $payType="Bank";
-        }
+function payroll_details($conn,$staffID){
+    $payroll="SELECT * FROM get_payroll WHERE staffID='$staffID'";
+    $payroll=$conn->query($payroll);
+    while ($p=$payroll->fetch_assoc()){
 
         echo "
         <tr class='gradeX'>
-            <td class='center'>".$c['payDate']."</td>
-            <td>".$c['course']."</td>
-            <td>".$c['stud_level']."</td>
-            <td>".$c['sch_session']."</td>
-            <td>".$c['refNo']."</td>
-            <td>".$payType."</td>
-            <td>".$c['paid_amount']."</td>
-            <td><a href='transaction.php?transaction=delete&c=fees.pay&data=".$c['payID']."' class='tip-top' data-original-title='Delete'><i class='icon-remove'></i></a></td>       
+            <td class='center'>".$p['payDate']."</td>
+            <td>".$p['basic']."</td>
+            <td>".$p['allowance']."</td>
+            <td>".$p['ssf']."</td>
+            <td>".$p['Sub_Total']."</td>
+            <td>".$p['Taxable_salary']."</td>
+            <td>".$p['Totalpaye']."</td>
+            <td>".$p['net_salary']."</td>
+            <td>".$p['bankID']."</td>
+            <td>".$p['acctName']."</td>
+            <td>".$p['AcctNo']."</td>
+            <td><a href='transaction.php?transaction=delete&c=fees.pay&data=".$p['payrollID']."' class='tip-top' data-original-title='Delete'><i class='icon-remove'></i></a></td>       
         </tr>
     ";
     }
@@ -139,28 +137,7 @@ function fees_details($conn,$student){
 ?>
 <div class="row-fluid">
     <div class="span12">
-        <div class="widget-box">
-            <div class="widget-title">
-                <ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" href="#tab1">Tab1</a></li>
-                    <li><a data-toggle="tab" href="#tab2">Tab2</a></li>
-                    <li><a data-toggle="tab" href="#tab3">Tab3</a></li>
-                </ul>
-            </div>
-            <div class="widget-content tab-content">
-                <div id="tab1" class="tab-pane active">
-                    <p>And is full of waffle to It has multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment.</p>
-                    <img src="img/demo/demo-image1.jpg" alt="demo-image"/></div>
-                <div id="tab2" class="tab-pane"> <img src="img/demo/demo-image2.jpg" alt="demo-image"/>
-                    <p>And is full of waffle to It has multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment.</p>
-                </div>
-                <div id="tab3" class="tab-pane">
-                    <p>And is full of waffle to It has multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment. </p>
-                    <img src="img/demo/demo-image3.jpg" alt="demo-image"/></div>
-            </div>
-        </div>
-    </div>
-    <div class="span5">
+        <div class="span5">
         <div class="widget-box">
             <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
                 <h5>Search Personal-info</h5>
@@ -190,12 +167,12 @@ function fees_details($conn,$student){
             </div>
         </div>
     </div>
-    <div class="span7">
-        <div class="widget-box">
-            <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-                <h5>Search Personal-info</h5>
-            </div>
-            <div class="widget-content nopadding">
+        <div class="span7">
+            <div class="widget-box">
+                <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+                    <h5>Search Personal-info</h5>
+                </div>
+                <div class="widget-content nopadding">
 
                     <div class="control-group">
                         <label class="control-label">Staff Name </label>
@@ -205,184 +182,232 @@ function fees_details($conn,$student){
                             </select>
                         </div>
                     </div>
-                <form class="form-horizontal">
-                    <div class="form-actions">
-                        <input type="hidden" name="ticket" value="pr">
-                        <input type="hidden" name="transaction" value="payout">
-                        <button type="submit" class="btn btn-success">Save</button>
+                    <form class="form-horizontal">
+                        <div class="form-actions">
+                            <input type="hidden" name="ticket" value="pr">
+                            <input type="hidden" name="transaction" value="payout">
+                            <button type="submit" class="btn btn-success">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="widget-box">
+            <div class="widget-title">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#tab1">Payroll</a></li>
+                    <li><a data-toggle="tab" href="#tab2">Salary Summary</a></li>
+                    <li><a data-toggle="tab" href="#tab3">Loan summary</a></li>
+                </ul>
+            </div>
+            <div class="widget-content tab-content">
+                <div id="tab1" class="tab-pane active">
+                    <div class="row-fluid">
+                        <div class="span3">
+                            <div class="widget-box">
+                                <div class="widget-title">
+				<span class="icon">
+					<i class="icon-file"></i>
+				</span>
+                                    <h5>Visited Pages</h5>
+                                </div>
+                                <div class="widget-content nopadding">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>Page</th>
+                                            <th>Visits</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><a href="#">Basic Pay</a></td>
+                                            <td><?php echo $basic;?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">Allowance</a></td>
+                                            <td><?php echo $allowance;?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">S.S.F</a></td>
+                                            <td><?php echo $ssf;?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">Sub Total</a></td>
+                                            <td><?php echo $sub_total;?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">Taxable Salary</a></td>
+                                            <td><?php echo $taxable_salary;?></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span3">
+                            <div class="widget-box">
+                                <div class="widget-title">
+				<span class="icon">
+					<i class="icon-file"></i>
+				</span>
+                                    <h5>Visited Pages</h5>
+                                </div>
+                                <div class="widget-content nopadding">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>Page</th>
+                                            <th>Visits</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><a href="#">GH216 FREE</a></td>
+                                            <td><?php echo $GH216;?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">GH108</a></td>
+                                            <td><?php echo $GH108;?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">GH151</a></td>
+                                            <td><?php echo $GH151;?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">GH2765</a></td>
+                                            <td><?php echo $GH2765;?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">Total Paye</a></td>
+                                            <td><?php echo $total_paye;?></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span3">
+                            <div class="widget-box">
+                                <div class="widget-title">
+				<span class="icon">
+					<i class="icon-file"></i>
+				</span>
+                                    <h5>Visited Pages</h5>
+                                </div>
+                                <div class="widget-content nopadding">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>Page</th>
+                                            <th>Visits</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><a href="#">Net Salary</a></td>
+                                            <td><?php echo $net_salary;?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">Total Salary Cost</a></td>
+                                            <td><?php echo $TotalSalaryCost;?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">Bank Name</a></td>
+                                            <td><?php echo $bank;?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">Account Name</a></td>
+                                            <td><?php echo $acctName;?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">Account Number</a></td>
+                                            <td><?php echo $acctNo;?></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span3">
+                            <div class="widget-box">
+                                <div class="widget-title">
+				<span class="icon">
+					<i class="icon-file"></i>
+				</span>
+                                    <h5>Visited Pages</h5>
+                                </div>
+                                <div class="widget-content nopadding">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>Page</th>
+                                            <th>Visits</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><a href="#">Date</a></td>
+                                            <td><?php echo $loanDate;?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">Loan Amount</a></td>
+                                            <td><?php echo $loan;?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">Paid Amount</a></td>
+                                            <td><?php echo $paid_loan;?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">Due Payment</a></td>
+                                            <td><?php echo $due_amount;?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">Balance</a></td>
+                                            <td><?php echo $loanBal;?></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </form>
+                </div>
+                <div id="tab2" class="tab-pane">
+                    <div class="widget-box">
+                        <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
+                            <h5>Static table</h5>
+                        </div>
+                        <div class="widget-content nopadding">
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Basic</th>
+                                    <th>Allowance</th>
+                                    <th>S.S.F</th>
+                                    <th>Sub Total</th>
+                                    <th>Taxable Salary</th>
+                                    <th>Total Paye</th>
+                                    <th>Net Salary</th>
+                                    <th>Bank</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <?php payroll_details($conn,$staffID) ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab3" class="tab-pane">
+                    <p>And is full of waffle to It has multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment. </p>
+                    <img src="img/demo/demo-image3.jpg" alt="demo-image"/></div>
             </div>
         </div>
     </div>
-</div>
-<div class="row-fluid">
-    <div class="span3">
-        <div class="widget-box">
-            <div class="widget-title">
-				<span class="icon">
-					<i class="icon-file"></i>
-				</span>
-                <h5>Visited Pages</h5>
-            </div>
-            <div class="widget-content nopadding">
-                <table class="table table-bordered">
-                    <thead>
-                    <tr>
-                        <th>Page</th>
-                        <th>Visits</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td><a href="#">Basic Pay</a></td>
-                        <td><?php echo $basic;?></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Allowance</a></td>
-                        <td><?php echo $allowance;?></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">S.S.F</a></td>
-                        <td><?php echo $ssf;?></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Sub Total</a></td>
-                        <td><?php echo $sub_total;?></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Taxable Salary</a></td>
-                        <td><?php echo $taxable_salary;?></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <div class="span3">
-        <div class="widget-box">
-            <div class="widget-title">
-				<span class="icon">
-					<i class="icon-file"></i>
-				</span>
-                <h5>Visited Pages</h5>
-            </div>
-            <div class="widget-content nopadding">
-                <table class="table table-bordered">
-                    <thead>
-                    <tr>
-                        <th>Page</th>
-                        <th>Visits</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td><a href="#">GH216 FREE</a></td>
-                        <td><?php echo $GH216;?></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">GH108</a></td>
-                        <td><?php echo $GH108;?></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">GH151</a></td>
-                        <td><?php echo $GH151;?></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">GH2765</a></td>
-                        <td><?php echo $GH2765;?></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Total Paye</a></td>
-                        <td><?php echo $total_paye;?></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <div class="span3">
-        <div class="widget-box">
-            <div class="widget-title">
-				<span class="icon">
-					<i class="icon-file"></i>
-				</span>
-                <h5>Visited Pages</h5>
-            </div>
-            <div class="widget-content nopadding">
-                <table class="table table-bordered">
-                    <thead>
-                    <tr>
-                        <th>Page</th>
-                        <th>Visits</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td><a href="#">Net Salary</a></td>
-                        <td><?php echo $net_salary;?></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Total Salary Cost</a></td>
-                        <td><?php echo $TotalSalaryCost;?></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Bank Name</a></td>
-                        <td><?php echo $bank;?></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Account Name</a></td>
-                        <td><?php echo $acctName;?></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Account Number</a></td>
-                        <td><?php echo $acctNo;?></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <div class="span3">
-        <div class="widget-box">
-            <div class="widget-title">
-				<span class="icon">
-					<i class="icon-file"></i>
-				</span>
-                <h5>Visited Pages</h5>
-            </div>
-            <div class="widget-content nopadding">
-                <table class="table table-bordered">
-                    <thead>
-                    <tr>
-                        <th>Page</th>
-                        <th>Visits</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td><a href="#">Date</a></td>
-                        <td><?php echo $loanDate;?></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Loan Amount</a></td>
-                        <td><?php echo $loan;?></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Paid Amount</a></td>
-                        <td><?php echo $paid_loan;?></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Due Payment</a></td>
-                        <td><?php echo $due_amount;?></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Balance</a></td>
-                        <td><?php echo $loanBal;?></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+
+
 </div>

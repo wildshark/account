@@ -98,7 +98,7 @@ function summary_cashbook($conn){
                     <div class="control-group">
                         <label class="control-label">Transaction Type </label>
                         <div class="controls">
-                            <select name="type">
+                            <select name="expenses">
                                 <?php expenses_due_for_payment_list($conn)?>
                             </select>
                         </div>
@@ -119,10 +119,21 @@ function summary_cashbook($conn){
                         </div>
                     </div>
                     <div class="control-group">
+                        <label class="control-label">Payment Status</label>
+                        <div class="controls">
+                            <label>
+                                <input type="radio" name="pay_status" class="active" value="1" />
+                                Not Advance Payment</label>
+                            <label>
+                                <input type="radio" name="pay_status" value="2" />
+                                Advance Payment</label>
+                        </div>
+                    </div>
+                    <div class="control-group">
                         <label class="control-label">Amount </label>
                         <div class="controls">
                             <div class="input-append">
-                                <input name="amount" type="text" placeholder="0.000" class="span11">
+                                <input name="amount" type="number" placeholder="0.000" class="span11">
                                 <span class="add-on">GHc</span> </div>
                         </div>
                     </div>

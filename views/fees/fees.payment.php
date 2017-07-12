@@ -88,7 +88,7 @@ $yearID=$d['admissionYear']
                     <div class="form-actions">
                         <input type="hidden" name="ticket" value="">
                         <input type="hidden" name="transaction" value="search">
-                        <button type="submit" class="btn btn-success">Save</button>
+                        <button type="submit" class="btn btn-success">Search</button>
                     </div>
                 </form>
             </div>
@@ -188,7 +188,7 @@ $yearID=$d['admissionYear']
                         <div class="form-actions">
                             <input type="hidden" name="ticket" value="<?php echo $student;?>">
                             <input type="hidden" name="transaction" value="fees.payment">
-                            <button type="submit" class="btn btn-success">Save</button>
+                            <button type="submit" class="btn btn-success">Add</button>
                         </div>
                     </form>
                 </div>

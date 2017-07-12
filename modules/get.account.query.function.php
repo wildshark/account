@@ -19,7 +19,7 @@ function ticket_generator($length=4){
 }
 
 function expenses_list($conn){
-    $list="SELECT * FROM expenses_list_";
+    $list="SELECT * FROM expenses_list";
     $list=$conn->query($list);
     while ($l=$list->fetch_assoc()){
         echo "<option value='".$l['TranCatID']."'>".$l['ledger']."</option>";
@@ -27,10 +27,10 @@ function expenses_list($conn){
 }
 
 function expenses_due_for_payment_list($conn){
-    $list="SELECT * FROM expenses_pay_list_";
+    $list="SELECT * FROM expenses_pay_list";
     $list=$conn->query($list);
     while ($l=$list->fetch_assoc()){
-        echo "<option value='".$l['TranCatID']."'>".$l['ledger']."</option>";
+        echo "<option value='".$l['tranCatID']."'>".$l['ledger']."</option>";
     }
 }
 function school_list($conn){

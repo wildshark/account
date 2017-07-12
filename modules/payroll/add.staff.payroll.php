@@ -6,7 +6,7 @@
  * Time: 2:54 PM
  */
 
-if (!isset($_SERVER)){
+if (!isset($_SESSION)){
  echo "error";
 }else{
     if (empty($_SESSION['staffID'])){
