@@ -111,6 +111,7 @@ if (empty($_SESSION['loanBal'])){
 }else{
     $loanBal=$_SESSION['loanBal'];
 }
+
 function payroll_details($conn,$staffID){
     $payroll="SELECT * FROM get_payroll WHERE staffID='$staffID'";
     $payroll=$conn->query($payroll);
@@ -134,10 +135,38 @@ function payroll_details($conn,$staffID){
     ";
     }
 }
+
+function total_salary_cost($conn){
+
+    //get the last date of the month and
+  //  $date = new DateTime('now');
+  //  $date->modify('last day of this month');
+  //  $payDate= $date->format('Y-m-d');
+
+    $total_salary_cost = "SELECT * FROM get_total_salary_calculation WHERE payDate='31-08-2017'";
+    $salary_cost = $conn->query($total_salary_cost);
+    $s = $salary_cost->fetch_assoc();
+    echo "
+            <tr>
+                <td>Total Basic</td>
+                <td>".$s['TotalBasic']."</td>
+            </tr>
+            <tr>
+                <td>All Allowances</td>
+                <td>".$s['TotalAllowance']."</td>
+            </tr>
+                <td>Total Income Tax</td>
+                <td>".$s['ssf']."</td>
+            </tr>
+            <tr>
+                <td>Total Salary Cost</td>
+                <td>".$s['TotalSalaryCost']."</td>
+            </tr>          
+    ";
+}
 ?>
 <div class="row-fluid">
-    <div class="span12">
-        <div class="span5">
+    <div class="span4">
         <div class="widget-box">
             <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
                 <h5>Search Personal-info</h5>
@@ -167,31 +196,66 @@ function payroll_details($conn,$staffID){
             </div>
         </div>
     </div>
-        <div class="span7">
-            <div class="widget-box">
-                <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-                    <h5>Search Personal-info</h5>
-                </div>
-                <div class="widget-content nopadding">
-
+    <div class="span5">
+        <div class="widget-box">
+            <div class="widget-title">
+								<span class="icon">
+									<i class="icon-info-sign"></i>
+								</span>
+                <h5>Numeric validation</h5>
+            </div>
+            <div class="widget-content nopadding">
+                <form class="form-horizontal" name="number_validate" id="number_validate" novalidate="novalidate">
                     <div class="control-group">
-                        <label class="control-label">Staff Name </label>
+                        <label class="control-label">Session</label>
                         <div class="controls">
-                            <select name="q">
-                                <?php staff_list($conn)?>
+                            <select name="school-session">
+                                <?php school_session($conn);?>
                             </select>
                         </div>
                     </div>
-                    <form class="form-horizontal">
-                        <div class="form-actions">
-                            <input type="hidden" name="ticket" value="pr">
-                            <input type="hidden" name="transaction" value="payout">
-                            <button type="submit" class="btn btn-success">Save</button>
+                    <div class="control-group">
+                        <label class="control-label">Semester</label>
+                        <div class="controls">
+                            <select name="school-semester">
+                                <option value="1">1st Semester</option>
+                                <option value="2">2nd Semester</option>
+                            </select>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                    <div class="form-actions">
+                        <input name="transaction" type="submit" class="btn btn-primary" value="payroll-validate" >
+                        <input name='' type="submit" value="Validate" class="btn btn-success">
+                    </div>
+                </form>
             </div>
         </div>
+
+    </div>
+    <div class="span3">
+        <div class="widget-box">
+            <div class="widget-title">
+								<span class="icon">
+									<i class="icon-eye-open"></i>
+								</span>
+                <h5>Browesr statistics</h5>
+            </div>
+            <div class="widget-content nopadding">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Browser</th>
+                        <th>Visits</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php total_salary_cost($conn);?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
         <div class="widget-box">
             <div class="widget-title">
                 <ul class="nav nav-tabs">
@@ -206,9 +270,9 @@ function payroll_details($conn,$staffID){
                         <div class="span3">
                             <div class="widget-box">
                                 <div class="widget-title">
-				<span class="icon">
-					<i class="icon-file"></i>
-				</span>
+                                    <span class="icon">
+                                        <i class="icon-file"></i>
+                                    </span>
                                     <h5>Visited Pages</h5>
                                 </div>
                                 <div class="widget-content nopadding">
@@ -248,9 +312,9 @@ function payroll_details($conn,$staffID){
                         <div class="span3">
                             <div class="widget-box">
                                 <div class="widget-title">
-				<span class="icon">
-					<i class="icon-file"></i>
-				</span>
+                                    <span class="icon">
+                                        <i class="icon-file"></i>
+                                    </span>
                                     <h5>Visited Pages</h5>
                                 </div>
                                 <div class="widget-content nopadding">
@@ -290,9 +354,9 @@ function payroll_details($conn,$staffID){
                         <div class="span3">
                             <div class="widget-box">
                                 <div class="widget-title">
-				<span class="icon">
-					<i class="icon-file"></i>
-				</span>
+                                    <span class="icon">
+                                        <i class="icon-file"></i>
+                                    </span>
                                     <h5>Visited Pages</h5>
                                 </div>
                                 <div class="widget-content nopadding">
@@ -332,9 +396,9 @@ function payroll_details($conn,$staffID){
                         <div class="span3">
                             <div class="widget-box">
                                 <div class="widget-title">
-				<span class="icon">
-					<i class="icon-file"></i>
-				</span>
+                                    <span class="icon">
+                                        <i class="icon-file"></i>
+                                    </span>
                                     <h5>Visited Pages</h5>
                                 </div>
                                 <div class="widget-content nopadding">
@@ -403,11 +467,35 @@ function payroll_details($conn,$staffID){
                     </div>
                 </div>
                 <div id="tab3" class="tab-pane">
-                    <p>And is full of waffle to It has multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment. </p>
-                    <img src="img/demo/demo-image3.jpg" alt="demo-image"/></div>
+                    <div class="widget-box">
+                        <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
+                            <h5>Static table</h5>
+                        </div>
+                        <div class="widget-content nopadding">
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Basic</th>
+                                    <th>Allowance</th>
+                                    <th>S.S.F</th>
+                                    <th>Sub Total</th>
+                                    <th>Taxable Salary</th>
+                                    <th>Total Paye</th>
+                                    <th>Net Salary</th>
+                                    <th>Bank</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php payroll_details($conn,$staffID) ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-
 </div>

@@ -15,11 +15,10 @@ function data_fees_ledger($conn){
                <td></td>
                <td>".$r['studentName']."</td>
                <td>".$r['AdmissionNo']."</td>
-               <td>".$r['stud_level']."</td>
-               <td>".$r['sch_session']."</td>
                <td>".$r['amount']."</td>
                <td>".$r['paid']."</td>
                <td>".$r=$r['amount']-$r['paid']."</td>
+               <td><a href='#' class='btn btn-mini btn-primary'>view</a> </td>
             </tr>
         ";
     }
@@ -41,11 +40,10 @@ function data_fees_ledger($conn){
                         <th><i class="icon-resize-vertical"></i></th>
                         <th>Student Name</th>
                         <th>Admission</th>
-                        <th>Level</th>
-                        <th>Session</th>
                         <th>Fees</th>
                         <th>Paid</th>
                         <th>Balance</th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>

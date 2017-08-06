@@ -6,7 +6,27 @@
  * Time: 1:49 PM
  */
 
+// Function to get the client IP address
+function get_client_ip() {
+    $ip_address = '';
+    if (isset($_SERVER['HTTP_CLIENT_IP']))
+        $ip_address = $_SERVER['HTTP_CLIENT_IP'];
+    else if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))
+        $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    else if(isset($_SERVER['HTTP_X_FORWARDED']))
+        $ip_address = $_SERVER['HTTP_X_FORWARDED'];
+    else if(isset($_SERVER['HTTP_FORWARDED_FOR']))
+        $ip_address = $_SERVER['HTTP_FORWARDED_FOR'];
+    else if(isset($_SERVER['HTTP_FORWARDED']))
+        $ip_address = $_SERVER['HTTP_FORWARDED'];
+    else if(isset($_SERVER['REMOTE_ADDR']))
+        $ip_address = $_SERVER['REMOTE_ADDR'];
+    else
+        $ip_address = 'UNKNOWN';
+    return $ip_address;
+}
 
+//function generate 4 digital pin
 function ticket_generator($length=4){
     $result="";
     $chars="123456789QWERTYUIPLKJHGFDSAZXCVBNM";
@@ -18,6 +38,7 @@ function ticket_generator($length=4){
     return $result;
 }
 
+//function expenses list combo
 function expenses_list($conn){
     $list="SELECT * FROM expenses_list";
     $list=$conn->query($list);
@@ -26,6 +47,7 @@ function expenses_list($conn){
     }
 }
 
+//funcation expenses due for payment combo
 function expenses_due_for_payment_list($conn){
     $list="SELECT * FROM expenses_pay_list";
     $list=$conn->query($list);
@@ -33,6 +55,8 @@ function expenses_due_for_payment_list($conn){
         echo "<option value='".$l['tranCatID']."'>".$l['ledger']."</option>";
     }
 }
+
+//function school list combo
 function school_list($conn){
     $list="SELECT * FROM school";
     $list=$conn->query($list);
@@ -41,6 +65,7 @@ function school_list($conn){
     }
 }
 
+//course list combo
 function course_list($conn){
     $list="SELECT * FROM course";
     $list=$conn->query($list);
@@ -49,6 +74,7 @@ function course_list($conn){
     }
 }
 
+//student name and admission no list combo
 function student_list($conn){
     $list="SELECT * FROM student_profile";
     $list=$conn->query($list);
@@ -57,6 +83,7 @@ function student_list($conn){
     }
 }
 
+//session list combo
 function year_list($conn){
     $list="SELECT * FROM session";
     $list=$conn->query($list);
@@ -65,6 +92,7 @@ function year_list($conn){
     }
 }
 
+//name of ghana banks list combo
 function bank_name_list($conn){
     $list="SELECT * FROM get_bank_list";
     $list=$conn->query($list);
@@ -73,6 +101,7 @@ function bank_name_list($conn){
     }
 }
 
+//staff position list combo
 function position_list($conn){
     $list="SELECT * FROM get_position_list";
     $list=$conn->query($list);
@@ -81,6 +110,7 @@ function position_list($conn){
     }
 }
 
+//staff name and id list combo
 function staff_list($conn){
     //get_staff_profile_list
     $list="SELECT * FROM get_staff_profile_list";
@@ -88,4 +118,21 @@ function staff_list($conn){
     while ($l=$list->fetch_assoc()){
         echo "<option value='".$l['staff_profile_ID']."'>".$l['staffName']."</option>";
     }
+}
+
+//school session list combo
+function school_session($conn){
+    //get_staff_profile_list
+    $list="SELECT * FROM get_session";
+    $list=$conn->query($list);
+    while ($l=$list->fetch_assoc()){
+        echo "<option value='".$l['year']."'>".$l['year']."</option>";
+    }
+}
+
+//Payroll: get the last date of the month
+function last_date(){
+    $date = new DateTime('now');
+    $date->modify('last day of this month');
+    echo $date->format('Y-m-d');
 }

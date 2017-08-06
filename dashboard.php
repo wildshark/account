@@ -78,11 +78,20 @@ if (empty($_SESSION['userID'])){
             include_once "template/form.php";
             break;
 
-        case "advance.payment";
+        case "general.ledger";
             include_once "config/config.php";
             include_once "modules/get.account.query.function.php";
-            $page->contenttitle="Advance Payment";
-            $page->views="views/ledger/advance.payments.ledger.php";
+            $page->contenttitle="General Ledger";
+            $page->views="views/ledger/general.ledger.summary.php";
+            include_once "template/form.php";
+            break;
+
+        case "view.ledger"; //view ledger details
+            $label=$_SESSION['ledger'];
+            include_once "config/config.php";
+            include_once "modules/get.account.query.function.php";
+            $page->contenttitle=$label." Ledger";
+            $page->views="views/ledger/ledger.details.php";
             include_once "template/form.php";
             break;
 
@@ -126,14 +135,17 @@ if (empty($_SESSION['userID'])){
             include_once "template/form.php";
             break;
 
-        case "view.ledger"; //view ledger details
+
+
+        case "salary.control"; //view ledger details
             $label=$_SESSION['ledger'];
             include_once "config/config.php";
             include_once "modules/get.account.query.function.php";
-            $page->contenttitle=$label." Ledger";
+            $page->contenttitle = "Salary Control";
             $page->views="views/ledger/ledger.details.php";
             include_once "template/form.php";
             break;
+
         default:
             include_once "config/config.php";
             include_once "template/home.php";

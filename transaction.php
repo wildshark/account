@@ -58,6 +58,12 @@ switch ($_GET["transaction"]){
         include_once "config/config.php";
         include_once "modules/payroll/calculate.payroll.php";
         break;
+    case "payroll-validate";
+    //insert into database
+        include_once "config/config.php";
+        include_once "modules/payroll/add.payroll.php";
+        break;
+
     case "payout";
         include_once "config/config.php";
         include_once "modules/payroll/add.staff.payroll.php";

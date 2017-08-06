@@ -29,16 +29,16 @@
     <li><a href="account.php?user=bank.book"><i class="icon icon-tint"></i> <span>Bank Book</span></a></li>
     <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Ledger</span></a>
         <ul>
+            <li><a href="account.php?user=general.ledger">General Ledger</a></li>
             <li><a href="account.php?user=ious">ious</a></li>
-            <li><a href="account.php?user=advance.payment">Advance Payment</a></li>
             <li><a href="form-wizard.html">Form with Wizard</a></li>
         </ul>
     </li>
     <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Account</span></a>
         <ul>
             <li><a href="account.php?user=capital.investments">Capital And Investments</a></li>
-            <li><a href="form-valid">Salary Control Ledger</a></li>
-            <li><a href="form-wizard.html">Investment</a></li>
+            <li><a href="account.php?user=salary.control">Salary Control Ledger</a></li>
+            <li><a href="account.php?user=investment">Investment</a></li>
             <li><a href="form-wizard.html">Trial Balance</a></li>
         </ul>
     </li>
