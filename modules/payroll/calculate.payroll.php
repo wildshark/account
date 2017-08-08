@@ -42,21 +42,21 @@ if (empty($staffID)){
     $loanDate= $date;
     $loanPayAmount=$l['pay_amount'];
     $loan=$l['loan'];
-    $paid_loan=$l['amount'];
+    $paid_loan=$l['paid'];
     $loanBal=$l['loan_bal'];
 
     if ($loanBal == 0 or empty($loanBal)){
-        $_SESSION['loanDate']=$loanDate ="";
-        $_SESSION['loan']=$loan="0.00";
-        $_SESSION['loan_paid']=$paid_loan="0.00";
-        $_SESSION['due_amount']=$loanPayAmount="0.00";
-        $_SESSION['loanBal']=$loanBal="0.00";
+        $_SESSION['loanDate'] = $loanDate ="";
+        $_SESSION['loan']=$loan = "0.00";
+        $_SESSION['loan_paid'] = $paid_loan = "0.00";
+        $_SESSION['due_amount'] = $loanPayAmount = "0.00";
+        $_SESSION['loanBal'] = $loanBal = "0.00";
     }else{
-        $_SESSION['loanDate']=$loanDate;
-        $_SESSION['loan']=$loan;
-        $_SESSION['loan_paid']=$paid_loan;
-        $_SESSION['due_amount']=$loanPayAmount;
-        $_SESSION['loanBal']=$loanBal;
+        $_SESSION['loanDate'] = $loanDate;
+        $_SESSION['loan'] = $loan;
+        $_SESSION['loan_paid'] = $paid_loan;
+        $_SESSION['due_amount'] = $loanPayAmount;
+        $_SESSION['loanBal'] = $loanBal;
     }
 
     //calculate SSF

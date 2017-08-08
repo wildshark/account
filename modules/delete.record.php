@@ -31,7 +31,6 @@ if ($_GET['c']=="fees.pay"){
 }
 
 if ($_GET['c']=="staff.loan"){
-
     //delete from staff loan
     $data=$conn->query("DELETE FROM `staff_loan` WHERE (`staff_loan_ID`='$id')");
     //delete from loan details
@@ -39,8 +38,17 @@ if ($_GET['c']=="staff.loan"){
     header("location: ". $_SERVER['HTTP_REFERER']);
 }
 
+//delete loan
 if ($_GET['c']=="paid.loan"){
     $data=$conn->query("DELETE FROM `loan_details` WHERE (`staff_loan_ID`='$id')");
+    header("location: ". $_SERVER['HTTP_REFERER']);
+
+}
+
+//delete payroll record
+if ($_GET['c']=="payroll"){
+
+    $data=$conn->query("DELETE FROM `payroll` WHERE (`payrollID`='$id')");
     header("location: ". $_SERVER['HTTP_REFERER']);
 
 }

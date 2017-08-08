@@ -8,8 +8,8 @@
 
  if (empty($_GET['staff'])) {
 
-     function loan_data($conn)
-     {
+     function loan_data($conn){
+
          $sql = "SELECT *FROM get_loan_calculator LIMIT 8";
          $loan = $conn->query($sql);
          while ($l = $loan->fetch_assoc()) {
@@ -28,8 +28,8 @@
          }
      }
 
-     function loan_payment($conn)
-     {
+     function loan_payment($conn){
+
          $sql = "SELECT * FROM get_loan_payment";
          $pay = $conn->query($sql);
          while ($p = $pay->fetch_assoc()) {
@@ -52,8 +52,8 @@
      }
  }else{
      $staffID=$_GET['staff'];
-     function loan_data($conn,$staffID)
-     {
+     function loan_data($conn,$staffID){
+
          $sql = "SELECT *FROM get_loan_calculator WHERE staffID='$staffID'";
          $loan = $conn->query($sql);
          while ($l = $loan->fetch_assoc()) {
@@ -72,8 +72,8 @@
          }
      }
 
-     function loan_payment($conn,$staffID)
-     {
+     function loan_payment($conn,$staffID){
+
          $sql = "SELECT * FROM get_loan_payment WHERE staffID='$staffID'";
          $pay = $conn->query($sql);
          while ($p = $pay->fetch_assoc()) {
@@ -95,6 +95,7 @@
      }
  }
 ?>
+
 <div class="row-fluid">
     <div class="span5">
         <div class="widget-box">
@@ -180,7 +181,7 @@
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <label class="control-label">Amount </label>
+                                        <label class="control-label">Monthly Pay Amount </label>
                                         <div class="controls">
                                             <div class="input-append">
                                                 <input name="payment" type="text" placeholder="0.000" class="span11">
@@ -188,7 +189,7 @@
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <label class="control-label">Amount </label>
+                                        <label class="control-label">Loan Amount </label>
                                         <div class="controls">
                                             <div class="input-append">
                                                 <input name="amount" type="text" placeholder="0.000" class="span11">
@@ -280,7 +281,7 @@
                                         <label class="control-label">Amount </label>
                                         <div class="controls">
                                             <div class="input-append">
-                                                <input name="payment" type="text" placeholder="0.000" class="span11">
+                                                <input name="payment" type="text" placeholder="0.00" class="span11">
                                                 <span class="add-on">GHc</span> </div>
                                         </div>
                                     </div>
@@ -293,7 +294,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="span7">
                         <div class="widget-box">
                             <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>

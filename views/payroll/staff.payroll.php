@@ -130,7 +130,32 @@ function payroll_details($conn,$staffID){
             <td>".$p['bankID']."</td>
             <td>".$p['acctName']."</td>
             <td>".$p['AcctNo']."</td>
-            <td><a href='transaction.php?transaction=delete&c=fees.pay&data=".$p['payrollID']."' class='tip-top' data-original-title='Delete'><i class='icon-remove'></i></a></td>       
+            <td><a href='transaction.php?transaction=delete&c=payroll&data=".$p['payrollID']."' class='tip-top' data-original-title='Delete'><i class='icon-remove'></i></a></td>       
+        </tr>
+    ";
+    }
+}
+
+function payroll_loan($conn,$staffID){
+
+    $loan="SELECT * FROM get_loan_calculator WHERE staffID='$staffID'";
+    $loan=$conn->query($loan);
+    while ($p=$loan->fetch_assoc()){
+
+        echo "
+        <tr class='gradeX'>
+            <td class='center'>".$p['payDate']."</td>
+            <td>".$p['basic']."</td>
+            <td>".$p['allowance']."</td>
+            <td>".$p['ssf']."</td>
+            <td>".$p['Sub_Total']."</td>
+            <td>".$p['Taxable_salary']."</td>
+            <td>".$p['Totalpaye']."</td>
+            <td>".$p['net_salary']."</td>
+            <td>".$p['bankID']."</td>
+            <td>".$p['acctName']."</td>
+            <td>".$p['AcctNo']."</td>
+            <td><a href='transaction.php?transaction=delete&c=payroll&data=".$p['payrollID']."' class='tip-top' data-original-title='Delete'><i class='icon-remove'></i></a></td>       
         </tr>
     ";
     }
@@ -143,24 +168,66 @@ function total_salary_cost($conn){
   //  $date->modify('last day of this month');
   //  $payDate= $date->format('Y-m-d');
 
-    $total_salary_cost = "SELECT * FROM get_total_salary_calculation WHERE payDate='31-08-2017'";
-    $salary_cost = $conn->query($total_salary_cost);
-    $s = $salary_cost->fetch_assoc();
+    if (!$_SESSION['date']){
+
+        $total_salary_cost = "SELECT * FROM get_total_salary_calculation";
+        $salary_cost = $conn->query($total_salary_cost);
+        $s = $salary_cost->fetch_assoc();
+    }else{
+
+        $date = $_SESSION['date'];
+
+        $total_salary_cost = "SELECT * FROM get_total_salary_calculation WHERE payDate = '$date'";
+        $salary_cost = $conn->query($total_salary_cost);
+        $s = $salary_cost->fetch_assoc();
+    }
+
+     if (empty($s['TotalBasic']) or $s['TotalBasic']==0){
+         $total_basic="0.00";
+         $_SESSION['TotalBasic']=$total_basic;
+     }else{
+         $total_basic=$s['TotalBasic'];
+         $_SESSION['TotalBasic']=$total_basic;
+    }
+
+    if (empty($s['TotalAllowance']) or $s['TotalAllowance']==0){
+        $total_allowance="0.00";
+        $_SESSION['TotalAllowance']=$total_allowance;
+    }else{
+        $total_allowance=$s['TotalAllowance'];
+        $_SESSION['TotalAllowance']=$total_allowance;
+    }
+
+    if (empty($s['ssf']) or $s['ssf']==0){
+        $ssf="0.00";
+        $_SESSION['SSF']=$ssf;
+    }else{
+        $ssf=$s['ssf'];
+        $_SESSION['SFF']=$ssf;
+    }
+
+    if (empty($s['TotalSalaryCost']) or $s['TotalSalaryCost']==0){
+        $total_salary_cost="0.00";
+        $_SESSION['TotalSalaryCost']=$total_salary_cost;
+    }else{
+        $total_salary_cost=$s['TotalSalaryCost'];
+        $_SESSION['TotalSalaryCost']=$total_salary_cost;
+    }
     echo "
             <tr>
                 <td>Total Basic</td>
-                <td>".$s['TotalBasic']."</td>
+                <td>".$total_basic."</td>
             </tr>
             <tr>
                 <td>All Allowances</td>
-                <td>".$s['TotalAllowance']."</td>
+                <td>".$total_allowance."</td>
             </tr>
                 <td>Total Income Tax</td>
-                <td>".$s['ssf']."</td>
+                <td>".$ssf."</td>
             </tr>
             <tr>
                 <td>Total Salary Cost</td>
-                <td>".$s['TotalSalaryCost']."</td>
+                <td>".$total_salary_cost."</td>
             </tr>          
     ";
 }
@@ -176,7 +243,7 @@ function total_salary_cost($conn){
                     <div class="control-group">
                         <label class="control-label">Pay Date (dd-mm-yyy)</label>
                         <div class="controls">
-                            <input name="date" type="text" data-date="<?php echo date("d-m-Y")?>" data-date-format="dd-mm-yyyy" value="<?php echo date("d-m-Y");?>" class="datepicker span11">
+                            <input name="date" type="text" data-date="<?php echo date("Y-m-")?>" data-date-format="dd-mm-yyyy" value="<?php echo date("d-m-Y");?>" class="datepicker span11">
                         </div>
                     </div>
                     <div class="control-group">
@@ -190,7 +257,7 @@ function total_salary_cost($conn){
                     <div class="form-actions">
                         <input type="hidden" name="ticket" value="">
                         <input type="hidden" name="transaction" value="payroll">
-                        <button type="submit" class="btn btn-success">Save</button>
+                        <button type="submit" class="btn btn-success pull-right">Search Staff</button>
                     </div>
                 </form>
             </div>
@@ -199,9 +266,9 @@ function total_salary_cost($conn){
     <div class="span5">
         <div class="widget-box">
             <div class="widget-title">
-								<span class="icon">
-									<i class="icon-info-sign"></i>
-								</span>
+				<span class="icon">
+					<i class="icon-info-sign"></i>
+				</span>
                 <h5>Numeric validation</h5>
             </div>
             <div class="widget-content nopadding">
@@ -224,8 +291,8 @@ function total_salary_cost($conn){
                         </div>
                     </div>
                     <div class="form-actions">
-                        <input name="transaction" type="submit" class="btn btn-primary" value="payroll-validate" >
-                        <input name='' type="submit" value="Validate" class="btn btn-success">
+                        <input name="transaction" type="submit" class="btn btn-primary pull-right" value="payroll-validate" >
+                        <button name="transaction" type="submit" value="salary-cost" class="btn btn-success pull-right">Post Salary Cost</button>
                     </div>
                 </form>
             </div>
@@ -445,19 +512,20 @@ function total_salary_cost($conn){
                         <div class="widget-content nopadding">
                             <table class="table table-bordered table-striped">
                                 <thead>
-                                <tr>
-                                    <th>Date</th>
-                                    <th>Basic</th>
-                                    <th>Allowance</th>
-                                    <th>S.S.F</th>
-                                    <th>Sub Total</th>
-                                    <th>Taxable Salary</th>
-                                    <th>Total Paye</th>
-                                    <th>Net Salary</th>
-                                    <th>Bank</th>
-                                    <th></th>
-                                    <th></th>
-                                </tr>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Basic</th>
+                                        <th>Allowance</th>
+                                        <th>S.S.F</th>
+                                        <th>Sub Total</th>
+                                        <th>Taxable Salary</th>
+                                        <th>Total Paye</th>
+                                        <th>Net Salary</th>
+                                        <th>Bank</th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
                                 </thead>
                                 <tbody>
                                     <?php payroll_details($conn,$staffID) ?>
@@ -474,22 +542,23 @@ function total_salary_cost($conn){
                         <div class="widget-content nopadding">
                             <table class="table table-bordered table-striped">
                                 <thead>
-                                <tr>
-                                    <th>Date</th>
-                                    <th>Basic</th>
-                                    <th>Allowance</th>
-                                    <th>S.S.F</th>
-                                    <th>Sub Total</th>
-                                    <th>Taxable Salary</th>
-                                    <th>Total Paye</th>
-                                    <th>Net Salary</th>
-                                    <th>Bank</th>
-                                    <th></th>
-                                    <th></th>
-                                </tr>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Basic</th>
+                                        <th>Allowance</th>
+                                        <th>S.S.F</th>
+                                        <th>Sub Total</th>
+                                        <th>Taxable Salary</th>
+                                        <th>Total Paye</th>
+                                        <th>Net Salary</th>
+                                        <th>Bank</th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
                                 </thead>
                                 <tbody>
-                                <?php payroll_details($conn,$staffID) ?>
+                                <?php payroll_loan($conn,$staffID); ?>
                                 </tbody>
                             </table>
                         </div>

@@ -40,5 +40,12 @@ $staffID='';
     $staffID=$_SESSION['staffID'];
 }
 
+//session time control
+$expiry = 1800 ;//session expiry required after 30 mins
+if (isset($_SESSION['LAST']) && (time() - $_SESSION['LAST'] > $expiry)) {
+    session_unset();
+    session_destroy();
+}
+$_SESSION['LAST'] = time();
 
 

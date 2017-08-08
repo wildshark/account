@@ -47,10 +47,50 @@ function get_fees_list($conn){
                         </div>
                     </div>
                     <div class="control-group">
-                        <label class="control-label">Amount </label>
+                        <label class="control-label">Tuition Fees </label>
                         <div class="controls">
                             <div class="input-append">
-                                <input name="amount" type="text" placeholder="0.000" class="span11">
+                                <input name="tuition-fees" type="number" required placeholder="0.000" class="span11">
+                                <span class="add-on">GHc</span> </div>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Medical Examination </label>
+                        <div class="controls">
+                            <div class="input-append">
+                                <input name="medical-examination" type="number" required placeholder="0.000" class="span11">
+                                <span class="add-on">GHc</span> </div>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Acceptance </label>
+                        <div class="controls">
+                            <div class="input-append">
+                                <input name="acceptance-fees" type="number" required placeholder="0.000" class="span11">
+                                <span class="add-on">GHc</span> </div>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">SRC Dues </label>
+                        <div class="controls">
+                            <div class="input-append">
+                                <input name="src-dues" type="number" required placeholder="0.000" class="span11">
+                                <span class="add-on">GHc</span> </div>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Results Verification </label>
+                        <div class="controls">
+                            <div class="input-append">
+                                <input name="results-verification" type="number" required placeholder="0.000" class="span11">
+                                <span class="add-on">GHc</span> </div>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Technology User Fees </label>
+                        <div class="controls">
+                            <div class="input-append">
+                                <input name="technology-fees" type="number" required placeholder="0.000" class="span11">
                                 <span class="add-on">GHc</span> </div>
                         </div>
                     </div>
@@ -66,9 +106,9 @@ function get_fees_list($conn){
     <div class="span6">
         <div class="widget-box">
             <div class="widget-title">
-								<span class="icon">
-									<i class="icon-eye-open"></i>
-								</span>
+				<span class="icon">
+					<i class="icon-eye-open"></i>
+				</span>
                 <h5>Browesr statistics</h5>
             </div>
             <div class="widget-content nopadding">

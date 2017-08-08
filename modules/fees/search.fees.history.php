@@ -21,8 +21,8 @@ $_SESSION['studentID']=$p['studentID'];
 $bal=$conn->query("SELECT * FROM get_fees_balance WHERE  studentID='$id'");
 $b=$bal->fetch_assoc();
 
-echo $_SESSION['fees']=$b['fees'];
-echo $_SESSION['paid']=$b['paid'];
-echo $_SESSION['bal']=$b['bal'];
+echo $_SESSION['fees'] = $b['fees'];
+echo $_SESSION['paid'] = $b['paid'];
+echo $_SESSION['bal'] = $b['bal'];
 
 header("location:" . $_SERVER['HTTP_REFERER']);
