@@ -93,5 +93,14 @@ switch ($_GET["transaction"]){
         include_once "modules/course/add.course.php";
         break;
 
+    case "fees.data";
+        include_once "config/config.php";
+        include_once "modules/course/add.course.php";
+        break;
+
+    case "fees.costing";
+        include_once "config/config.php";
+        include_once "modules/fees/add.fees.costing.php";
+        break;
 
 }

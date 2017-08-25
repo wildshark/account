@@ -2,31 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c504eb96-3b0a-4d1b-9d60-133f7fab0fe0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/course/add.course.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/student/student.data.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/course/course.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/fees/fees.item.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/fees/fees.costing.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/modules/get.account.query.function.php" afterPath="$PROJECT_DIR$/modules/get.global.function.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.keystream" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.keystream" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.keystream.len" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.keystream.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.len" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata_i" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata_i" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_src_/schema/ghanacu_account.zip" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_src_/schema/ghanacu_account.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/webServers.xml" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/fees/add.fees.costing.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dashboard.php" afterPath="$PROJECT_DIR$/dashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/delete.record.php" afterPath="$PROJECT_DIR$/modules/delete.record.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/fees/add.fees.payment.php" afterPath="$PROJECT_DIR$/modules/fees/add.fees.payment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/fees/add.fees.record.php" afterPath="$PROJECT_DIR$/modules/fees/add.fees.record.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/login.php" afterPath="$PROJECT_DIR$/template/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/master.menu.top.php" afterPath="$PROJECT_DIR$/template/master.menu.top.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transaction.php" afterPath="$PROJECT_DIR$/transaction.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/fees/fees.payment.php" afterPath="$PROJECT_DIR$/views/fees/fees.payment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/student/student.profile.php" afterPath="$PROJECT_DIR$/views/student/student.profile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/fees/fees.item.php" afterPath="$PROJECT_DIR$/views/fees/fees.item.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,34 +49,20 @@
             <file leaf-file-name="fees.item.php" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/views/fees/fees.item.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="2260">
-                    <caret line="118" column="60" lean-forward="false" selection-start-line="118" selection-start-column="60" selection-end-line="118" selection-end-column="60" />
+                  <state relative-caret-position="273">
+                    <caret line="69" column="107" lean-forward="false" selection-start-line="69" selection-start-column="107" selection-end-line="69" selection-end-column="107" />
                     <folding>
-                      <marker date="1503665252635" expanded="true" signature="153:199" ph="SELECT * FRO... get_fees_list" />
-                      <marker date="1503665252635" expanded="true" signature="300:708" ph="..." />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-    <window id="2">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-            <file leaf-file-name="course.php" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/views/course/course.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="420">
-                    <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-                    <folding>
-                      <marker date="1503652581462" expanded="true" signature="138:167" ph="SELECT * FRO... get_course_list" />
-                      <marker date="1503652581462" expanded="true" signature="440:523" ph="..." />
-                      <marker date="1503652581462" expanded="true" signature="440:532" ph="..." />
-                      <marker date="1503652581462" expanded="true" signature="440:661" ph="..." />
+                      <element signature="n#get_fees_list_international#0;n#!!top" expanded="false" />
+                      <element signature="n#get_fees_list_local#0;n#!!top" expanded="false" />
+                      <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                      <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                      <marker date="1503686008848" expanded="true" signature="177:223" ph="SELECT * FRO... get_fees_list" />
+                      <marker date="1503686008848" expanded="true" signature="324:1078" ph="..." />
+                      <marker date="1503686008848" expanded="true" signature="1163:1209" ph="SELECT * FRO... get_fees_list" />
+                      <marker date="1503686008848" expanded="true" signature="1310:1830" ph="..." />
+                      <marker date="1503686008848" expanded="true" signature="1310:2064" ph="..." />
+                      <marker date="1503686008848" expanded="true" signature="2111:13914" ph="..." />
+                      <marker date="1503686008848" expanded="true" signature="2136:13907" ph="..." />
                     </folding>
                   </state>
                 </provider>
@@ -113,15 +78,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="fees.item.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fees.item.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/fees/fees.item.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-22">
-              <caret line="39" column="30" lean-forward="true" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+            <state relative-caret-position="-1923">
+              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding>
-                <marker date="1503665252635" expanded="true" signature="153:199" ph="SELECT * FRO... get_fees_list" />
-                <marker date="1503665252635" expanded="true" signature="300:708" ph="..." />
+                <marker date="1503686008848" expanded="true" signature="177:223" ph="SELECT * FRO... get_fees_list" />
+                <marker date="1503686008848" expanded="true" signature="324:1078" ph="..." />
+                <marker date="1503686008848" expanded="true" signature="2088:13914" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add.fees.costing.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/modules/fees/add.fees.costing.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="335">
+              <caret line="22" column="62" lean-forward="false" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
+              <folding>
+                <marker date="1503685765839" expanded="true" signature="572:923" ph="INSERT INTO `fees_price_list`... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="transaction.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/transaction.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="102" column="55" lean-forward="false" selection-start-line="102" selection-start-column="55" selection-end-line="102" selection-end-column="55" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -159,7 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/modules/profile/staff.payroll.php" />
         <option value="$PROJECT_DIR$/modules/payroll/add.staff.loan.php" />
         <option value="$PROJECT_DIR$/modules/payroll/add.staff.pay.loan.php" />
         <option value="$PROJECT_DIR$/modules/dashboard.function.php" />
@@ -197,7 +184,6 @@
         <option value="$PROJECT_DIR$/views/fees/fees.costing.international.php" />
         <option value="$PROJECT_DIR$/views/fees/fees.costing.local.php" />
         <option value="$PROJECT_DIR$/template/master.menu.top.php" />
-        <option value="$PROJECT_DIR$/transaction.php" />
         <option value="$PROJECT_DIR$/modules/course/add.course.php" />
         <option value="$PROJECT_DIR$/views/course/course.php" />
         <option value="$PROJECT_DIR$/modules/get.account.query.function.php" />
@@ -209,6 +195,8 @@
         <option value="$PROJECT_DIR$/modules/get.global.function.php" />
         <option value="$PROJECT_DIR$/dashboard.php" />
         <option value="$PROJECT_DIR$/views/fees/fees.php" />
+        <option value="$PROJECT_DIR$/modules/fees/add.fees.costing.php" />
+        <option value="$PROJECT_DIR$/transaction.php" />
         <option value="$PROJECT_DIR$/views/fees/fees.item.php" />
       </list>
     </option>
@@ -223,7 +211,7 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="y" value="2" />
     <option name="width" value="1378" />
@@ -263,7 +251,7 @@
               <item name="account" type="b2602c69:ProjectViewProjectNode" />
               <item name="account" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="payment" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="fees" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="account" type="b2602c69:ProjectViewProjectNode" />
@@ -498,15 +486,15 @@
       <workItem from="1503483345369" duration="13445000" />
       <workItem from="1503584487571" duration="23584000" />
       <workItem from="1503660142766" duration="252000" />
-      <workItem from="1503661138671" duration="3718000" />
+      <workItem from="1503661138671" duration="11836000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="292771000" />
+    <option name="totallyTimeSpent" value="300889000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22844176" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -583,20 +571,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/modules/payment/add.pay.voucher.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/ledger/general.ledger.summary.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -884,27 +858,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/course/course.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <marker date="1503652581462" expanded="true" signature="138:167" ph="SELECT * FRO... get_course_list" />
-            <marker date="1503652581462" expanded="true" signature="440:523" ph="..." />
-            <marker date="1503652581462" expanded="true" signature="440:532" ph="..." />
-            <marker date="1503652581462" expanded="true" signature="440:661" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/transaction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/fees/fees.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-93">
@@ -975,13 +928,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/course/course.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <marker date="1503652581462" expanded="true" signature="138:167" ph="SELECT * FRO... get_course_list" />
+            <marker date="1503652581462" expanded="true" signature="440:523" ph="..." />
+            <marker date="1503652581462" expanded="true" signature="440:532" ph="..." />
+            <marker date="1503652581462" expanded="true" signature="440:661" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/superglobals/_superglobals.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transaction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="102" column="55" lean-forward="false" selection-start-line="102" selection-start-column="55" selection-end-line="102" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/fees/add.fees.costing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="22" column="62" lean-forward="false" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
+          <folding>
+            <marker date="1503685765839" expanded="true" signature="572:923" ph="INSERT INTO `fees_price_list`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/fees/fees.item.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="39" column="30" lean-forward="true" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+        <state relative-caret-position="273">
+          <caret line="69" column="107" lean-forward="false" selection-start-line="69" selection-start-column="107" selection-end-line="69" selection-end-column="107" />
           <folding>
-            <marker date="1503665252635" expanded="true" signature="153:199" ph="SELECT * FRO... get_fees_list" />
-            <marker date="1503665252635" expanded="true" signature="300:708" ph="..." />
+            <element signature="n#get_fees_list_international#0;n#!!top" expanded="false" />
+            <element signature="n#get_fees_list_local#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <marker date="1503686008848" expanded="true" signature="177:223" ph="SELECT * FRO... get_fees_list" />
+            <marker date="1503686008848" expanded="true" signature="324:1078" ph="..." />
+            <marker date="1503686008848" expanded="true" signature="1163:1209" ph="SELECT * FRO... get_fees_list" />
+            <marker date="1503686008848" expanded="true" signature="1310:1830" ph="..." />
+            <marker date="1503686008848" expanded="true" signature="1310:2064" ph="..." />
+            <marker date="1503686008848" expanded="true" signature="2111:13914" ph="..." />
+            <marker date="1503686008848" expanded="true" signature="2136:13907" ph="..." />
           </folding>
         </state>
       </provider>
