@@ -2,26 +2,27 @@
 /**
  * Created by PhpStorm.
  * User: Andrew Quaye
- * Date: 30-Jun-17
- * Time: 6:20 PM
+ * Date: 23-Aug-17
+ * Time: 12:06 PM
  */
-function get_fees_list($conn){
-    $sql="SELECT * FROM get_fees_price_list";
+
+function get_fees_list_international($conn){
+    $sql="SELECT * FROM get_fees_list WHERE statusID='2' ";
     $data=$conn->query($sql);
     while ($r=$data->fetch_assoc()){
         echo "
             <tr>
-               <td>".$r['school']."</td>
-               <td>".$r['course']."</td>
-               <td>".$r['amount']."</td>
+               <td>".$r['prefix']."</td>
+               <td>".$r['tuition']."</td>
+               <td>".$r['other_cost']."</td>
+               <td>".number_format($total=($r['tuition'] + $r['other_cost']),2)."</td>
                <td><a href='transaction.php?transaction=delete&c=fees&data=".$r['feesID']."' class='tip-top' data-original-title='Delete'><i class='icon-remove'></i></a></td>
             </tr>
         ";
     }
-
 }
-
 ?>
+
 <div class="row-fluid">
     <div class="span6">
         <div class="widget-box">
@@ -35,14 +36,6 @@ function get_fees_list($conn){
                         <div class="controls">
                             <select name="school">
                                 <?php school_list($conn);?>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label">Course </label>
-                        <div class="controls">
-                            <select name="course">
-                                <?php course_list($conn);?>
                             </select>
                         </div>
                     </div>
@@ -115,17 +108,19 @@ function get_fees_list($conn){
                 <table class="table table-bordered">
                     <thead>
                     <tr>
-                        <th>Browser</th>
-                        <th>Visits</th>
-                        <th>Amount</th>
+                        <th>School</th>
+                        <th>Tuition</th>
+                        <th>Other</th>
+                        <th>Fees</th>
                         <th></th>
                     </tr>
                     </thead>
                     <tbody>
-                        <?php get_fees_list($conn)?>
+                    <?php get_fees_list_international($conn)?>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 </div>
+

@@ -79,7 +79,7 @@ function student_list($conn){
     $list="SELECT * FROM student_profile";
     $list=$conn->query($list);
     while ($l=$list->fetch_assoc()){
-        echo "<option value='".$l['studentID']."'>".$l['AdmissionNo']." - ".$l['studentName']."</option>";
+        echo "<option value='".$l['studentID']."'>".$l['admissionNo']." - ".$l['studentName']."</option>";
     }
 }
 
@@ -136,3 +136,18 @@ function last_date(){
     $date->modify('last day of this month');
     echo $date->format('Y-m-d');
 }
+
+//Course: get the Total Number of course per Schoool
+function NoOfCourse_data($conn){
+    $data="SELECT * FROM get_count_course_for_sch";
+    $data=$conn->query($data);
+    while($d=$data->fetch_assoc()){
+        echo "
+        <tr class='gradeX'>
+            <td>".$d['school']."</td>
+            <td>".$d['prefix']."</td>
+            <td>".$d['NoOfCourse']."</td>
+        </tr>";
+    }
+}
+

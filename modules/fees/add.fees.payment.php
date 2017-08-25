@@ -9,7 +9,7 @@
 $tranDate= date('d-m-Y h:i:sa');
 $date=$_GET['date'];
 $student=$_GET['ticket'];
-$courseID=$_GET['course'];
+$schoolID=$_GET['course'];
 $payType=$_GET['pay'];
 $ref=$_GET['ref'];
 $amount=$_GET['amount'];
@@ -19,9 +19,11 @@ $description=$_GET['description'];
 //yearID is the school Session
 $yearID=date("Y");
 
-$data=$conn->query("SELECT * FROM fees_price_list WHERE courseID='$courseID'");
+$data=$conn->query("SELECT * FROM get_fees_list WHERE schoolID='$schoolID'");
 $r=$data->fetch_assoc();
-$fees_amount=$r['amount'];
+$tuition=$r['tuition'];
+$other=$r['other_cost'];
+$fees_amount=$tuition + $other;
 
 if (empty($description)){
     $data=$conn->query("SELECT * FROM get_student_profile WHERE studentID='$student'");

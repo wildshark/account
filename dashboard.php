@@ -18,15 +18,31 @@ if (empty($_SESSION['userID'])){
         case "dashboard";
             include_once "config/config.php";
             $page->chart= "modules/dashboard.chart.php";
-            include_once "modules/get.account.query.function.php";
+            include_once "modules/get.global.function.php";
             include_once "modules/dashboard.function.php";
             $page->views="views/dashboard.views.php";
             include_once "template/home.php";
             break;
 
+        case"student-data";
+            include_once "config/config.php";
+            include_once "modules/get.global.function.php";
+            $page->contenttitle="Student Data";
+            $page->views="views/student/student.profile.php";
+            include_once "template/form.php";
+            break;
+
+        case"course-data";
+            include_once "config/config.php";
+            include_once "modules/get.global.function.php";
+            $page->contenttitle="Course List";
+            $page->views="views/course/course.php";
+            include_once "template/form.php";
+            break;
+
         case"expenditure";
             include_once "config/config.php";
-            include_once "modules/get.account.query.function.php";
+            include_once "modules/get.global.function.php";
             $page->contenttitle="Expenditure";
             $page->views="views/book/expenditure.details.php";
             include_once "template/form.php";
@@ -34,7 +50,7 @@ if (empty($_SESSION['userID'])){
 
         case "pay.voucher";
             include_once "config/config.php";
-            include_once "modules/get.account.query.function.php";
+            include_once "modules/get.global.function.php";
             $page->contenttitle="Pay Voucher";
             $page->views="views/book/pay.voucher.details.php";
             include_once "template/form.php";
@@ -56,7 +72,7 @@ if (empty($_SESSION['userID'])){
 
         case"fees.payment";
             include_once "config/config.php";
-            include_once "modules/get.account.query.function.php";
+            include_once "modules/get.global.function.php";
             $page->contenttitle="Fees Entry";
             $page->views="views/fees/fees.payment.php";
             include_once "template/form.php";
@@ -64,15 +80,15 @@ if (empty($_SESSION['userID'])){
 
         case"fees.costing";
             include_once "config/config.php";
-            include_once "modules/get.account.query.function.php";
+            include_once "modules/get.global.function.php";
             $page->contenttitle="Fees Entry";
-            $page->views="views/fees/fees.costing.php";
+            $page->views="views/fees/fees.item.php";
             include_once "template/form.php";
             break;
 
         case "ious";
             include_once "config/config.php";
-            include_once "modules/get.account.query.function.php";
+            include_once "modules/get.global.function.php";
             $page->contenttitle="Fees Entry";
             $page->views="views/ledger/ious.ledger.php";
             include_once "template/form.php";
@@ -80,7 +96,7 @@ if (empty($_SESSION['userID'])){
 
         case "general.ledger";
             include_once "config/config.php";
-            include_once "modules/get.account.query.function.php";
+            include_once "modules/get.global.function.php";
             $page->contenttitle="General Ledger";
             $page->views="views/ledger/general.ledger.summary.php";
             include_once "template/form.php";
@@ -89,7 +105,7 @@ if (empty($_SESSION['userID'])){
         case "view.ledger"; //view ledger details
             $label=$_SESSION['ledger'];
             include_once "config/config.php";
-            include_once "modules/get.account.query.function.php";
+            include_once "modules/get.global.function.php";
             $page->contenttitle=$label." Ledger";
             $page->views="views/ledger/ledger.details.php";
             include_once "template/form.php";
@@ -97,7 +113,7 @@ if (empty($_SESSION['userID'])){
 
         case "fees.ledger";
             include_once "config/config.php";
-            include_once "modules/get.account.query.function.php";
+            include_once "modules/get.global.function.php";
             $page->contenttitle="Fees Ledger ";
             $page->views="views/ledger/fees.ledger.book.php";
             include_once "template/form.php";
@@ -105,7 +121,7 @@ if (empty($_SESSION['userID'])){
 
         case "capital.investments";
             include_once "config/config.php";
-            include_once "modules/get.account.query.function.php";
+            include_once "modules/get.global.function.php";
             $page->contenttitle="Capital Investments ";
             $page->views="views/book/income.capital.book.php";
             include_once "template/form.php";
@@ -113,7 +129,7 @@ if (empty($_SESSION['userID'])){
 
         case"staff.profile";
             include_once "config/config.php";
-            include_once "modules/get.account.query.function.php";
+            include_once "modules/get.global.function.php";
             $page->contenttitle="Staff Profile ";
             $page->views="views/payroll/staff.profile.php";
             include_once "template/form.php";
@@ -121,7 +137,7 @@ if (empty($_SESSION['userID'])){
 
         case"staff.payroll";
             include_once "config/config.php";
-            include_once "modules/get.account.query.function.php";
+            include_once "modules/get.global.function.php";
             $page->contenttitle="Staff Payroll";
             $page->views="views/payroll/staff.payroll.php";
             include_once "template/form.php";
@@ -129,7 +145,7 @@ if (empty($_SESSION['userID'])){
 
         case "staff.loan";
             include_once "config/config.php";
-            include_once "modules/get.account.query.function.php";
+            include_once "modules/get.global.function.php";
             $page->contenttitle="Staff Loan";
             $page->views="views/payroll/staff.loan.php";
             include_once "template/form.php";
@@ -140,7 +156,7 @@ if (empty($_SESSION['userID'])){
         case "salary.control"; //view ledger details
             $label=$_SESSION['ledger'];
             include_once "config/config.php";
-            include_once "modules/get.account.query.function.php";
+            include_once "modules/get.global.function.php";
             $page->contenttitle = "Salary Control";
             $page->views="views/ledger/ledger.details.php";
             include_once "template/form.php";

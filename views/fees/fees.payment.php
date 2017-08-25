@@ -63,11 +63,16 @@ function fees_details($conn,$student){
     }
 }
 
-$student_data=$conn->query("SELECT * FROM get_student_profile WHERE studentID='$student'");
-$d=$student_data->fetch_assoc();
-$course=$d['course'];
-$school=$d['school'];
-$yearID=$d['admissionYear']
+    $student_data=$conn->query("SELECT * FROM get_student_profile WHERE studentID='$student'");
+    $d=$student_data->fetch_assoc();
+    $course=$d['courseID'];
+    $yearID=$d['admissionYr'];
+
+    $student_school=$conn->query("SELECT * FROM get_course_list WHERE courseID='$course'");
+    $s=$student_school->fetch_assoc();
+    $course=$s['course'];
+    $school=$s['prefix'];
+
 ?>
 <div class="row-fluid">
     <div class="span5">

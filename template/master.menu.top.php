@@ -7,8 +7,11 @@
  */
 
 ?>
+
 <ul>
     <li class="active"><a href="account.php?user=dashboard"><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
+    <li><a href="account.php?user=course-data"><i class="icon icon-inbox"></i> <span>Course List</span></a> </li>
+    <li><a href="account.php?user=student-data"><i class="icon icon-inbox"></i> <span>Student Data</span></a> </li>
     <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>School Fees</span></a>
         <ul>
             <li><a href="account.php?user=fees.payment">Fees Payment</a></li>
