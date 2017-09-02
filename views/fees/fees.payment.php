@@ -118,7 +118,7 @@ function fees_details($conn,$student){
                                 <label>Admission No#: <b><?php echo $admission;?></b> </label>
                             </div>
                             <div class="control-group">
-                                <label>Course : <b><?php echo $course;?></b> </label>
+                                <label>Programme : <b><?php echo $course;?></b> </label>
                             </div>
                             <div class="control-group">
                                 <label>School : <b><?php echo $school;?></b> </label>

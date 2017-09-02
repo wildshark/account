@@ -15,6 +15,7 @@ $login=$conn->query($login);
 $r=$login->fetch_assoc();
 if ($r['userName']==$username AND $r['userPasswd']==$password){
     $_SESSION['userID']=$r['userID'];
+    $_SESSION['role']=$r['roleID'];
     $_SESSION['username']=$username;
     header("location: account.php?user=dashboard");
 }else{

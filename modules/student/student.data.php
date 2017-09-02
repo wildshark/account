@@ -26,11 +26,18 @@ if ($_POST['submit'] == 'validate'){
         echo"Admission Number exist in the database";
     }else{
 
+        //insert in cash book new student
         $student_data="INSERT INTO `student_profile` (`admissionDate`, `studentName`, `admissionNo`, `mobile`, `courseID`, `admissionYr`,`categoryID`) 
 VALUES ('$date', '$student_name', '$admissionNo', '$mobile', '$course', '$admissionYr','$category')";
         $student_data=$conn->query($student_data);
 
+/***
+        //insert in cash book pay for sale of form
+        $form_payment="INSERT INTO `general_legder` (`tranDate`, `GL_date`, `ticketID`, `bookID`, `tranCatID`, `description`, `refNo`, `qouteDr`, `cashDr`, `tranTypeID`, `yearID`, `semesterID`) 
+VALUES ('$now', '$date', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1')";
+        $form_payment=$conn->query($form_payment);
         header("location: account.php?user=student-data");
+***/
     }
 
 }else{

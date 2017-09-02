@@ -53,7 +53,7 @@ function student_data($conn){
             <div class="widget-content nopadding">
                 <form class="form-horizontal" method="post" action="transaction.php?transaction=student.data" name="basic_validate" id="basic_validate" novalidate="novalidate">
                     <div class="control-group">
-                        <label class="control-label">Date picker (dd-mm)</label>
+                        <label class="control-label">Admission Date</label>
                         <div class="controls">
                             <input name="date" type="text" data-date="01-02-2013" data-date-format="dd-mm-yyyy" class="datepicker span11">
                             <span class="help-block">Date with Formate of  (dd-mm-yy)</span> </div>
@@ -88,7 +88,7 @@ function student_data($conn){
                         </div>
                     </div>
                     <div class="control-group">
-                        <label class="control-label">Course</label>
+                        <label class="control-label">Programme</label>
                         <div class="controls">
                             <select name="course">
                                 <?php course_list($conn);?>
@@ -128,7 +128,7 @@ function student_data($conn){
                         <th>Student</th>
                         <th>Reg. No</th>
                         <th>Year</th>
-                        <th>Course</th>
+                        <th>Programme</th>
                         <th>School</th>
                     </tr>
                     </thead>

@@ -46,7 +46,7 @@ function course_data($conn){
                         </div>
                     </div>
                     <div class="control-group">
-                        <label class="control-label">Course</label>
+                        <label class="control-label">Programme</label>
                         <div class="controls">
                             <input type="text" name="course" id="required">
                         </div>
@@ -68,7 +68,7 @@ function course_data($conn){
                 <table class="table table-bordered data-table">
                     <thead>
                     <tr>
-                        <th>Course</th>
+                        <th>Programme</th>
                         <th>School</th>
                         <th></th>
                     </tr>

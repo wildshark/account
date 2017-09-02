@@ -18,7 +18,7 @@ function data_fees_ledger($conn){
                <td>".$r['amount']."</td>
                <td>".$r['paid']."</td>
                <td>".$r=$r['amount']-$r['paid']."</td>
-               <td><a href='#' class='btn btn-mini btn-primary'>view</a> </td>
+               <td><a href='' class='btn btn-mini btn-primary'>view</a> </td>
             </tr>
         ";
     }
