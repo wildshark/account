@@ -8,6 +8,8 @@
 
 
 $date=$_GET['date'];
+$date=strtotime($date);
+$date= date("Y/m/d",$date);
 $tranID=$_GET['type'];
 $details=$_GET['detail'];
 $ref=$_GET['ref'];
@@ -23,12 +25,12 @@ $r=$sql->fetch_assoc();
 $t_book=$r['bookID'];
 $t_profit= $r['profitLossID'];
 $t_balSheet=$r['balanceSheetID'];
-$t_date=date("d-m-Y h:i:s");
 
 $sql = "INSERT INTO general_legder (tranDate,GL_date,ticketID,tranCatID,description,refNo,semesterID,yearID,bookID,tranTypeID,profitlossID,balanceSheetID,qouteDr)
-VALUES ('$t_date','$date','$ticketID','$tranID', '$details','$ref','$semester','$yearId','$t_book','3','$t_profit','$t_balSheet','$amount')";
+VALUES ('$tranDate','$date','$ticketID','$tranID', '$details','$ref','$semester','$yearId','$t_book','3','$t_profit','$t_balSheet','$amount')";
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    //echo "New record created successfully";
+    header("location: account.php?user=expenditure");
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

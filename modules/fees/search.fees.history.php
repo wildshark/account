@@ -6,7 +6,7 @@
  * Time: 10:33 PM
  */
 
-echo $id=$_GET['q'];
+$id=$_GET['q'];
 
 $profile=$conn->query("SELECT * FROM student_profile WHERE studentID='$id'");
 $p=$profile->fetch_assoc();
@@ -21,8 +21,9 @@ $_SESSION['studentID']=$p['studentID'];
 $bal=$conn->query("SELECT * FROM get_fees_balance WHERE  studentID='$id'");
 $b=$bal->fetch_assoc();
 
-echo $_SESSION['fees'] = $b['fees'];
-echo $_SESSION['paid'] = $b['paid'];
-echo $_SESSION['bal'] = $b['bal'];
+$_SESSION['fees'] = $b['fees'];
+$_SESSION['paid'] = $b['paid'];
+$_SESSION['bal'] = $b['bal'];
+
 
 header("location:" . $_SERVER['HTTP_REFERER']);

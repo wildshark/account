@@ -68,7 +68,7 @@ function summary_bnkbook($conn){
                     </tr>
                     </thead>
                     <tbody>
-                    <?php summary_bnkbook($conn)?>
+                        <?php summary_bnkbook($conn)?>
                     </tbody>
                 </table>
             </div>
@@ -94,7 +94,7 @@ function summary_bnkbook($conn){
                     </tr>
                     </thead>
                     <tbody>
-                    <?php bankbook($conn)?>
+                        <?php bankbook($conn)?>
                     </tbody>
                 </table>
             </div>

@@ -8,9 +8,9 @@
 
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "usbw";
 $database="ghanacu_account";
-$port="3306";
+$port="3307";
 // Create connection
 $conn = new mysqli($servername, $username, $password,$database,$port);
 

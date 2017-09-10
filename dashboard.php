@@ -5,6 +5,8 @@
  * Date: 30-Jun-17
  * Time: 2:21 PM
  */
+
+
 if (empty($_SESSION['userID'])){
     session_destroy();
     header("location: index.php");

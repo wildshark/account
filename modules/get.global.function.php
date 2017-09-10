@@ -39,7 +39,7 @@ function ticket_generator($length=4){
 }
 
 //function expenses list combo
-function expenses_list($conn){
+function expenditure_list($conn){
     $list="SELECT * FROM expenses_list";
     $list=$conn->query($list);
     while ($l=$list->fetch_assoc()){

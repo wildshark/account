@@ -76,13 +76,13 @@ function summary_capital($conn){
         <div class="widget-box">
             <div class="widget-title">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" href="#tab1">Staff Profile</a></li>
-                    <li><a data-toggle="tab" href="#tab2">Salary</a></li>
-                    <li><a data-toggle="tab" href="#tab3">Salary</a></li>
+                    <li class="active"><a data-toggle="tab" href="#staff-profile">Staff Profile</a></li>
+                    <li><a data-toggle="tab" href="#salary">Salary</a></li>
+                    <li><a data-toggle="tab" href="#payment-history">Payment History</a></li>
                 </ul>
             </div>
             <div class="widget-content tab-content">
-                <div id="tab1" class="tab-pane active">
+                <div id="staff-profile" class="tab-pane active">
                     <div class="widget-box">
                         <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
                             <h5>Personal-info</h5>
@@ -131,7 +131,7 @@ function summary_capital($conn){
                         </div>
                     </div>
                 </div>
-                <div id="tab2" class="tab-pane">
+                <div id="salary" class="tab-pane">
                     <div class="widget-box">
                         <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
                             <h5>Personal-info</h5>
@@ -185,7 +185,7 @@ function summary_capital($conn){
                         </div>
                     </div>
                 </div>
-                <div id="tab3" class="tab-pane">
+                <div id="payment-history" class="tab-pane">
                     <div class="row-fluid">
                         <div class="span12">
                             <div class="widget-box">
