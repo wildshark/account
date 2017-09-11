@@ -103,4 +103,8 @@ switch ($_GET["transaction"]){
         include_once "modules/fees/add.fees.costing.php";
         break;
 
+    case "profit.loss";
+        include_once "config/config.php";
+        include_once "modules/profit_loss/profit.loss.php";
+
 }

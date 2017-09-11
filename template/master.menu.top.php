@@ -46,8 +46,8 @@ function administrator(){
             </li>
             <li class='submenu'> <a href='#'><i class='icon icon-th-list'></i> <span>Account</span></a>
                 <ul>
-                    <li><a href='account.php?user=capital.investments'>Capital And Investments</a></li>
-        
+                    <li><a href='account.php?user=capital.investments'>Capital & Investments</a></li>
+                    <li><a href='account.php?user=profit.loss'>Profit & Loss</a></li>
                     <li><a href='account.php?user=investment'>Investment</a></li>
                     <li><a href='form-wizard.html'>Trial Balance</a></li>
                 </ul>
@@ -100,7 +100,7 @@ function school_account_entry(){
             <li class='submenu'> <a href='#'><i class='icon icon-th-list'></i> <span>Account</span></a>
                 <ul>
                     <li><a href='account.php?user=capital.investments'>Capital And Investments</a></li>
-        
+                    <li><a href='account.php?user=profit.loss'>Profit & Loss</a></li>
                     <li><a href='account.php?user=investment'>Investment</a></li>
                     <li><a href='form-wizard.html'>Trial Balance</a></li>
                 </ul>

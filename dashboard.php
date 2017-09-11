@@ -153,8 +153,6 @@ if (empty($_SESSION['userID'])){
             include_once "template/form.php";
             break;
 
-
-
         case "salary.control"; //view ledger details
             $label=$_SESSION['ledger'];
             include_once "config/config.php";
@@ -163,6 +161,14 @@ if (empty($_SESSION['userID'])){
             $page->views="views/ledger/ledger.details.php";
             include_once "template/form.php";
             break;
+
+        case"profit.loss";
+            include_once "config/config.php";
+            include_once "modules/get.global.function.php";
+            $page->contenttitle="Profile & Loss Statement";
+            $page->views="views/profit_loss/profit.loss.php";
+            include_once "template/form.php";
+        break;
 
         default:
             include_once "config/config.php";
