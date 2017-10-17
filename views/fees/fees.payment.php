@@ -185,7 +185,7 @@ function summary_details($conn,$student){
                                         </div>
 
                                         <div class="control-group">
-                                            <label>Course </label>
+                                            <label>School </label>
                                             <select name="school">
                                                 <?php school_list($conn);?>
                                             </select>
@@ -198,10 +198,19 @@ function summary_details($conn,$student){
                                             </select>
                                         </div>
                                         <div class="control-group">
-                                            <label>Payment Type </label>
+                                            <label>Semester </label>
                                             <select name="semester">
                                                 <option value="1">1st Semester </option>
                                                 <option value="2">2nd Semester </option>
+                                            </select>
+                                        </div>
+                                        <div class="control-group">
+                                            <label>Level </label>
+                                            <select name="level">
+                                                <option value="100">Level 100 </option>
+                                                <option value="200">Level 200</option>
+                                                <option value="300">Level 300</option>
+                                                <option value="400">Level 400</option>
                                             </select>
                                         </div>
                                         <div class="control-group">

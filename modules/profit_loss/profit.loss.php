@@ -10,7 +10,6 @@
  $start_date=$_GET['start-date'];
  $end_date=$_GET['end-date'];
 
-
 //query get_profit_loss_expenditure_n2
 function get_profit_loss_expenditure($conn,$start_date,$end_date){
 
@@ -26,6 +25,7 @@ function get_profit_loss_expenditure($conn,$start_date,$end_date){
                 <td>".$e['expenses']."</td>
             </tr>
         ";
+
 
     }
 }

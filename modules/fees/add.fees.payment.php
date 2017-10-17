@@ -16,9 +16,8 @@ $discount=$_GET['discount'];
 $amount=$_GET['amount'];
 $semesterID=$_GET['semester'];
 $description=$_GET['description'];
-
-//yearID is the school Session
-$yearID=date("Y");
+$level=$_GET['level'];
+$school_session=$_GET['session'];
 
 $data=$conn->query("SELECT * FROM get_fees_list WHERE schoolID='$schoolID'");
 $r=$data->fetch_assoc();
@@ -42,33 +41,23 @@ if (empty($description)){
     $description= $stName." ~ ". $admissionNo." paid ". $amount ."ref.".$ref;
 }
 
-//check payment type 1. Cash 2.Bank
-if ($payType==1){
-    $data="INSERT INTO fees_payment(tranDate,payDate,studentID,schoolID,payTypeID,refNo,fees_amount,paid_amount)
-VALUES ('$tranDate','$date','$student','$schoolID','$payType','$ref','$fees_amount','$amount')";
-    if ($conn->query($data) === TRUE) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-}elseif ($payType==2){
-    $data="INSERT INTO fees_payment(tranDate,payDate,studentID,courseID,payTypeID,refNo,fees_amount,paid_amount)
-VALUES ('$tranDate','$date','$student','$courseID','$payType','$ref','$fees_amount','$amount')";
-    if ($conn->query($data) === TRUE) {
+//check payment type 1. cash 2.Bank
 
-        //insert to bank in General Ledger as income
-        $gl="INSERT INTO general_legder(tranDate,GL_date,ticketID,bookID,tranCatID,description,refNo,bankDr,tranTypeID,
-yearID,semesterID,profitlossID,balanceSheetID)
+
+$data="INSERT INTO fees_payment(tranDate,payDate,studentID,schoolID,payTypeID,refNo,fees_amount,paid_amount,stud_level,semesterID,sch_session)
+VALUES ('$tranDate','$date','$student','$schoolID','$payType','$ref','$fees_amount','$amount','$level','$semesterID','$school_session')";
+    if ($conn->query($data) === TRUE) {
+        //echo "New record created successfully";
+        if ($payType == 2){
+            //insert in General Ledger ~ BANK
+            $gl="INSERT INTO general_legder(tranDate,GL_date,ticketID,bookID,tranCatID,description,refNo,bankDr,tranTypeID,yearID,semesterID,profitlossID,balanceSheetID)
 VALUES ('$tranDate','$date','F','1','1','$description','$ref','$amount','2','$yearID','$semesterID','1','4')";
-        if ($conn->query($gl) === TRUE){
-            header("location:". $_SERVER['HTTP_REFERER']);
-        }else{
-            header("location: account.php?user=dashboard");
+            if ($conn->query($gl) === TRUE){
+                header("location:". $_SERVER['HTTP_REFERER']);
+            }else{
+                header("location: account.php?user=dashboard");
+            }
         }
-       // echo "New record created successfully";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
-}
-
-

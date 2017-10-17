@@ -10,8 +10,8 @@
           <option name="port" value="21" />
         </fileTransfer>
       </webServer>
-      <webServer id="61931b44-9927-4114-bf07-8a2a11acefb5" name="server47" url="http://192.168.100.208">
-        <fileTransfer host="192.168.100.208" port="21">
+      <webServer id="61931b44-9927-4114-bf07-8a2a11acefb5" name="server47" url="http://192.168.2.208">
+        <fileTransfer host="192.168.2.208" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>

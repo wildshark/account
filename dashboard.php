@@ -170,6 +170,12 @@ if (empty($_SESSION['userID'])){
             include_once "template/form.php";
         break;
 
+        case'print';
+            include_once "config/config.php";
+            include_once "modules/get.global.function.php";
+            include_once "print.php";
+        break;
+
         default:
             include_once "config/config.php";
             include_once "template/home.php";
