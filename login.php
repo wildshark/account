@@ -18,7 +18,7 @@ if ($r['userName']==$username AND $r['userPasswd']==$password){
     $_SESSION['userID']=$r['userID'];
     $_SESSION['roleID']=$r['statusID'];
     $_SESSION['username']=$username;
-    header("location: account.php?user=dashboard");
+    header("location: account.php?user=dashboard&error=0&alert=0");
 }else{
     include_once "config/config.php";
     include_once 'template/login.php';

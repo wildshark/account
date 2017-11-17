@@ -58,8 +58,9 @@ if ($_GET['c']=="payroll"){
 }
 
 //delete course record
-if($_GET['c'] == "delete"){
+if($_GET['c'] == "course"){
 
     $data=$conn->query("DELETE FROM `course` WHERE (`courseID`='$id')");
-    header("location: ". $_SERVER['HTTP_REFERER']);
+    header("location: account.php?user=course-data&error=4&alert=2");
+
 }

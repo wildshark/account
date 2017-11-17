@@ -10,6 +10,12 @@ function data_fees_ledger($conn){
     $data="SELECT * FROM get_fees_ledger_book";
     $data=$conn->query($data);
     while ($r=$data->fetch_assoc()){
+        $_SESSION['studentID']=$r['studentID'];
+        $_SESSION['student_name']=$r['studentName'];
+        $_SESSION['admissionNo']=$r['AdmissionNo'];
+        $_SESSION['amount']=$r['amount'];
+        $_SESSION['paid']=$r['paid'];
+        $_SESSION['balance']=$r['amount']-$r['paid'];
         echo "
             <tr>
                <td></td>
@@ -18,7 +24,7 @@ function data_fees_ledger($conn){
                <td>".$r['amount']."</td>
                <td>".$r['paid']."</td>
                <td>".$r=$r['amount']-$r['paid']."</td>
-               <td><a href='' class='btn btn-mini btn-primary'>view</a> </td>
+               <td><a href='account.php?user=fees.payment.details&id=".$r['studentID']."&error=0&alert=1' class='btn btn-mini btn-primary'>view</a> </td>
             </tr>
         ";
     }

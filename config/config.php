@@ -28,6 +28,14 @@ $page->contenttitle="Account";
 $page->url="";
 $page->copyright=" 2012 - ".date("Y")." &copy; iQuipe Digital Enterprises";
 $page->views="views/default.views.php";
+$page->error="system error, try again later";
+
+//printout label
+
+$printout =new stdClass();
+$printout->header="Print Out";
+$printout->title="Ghana Christian University College";
+$printout->copyright=" 2012 - ".date("Y")." &copy; iQuipe Digital Enterprises";
 
 /**
  *check the StaffID status,

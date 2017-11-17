@@ -54,14 +54,17 @@ function fees_details($conn,$student){
 
             echo "
                     <tr class='gradeX'>
+                        <td class='center'>" . $c['tranDate'] . "</td>
                         <td class='center'>" . $c['payDate'] . "</td>
+                        <td>".$c['studentName']."</td>
+                        <td>".$c['admissionNo']."</td>
                         <td>" . $c['stud_level'] . "</td>
                         <td>" . $c['sch_session'] . "</td>
                         <td>" . $c['refNo'] . "</td>
                         <td>" . $payType . "</td>
                         <td>" . $c['paid_amount'] . "</td>
                         <td>
-                            <a href='transaction.php?transaction=delete&c=fees.pay&data=" . $c['payID'] . "' class='tip-top' data-original-title='Delete'><button class=\"btn btn-danger btn-mini\">btn-danger</button></a>
+                            <a href='transaction.php?transaction=delete&c=fees.pay&data=" . $c['payID'] . "' class='tip-top' data-original-title='Delete'><button class=\"btn btn-danger btn-mini\">Delete</button></a>
                         </td>       
                     </tr>
                 ";
@@ -91,8 +94,10 @@ function summary_details($conn,$student){
         while ($s = $summary->fetch_assoc()) {
             echo "
                   <tr class='gradeX'>
-                     <td>" . $s['stud_level'] . "</td>
+                      <td>".$s['studentName']."</td>
+                     <td>".$s['admissionNo']."</td>
                      <td>" . $s['sch_session'] . "</td>
+                     <td>" . $s['stud_level'] . "</td>
                      <td>" . $s['fees'] . "</td>
                      <td>" . $s['payment'] . "</td>
                      <td>" . $s['balance'] . "</td>     
@@ -225,15 +230,15 @@ function summary_details($conn,$student){
                                     <div class="span6">
                                         <div class="control-group">
                                             <label>Date picker (dd-mm)</label>
-                                            <input name="date" type="text" data-date="01-02-2013" data-date-format="dd-mm-yyyy" value="<?php echo date("d-m-Y");?>" class="datepicker span11">
+                                            <input name="date" type="text" data-date="01-02-2013" data-date-format="dd-mm-yyyy" value="<?php echo date("d-m-Y");?>" class="datepicker span11" id="required" required />
                                         </div>
                                         <div class="control-group">
                                             <label>Ref. No# </label>
-                                            <input name="ref" type="text" class="span11" />
+                                            <input name="ref" type="text" class="span11" id="required" required />
                                         </div>
                                         <div class="control-group">
                                             <label>Description </label>
-                                            <input name="description" type="text" class="span11" />
+                                            <input name="description" type="text" class="span11" id="required" required />
                                         </div>
                                         <div class="control-group">
                                             <label >Discount </label>
@@ -247,7 +252,7 @@ function summary_details($conn,$student){
                                             <label >Paid Amount </label>
                                             <div >
                                                 <div class="input-append">
-                                                    <input name="amount" type="text" placeholder="0.000" class="span11">
+                                                    <input name="amount" type="text" placeholder="0.000" class="span11"  id="required" required>
                                                     <span class="add-on">GHc</span> </div>
                                             </div>
                                         </div>
@@ -273,7 +278,10 @@ function summary_details($conn,$student){
                         <table class="table table-bordered data-table">
                             <thead>
                             <tr>
+                                <th>Tran Date</th>
                                 <th>Date</th>
+                                <th>Student Name</th>
+                                <th>Admission No#</th>
                                 <th>Session</th>
                                 <th>level</th>
                                 <th>Ref. No#</th>
@@ -299,6 +307,8 @@ function summary_details($conn,$student){
                         <table class="table table-bordered data-table">
                             <thead>
                             <tr>
+                                <th>Student Name</th>
+                                <th>Admission No#</th>
                                 <th>Session</th>
                                 <th>Level</th>
                                 <th>Fees</th>

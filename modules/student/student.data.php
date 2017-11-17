@@ -6,38 +6,52 @@
  * Time: 5:15 PM
  */
 
-if ($_POST['submit'] == 'validate'){
+if ($_GET['submit'] == 'validate'){
 
-    $date = $_POST['date'];
-    $date = date('Y-m-d', strtotime($date));
-    $admissionYr = $_POST['admission-year'];
-    $admissionNo = $_POST['admission-number'];
-    $student_name=$_POST['student-name'];
-    $category=$_POST['student-category'];
-    $course=$_POST['course'];
-    $email= $_POST['email'];
-    $mobile=$_POST['mobile'];
-
-    $check_admission= "SELECT * FROM `student_profile`  WHERE admissionNo = '$admissionNo'";
-    $check_admission=$conn->query($check_admission);
-    $chk=$check_admission->fetch_assoc();
-
-    if ($chk['admissionNo']== $admissionNo){
-        echo"Admission Number exist in the database";
+    if (empty($_GET['date'])){
+        header("location: account.php?user=student-data&error=3&alert=1");
+    }elseif(empty($_GET['admission-year'])) {
+        header("location: account.php?user=student-data&error=3&alert=1");
+    }elseif (empty($_GET['admission-number'])){
+        header("location: account.php?user=student-data&error=3&alert=1");
+    }elseif (empty($_GET['student-name'])){
+        header("location: account.php?user=student-data&error=3&alert=1");
+    }elseif (empty($_GET['student-category'])){
+        header("location: account.php?user=student-data&error=3&alert=1");
+    }elseif (empty($_GET['course'])){
+        header("location: account.php?user=student-data&error=3&alert=1");
+    }elseif (empty($_GET['email'])){
+        header("location: account.php?user=student-data&error=3&alert=1");
+    }elseif (empty($_GET['mobile'])){
+        header("location: account.php?user=student-data&error=3&alert=1");
     }else{
 
-        //insert in cash book new student
-        $student_data="INSERT INTO `student_profile` (`admissionDate`, `studentName`, `admissionNo`, `mobile`, `courseID`, `admissionYr`,`categoryID`) 
-VALUES ('$date', '$student_name', '$admissionNo', '$mobile', '$course', '$admissionYr','$category')";
-        $student_data=$conn->query($student_data);
+        $date = $_GET['date'];
+        $date = date('Y-m-d', strtotime($date));
+        $admissionYr = $_GET['admission-year'];
+        $admissionNo = $_GET['admission-number'];
+        $student_name=$_GET['student-name'];
+        $category=$_GET['student-category'];
+        $course=$_GET['course'];
+        $email= $_GET['email'];
+        $mobile=$_GET['mobile'];
 
-/***
-        //insert in cash book pay for sale of form
-        $form_payment="INSERT INTO `general_legder` (`tranDate`, `GL_date`, `ticketID`, `bookID`, `tranCatID`, `description`, `refNo`, `qouteDr`, `cashDr`, `tranTypeID`, `yearID`, `semesterID`) 
-VALUES ('$now', '$date', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1')";
-        $form_payment=$conn->query($form_payment);
-        header("location: account.php?user=student-data");
-***/
+        $check_admission= "SELECT * FROM `student_profile`  WHERE admissionNo = '$admissionNo'";
+        $check_admission=$conn->query($check_admission);
+        $chk=$check_admission->fetch_assoc();
+
+        if ($chk['admissionNo'] == $admissionNo and $chk['studentName']==$student_name){
+            header("location: account.php?user=student-data&error=3&alert=3");
+        }else {
+
+            //insert in cash book new student
+            $student_data = "INSERT INTO `student_profile` (`admissionDate`, `studentName`, `admissionNo`, `mobile`, `courseID`, `admissionYr`,`categoryID`) 
+VALUES ('$date', '$student_name', '$admissionNo', '$mobile', '$course', '$admissionYr','$category')";
+            $student_data = $conn->query($student_data);
+            if ($student_data == TRUE){
+                header("location: account.php?user=student-data&error=2&alert=2");
+            }
+        }
     }
 
 }else{

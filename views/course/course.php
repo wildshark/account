@@ -36,11 +36,12 @@ function course_data($conn){
                 <h5>Data validation</h5>
             </div>
             <div class="widget-content nopadding">
-                <form class="form-horizontal" method="post" action="transaction.php?transaction=course.data" name="basic_validate" id="basic_validate" novalidate="novalidate">
+                <form class="form-horizontal" method="GET" action="transaction.php" name="basic_validate" id="basic_validate" novalidate="novalidate">
+                    <input type="hidden" name="transaction" value="course.data">
                     <div class="control-group">
                         <label class="control-label">School</label>
                         <div class="controls">
-                            <select name="school">
+                            <select name="school" required>
                                 <?php school_list($conn);?>
                             </select>
                         </div>
@@ -48,7 +49,7 @@ function course_data($conn){
                     <div class="control-group">
                         <label class="control-label">Programme</label>
                         <div class="controls">
-                            <input type="text" name="course" id="required">
+                            <input type="text" name="course" id="required" required>
                         </div>
                     </div>
                     <div class="form-actions">

@@ -8,6 +8,7 @@
 
 
 switch ($_GET["transaction"]){
+
     case "expenditure";
         include_once "config/config.php";
         include_once "modules/expenditure/add.expenditure.record.php";
@@ -64,10 +65,12 @@ switch ($_GET["transaction"]){
         include_once "config/config.php";
         include_once "modules/payroll/add.payroll.php";
         break;
+
     case "salary-cost";
         include_once "config/config.php";
         include_once "modules/salary_control/salary.control.cost.php";
         break;
+
     case "payout";
         include_once "config/config.php";
         include_once "modules/payroll/add.staff.payroll.php";
@@ -99,12 +102,15 @@ switch ($_GET["transaction"]){
         break;
 
     case "fees.costing";
-        include_once "config/config.php";
-        include_once "modules/fees/add.fees.costing.php";
-        break;
+       //echo "fees costing";
+       include_once "config/config.php";
+        include_once "modules/get.global.function.php";
+       include_once "modules/fees/add.fees.costing.php";
+    break;
 
     case "profit.loss";
         include_once "config/config.php";
         include_once "modules/profit_loss/profit.loss.php";
+        break;
 
 }

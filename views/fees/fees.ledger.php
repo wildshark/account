@@ -5,51 +5,64 @@
  * Date: 01-Jul-17
  * Time: 10:17 AM
  */
+$student=$_GET['id'];
 
-function cashbook($conn,$student){
-    $cash="SELECT * FROM fees_payment WHERE studentID='$student' ";
+
+function ledger($conn,$student){
+    $cash="SELECT * FROM get_fees_payment_history WHERE studentID='$student' ";
     $cash=$conn->query($cash);
     while ($c=$cash->fetch_assoc()){
+
+
         echo "
         <tr class='gradeX'>
-            <td class='center'>".$c['GL_date']."</td>
-            <td>".$c['description']."</td>
+            <td class='center'>".$c['payDate']."</td>
+            <td>".$c['sch_session']."</td>
+            <td>".$c['semesterID']."</td>
+            <td>".$c['stud_level']."</td>
             <td>".$c['refNo']."</td>
-            <td>".$c['cashDr']."</td>
-            <td>".$c['cashCr']."</td>
+            <td>".$c['payTypeID']."</td>
+            <td>".$c['paid_amount']."</td>
         </tr>
     ";
     }
 }
-function summary_book($conn){
-    $cash="SELECT * FROM get_sum_cashbook";
-    $cash=$conn->query($cash);
-    $c=$cash->fetch_assoc();
-    $debit=$c['Debit'];
-    $credit=$c['Credit'];
-    $bal=$debit-$credit;
-
-    echo "
-        <tr>
-            <td>Debit</td>
-            <td>".$debit."</td>
-        </tr>
-        <tr>
-            <td>Credit</td>
-            <td>".$credit."</td>
-        </tr>
-        <tr>
-            <td>Balance</td>
-            <td>".$bal."</td>
-        </tr>
-    ";
-}
-
 
 ?>
 <div class="row-fluid">
     <div class="span6">
-
+        <div class="widget-box">
+            <div class="widget-title">
+				<span class="icon">
+					<i class="icon-eye-open"></i>
+				</span>
+                <h5>Browesr statistics</h5>
+            </div>
+            <div class="widget-content nopadding">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Browser</th>
+                        <th>Visits</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Student</td>
+                        <td><?php echo $_SESSION['student_name'];?></td>
+                    </tr>
+                    <tr>
+                        <td>Admission No#</td>
+                        <td><?php echo $_SESSION['admissionNo'];?></td>
+                    </tr>
+                    <tr>
+                        <td>School </td>
+                        <td><?php echo $_SESSION['amount']-$_SESSION['paid'] ?></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
     <div class="span6">
         <div class="widget-box">
@@ -68,7 +81,18 @@ function summary_book($conn){
                     </tr>
                     </thead>
                     <tbody>
-                    <?php summary_cashbook($conn)?>
+                    <tr>
+                        <td>Total Fees</td>
+                        <td><?php echo $_SESSION['amount'];?></td>
+                    </tr>
+                    <tr>
+                        <td>Total Payment</td>
+                        <td><?php echo $_SESSION['paid'];?></td>
+                    </tr>
+                    <tr>
+                        <td>Balance</td>
+                        <td><?php echo $_SESSION['amount']-$_SESSION['paid'] ?></td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
@@ -87,14 +111,16 @@ function summary_book($conn){
                     <thead>
                     <tr>
                         <th>Date</th>
-                        <th>Details</th>
+                        <th>Session</th>
+                        <th>Semester</th>
+                        <th>Level</th>
                         <th>Ref. No#</th>
-                        <th>Debit</th>
-                        <th>Credit</th>
+                        <th>Pay Type</th>
+                        <th>Amount</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <?php cashbook($conn)?>
+                    <?php ledger($conn,$student)?>
                     </tbody>
                 </table>
             </div>

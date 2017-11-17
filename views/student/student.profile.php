@@ -7,7 +7,7 @@
  */
 
 function student_data($conn){
-    $data="SELECT * FROM student_profile";
+    $data="SELECT * FROM get_student_profile";
     $data=$conn->query($data);
    while ( $d=$data->fetch_assoc()){
 
@@ -51,17 +51,18 @@ function student_data($conn){
                 <h5>Data validation</h5>
             </div>
             <div class="widget-content nopadding">
-                <form class="form-horizontal" method="post" action="transaction.php?transaction=student.data" name="basic_validate" id="basic_validate" novalidate="novalidate">
+                <form class="form-horizontal" method="GET" action="transaction.php" name="basic_validate" id="basic_validate" novalidate="novalidate">
+                    <input type="hidden" name="transaction" value="student.data">
                     <div class="control-group">
                         <label class="control-label">Admission Date</label>
                         <div class="controls">
-                            <input name="date" type="text" data-date="01-02-2013" data-date-format="dd-mm-yyyy" class="datepicker span11">
+                            <input name="date" type="date" data-date="01-02-2013" data-date-format="dd-mm-yyyy" class="datepicker span11" id="date">
                             <span class="help-block">Date with Formate of  (dd-mm-yy)</span> </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label">Admission Year</label>
                         <div class="controls">
-                            <select name="admission-year">
+                            <select name="admission-year" required>
                                 <?php year_list($conn);?>
                             </select>
                         </div>
@@ -69,19 +70,19 @@ function student_data($conn){
                     <div class="control-group">
                         <label class="control-label">Admission Number</label>
                         <div class="controls">
-                            <input type="text" name="admission-number" id="required">
+                            <input type="text" name="admission-number" id="required" required>
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label">Student Name</label>
                         <div class="controls">
-                            <input type="text" name="student-name" id="required">
+                            <input type="text" name="student-name" id="required" required>
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label">Student category</label>
                         <div class="controls">
-                            <select name="student-category">
+                            <select name="student-category" required>
                                 <option value="1">Local Student</option>
                                 <option value="2">International Student</option>
                             </select>
@@ -90,7 +91,7 @@ function student_data($conn){
                     <div class="control-group">
                         <label class="control-label">Programme</label>
                         <div class="controls">
-                            <select name="course">
+                            <select name="course" required>
                                 <?php course_list($conn);?>
                             </select>
                         </div>
@@ -98,13 +99,13 @@ function student_data($conn){
                     <div class="control-group">
                         <label class="control-label">Email</label>
                         <div class="controls">
-                            <input type="text" name="email" id="email">
+                            <input type="text" name="email" id="email" required>
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label">Mobile Number</label>
                         <div class="controls">
-                            <input type="text" name="mobile" id="mobile">
+                            <input type="text" name="mobile" id="mobile" required>
                         </div>
                     </div>
                     <div class="form-actions">

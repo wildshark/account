@@ -5,7 +5,7 @@
  * Date: 30-Jun-17
  * Time: 2:21 PM
  */
-
+include_once "alert/alert.php";
 
 if (empty($_SESSION['userID'])){
     session_destroy();
@@ -31,7 +31,7 @@ if (empty($_SESSION['userID'])){
             include_once "modules/get.global.function.php";
             $page->contenttitle="Student Data";
             $page->views="views/student/student.profile.php";
-            include_once "template/form.php";
+            include_once "template/form.validation.php";
             break;
 
         case"course-data";
@@ -39,7 +39,7 @@ if (empty($_SESSION['userID'])){
             include_once "modules/get.global.function.php";
             $page->contenttitle="Course List";
             $page->views="views/course/course.php";
-            include_once "template/form.php";
+            include_once "template/form.validation.php";
             break;
 
         case"expenditure";
@@ -87,6 +87,14 @@ if (empty($_SESSION['userID'])){
             $page->views="views/fees/fees.item.php";
             include_once "template/form.php";
             break;
+
+        case"fees.payment.details";
+            include_once "config/config.php";
+            include_once "modules/get.global.function.php";
+            $page->contenttitle="Fees Payment : ".$_SESSION['student_name'];
+            $page->views="views/fees/fees.ledger.php";
+            include_once "template/form.php";
+        break;
 
         case "ious";
             include_once "config/config.php";

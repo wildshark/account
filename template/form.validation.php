@@ -2,21 +2,18 @@
 /**
  * Created by PhpStorm.
  * User: Andrew Quaye
- * Date: 29-Jun-17
- * Time: 1:14 PM
+ * Date: 11-Nov-17
+ * Time: 6:00 AM
  */
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title><?php echo $page->header?></title>
-    <meta charset="UTF-8" />
+    <title>Maruti Admin</title><meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="template/css/bootstrap.min.css" />
     <link rel="stylesheet" href="template/css/bootstrap-responsive.min.css" />
-    <link rel="stylesheet" href="template/css/colorpicker.css" />
-    <link rel="stylesheet" href="template/css/datepicker.css" />
     <link rel="stylesheet" href="template/css/uniform.css" />
     <link rel="stylesheet" href="template/css/select2.css" />
     <link rel="stylesheet" href="template/css/maruti-style.css" />
@@ -26,7 +23,7 @@
 
 <!--Header-part-->
 <div id="header">
-    <h1><a href="dashboard.html">Qua Account</a></h1>
+    <h1><a href="dashboard.html">Maruti Admin</a></h1>
 </div>
 <!--close-Header-part-->
 
@@ -38,21 +35,29 @@
 <div id="user-nav" class="navbar navbar-inverse">
     <?php include_once "top.menu.php";?>
 </div>
+<div id="search">
+    <input type="text" placeholder="Search here..."/>
+    <button type="submit" class="tip-left" title="Search"><i class="icon-search icon-white"></i></button>
+</div>
 <!--close-top-Header-menu-->
-<!--left-menu-stats-sidebar-->
+<!--close-top-Header-menu-->
 <div id="sidebar">
     <div id="search">
-        <input type="text" placeholder="Search here..."/>
-        <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
+        <input type="text" placeholder="Search here..."/><button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
     </div>
     <?php include_once 'master.menu.top.php'?>
 </div>
-<!--close-left-menu-stats-sidebar-->
 <div id="content">
     <div id="content-header">
-        <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="tip-bottom">Form elements</a> <a href="#" class="current">Common elements</a> </div>
+        <div id="breadcrumb">
+            <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a>
+            <a href="#">Form elements</a>
+            <a href="#" class="current">Validation</a>
+        </div>
         <h1><?php echo $page->contenttitle;?></h1>
+
     </div>
+
     <div class="container-fluid">
         <div>
             <?php
@@ -61,22 +66,20 @@
             ?>
         </div>
         <?php include_once $page->views;?>
+
     </div>
-</div>
-<div class="row-fluid">
+</div> <div class="row-fluid">
     <div id="footer" class="span12"><?php echo $page->copyright;?> </div>
 </div>
 <script src="template/js/jquery.min.js"></script>
 <script src="template/js/jquery.ui.custom.js"></script>
 <script src="template/js/bootstrap.min.js"></script>
-<script src="template/js/bootstrap-colorpicker.js"></script>
-<script src="template/js/bootstrap-datepicker.js"></script>
 <script src="template/js/jquery.uniform.js"></script>
 <script src="template/js/select2.min.js"></script>
+<script src="template/js/jquery.validate.js"></script>
 <script src="template/js/maruti.js"></script>
-<script src="template/js/maruti.tables.js"></script>
-<script src="template/js/jquery.dataTables.min.js"></script>
-<script src="template/js/maruti.form_common.js"></script>
+<script src="template/js/maruti.form_validation.js"></script>
 </body>
+
 </html>
 
