@@ -16,7 +16,7 @@ session_start();
 date_default_timezone_set("Africa/Accra");
 
 //transaction Date and time
-$tranDate=date("Y/m/d h:i:sa");
+$tranDate=date("Y/m/d h:i:s");
 $date=date("d/m/y");
 
 //page content and label

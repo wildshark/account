@@ -5,7 +5,11 @@
  * Date: 30-Jun-17
  * Time: 6:16 PM
  */
-
+if (empty($_SESSION['studentID'])){
+    $student_id='Null';
+}else{
+    $student_id=$_SESSION['studentID'];
+}
 if (empty($_SESSION['name'])){
     $name='Null';
 }else{
@@ -16,11 +20,7 @@ if (empty($_SESSION['admission'])){
 }else{
     $admission=$_SESSION['admission'];
 }
-if (empty($_SESSION['studentID'])){
-    $student='Null';
-}else{
-    $student=$_SESSION['studentID'];
-}
+
 if (empty($_SESSION['fees'])){
     $fees='Null';
 }else{
@@ -36,13 +36,18 @@ if (empty($_SESSION['bal'])){
 }else{
     $bal=$_SESSION['bal'];
 }
+if(empty($_SESSION['student_category'])){
+    $student_category='Null';
+}else{
+    $student_category=$_SESSION['student_category'];
+}
 
-function fees_details($conn,$student){
+function fees_details($conn,$student_id){
 
-    If ($student == "Null") {
+    If ($student_id == "Null") {
         exit();
     } else {
-        $cash = "SELECT * FROM get_fees_payment_history WHERE studentID='$student'";
+        $cash = "SELECT * FROM get_fees_payment_history WHERE studentID='$student_id'";
         $cash = $conn->query($cash);
         while ($c = $cash->fetch_assoc()) {
 
@@ -74,7 +79,7 @@ function fees_details($conn,$student){
 }
 
 
-    $student_data=$conn->query("SELECT * FROM get_student_profile WHERE studentID='$student'");
+    $student_data=$conn->query("SELECT * FROM get_student_profile WHERE studentID='$student_id'");
     $d=$student_data->fetch_assoc();
     $course=$d['courseID'];
     $yearID=$d['admissionYr'];
@@ -84,12 +89,12 @@ function fees_details($conn,$student){
     $course=$s['course'];
     $school=$s['prefix'];
 
-function summary_details($conn,$student){
+function summary_details($conn,$student_id){
 
-    If ($student == "Null") {
+    If ($student_id == "Null") {
         exit();
     } else {
-        $summary = "SELECT * FROM get_fees_summary WHERE studentID='$student'";
+        $summary = "SELECT * FROM get_fees_summary WHERE studentID='$student_id'";
         $summary = $conn->query($summary);
         while ($s = $summary->fetch_assoc()) {
             echo "
@@ -258,7 +263,8 @@ function summary_details($conn,$student){
                                         </div>
                                     </div>
                                     <div class="form-actions">
-                                        <input type="hidden" name="ticket" value="<?php echo $student;?>">
+                                        <input type="hidden" name="student-id" value="<?php echo $student_id;?>">
+                                        <input type="hidden" name="category-id" value="<?php echo $student_category;?>">
                                         <input type="hidden" name="transaction" value="fees.payment">
                                         <button type="submit" class="btn btn-success">Add</button>
                                     </div>
@@ -291,7 +297,7 @@ function summary_details($conn,$student){
                             </tr>
                             </thead>
                             <tbody>
-                                <?php fees_details($conn,$student); ?>
+                                <?php fees_details($conn,$student_id); ?>
                             </tbody>
                         </table>
                     </div>
@@ -317,7 +323,7 @@ function summary_details($conn,$student){
                             </tr>
                             </thead>
                             <tbody>
-                                <?php summary_details($conn,$student); ?>
+                                <?php summary_details($conn,$student_id); ?>
                             </tbody>
                         </table>
                     </div>

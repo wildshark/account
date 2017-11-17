@@ -14,6 +14,7 @@ $p=$profile->fetch_assoc();
 $_SESSION['name']=$p['studentName'];
 $_SESSION['admission']=$p['AdmissionNo'];
 $_SESSION['studentID']=$p['studentID'];
+$_SESSION['student_category']=$p['categoryID'];
 
 //$data=$conn->query("SELECT * FROM fees_payment WHERE studentID='$id'");
 //$f=$data->fetch_assoc();
@@ -24,6 +25,5 @@ $b=$bal->fetch_assoc();
 $_SESSION['fees'] = $b['fees'];
 $_SESSION['paid'] = $b['paid'];
 $_SESSION['bal'] = $b['bal'];
-
 
 header("location:" . $_SERVER['HTTP_REFERER']);

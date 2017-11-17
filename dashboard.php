@@ -80,6 +80,13 @@ if (empty($_SESSION['userID'])){
             include_once "template/form.php";
             break;
 
+        case"fees-revenue";
+            include_once "config/config.php";
+            include_once "modules/get.global.function.php";
+            $page->contenttitle="Fees Revenue";
+            $page->views="views/ledger/fees.revenue.php";
+            include_once "template/form.php";
+        break;
         case"fees.costing";
             include_once "config/config.php";
             include_once "modules/get.global.function.php";

@@ -36,6 +36,7 @@ function administrator(){
             <li><a href='account.php?user=pay.voucher&error=0&alert=1'><i class='icon icon-th'></i> <span>Pay Voucher</span></a></li>
             <li><a href='account.php?user=cash.book&error=0&alert=1'><i class='icon icon-fullscreen'></i> <span>Cash Book</span></a></li>
             <li><a href='account.php?user=bank.book&error=0&alert=1'><i class='icon icon-tint'></i> <span>Bank Book</span></a></li>
+            <li><a href='account.php?user=fees-revenue&error=0&alert=1'><i class='icon icon-inbox'></i> <span>Fees Revenue</span></a> </li>
             <li class='submenu'> <a href='#'><i class='icon icon-th-list'></i> <span>Ledger</span></a>
                 <ul>
                     <li><a href='account.php?user=general.ledger&error=0&alert=1'>General Ledger</a></li>
