@@ -2,41 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c504eb96-3b0a-4d1b-9d60-133f7fab0fe0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/alert/alert.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/print/css/normalize.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/print/css/paper.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/print/css/receipt.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/print/invoice.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/print/page.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/print/pos/pos.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/print/views/receipt.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/form.validation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.keystream" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.keystream" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.keystream.len" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.keystream.len" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.len" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.len" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.values.at" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata_i" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata_i" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_src_/schema/ghanacu_account.zip" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_src_/schema/ghanacu_account.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dashboard.php" afterPath="$PROJECT_DIR$/dashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/course/add.course.php" afterPath="$PROJECT_DIR$/modules/course/add.course.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/delete.record.php" afterPath="$PROJECT_DIR$/modules/delete.record.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/fees/add.fees.costing.php" afterPath="$PROJECT_DIR$/modules/fees/add.fees.costing.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/fees/add.fees.payment.php" afterPath="$PROJECT_DIR$/modules/fees/add.fees.payment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/student/student.data.php" afterPath="$PROJECT_DIR$/modules/student/student.data.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/print.php" afterPath="$PROJECT_DIR$/print.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/form.php" afterPath="$PROJECT_DIR$/template/form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/master.menu.top.php" afterPath="$PROJECT_DIR$/template/master.menu.top.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/top.menu.php" afterPath="$PROJECT_DIR$/template/top.menu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.php" afterPath="$PROJECT_DIR$/test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transaction.php" afterPath="$PROJECT_DIR$/transaction.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/course/course.php" afterPath="$PROJECT_DIR$/views/course/course.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/fees/fees.item.php" afterPath="$PROJECT_DIR$/views/fees/fees.item.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/fees/fees.ledger.php" afterPath="$PROJECT_DIR$/views/fees/fees.ledger.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/fees/fees.payment.php" afterPath="$PROJECT_DIR$/views/fees/fees.payment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/ledger/fees.ledger.book.php" afterPath="$PROJECT_DIR$/views/ledger/fees.ledger.book.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/payroll/staff.loan.php" afterPath="$PROJECT_DIR$/views/payroll/staff.loan.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/student/student.profile.php" afterPath="$PROJECT_DIR$/views/student/student.profile.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,33 +33,19 @@
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="ghanacu_account@localhost" type="e3449647:DbNodeDescriptor" />
       </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="ghanacu_account@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="ghanacu_account" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="ghanacu_account@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="ghanacu_account" type="e3449647:DbNodeDescriptor" />
+        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
+      </path>
     </expand>
     <select />
-  </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="fees.item.php" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/views/fees/fees.item.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="742">
-                    <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-                    <folding>
-                      <marker date="1510924040226" expanded="true" signature="177:223" ph="SELECT * FRO... get_fees_list" />
-                      <marker date="1510924040226" expanded="true" signature="324:1078" ph="..." />
-                      <marker date="1510924040226" expanded="true" signature="1163:1209" ph="SELECT * FRO... get_fees_list" />
-                      <marker date="1510924040226" expanded="true" signature="1310:2064" ph="..." />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="account" />
@@ -104,8 +65,8 @@
       <file leaf-file-name="add.fees.costing.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/fees/add.fees.costing.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="560">
+              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding>
                 <marker date="1510863156290" expanded="true" signature="739:1165" ph="INSERT INTO `fees_price_list`... " />
               </folding>
@@ -138,8 +99,8 @@
       <file leaf-file-name="get.global.function.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/get.global.function.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-40">
-              <caret line="43" column="30" lean-forward="true" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
+            <state relative-caret-position="-1783">
+              <caret line="43" column="30" lean-forward="false" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
               <folding>
                 <marker date="1505069603203" expanded="true" signature="1252:1279" ph="SELECT * FRO... expenses_list" />
                 <marker date="1505069603203" expanded="true" signature="1538:1569" ph="SELECT * FRO... expenses_pay_list" />
@@ -272,7 +233,7 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-1" />
     <option name="y" value="160" />
     <option name="width" value="1378" />
@@ -313,6 +274,17 @@
               <item name="account" type="b2602c69:ProjectViewProjectNode" />
               <item name="account" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="fees" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="account" type="b2602c69:ProjectViewProjectNode" />
+              <item name="account" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="account" type="b2602c69:ProjectViewProjectNode" />
+              <item name="account" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="fees" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
@@ -554,12 +526,12 @@
       <workItem from="1510559246759" duration="1173000" />
       <workItem from="1510595370381" duration="778000" />
       <workItem from="1510764841918" duration="1010000" />
-      <workItem from="1510858285297" duration="9002000" />
+      <workItem from="1510858285297" duration="13143000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="447248000" />
+    <option name="totallyTimeSpent" value="451389000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -571,14 +543,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20801815" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20905924" sideWeight="0.5060698" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15582451" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="1366" y="0" width="1280" height="984" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13675214" sideWeight="0.4939302" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2632375" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="1366" y="0" width="1280" height="984" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13675214" sideWeight="0.4939302" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2518968" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -601,21 +572,23 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="605" y="350" width="444" height="168" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20905924" sideWeight="0.5060698" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="605" y="350" width="444" height="168" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13675214" sideWeight="0.4939302" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20272315" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20801815" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22768533" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15582451" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="1366" y="0" width="1280" height="984" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43418804" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2526475" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2518968" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -976,14 +949,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="76" column="12" lean-forward="false" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/transaction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -992,23 +957,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/fees/fees.item.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding>
-            <marker date="1510924040226" expanded="true" signature="177:223" ph="SELECT * FRO... get_fees_list" />
-            <marker date="1510924040226" expanded="true" signature="324:1078" ph="..." />
-            <marker date="1510924040226" expanded="true" signature="1163:1209" ph="SELECT * FRO... get_fees_list" />
-            <marker date="1510924040226" expanded="true" signature="1310:2064" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/get.global.function.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
-          <caret line="43" column="30" lean-forward="true" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
+        <state relative-caret-position="-1783">
+          <caret line="43" column="30" lean-forward="false" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
           <folding>
             <marker date="1505069603203" expanded="true" signature="1252:1279" ph="SELECT * FRO... expenses_list" />
             <marker date="1505069603203" expanded="true" signature="1538:1569" ph="SELECT * FRO... expenses_pay_list" />
@@ -1026,12 +978,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="76" column="12" lean-forward="false" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/modules/fees/add.fees.costing.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="560">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
             <marker date="1510863156290" expanded="true" signature="739:1165" ph="INSERT INTO `fees_price_list`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/fees/fees.item.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-680">
+          <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="43" />
+          <folding>
+            <marker date="1510928605675" expanded="true" signature="177:191" ph="SELECT * FRO... get_fees_list" />
+            <marker date="1510928605675" expanded="true" signature="177:220" ph="SELECT * FRO... get_foreign_student_fees_list" />
+            <marker date="1510928605675" expanded="true" signature="320:834" ph="..." />
+            <marker date="1510928605675" expanded="true" signature="320:875" ph="..." />
+            <marker date="1510928605675" expanded="true" signature="320:915" ph="..." />
+            <marker date="1510928605675" expanded="true" signature="320:956" ph="..." />
+            <marker date="1510928605675" expanded="true" signature="320:1232" ph="..." />
+            <marker date="1510928605675" expanded="true" signature="1317:1358" ph="SELECT * FRO... get_fees_list" />
+            <marker date="1510928605675" expanded="true" signature="1458:2136" ph="..." />
+            <marker date="1510928605675" expanded="true" signature="1458:2353" ph="..." />
           </folding>
         </state>
       </provider>
