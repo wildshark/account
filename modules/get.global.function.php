@@ -40,7 +40,7 @@ function ticket_generator($length=4){
 
 //function expenses list combo
 function expenditure_list($conn){
-    $list="SELECT * FROM expenses_list";
+    $list="SELECT * FROM get_expenditure_list";
     $list=$conn->query($list);
     while ($l=$list->fetch_assoc()){
         echo "<option value='".$l['TranCatID']."'>".$l['ledger']."</option>";

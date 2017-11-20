@@ -11,6 +11,7 @@ $tranDate= date('Y-m-d h:i:s');
 $d=strtotime($_GET['date']);
 $date= date("Y-m-d",$d);
 
+$student_entry_type=$_GET['student-entry-type'];
 $student_id= $_GET['student-id'];
 $schoolID= $_GET['school'];
 $payType= $_GET['pay'];
@@ -23,12 +24,28 @@ $level= $_GET['level'];
 $school_session= $_GET['session'];
 $student_category_id= $_GET['category-id'];
 
-$data=$conn->query("SELECT * FROM get_fees WHERE schoolID='$schoolID' AND statusID='$student_category_id'");
-$r=$data->fetch_assoc();
-$tuition=$r['tuition'];
-$other=$r['other_fees'];
-$school=$r['prefix'];
-$fees_cost=$tuition+$other;
+//get fees for new intake and returning student
+
+if ($student_entry_type == 1){
+
+    $data=$conn->query("SELECT * FROM get_fees_list_for_new_student WHERE schoolID='$schoolID' AND statusID='$student_category_id'");
+    $r=$data->fetch_assoc();
+    $tuition=$r['tuition'];
+    $other=$r['other_fees'];
+    $school=$r['prefix'];
+    $fees_cost=$tuition+$other;
+
+}elseif ($student_entry_type== 2){
+
+    $data=$conn->query("SELECT * FROM get_fees_list_continuing_student WHERE schoolID='$schoolID' AND statusID='$student_category_id'");
+    $r=$data->fetch_assoc();
+    $tuition=$r['tuition'];
+    $other=$r['other_fees'];
+    $school=$r['prefix'];
+    $fees_cost=$tuition+$other;
+
+}
+
 
 //calculate fees discount
 if (empty($discount) || $discount == 0){

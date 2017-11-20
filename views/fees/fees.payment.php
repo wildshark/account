@@ -152,7 +152,8 @@ function summary_details($conn,$student_id){
                         <div class="widget-title">
                             <ul class="nav nav-tabs">
                                 <li class="active"><a data-toggle="tab" href="#tab1">Payment History</a></li>
-                                <li><a data-toggle="tab" href="#tab2">Payment Slip</a></li>
+                                <li><a data-toggle="tab" href="#tab2">New Student Payment Slip</a></li>
+                                <li><a data-toggle="tab" href="#tab3">Continuing Student Payment Slip</a></li>
                             </ul>
                         </div>
                         <div class="widget-content tab-content">
@@ -186,6 +187,91 @@ function summary_details($conn,$student_id){
                                 </form>
                             </div>
                             <div id="tab2" class="tab-pane">
+                                <p> Key in Detail payment for New Student, </p>
+                                <form class="form-horizontal">
+                                    <div class="span6">
+                                        <div class="control-group">
+                                            <label>Student Name </label>
+                                            <input name="student" type="text" disabled value="<?php echo $name;?>" class="span11" />
+                                        </div>
+
+                                        <div class="control-group">
+                                            <label>School </label>
+                                            <select name="school">
+                                                <?php school_list($conn);?>
+                                            </select>
+                                        </div>
+                                        <div class="control-group">
+                                            <label>Session </label>
+                                            <select name="session">
+                                                <option value=""></option>
+                                                <?php year_list($conn);?>
+                                            </select>
+                                        </div>
+                                        <div class="control-group">
+                                            <label>Semester </label>
+                                            <select name="semester">
+                                                <option value="1">1st Semester </option>
+                                                <option value="2">2nd Semester </option>
+                                            </select>
+                                        </div>
+                                        <div class="control-group">
+                                            <label>Level </label>
+                                            <select name="level">
+                                                <option value="100">Level 100 </option>
+                                                <option value="200">Level 200</option>
+                                                <option value="300">Level 300</option>
+                                                <option value="400">Level 400</option>
+                                            </select>
+                                        </div>
+                                        <div class="control-group">
+                                            <label>Payment Type </label>
+                                            <select name="pay">
+                                                <option value="1">Cash </option>
+                                                <option value="2">Bank</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="span6">
+                                        <div class="control-group">
+                                            <label>Date picker (dd-mm)</label>
+                                            <input name="date" type="text" data-date="01-02-2013" data-date-format="dd-mm-yyyy" value="<?php echo date("d-m-Y");?>" class="datepicker span11" id="required" required />
+                                        </div>
+                                        <div class="control-group">
+                                            <label>Ref. No# </label>
+                                            <input name="ref" type="text" class="span11" id="required" required />
+                                        </div>
+                                        <div class="control-group">
+                                            <label>Description </label>
+                                            <input name="description" type="text" class="span11" id="required" required />
+                                        </div>
+                                        <div class="control-group">
+                                            <label >Discount </label>
+                                            <div >
+                                                <div class="input-append">
+                                                    <input name="discount" type="text" placeholder="0.00" class="span11">
+                                                    <span class="add-on">%</span> </div>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label >Paid Amount </label>
+                                            <div >
+                                                <div class="input-append">
+                                                    <input name="amount" type="text" placeholder="0.000" class="span11"  id="required" required>
+                                                    <span class="add-on">GHc</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-actions">
+                                        <input type="hidden" name="student-id" value="<?php echo $student_id;?>">
+                                        <input type="hidden" name="category-id" value="<?php echo $student_category;?>">
+                                        <input type="hidden" name="transaction" value="fees.payment">
+                                        <button type="submit" class="btn btn-success">Add</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div id="tab3" class="tab-pane">
                                 <p> waffle to pad out the comment. Usually, </p>
                                 <form class="form-horizontal">
                                     <div class="span6">
@@ -266,6 +352,7 @@ function summary_details($conn,$student_id){
                                         <input type="hidden" name="student-id" value="<?php echo $student_id;?>">
                                         <input type="hidden" name="category-id" value="<?php echo $student_category;?>">
                                         <input type="hidden" name="transaction" value="fees.payment">
+                                        <input type="hidden" name="student-entry-type" value="2">
                                         <button type="submit" class="btn btn-success">Add</button>
                                     </div>
                                 </form>

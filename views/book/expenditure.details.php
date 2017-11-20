@@ -28,7 +28,22 @@ function get_expenditure_summary($conn){
     }
 }
 
-function cashbook($conn){
+function get_daily_expenses_transaction($conn){
+   $transaction="SELECT * FROM get_expenditure_per_day";
+   $transaction=$conn->query($transaction);
+   while ($t=$transaction->fetch_assoc()){
+       echo"
+            <tr class='gradeX'>
+                  <td>{$t['GL_date']}</td>
+                  <td>{$t['ledger']}</td>
+                  <td>{$t['refNo']}</td>
+                  <td class='center'>{$t['qouteDr']}</td>
+            </tr>
+       ";
+   }
+}
+
+function get_expenditure_book($conn){
     $cash="SELECT * FROM get_expenditure_book";
     $cash=$conn->query($cash);
     while ($c=$cash->fetch_assoc()){
@@ -45,37 +60,23 @@ function cashbook($conn){
     ";
     }
 }
-function summary_cashbook($conn){
 
-    $cash="SELECT * FROM get_sum_gl_qoute";
+function get_expenditure_ledger_summary($conn){
+    $cash="SELECT * FROM get_expenditure_book";
     $cash=$conn->query($cash);
-    $c=$cash->fetch_assoc();
-    $debit=$c['qDr'];
-    $credit=$c['qCr'];
-    $bal=$debit-$credit;
-
-    $x=ticket_generator($length=4)."-".date('Y')."-".date('dm');
-    $_GET['ticketID']=$x;
-
-    echo "
-        <tr>
-            <td>Date</td>
-            <td>".date('d-m-Y')."</td>
+    while ($c=$cash->fetch_assoc()){
+        echo "
+        <tr class='gradeX'>
+            <td class='center'>".$c['GL_date']."</td>
+            <td>".$c['description']."</td>
+            <td>".$c['refNo']."</td>
+            <td>".$c['ticketID']."</td>
+            <td>".$c['yearID']."</td>
+            <td>".$c['qouteDr']."</td>
+            <td><a href='' class ='btn btn-mini btn-primary'>Remove</a></td>
         </tr>
-        <tr>
-            <td>Time</td>
-            <td>".date('h:i:sa')."</td>
-        </tr>
-        <tr>
-            <td>Transaction ID# </td>
-            <td>".date('Y')."-".date('dm')."</td>
-        </tr>
-        <tr>
-            <td>Bill Unpaid</td>
-            <td>".$bal."</td>
-        </tr>
-        
     ";
+    }
 }
 
 
@@ -84,11 +85,11 @@ function summary_cashbook($conn){
     <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#expenses">Expenses</a></li>
         <li><a data-toggle="tab" href="#expenses-history">Expenses History</a></li>
-        <li><a data-toggle="tab" href="#summary">Summary</a></li>
+        <li><a data-toggle="tab" href="#expenses-summary">Summary</a></li>
     </ul>
     <div class="tab-content">
         <div id="expenses" class="tab-pane fade in active">
-            <div class="span6">
+            <div class="span5">
                 <div class="widget-box">
                     <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
                         <h5>Expenses-info</h5>
@@ -149,24 +150,24 @@ function summary_cashbook($conn){
                     </div>
                 </div>
             </div>
-            <div class="span6">
+            <div class="span7">
                 <div class="widget-box">
                     <div class="widget-title">
-				        <span class="icon">
-					       <i class="icon-eye-open"></i>
-				        </span>
-                        <h5>Browesr statistics</h5>
+                        <span class="icon"><i class="icon-th"></i></span>
+                        <h5>Data table</h5>
                     </div>
                     <div class="widget-content nopadding">
-                        <table class="table table-bordered">
+                        <table class="table table-bordered data-table">
                             <thead>
                             <tr>
-                                <th></th>
-                                <th></th>
+                                <th>Date</th>
+                                <th>Transaction</th>
+                                <th>Ref. No#</th>
+                                <th>Amount</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <?php summary_cashbook($conn)?>
+                                <?php get_daily_expenses_transaction($conn);?>
                             </tbody>
                         </table>
                     </div>
@@ -184,22 +185,19 @@ function summary_cashbook($conn){
                         <thead>
                         <tr>
                             <th>Date</th>
-                            <th>Details</th>
+                            <th>Transaction</th>
                             <th>Ref. No#</th>
-                            <th>Trans No#</th>
-                            <th>Session</th>
                             <th>Amount</th>
-                            <th></th>
                         </tr>
                         </thead>
                         <tbody>
-                        <?php cashbook($conn)?>
+                            <?php get_expenditure_book($conn);?>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-        <div id="summary" class="tab-pane fade">
+        <div id="expenses-summary" class="tab-pane fade">
             <div class="widget-box">
                 <div class="widget-title">
                     <span class="icon"><i class="icon-th"></i></span>
@@ -209,14 +207,14 @@ function summary_cashbook($conn){
                     <table class="table table-bordered data-table">
                         <thead>
                         <tr>
-                            <th>Ledger</th>
-                            <th>Year</th>
-                            <th>Semester</th>
+                            <th>Date</th>
+                            <th>Details</th>
+                            <th>Ref. No#</th>
                             <th>Amount</th>
                         </tr>
                         </thead>
                         <tbody>
-                            <?php get_expenditure_summary($conn)?>
+                            <?php get_expenditure_ledger_summary($conn);?>
                         </tbody>
                     </table>
                 </div>

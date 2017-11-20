@@ -30,7 +30,7 @@ $sql = "INSERT INTO general_legder (tranDate,GL_date,ticketID,tranCatID,descript
 VALUES ('$tranDate','$date','$ticketID','$tranID', '$details','$ref','$semester','$yearId','$t_book','3','$t_profit','$t_balSheet','$amount')";
 if ($conn->query($sql) === TRUE) {
     //echo "New record created successfully";
-    header("location: account.php?user=expenditure");
+    header("location: account.php?user=expenditure&error=2&alert=2");
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
