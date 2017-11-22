@@ -23,6 +23,11 @@ switch ($error){
     case 4:
         $msg="Record has been delete";
     break;
+    case 5:
+        $msg="Missing staff name or Id number";
+    break;
+    case 6:
+        $msg="Missing details can't post salary Cost to salary control ledger";
     default:
        $msg ="Fill in all text field";
 }

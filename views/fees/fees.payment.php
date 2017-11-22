@@ -267,6 +267,7 @@ function summary_details($conn,$student_id){
                                         <input type="hidden" name="student-id" value="<?php echo $student_id;?>">
                                         <input type="hidden" name="category-id" value="<?php echo $student_category;?>">
                                         <input type="hidden" name="transaction" value="fees.payment">
+                                        <input type="hidden" name="student-entry-type" value="1">
                                         <button type="submit" class="btn btn-success">Add</button>
                                     </div>
                                 </form>

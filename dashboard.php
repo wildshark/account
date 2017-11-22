@@ -87,6 +87,7 @@ if (empty($_SESSION['userID'])){
             $page->views="views/ledger/fees.revenue.php";
             include_once "template/form.php";
         break;
+
         case"fees.costing";
             include_once "config/config.php";
             include_once "modules/get.global.function.php";
@@ -169,11 +170,10 @@ if (empty($_SESSION['userID'])){
             break;
 
         case "salary.control"; //view ledger details
-            $label=$_SESSION['ledger'];
             include_once "config/config.php";
             include_once "modules/get.global.function.php";
             $page->contenttitle = "Salary Control";
-            $page->views="views/ledger/ledger.details.php";
+            $page->views="views/ledger/salary.control.ledger.php";
             include_once "template/form.php";
             break;
 
@@ -184,6 +184,8 @@ if (empty($_SESSION['userID'])){
             $page->views="views/profit_loss/profit.loss.php";
             include_once "template/form.php";
         break;
+
+
 
         case'print';
             include_once "config/config.php";

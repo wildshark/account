@@ -8,6 +8,7 @@
 
 //database connection
 include_once "db/conn.php";
+include_once "setup.php";
 
 //session
 session_start();
@@ -36,6 +37,8 @@ $printout =new stdClass();
 $printout->header="Print Out";
 $printout->title="Ghana Christian University College";
 $printout->copyright=" 2012 - ".date("Y")." &copy; iQuipe Digital Enterprises";
+
+
 
 /**
  *check the StaffID status,

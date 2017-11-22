@@ -62,18 +62,22 @@ function get_expenditure_book($conn){
 }
 
 function get_expenditure_ledger_summary($conn){
-    $cash="SELECT * FROM get_expenditure_book";
+    $cash="SELECT * FROM get_expenditure_summary";
     $cash=$conn->query($cash);
     while ($c=$cash->fetch_assoc()){
+        if ($c['semesterID'] == 1){
+            $semester="1st Semester";
+        }elseif ($c['semesterID'] == 2){
+            $semester="2nd Semester";
+        }
         echo "
         <tr class='gradeX'>
-            <td class='center'>".$c['GL_date']."</td>
-            <td>".$c['description']."</td>
-            <td>".$c['refNo']."</td>
-            <td>".$c['ticketID']."</td>
-            <td>".$c['yearID']."</td>
-            <td>".$c['qouteDr']."</td>
-            <td><a href='' class ='btn btn-mini btn-primary'>Remove</a></td>
+            <td class='center'>".$c['yearID']."</td>
+            <td>".$c['ledger']."</td>
+            <td>".$semester."</td> 
+            <td>".$c['NoOfTransaction']."</td>
+            <td>".$c['Dr']."</td>
+            <td><a href='' class ='btn btn-mini btn-primary'>View Ledger</a></td>
         </tr>
     ";
     }
@@ -207,10 +211,12 @@ function get_expenditure_ledger_summary($conn){
                     <table class="table table-bordered data-table">
                         <thead>
                         <tr>
-                            <th>Date</th>
+                            <th>Session</th>
                             <th>Details</th>
-                            <th>Ref. No#</th>
+                            <th>Semester</th>
+                            <th>Total Tran.</th>
                             <th>Amount</th>
+                            <th></th>
                         </tr>
                         </thead>
                         <tbody>

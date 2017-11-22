@@ -111,6 +111,9 @@ switch ($_GET["transaction"]){
     case "profit.loss";
         include_once "config/config.php";
         include_once "modules/profit_loss/profit.loss.php";
-        break;
+        $page->contenttitle="Profit & Loss Statement";
+        $page->views="views/profit_loss/profit.loss.calculate.php";
+        include_once "template/form.php";
+    break;
 
 }

@@ -9,41 +9,36 @@
 <div class="row-fluid">
     <div class="span5">
         <div class="widget-box">
-            <div class="widget-title">
-				<span class="icon">
-					<i class="icon-info-sign"></i>
-				</span>
-                <h5>Data validation</h5>
+            <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+                <h5>Personal-info</h5>
             </div>
             <div class="widget-content nopadding">
-                <form class="form-horizontal" method="get" action="transaction.php" name="basic_validate" id="basic_validate" novalidate="novalidate">
+                <form action="transaction.php" method="get" class="form-horizontal">
+                    <input type="hidden" name="transaction" value="profit.loss">
+                    <input type="hidden" name="error" value="0">
+                    <input type="hidden" name="alert" value="1">
                     <div class="control-group">
-                        <label class="control-label">Year</label>
+                        <label class="control-label">Session </label>
                         <div class="controls">
-                            <select name="year">
+                            <select name="year" >
                                 <?php year_list($conn);?>
                             </select>
                         </div>
                     </div>
                     <div class="control-group">
-                        <label class="control-label">Start Date (mm-dd)</label>
+                        <label class="control-label">Date picker (dd-mm)</label>
                         <div class="controls">
-                            <div  data-date="12-02-2012" class="input-append date datepicker">
-                                <input type="text" name="start-date" value="12-02-2012"  data-date-format="mm-dd-yyyy" class="span11" >
-                                <span class="add-on"><i class="icon-th"></i></span> </div>
-                        </div>
+                            <input type="text" name="start-date" data-date="01-02-2013" data-date-format="dd-mm-yyyy" value="<?php echo date('d-m-Y');?>" class="datepicker span11">
+                            <span class="help-block">Date with Formate of  (dd-mm-yy)</span> </div>
                     </div>
                     <div class="control-group">
-                        <label class="control-label">End Date (mm-dd)</label>
+                        <label class="control-label">Date picker (dd-mm)</label>
                         <div class="controls">
-                            <div  data-date="12-02-2012" class="input-append date datepicker">
-                                <input type="text" name="end-date" value="12-02-2012"  data-date-format="mm-dd-yyyy" class="span11" >
-                                <span class="add-on"><i class="icon-th"></i></span> </div>
-                        </div>
+                            <input type="text" name="end-date" data-date="01-02-2013" data-date-format="dd-mm-yyyy" value="<?php echo date('d-m-Y');?>" class="datepicker span11">
+                            <span class="help-block">Date with Formate of  (dd-mm-yy)</span> </div>
                     </div>
                     <div class="form-actions">
-                        <input type="hidden" name="transaction" value="profit.loss">
-                        <input type="submit"  name="submit" value="validate" class="btn btn-success">
+                        <button type="submit" name="submit" value="pl" class="btn btn-success">Query</button>
                     </div>
                 </form>
             </div>
@@ -51,12 +46,33 @@
     </div>
     <div class="span7">
         <div class="widget-box">
-            <div class="widget-title">
-                <span class="icon"><i class="icon-th"></i></span>
-                <h5>Data table</h5>
+            <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+                <h5>Personal-info</h5>
             </div>
             <div class="widget-content nopadding">
-
+                Personal-infoPersonal-infoPersonal-infoPersonal-infoPersonal-info
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span6">
+        <div class="widget-box">
+            <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+                <h5>Personal-info</h5>
+            </div>
+            <div class="widget-content nopadding">
+                Personal-infoPersonal-infoPersonal-infoPersonal-infoPersonal-info
+            </div>
+        </div>
+    </div>
+    <div class="span6">
+        <div class="widget-box">
+            <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+                <h5>Personal-info</h5>
+            </div>
+            <div class="widget-content nopadding">
+                Personal-infoPersonal-infoPersonal-infoPersonal-infoPersonal-info
             </div>
         </div>
     </div>

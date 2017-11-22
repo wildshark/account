@@ -29,20 +29,20 @@ $student_category_id= $_GET['category-id'];
 if ($student_entry_type == 1){
 
     $data=$conn->query("SELECT * FROM get_fees_list_for_new_student WHERE schoolID='$schoolID' AND statusID='$student_category_id'");
-    $r=$data->fetch_assoc();
-    $tuition=$r['tuition'];
-    $other=$r['other_fees'];
-    $school=$r['prefix'];
-    $fees_cost=$tuition+$other;
+    $r = $data->fetch_assoc();
+    $tuition = $r['tuition'];
+    $other = $r['other_fees'];
+    $school = $r['prefix'];
+    $fees_cost = $tuition + $other;
 
 }elseif ($student_entry_type== 2){
 
     $data=$conn->query("SELECT * FROM get_fees_list_continuing_student WHERE schoolID='$schoolID' AND statusID='$student_category_id'");
-    $r=$data->fetch_assoc();
-    $tuition=$r['tuition'];
-    $other=$r['other_fees'];
-    $school=$r['prefix'];
-    $fees_cost=$tuition+$other;
+    $r = $data->fetch_assoc();
+    $tuition = $r['tuition'];
+    $other = $r['other_fees'];
+    $school = $r['prefix'];
+    $fees_cost=$tuition + $other;
 
 }
 
@@ -67,8 +67,8 @@ if (empty($description)){
 
 //check payment type 1. cash 2.Bank
 
-$data="INSERT INTO fees_payment(tranDate,payDate,studentID,schoolID,payTypeID,refNo,fees_amount,paid_amount,stud_level,semesterID,sch_session,main_fees,discount)
-VALUES ('$tranDate','$date','$student_id','$schoolID','$payType','$ref','$fees_amount','$amount','$level','$semesterID','$school_session','$fees_cost','$discount')";
+$data="INSERT INTO fees_payment(tranDate,payDate,studentID,schoolID,payTypeID,refNo,fees_amount,paid_amount,stud_level,semesterID,sch_session,main_fees,discount,tutor_materials)
+VALUES ('$tranDate','$date','$student_id','$schoolID','$payType','$ref','$fees_amount','$amount','$level','$semesterID','$school_session','$fees_cost','$discount','$other')";
     if ($conn->query($data) === TRUE) {
         //echo "New record created successfully";
         if ($payType == 2){
