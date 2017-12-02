@@ -56,7 +56,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php get_fees_income($conn,$start,$end)?>
+                        <?php get_fees_revenue_summary($conn,$start,$end)?>
                     </tbody>
                 </table>
             </div>

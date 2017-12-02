@@ -22,27 +22,22 @@ if ($_GET['submit']== 'pl'){
 
         $year = $_GET['year'];
 
-        //query income
-        function get_fees_income($conn,$start,$end){
-            $income="SELECT get_profit_loss_income.semesterID, get_profit_loss_income.studentID,
-Sum(get_profit_loss_income.tutor_materials) as materials,
-Sum(get_profit_loss_income.main_fees)as tutor
-FROM get_profit_loss_income WHERE get_profit_loss_income.payDate BETWEEN '{$start}' AND '{$end}'
-GROUP BY get_profit_loss_income.semesterID, get_profit_loss_income.studentID";
-            $income_result=$conn->query($income);
-            while ($i=$income_result->fetch_assoc()){
-                echo "
-                <tr class='gradeX'>
-                    <td class='center'>Fee Rev</td>
-                    <td>" . $i['tutor'] . "</td>
-                </tr>
-                <tr class='gradeX'>
-                    <td class='center'>Materials</td>
-                    <td>" . $i['materials'] . "</td>
-                </tr>
-            ";
+
+        function get_fees_revenue_summary($conn,$start,$end){
+
+            $fees_revenue="select * from get_pl_fees_revenue WHERE jDate BETWEEN '{$start}' AND '{$end}'";
+            $fees_revenue=$conn->query($fees_revenue);
+            while($r=$fees_revenue->fetch_assoc()){
+                echo"
+                    <tr class='gradeX'>
+                        <td class='center'><a href='account.php?user=fees.income.details&data=".$r['revenueID']."&sort=".$r['revenue']."&error=0&alert=1'>".$r['revenue']."</a> </td>
+                        <td>" . $r['total'] . "</td>
+                    </tr>";
+
+
             }
         }
+
         //query get_profit_loss_expenditure_n2
         function get_profit_loss_expenditure($conn, $start, $end){
 
@@ -52,7 +47,7 @@ GROUP BY get_profit_loss_income.semesterID, get_profit_loss_income.studentID";
             while ($e = $expenses_result->fetch_assoc()) {
                 echo "
                 <tr class='gradeX'>
-                    <td class='center'>" . $e['ledger'] . "</td>
+                    <td class='center'><a href='account.php?user=fees.income.details&data=".$e['revenueID']."&sort=".$r['revenue']."&error=0&alert=1'>" . $e['ledger'] . "</td>
                     <td>" . $e['expenses'] . "</td>
                 </tr>
             ";
@@ -62,10 +57,7 @@ GROUP BY get_profit_loss_income.semesterID, get_profit_loss_income.studentID";
 
         function profit_loss_calculation($conn,$start,$end){
 
-            $total_income = "SELECT get_profit_loss_income.semesterID, get_profit_loss_income.studentID,
-sum(get_profit_loss_income.main_fees+get_profit_loss_income.tutor_materials) as total_income
-FROM get_profit_loss_income WHERE get_profit_loss_income.payDate BETWEEN '{$start}' AND '{$end}'
-GROUP BY get_profit_loss_income.semesterID, get_profit_loss_income.studentID";
+            $total_income = "SELECT Sum(get_pl_fees_revenue.total) AS total_income,jDate FROM get_pl_fees_revenue WHERE jDate BETWEEN '{$start}' AND '{$end}' GROUP BY jDate";
             $total_income = $conn->query($total_income);
             $income = $total_income->fetch_assoc();
             if ($income['total_income'] == 0.00 || empty($income['total_income'])){
@@ -74,11 +66,10 @@ GROUP BY get_profit_loss_income.semesterID, get_profit_loss_income.studentID";
                 $income=$income['total_income'];
             }
 
-
             $total_expenditure="SELECT get_profit_loss_expenditure_n2.GL_date, Sum(get_profit_loss_expenditure_n2.dr) AS total_exp FROM get_profit_loss_expenditure_n2 WHERE get_profit_loss_expenditure_n2.GL_date BETWEEN '{$start}' AND '{$end}' GROUP BY get_profit_loss_expenditure_n2.GL_date";
             $total_expenses = $conn->query($total_expenditure);
             $expenses = $total_expenses->fetch_assoc();
-            if ($expenses['total_exp'] == 0.00 || empty($expenses['total_income'])){
+            if ($expenses['total_exp'] == 0.00 || empty($expenses['total_exp'])){
                 $expenses="0.00";
             }else{
                 $expenses=$expenses['total_exp'];
@@ -156,8 +147,3 @@ GROUP BY get_profit_loss_income.semesterID, get_profit_loss_income.studentID";
         }
     }
 }
-
-
-
-
-

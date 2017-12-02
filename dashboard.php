@@ -88,6 +88,23 @@ if (empty($_SESSION['userID'])){
             include_once "template/form.php";
         break;
 
+        case "fees.journal.book";
+            include_once "config/config.php";
+            include_once "modules/get.global.function.php";
+            $page->contenttitle="Fees Revenue";
+            $page->views="views/fees/fees.revenue.summary.php";
+            include_once "template/form.php";
+        break;
+
+        case "fees.income.details";
+            $revenueType=$_GET['sort'];
+            include_once "config/config.php";
+            include_once "modules/get.global.function.php";
+            $page->contenttitle="Fees Revenue : ".$revenueType;
+            $page->views="views/fees/fees.revenue.details.php";
+            include_once "template/form.php";
+        break;
+
         case"fees.costing";
             include_once "config/config.php";
             include_once "modules/get.global.function.php";
@@ -184,8 +201,6 @@ if (empty($_SESSION['userID'])){
             $page->views="views/profit_loss/profit.loss.php";
             include_once "template/form.php";
         break;
-
-
 
         case'print';
             include_once "config/config.php";

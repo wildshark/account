@@ -60,7 +60,7 @@ function summary_ledger($conn){
             <td>".date('d-m-Y')."</td>
         </tr>
         <tr>
-            <td>debit</td>
+            <td>Debit</td>
             <td>".$debit."</td>
         </tr>
         <tr>

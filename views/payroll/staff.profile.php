@@ -127,6 +127,7 @@ function summary_capital($conn){
                             <div class="form-actions">
                                 <input type="hidden" name="ticket" value="">
                                 <input type="hidden" name="transaction" value="staff">
+                                <button type="submit" class="btn btn-success">Save</button>
                             </div>
                         </div>
                     </div>

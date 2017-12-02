@@ -5,7 +5,11 @@
  * Date: 04-Jul-17
  * Time: 2:57 PM
  */
-
+if(empty($_SESSION['staff_id'])){
+    $staff_id="";
+}else{
+    $staff_id=$_SESSION['staff_id'];
+}
 if (empty($_SESSION['name'])){
     $name='Null';
 }else{
@@ -112,8 +116,8 @@ if (empty($_SESSION['loanBal'])){
     $loanBal=$_SESSION['loanBal'];
 }
 
-function payroll_details($conn,$staffID){
-    $payroll="SELECT * FROM get_payroll WHERE staffID='$staffID'";
+function payroll_details($conn,$staff_id){
+    $payroll="SELECT * FROM get_payroll WHERE staffID='$staff_id'";
     $payroll=$conn->query($payroll);
     while ($p=$payroll->fetch_assoc()){
 
@@ -136,9 +140,9 @@ function payroll_details($conn,$staffID){
     }
 }
 
-function payroll_loan($conn,$staffID){
+function payroll_loan($conn,$staff_id){
 
-    $loan="SELECT * FROM get_loan_calculator WHERE staffID='$staffID'";
+    $loan="SELECT * FROM get_loan_calculator WHERE staffID='$staff_id'";
     $loan=$conn->query($loan);
     while ($p=$loan->fetch_assoc()){
 
@@ -243,7 +247,7 @@ function total_salary_cost($conn){
                     <div class="control-group">
                         <label class="control-label">Pay Date (dd-mm-yyy)</label>
                         <div class="controls">
-                            <input name="date" type="text" data-date="<?php echo date("Y-m-")?>" data-date-format="dd-mm-yyyy" value="<?php echo date("d-m-Y");?>" class="datepicker span11">
+                            <input name="date" type="text" data-date="<?php echo date("Y-m-d")?>" data-date-format="dd-mm-yyyy" value="<?php echo date("d-m-Y");?>" class="datepicker span11">
                         </div>
                     </div>
                     <div class="control-group">
@@ -528,7 +532,7 @@ function total_salary_cost($conn){
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php payroll_details($conn,$staffID) ?>
+                                    <?php payroll_details($conn,$staff_id) ?>
                                 </tbody>
                             </table>
                         </div>
@@ -558,7 +562,7 @@ function total_salary_cost($conn){
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <?php payroll_loan($conn,$staffID); ?>
+                                <?php payroll_loan($conn,$staff_id); ?>
                                 </tbody>
                             </table>
                         </div>

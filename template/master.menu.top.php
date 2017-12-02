@@ -22,6 +22,7 @@ function administrator(){
                 <ul>
                     <li><a href='account.php?user=fees.payment&error=0&alert=1'>Fees Payment</a></li>
                     <li><a href='account.php?user=fees.ledger&error=0&alert=1'>Fees Ledger</a></li>
+                    <li><a href='account.php?user=fees.journal.book&error=0&alert=1'>fees.journal.book</a> </li>
                     <li><a href='account.php?user=fees.costing&error=0&alert=1'>Setup</a></li>
                 </ul>
             </li>
@@ -67,6 +68,7 @@ function student_admission_entry(){
                     <ul>
                         <li><a href='account.php?user=fees.payment&error=0&alert=1'>Fees Payment</a></li>
                         <li><a href='account.php?user=fees.ledger&error=0&alert=1'>Fees Ledger</a></li>
+                        <li><a href='account.php?user=fees.revenue&error=0&alert=1'>Fees Revenue</a></li>
                         <li><a href='account.php?user=fees.costing&error=0&alert=1'>Setup</a></li>
                     </ul>
                 </li>

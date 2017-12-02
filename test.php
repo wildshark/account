@@ -5,38 +5,52 @@
  * Date: 06-Aug-17
  * Time: 9:01 AM
  */
+
+require_once "config/config.php";
+
+
+
+
+
 ?>
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="utf-8">
-    <title>A4</title>
+    <title>Webslesson Tutorial | Make Simple Pie Chart by Google Chart API with PHP Mysql</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart()
+        {
+            var data = google.visualization.arrayToDataTable([
+                ['Gender', 'Number'],
+                <?php
 
-    <!-- Normalize or reset CSS with your favorite library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
-
-    <!-- Load paper.css for happy printing -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.2.3/paper.css">
-
-    <!-- Set page size here: A5, A4 or A3 -->
-    <!-- Set also "landscape" if you need -->
-    <style>@page { size: A4 }</style>
+                $query='select * from general_legder';
+                $sql=$conn->query($query);
+                while ($result=$sql->fetch_assoc()){
+                    echo "['".$result["qouteDr"]."', ".$result["qouteCr"]."],";
+                }
+                echo json_encode($result);
+                ?>
+            ]);
+            var options = {
+                title: 'Percentage of Male and Female Employee',
+                //is3D:true,
+                pieHole: 0.4
+            };
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+        }
+    </script>
 </head>
-
-<!-- Set "A5", "A4" or "A3" for class name -->
-<!-- Set also "landscape" if you need -->
-<body class="A4">
-
-<!-- Each sheet element should have the class "sheet" -->
-<!-- "padding-**mm" is optional: you can set 10, 15, 20 or 25 -->
-<section class="sheet padding-10mm">
-
-    <!-- Write HTML just like a web page -->
-    <article>This is an A4 document.</article>
-
-</section>
-
+<body>
+<br /><br />
+<div style="width:900px;">
+    <h3 align="center">Make Simple Pie Chart by Google Chart API with PHP Mysql</h3>
+    <br />
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+</div>
 </body>
-
 </html>

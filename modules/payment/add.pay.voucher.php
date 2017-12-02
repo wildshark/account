@@ -28,6 +28,8 @@
  $t_profit= $r['profitLossID'];
  $t_balSheet=$r['balanceSheetID'];
 
+ //
+
 if ($payType == 1){
 
         //if payment type is cash
