@@ -14,7 +14,6 @@ function revenue_ledger($conn){
         echo "
             <tr>
                <td></td>
-               <td>".$r['tranDate']."</td>
                <td>".$r['payDate']."</td>
                <td>".$r['studentName']."</td>
                <td>".$r['admissionNo']."</td>
@@ -39,7 +38,6 @@ function revenue_ledger($conn){
                     <thead>
                     <tr>
                         <th><i class="icon-resize-vertical"></i></th>
-                        <th>Transaction</th>
                         <th>Date</th>
                         <th>Student Name</th>
                         <th>Admission Number</th>
@@ -48,7 +46,7 @@ function revenue_ledger($conn){
                     </tr>
                     </thead>
                     <tbody>
-                    <?php revenue_ledger($conn)?>
+                        <?php revenue_ledger($conn)?>
                     </tbody>
                 </table>
             </div>

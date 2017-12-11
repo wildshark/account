@@ -51,7 +51,8 @@
     </div>
     <!--close-top-Header-menu-->
 
-    <div id="sidebar"><a href="u=dashboard" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
+    <div id="sidebar">
+        <a href="u=dashboard" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
         <?php include_once "master.menu.top.php";?>
     </div>
     <div id="content">

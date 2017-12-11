@@ -52,23 +52,15 @@ function summary_ledger($conn,$ledgerID){
     $r=$data->fetch_assoc();
     echo "
         <tr>
-            <td>Date</td>
-            <td>".date('d-m-Y')."</td>
-        </tr>
-        <tr>
-            <td>Time</td>
-            <td>".date('h:i:sa')."</td>
-        </tr>
-        <tr>
-            <td>Bill</td>
+            <td>Debit</td>
             <td>".$r['Dr']."</td>
         </tr>
         <tr>
-            <td>Paid</td>
+            <td>Credit</td>
             <td>".$r['Cr']."</td>
         </tr>
         <tr>
-            <td>Bal</td>
+            <td>Balance</td>
             <td>".$r['balance']."</td>
         </tr>
     ";

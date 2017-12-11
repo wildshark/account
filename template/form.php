@@ -41,10 +41,6 @@
 <!--close-top-Header-menu-->
 <!--left-menu-stats-sidebar-->
 <div id="sidebar">
-    <div id="search">
-        <input type="text" placeholder="Search here..."/>
-        <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
-    </div>
     <?php include_once 'master.menu.top.php'?>
 </div>
 <!--close-left-menu-stats-sidebar-->

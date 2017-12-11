@@ -38,19 +38,24 @@ $printout->header="Print Out";
 $printout->title="Ghana Christian University College";
 $printout->copyright=" 2012 - ".date("Y")." &copy; iQuipe Digital Enterprises";
 
-
-
 /**
  *check the StaffID status,
  * from the login pass the staffID value into
  * a session and use it globally
 **/
 if(!isset($_SESSION['staffID'])) {
-$staffID='';
+    $staffID='';
+
 }else{
     $staffID=$_SESSION['staffID'];
 }
 
+if (!isset($_SESSION['roleID'])){
+    $roleID='';
+}else{
+    $roleID=$_SESSION['roleID'];
+
+}
 //session time control
 $expiry = 1800 ;//session expiry required after 30 mins
 if (isset($_SESSION['LAST']) && (time() - $_SESSION['LAST'] > $expiry)) {

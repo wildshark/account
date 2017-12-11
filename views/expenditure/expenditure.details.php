@@ -5,13 +5,12 @@
  * Date: 01-Jul-17
  * Time: 10:17 AM
  */
-$revenueID=$_GET['data'];
+$expID=$_GET['data'];
 
-function ledger_summary($conn,$revenueID){
-    $revenue="SELECT fees_journal.revenueID, Sum(fees_journal.amount)as total FROM fees_journal
-WHERE fees_journal.revenueID = '$revenueID' GROUP BY fees_journal.revenueID";
-    $revenue=$conn->query($revenue);
-    while ($r=$revenue->fetch_assoc()){
+function ledger_summary($conn,$expID){
+    $expense="SELECT GL_date, Sum(qouteDr) as total, tranCatID FROM get_expenditure_book WHERE tranCatID ='$expID'";
+    $expense=$conn->query($expense);
+    while ($r=$expense->fetch_assoc()){
 
         echo "
               <tr>
@@ -25,8 +24,8 @@ WHERE fees_journal.revenueID = '$revenueID' GROUP BY fees_journal.revenueID";
     }
 }
 
-function ledger($conn,$revenueID){
-    $revenue="SELECT * FROM get_fees_revenu_journal WHERE revenueID='$revenueID' ";
+function ledger($conn,$expID){
+    $revenue="SELECT * FROM general_legder WHERE general_legder.tranTypeID = 3 And tranCatID='$expID'";
     $revenue=$conn->query($revenue);
     while ($c=$revenue->fetch_assoc()){
 
@@ -40,11 +39,11 @@ function ledger($conn,$revenueID){
 
         echo "
         <tr class='gradeX'>
-            <td class='center'>".$c['jDate']."</td>
+            <td class='center'>".$c['GL_date']."</td>
             <td>".$c['yearID']."</td>
             <td>".$semester."</td>
-            <td>".$c['studentName']." index No ".$c['admissionNo']." paid for ".$c['revenue']." </td>  
-            <td>".$c['amount']."</td>
+            <td>".$c['description']." </td>  
+            <td>".$c['qouteDr']."</td>
         </tr>
     ";
     }
@@ -69,7 +68,7 @@ function ledger($conn,$revenueID){
                     </tr>
                     </thead>
                     <tbody>
-                        <?php ledger_summary($conn,$revenueID)?>
+                        <?php ledger_summary($conn,$expID)?>
                     </tbody>
                 </table>
             </div>
@@ -108,7 +107,7 @@ function ledger($conn,$revenueID){
                     </tr>
                     </thead>
                     <tbody>
-                        <?php ledger($conn,$revenueID)?>
+                        <?php ledger($conn,$expID)?>
                     </tbody>
                 </table>
             </div>

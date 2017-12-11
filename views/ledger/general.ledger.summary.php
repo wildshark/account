@@ -19,8 +19,8 @@ function data_sheet_general_ledger($conn){
                <td>".$r['bal']."</td>
                <td>".$r['NoOfID']."</td>
                <td>
-                   <a href='account.php?user=view.ledger&data=".$r['tranCatID']."&book=".$r['ledger']."' class='btn btn-mini btn-primary left'>View Details</a>
-                   <a href='account.php?user=pay.voucher' class='btn btn-mini btn-primary left'>Make Payment</a>
+                   <a href='account.php?user=view.ledger&data=".$r['tranCatID']."&book=".$r['ledger']."&error=0&alert=1' class='btn btn-mini btn-primary left'>View Details</a>
+                   <a href='account.php?user=pay.voucher&error=0&alert=1' class='btn btn-mini btn-primary left'>Make Payment</a>
                </td>
             </tr>
         ";

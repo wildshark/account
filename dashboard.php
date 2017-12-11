@@ -47,29 +47,38 @@ if (empty($_SESSION['userID'])){
             include_once "modules/get.global.function.php";
             $page->contenttitle="Expenditure";
             $page->views="views/book/expenditure.details.php";
-            include_once "template/form.php";
+            include_once "template/form.validation.php";
             break;
+
+        case "expenditure.details";
+            $revenueType=$_GET['sort'];
+            include_once "config/config.php";
+            include_once "modules/get.global.function.php";
+            $page->contenttitle="Expenditure : ".$revenueType;
+            $page->views="views/expenditure/expenditure.details.php";
+            include_once "template/form.validation.php";
+        break;
 
         case "pay.voucher";
             include_once "config/config.php";
             include_once "modules/get.global.function.php";
             $page->contenttitle="Pay Voucher";
             $page->views="views/book/pay.voucher.details.php";
-            include_once "template/form.php";
+            include_once "template/form.validation.php";
             break;
 
         case "cash.book";
             include_once "config/config.php";
             $page->contenttitle="Cash Book";
             $page->views="views/book/cash.book.details.php";
-            include_once "template/form.php";
+            include_once "template/form.validation.php";
             break;
 
         case "bank.book";
             include_once "config/config.php";
             $page->contenttitle="Bank Book";
             $page->views="views/book/bank.book.details.php";
-            include_once "template/form.php";
+            include_once "template/form.validation.php";
             break;
 
         case"fees.payment";
@@ -77,15 +86,15 @@ if (empty($_SESSION['userID'])){
             include_once "modules/get.global.function.php";
             $page->contenttitle="Fees Entry";
             $page->views="views/fees/fees.payment.php";
-            include_once "template/form.php";
+            include_once "template/form.validation.php";
             break;
 
-        case"fees-revenue";
+        case"fees.revenue";
             include_once "config/config.php";
             include_once "modules/get.global.function.php";
-            $page->contenttitle="Fees Revenue";
+            $page->contenttitle="Fees Payment";
             $page->views="views/ledger/fees.revenue.php";
-            include_once "template/form.php";
+            include_once "template/form.validation.php";
         break;
 
         case "fees.journal.book";
@@ -93,7 +102,7 @@ if (empty($_SESSION['userID'])){
             include_once "modules/get.global.function.php";
             $page->contenttitle="Fees Revenue";
             $page->views="views/fees/fees.revenue.summary.php";
-            include_once "template/form.php";
+            include_once "template/form.validation.php";
         break;
 
         case "fees.income.details";
@@ -102,7 +111,7 @@ if (empty($_SESSION['userID'])){
             include_once "modules/get.global.function.php";
             $page->contenttitle="Fees Revenue : ".$revenueType;
             $page->views="views/fees/fees.revenue.details.php";
-            include_once "template/form.php";
+            include_once "template/form.validation.php";
         break;
 
         case"fees.costing";
@@ -110,7 +119,7 @@ if (empty($_SESSION['userID'])){
             include_once "modules/get.global.function.php";
             $page->contenttitle="Fees Entry";
             $page->views="views/fees/fees.item.php";
-            include_once "template/form.php";
+            include_once "template/form.validation.php";
             break;
 
         case"fees.payment.details";
@@ -118,7 +127,7 @@ if (empty($_SESSION['userID'])){
             include_once "modules/get.global.function.php";
             $page->contenttitle="Fees Payment : ".$_SESSION['student_name'];
             $page->views="views/fees/fees.ledger.php";
-            include_once "template/form.php";
+            include_once "template/form.validation.php";
         break;
 
         case "ious";
@@ -126,7 +135,7 @@ if (empty($_SESSION['userID'])){
             include_once "modules/get.global.function.php";
             $page->contenttitle="Fees Entry";
             $page->views="views/ledger/ious.ledger.php";
-            include_once "template/form.php";
+            include_once "template/form.validation.php";
             break;
 
         case "general.ledger";
@@ -134,7 +143,7 @@ if (empty($_SESSION['userID'])){
             include_once "modules/get.global.function.php";
             $page->contenttitle="General Ledger";
             $page->views="views/ledger/general.ledger.summary.php";
-            include_once "template/form.php";
+            include_once "template/form.validation.php";
             break;
 
         case "view.ledger"; //view ledger details
@@ -143,7 +152,7 @@ if (empty($_SESSION['userID'])){
             include_once "modules/get.global.function.php";
             $page->contenttitle=$label." Ledger";
             $page->views="views/ledger/ledger.details.php";
-            include_once "template/form.php";
+            include_once "template/form.validation.php";
             break;
 
         case "fees.ledger";
@@ -151,7 +160,7 @@ if (empty($_SESSION['userID'])){
             include_once "modules/get.global.function.php";
             $page->contenttitle="Fees Ledger ";
             $page->views="views/ledger/fees.ledger.book.php";
-            include_once "template/form.php";
+            include_once "template/form.validation.php";
             break;
 
         case "capital.investments";
@@ -159,7 +168,7 @@ if (empty($_SESSION['userID'])){
             include_once "modules/get.global.function.php";
             $page->contenttitle="Capital Investments ";
             $page->views="views/book/income.capital.book.php";
-            include_once "template/form.php";
+            include_once "template/form.validation.php";
             break;
 
         case"staff.profile";
@@ -167,7 +176,7 @@ if (empty($_SESSION['userID'])){
             include_once "modules/get.global.function.php";
             $page->contenttitle="Staff Profile ";
             $page->views="views/payroll/staff.profile.php";
-            include_once "template/form.php";
+            include_once "template/form.validation.php";
             break;
 
         case"staff.payroll";
@@ -175,7 +184,7 @@ if (empty($_SESSION['userID'])){
             include_once "modules/get.global.function.php";
             $page->contenttitle="Staff Payroll";
             $page->views="views/payroll/staff.payroll.php";
-            include_once "template/form.php";
+            include_once "template/form.validation.php";
             break;
 
         case "staff.loan";
@@ -183,7 +192,7 @@ if (empty($_SESSION['userID'])){
             include_once "modules/get.global.function.php";
             $page->contenttitle="Staff Loan";
             $page->views="views/payroll/staff.loan.php";
-            include_once "template/form.php";
+            include_once "template/form.validation.php";
             break;
 
         case "salary.control"; //view ledger details
@@ -191,15 +200,15 @@ if (empty($_SESSION['userID'])){
             include_once "modules/get.global.function.php";
             $page->contenttitle = "Salary Control";
             $page->views="views/ledger/salary.control.ledger.php";
-            include_once "template/form.php";
+            include_once "template/form.validation.php";
             break;
 
         case"profit.loss";
             include_once "config/config.php";
             include_once "modules/get.global.function.php";
-            $page->contenttitle="Profile & Loss Statement";
+            $page->contenttitle="Income Statement";
             $page->views="views/profit_loss/profit.loss.php";
-            include_once "template/form.php";
+            include_once "template/form.validation.php";
         break;
 
         case'print';

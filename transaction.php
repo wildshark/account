@@ -88,8 +88,9 @@ switch ($_GET["transaction"]){
 
     case "student.data";
         include_once "config/config.php";
+        include_once "modules/injectors/fees.sql.injection.php";
         include_once "modules/student/student.data.php";
-        break;
+    break;
 
     case "course.data";
         include_once "config/config.php";
@@ -111,7 +112,7 @@ switch ($_GET["transaction"]){
     case "profit.loss";
         include_once "config/config.php";
         include_once "modules/profit_loss/profit.loss.php";
-        $page->contenttitle="Profit & Loss Statement";
+        $page->contenttitle="Income Statement";
         $page->views="views/profit_loss/profit.loss.calculate.php";
         include_once "template/form.php";
     break;

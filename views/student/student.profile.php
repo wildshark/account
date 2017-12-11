@@ -56,8 +56,17 @@ function student_data($conn){
                     <div class="control-group">
                         <label class="control-label">Admission Date</label>
                         <div class="controls">
-                            <input name="date" type="date" data-date="01-02-2013" data-date-format="dd-mm-yyyy" class="datepicker span11" id="date">
+                            <input name="date" type="date" data-date="<?php echo date('dd-mm-Y');?>" data-date-format="dd-mm-yyyy" class="span11" id="date">
                             <span class="help-block">Date with Formate of  (dd-mm-yy)</span> </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Semester</label>
+                        <div class="controls">
+                            <select name="semester" required>
+                                <option value="1">1st Semester</option>
+                                <option value="2">2nd Semester</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label">Admission Year</label>

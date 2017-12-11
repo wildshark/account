@@ -47,7 +47,7 @@ if ($_GET['submit']== 'pl'){
             while ($e = $expenses_result->fetch_assoc()) {
                 echo "
                 <tr class='gradeX'>
-                    <td class='center'><a href='account.php?user=fees.income.details&data=".$e['revenueID']."&sort=".$r['revenue']."&error=0&alert=1'>" . $e['ledger'] . "</td>
+                    <td class='center'><a href='account.php?user=expenditure.details&data=".$e['tranCatID']."&sort=".$e['ledger']."&error=0&alert=1'>" . $e['ledger'] . "</td>
                     <td>" . $e['expenses'] . "</td>
                 </tr>
             ";

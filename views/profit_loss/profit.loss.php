@@ -55,25 +55,3 @@
         </div>
     </div>
 </div>
-<div class="row-fluid">
-    <div class="span6">
-        <div class="widget-box">
-            <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-                <h5>Personal-info</h5>
-            </div>
-            <div class="widget-content nopadding">
-                Personal-infoPersonal-infoPersonal-infoPersonal-infoPersonal-info
-            </div>
-        </div>
-    </div>
-    <div class="span6">
-        <div class="widget-box">
-            <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-                <h5>Personal-info</h5>
-            </div>
-            <div class="widget-content nopadding">
-                Personal-infoPersonal-infoPersonal-infoPersonal-infoPersonal-info
-            </div>
-        </div>
-    </div>
-</div>

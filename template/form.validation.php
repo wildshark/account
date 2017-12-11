@@ -42,9 +42,7 @@
 <!--close-top-Header-menu-->
 <!--close-top-Header-menu-->
 <div id="sidebar">
-    <div id="search">
-        <input type="text" placeholder="Search here..."/><button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
-    </div>
+
     <?php include_once 'master.menu.top.php'?>
 </div>
 <div id="content">
@@ -66,7 +64,6 @@
             ?>
         </div>
         <?php include_once $page->views;?>
-
     </div>
 </div> <div class="row-fluid">
     <div id="footer" class="span12"><?php echo $page->copyright;?> </div>
@@ -79,6 +76,8 @@
 <script src="template/js/jquery.validate.js"></script>
 <script src="template/js/maruti.js"></script>
 <script src="template/js/maruti.form_validation.js"></script>
+<script src="template/js/jquery.dataTables.min.js"></script>
+<script src="template/js/maruti.tables.js"></script>
 </body>
 
 </html>
