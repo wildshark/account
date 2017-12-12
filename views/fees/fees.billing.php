@@ -2,28 +2,23 @@
 /**
  * Created by PhpStorm.
  * User: Andrew Quaye
- * Date: 02-Jul-17
- * Time: 2:47 PM
+ * Date: 12-Dec-17
+ * Time: 11:20 AM
  */
 
+
 function data_fees_ledger($conn){
-    $data="SELECT * FROM get_fees_ledger_book";
+    $data="SELECT * FROM get_student_list";
     $data=$conn->query($data);
     while ($r=$data->fetch_assoc()){
-        $_SESSION['studentID']=$r['studentID'];
-        $_SESSION['student_name']=$r['studentName'];
-        $_SESSION['admissionNo']=$r['admissionNo'];
-        $_SESSION['amount']=$r['amount'];
-        $_SESSION['paid']=$r['paid'];
-        $_SESSION['balance']=$r['amount']-$r['paid'];
         echo "
             <tr>
                <td></td>
                <td>".$r['studentName']."</td>
                <td>".$r['admissionNo']."</td>
-               <td>".$r['amount']."</td>
-               <td>".$r['paid']."</td>
-               <td>".$r=$r['amount']-$r['paid']."</td>
+               <td>".$r['categoryID']."</td>
+               <td>".$r['course']."</td>
+               <td>".$r=$r['school']."</td>
                <td><a href='account.php?user=fees.payment.details&id=".$r['studentID']."&error=0&alert=1' class='btn btn-mini btn-primary'>view</a> </td>
             </tr>
         ";
@@ -53,11 +48,10 @@ function data_fees_ledger($conn){
                     </tr>
                     </thead>
                     <tbody>
-                        <?php data_fees_ledger($conn)?>
+                    <?php data_fees_ledger($conn)?>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 </div>
-
