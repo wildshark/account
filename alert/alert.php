@@ -28,6 +28,7 @@ switch ($error){
     break;
     case 6:
         $msg="Missing details can't post salary Cost to salary control ledger";
+    break;
     default:
        $msg ="Fill in all text field";
 }

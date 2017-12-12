@@ -10,7 +10,7 @@ function student_data($conn){
     $data="SELECT * FROM get_student_profile";
     $data=$conn->query($data);
    while ( $d=$data->fetch_assoc()){
-
+       $studentID=$d['studentID'];
        $date = $d['admissionDate'];
        $date= date('d-m-Y', strtotime($date));
        $student = $d['studentName'];
@@ -34,6 +34,7 @@ function student_data($conn){
             <td>".$admissionYr."</td>
             <td>".$course."</td>
             <td>".$school."</td>
+            <td><a href='account.php?delete=student-data&id={$studentID}' class='btn btn-mini btn-xs btn-danger'><span class='glyphicon glyphicon-trash'></span>Delete</a></td>
         </tr>
     ";
    }
@@ -51,7 +52,7 @@ function student_data($conn){
                 <h5>Data validation</h5>
             </div>
             <div class="widget-content nopadding">
-                <form class="form-horizontal" method="GET" action="transaction.php" name="basic_validate" id="basic_validate" novalidate="novalidate">
+                <form class="form-horizontal" method="GET" action="account.php" name="basic_validate" id="basic_validate" novalidate="novalidate">
                     <input type="hidden" name="transaction" value="student.data">
                     <div class="control-group">
                         <label class="control-label">Admission Date</label>
@@ -140,6 +141,7 @@ function student_data($conn){
                         <th>Year</th>
                         <th>Programme</th>
                         <th>School</th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>

@@ -74,6 +74,16 @@ function course_list($conn){
     }
 }
 
+//course list by school combo
+function course_list_by_school($conn){
+
+    $list="SELECT * FROM course";
+    $list=$conn->query($list);
+    while ($l=$list->fetch_assoc()){
+        echo "<option value='".$l['prefix']."'>".$l['course']."</option>";
+    }
+}
+
 //student name and admission no list combo
 function student_list($conn){
     $list="SELECT * FROM student_profile";
@@ -129,6 +139,7 @@ function school_session($conn){
         echo "<option value='".$l['year']."'>".$l['year']."</option>";
     }
 }
+
 
 //Payroll: get the last date of the month
 function last_date(){

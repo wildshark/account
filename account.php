@@ -8,9 +8,11 @@
 include_once "config/config.php";
 
 if (!empty($_GET['transaction'])){
-    include_once "transaction.php";
-}else{
-    include_once "dashboard.php";
+    include_once "inc/transaction.inc";
+}elseif(!empty($_GET['user'])){
+    include_once "inc/dashboard.inc";
+}elseif(!empty($_GET['delete'])){
+    include_once "inc/delete.inc";
 }
 
 

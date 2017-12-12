@@ -13,7 +13,7 @@ function course_data($conn){
         $id=$d['courseID'];
         $course=$d['course'];
         $school = $d['prefix'];
-        $url="transaction.php?transaction=delete&c=course&data=".$id;
+        $url="account.php?transaction=delete&c=course&data=".$id;
         echo "
         <tr class='gradeX'>
             <td>".$course."</td>
@@ -36,7 +36,7 @@ function course_data($conn){
                 <h5>Data validation</h5>
             </div>
             <div class="widget-content nopadding">
-                <form class="form-horizontal" method="GET" action="transaction.php" name="basic_validate" id="basic_validate" novalidate="novalidate">
+                <form class="form-horizontal" method="GET" action="account.php" name="basic_validate" id="basic_validate" novalidate="novalidate">
                     <input type="hidden" name="transaction" value="course.data">
                     <div class="control-group">
                         <label class="control-label">School</label>
