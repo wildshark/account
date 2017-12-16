@@ -8,18 +8,18 @@
 $revenueID=$_GET['data'];
 
 function ledger_summary($conn,$revenueID){
-    $revenue="SELECT fees_journal.revenueID, Sum(fees_journal.amount)as total FROM fees_journal
-WHERE fees_journal.revenueID = '$revenueID' GROUP BY fees_journal.revenueID";
+    $revenue="SELECT fees_bill.revenueID, Sum(fees_bill.amount) AS cost, Sum(fees_bill.paid) AS paid FROM fees_bill
+WHERE fees_bill.revenueID = '$revenueID' GROUP BY fees_bill.revenueID";
     $revenue=$conn->query($revenue);
     while ($r=$revenue->fetch_assoc()){
 
         echo "
               <tr>
-                <td>xxx</td>
-                <td>xxx.xxx</td>
+                <td>Total Fees</td>
+                <td>".$r['cost']."</td>
               <tr>
-                <td>Amount</td>
-                <td>".$r['total']."</td>
+                <td>Total Paid</td>
+                <td>".$r['paid']."</td>
               </tr>
         ";
     }
@@ -45,6 +45,7 @@ function ledger($conn,$revenueID){
             <td>".$semester."</td>
             <td>".$c['studentName']." index No ".$c['admissionNo']." paid for ".$c['revenue']." </td>  
             <td>".$c['amount']."</td>
+            <td>".$c['paid']."</td>
         </tr>
     ";
     }
@@ -104,7 +105,8 @@ function ledger($conn,$revenueID){
                         <th>Session</th>
                         <th>Semester</th>
                         <th>Details</th>
-                        <th>Amount</th>
+                        <th>Debit</th>
+                        <th>Credit</th>
                     </tr>
                     </thead>
                     <tbody>

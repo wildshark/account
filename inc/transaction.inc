@@ -34,6 +34,11 @@ switch ($_GET["transaction"]){
         include_once "modules/fees/add.fees.payment.php";
         break;
 
+    case "fees.bill";
+        include_once "config/config.php";
+        include_once "modules/fees/fees.billing.php";
+    break;
+
     case"capital";
         include_once "config/config.php";
         include_once "modules/payment/add.income.capital.php";
@@ -88,8 +93,8 @@ switch ($_GET["transaction"]){
 
     case "student.data";
         include_once "config/config.php";
-        include_once "modules/injectors/fees.sql.injection.php";
-        include_once "modules/student/student.data.php";
+       // include_once "modules/injectors/fees.sql.injection.php";
+        include_once "modules/student/student.profile.php";
     break;
 
     case "course.data";

@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c504eb96-3b0a-4d1b-9d60-133f7fab0fe0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/student/post.fees.details.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/student/post.fees.ledger.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/fees/fees.billing.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/inc/print.inc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/fees/add.fees.payment.php.xxx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/fees/fees.billing.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/print/print.fee.bill.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/student/student.profile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/print/fees.bill.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/fees/fees.payment.php.xx" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml___jb_tmp___" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/modules/student/student.data.php" afterPath="$PROJECT_DIR$/modules/student/student.data.php.bk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.keystream" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.keystream" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.keystream.len" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.keystream.len" />
@@ -14,9 +20,17 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_src_/schema/ghanacu_account.zip" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_src_/schema/ghanacu_account.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/student/student.data.php" afterPath="$PROJECT_DIR$/modules/student/student.data.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account.php" afterPath="$PROJECT_DIR$/account.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/dashboard.inc" afterPath="$PROJECT_DIR$/inc/dashboard.inc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/transaction.inc" afterPath="$PROJECT_DIR$/inc/transaction.inc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/fees/add.fees.payment.php" afterPath="$PROJECT_DIR$/modules/fees/add.fees.payment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/get.global.function.php" afterPath="$PROJECT_DIR$/modules/get.global.function.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/injectors/fees.sql.injection.php" afterPath="$PROJECT_DIR$/modules/injectors/fees.sql.injection.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/master.menu.top.php" afterPath="$PROJECT_DIR$/template/master.menu.top.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/ledger/fees.ledger.book.php" afterPath="$PROJECT_DIR$/views/ledger/fees.ledger.book.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/fees/fees.billing.php" afterPath="$PROJECT_DIR$/views/fees/fees.billing.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/fees/fees.ledger.php" afterPath="$PROJECT_DIR$/views/fees/fees.ledger.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/fees/fees.payment.php" afterPath="$PROJECT_DIR$/views/fees/fees.payment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/fees/fees.revenue.details.php" afterPath="$PROJECT_DIR$/views/fees/fees.revenue.details.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,84 +57,59 @@
         <item name="ghanacu_account@localhost" type="e3449647:DbNodeDescriptor" />
         <item name="ghanacu_account" type="e3449647:DbNodeDescriptor" />
       </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="ghanacu_account@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="ghanacu_account" type="e3449647:DbNodeDescriptor" />
-        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="ghanacu_account@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="ghanacu_account" type="e3449647:DbNodeDescriptor" />
-        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
-        <item name="general_legder" type="e3449647:DbNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="student.data.php" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/modules/student/student.data.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="411">
-                    <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-                    <folding>
-                      <marker date="1513076401570" expanded="true" signature="1650:1705" ph="select * fro... get_course_list" />
-                      <marker date="1513076401570" expanded="true" signature="1914:1981" ph="SELECT * FRO... student_profile" />
-                      <marker date="1513076401570" expanded="true" signature="2337:2416" ph="select * fro... student_profile" />
-                      <marker date="1513076401570" expanded="true" signature="2679:2934" ph="INSERT INTO `student_profile`... " />
-                      <marker date="1513076401570" expanded="true" signature="3089:3160" ph="select * fro... student_profile" />
-                      <marker date="1513076401570" expanded="true" signature="3538:3793" ph="INSERT INTO `student_profile`... " />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
     <window id="2">
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="add.fees.payment.php" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/modules/fees/add.fees.payment.php">
+            <file leaf-file-name="fees.payment.php" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/views/fees/fees.payment.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="1691">
-                    <caret line="200" column="75" lean-forward="false" selection-start-line="200" selection-start-column="75" selection-end-line="200" selection-end-column="75" />
+                  <state relative-caret-position="400">
+                    <caret line="142" column="69" lean-forward="false" selection-start-line="142" selection-start-column="51" selection-end-line="142" selection-end-column="69" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="add.fees.payment.php.xxx" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/modules/fees/add.fees.payment.php.xxx">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="514">
+                    <caret line="248" column="5" lean-forward="false" selection-start-line="207" selection-start-column="3" selection-end-line="248" selection-end-column="5" />
                     <folding>
-                      <marker date="1511692593796" expanded="true" signature="676:782" ph="SELECT * FRO... get_fees_list_for_new_student" />
-                      <marker date="1511692593796" expanded="true" signature="1518:1733" ph="INSERT INTO `fees_journal`... " />
-                      <marker date="1511692593796" expanded="true" signature="1848:2061" ph="INSERT INTO `fees_journal`... " />
-                      <marker date="1511692593796" expanded="true" signature="2178:2392" ph="INSERT INTO `fees_journal`... " />
-                      <marker date="1511692593796" expanded="true" signature="2507:2720" ph="INSERT INTO `fees_journal`... " />
-                      <marker date="1511692593796" expanded="true" signature="2832:3042" ph="INSERT INTO `fees_journal`... " />
-                      <marker date="1511692593796" expanded="true" signature="3151:3359" ph="INSERT INTO `fees_journal`... " />
-                      <marker date="1511692593796" expanded="true" signature="3471:3682" ph="INSERT INTO `fees_journal`... " />
-                      <marker date="1511692593796" expanded="true" signature="3792:4001" ph="INSERT INTO `fees_journal`... " />
-                      <marker date="1511692593796" expanded="true" signature="4115:4328" ph="INSERT INTO `fees_journal`... " />
-                      <marker date="1511692593796" expanded="true" signature="4445:4660" ph="INSERT INTO `fees_journal`... " />
-                      <marker date="1511692593796" expanded="true" signature="4772:4982" ph="INSERT INTO `fees_journal`... " />
-                      <marker date="1511692593796" expanded="true" signature="5094:5304" ph="INSERT INTO `fees_journal`... " />
-                      <marker date="1511692593796" expanded="true" signature="5415:5624" ph="INSERT INTO `fees_journal`... " />
-                      <marker date="1511692593796" expanded="true" signature="5735:5944" ph="INSERT INTO `fees_journal`... " />
-                      <marker date="1511692593796" expanded="true" signature="6057:6166" ph="SELECT * FRO... get_fees_list_continuing_student" />
-                      <marker date="1511692593796" expanded="true" signature="6535:6744" ph="INSERT INTO `fees_journal`... " />
-                      <marker date="1511692593796" expanded="true" signature="6856:7067" ph="INSERT INTO `fees_journal`... " />
-                      <marker date="1511692593796" expanded="true" signature="7181:7394" ph="INSERT INTO `fees_journal`... " />
-                      <marker date="1511692593796" expanded="true" signature="7505:7714" ph="INSERT INTO `fees_journal`... " />
-                      <marker date="1511692593796" expanded="true" signature="7825:8034" ph="INSERT INTO `fees_journal`... " />
-                      <marker date="1511692593796" expanded="true" signature="8372:8435" ph="SELECT * FRO... get_student_profile" />
-                      <marker date="1511692593796" expanded="true" signature="8660:9003" ph="INSERT INTO fees_payment... " />
-                      <marker date="1511692593796" expanded="true" signature="9152:9323" ph="INSERT INTO `fees_revenue`... " />
-                      <marker date="1511692593796" expanded="true" signature="9445:9706" ph="INSERT INTO general_legder... " />
-                      <marker date="1511692593796" expanded="true" signature="10352:10523" ph="INSERT INTO `fees_revenue`... " />
+                      <marker date="1513427155142" expanded="false" signature="9:93" ph=" Created by PhpStorm. ..." />
+                      <marker date="1513427155142" expanded="true" signature="681:787" ph="SELECT * FRO... get_fees_list_for_new_student" />
+                      <marker date="1513427155142" expanded="true" signature="1524:1542" ph="INSERT INTO `fees_journal`... " />
+                      <marker date="1513427155142" expanded="true" signature="1524:1572" ph="INSERT INTO `fees_bill`... " />
+                      <marker date="1513427155142" expanded="true" signature="1524:1745" ph="INSERT INTO `fees_bill`... " />
+                      <marker date="1513427155142" expanded="true" signature="1860:2066" ph="INSERT INTO `fees_bill`... " />
+                      <marker date="1513427155142" expanded="true" signature="2183:2390" ph="INSERT INTO `fees_bill`... " />
+                      <marker date="1513427155142" expanded="true" signature="2505:2711" ph="INSERT INTO `fees_bill`... " />
+                      <marker date="1513427155142" expanded="true" signature="2823:3026" ph="INSERT INTO `fees_bill`... " />
+                      <marker date="1513427155142" expanded="true" signature="3135:3336" ph="INSERT INTO `fees_bill`... " />
+                      <marker date="1513427155142" expanded="true" signature="3448:3652" ph="INSERT INTO `fees_bill`... " />
+                      <marker date="1513427155142" expanded="true" signature="3762:3964" ph="INSERT INTO `fees_bill`... " />
+                      <marker date="1513427155142" expanded="true" signature="4078:4284" ph="INSERT INTO `fees_bill`... " />
+                      <marker date="1513427155142" expanded="true" signature="4401:4609" ph="INSERT INTO `fees_bill`... " />
+                      <marker date="1513427155142" expanded="true" signature="4721:4924" ph="INSERT INTO `fees_bill`... " />
+                      <marker date="1513427155142" expanded="true" signature="5036:5239" ph="INSERT INTO `fees_bill`... " />
+                      <marker date="1513427155142" expanded="true" signature="5350:5552" ph="INSERT INTO `fees_bill`... " />
+                      <marker date="1513427155142" expanded="true" signature="5663:5865" ph="INSERT INTO `fees_bill`... " />
+                      <marker date="1513427155142" expanded="true" signature="5979:6088" ph="SELECT * FRO... get_fees_list_continuing_student" />
+                      <marker date="1513427155142" expanded="true" signature="6457:6659" ph="INSERT INTO `fees_bill`... " />
+                      <marker date="1513427155142" expanded="true" signature="6771:6975" ph="INSERT INTO `fees_bill`... " />
+                      <marker date="1513427155142" expanded="true" signature="7089:7295" ph="INSERT INTO `fees_bill`... " />
+                      <marker date="1513427155142" expanded="true" signature="7406:7608" ph="INSERT INTO `fees_bill`... " />
+                      <marker date="1513427155142" expanded="true" signature="7719:7921" ph="INSERT INTO `fees_bill`... " />
+                      <marker date="1513427155142" expanded="true" signature="7790:7921" ph="INSERT INTO `fees_journal`... " />
+                      <marker date="1513427155142" expanded="true" signature="8258:8321" ph="SELECT * FRO... get_student_profile" />
+                      <marker date="1513427155142" expanded="true" signature="8552:8900" ph="INSERT INTO fees_payment... " />
+                      <marker date="1513427155142" expanded="true" signature="9085:9346" ph="INSERT INTO general_legder... " />
+                      <marker date="1513427155142" expanded="true" signature="9982:10243" ph="INSERT INTO general_legder... " />
                     </folding>
                   </state>
                 </provider>
@@ -136,165 +125,152 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dashboard.inc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inc/dashboard.inc">
+      <file leaf-file-name="fees.payment.php.xx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/fees/fees.payment.php.xx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="157" column="25" lean-forward="false" selection-start-line="157" selection-start-column="14" selection-end-line="157" selection-end-column="25" />
+            <state relative-caret-position="240">
+              <caret line="12" column="30" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="485" selection-end-column="0" />
+              <folding>
+                <marker date="1513385979020" expanded="true" signature="913:981" ph="SELECT * FRO... get_fees_payment_history" />
+                <marker date="1513385979020" expanded="true" signature="913:1020" ph="SELECT * FRO... get_fees_payment_history" />
+                <marker date="1513385979020" expanded="true" signature="1335:2102" ph="..." />
+                <marker date="1513385979020" expanded="true" signature="1823:2069" ph="..." />
+                <marker date="1513385979020" expanded="true" signature="2175:2238" ph="SELECT * FRO... get_student_profile" />
+                <marker date="1513385979020" expanded="true" signature="2373:2427" ph="SELECT * FRO... get_course_list" />
+                <marker date="1513385979020" expanded="true" signature="2651:2711" ph="SELECT * FRO... get_fees_summary" />
+                <marker date="1513385979020" expanded="true" signature="2859:3257" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add.fees.payment.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/fees/add.fees.payment.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-282">
+              <caret line="239" column="44" lean-forward="false" selection-start-line="239" selection-start-column="44" selection-end-line="239" selection-end-column="44" />
+              <folding>
+                <marker date="1513433998048" expanded="true" signature="688:794" ph="SELECT * FRO... get_fees_list_for_new_student" />
+                <marker date="1513433998048" expanded="true" signature="1569:1774" ph="INSERT INTO `fees_bill`... " />
+                <marker date="1513433998048" expanded="true" signature="1889:2095" ph="INSERT INTO `fees_bill`... " />
+                <marker date="1513433998048" expanded="true" signature="2212:2419" ph="INSERT INTO `fees_bill`... " />
+                <marker date="1513433998048" expanded="true" signature="2534:2740" ph="INSERT INTO `fees_bill`... " />
+                <marker date="1513433998048" expanded="true" signature="2852:3055" ph="INSERT INTO `fees_bill`... " />
+                <marker date="1513433998048" expanded="true" signature="3164:3365" ph="INSERT INTO `fees_bill`... " />
+                <marker date="1513433998048" expanded="true" signature="3477:3681" ph="INSERT INTO `fees_bill`... " />
+                <marker date="1513433998048" expanded="true" signature="3791:3993" ph="INSERT INTO `fees_bill`... " />
+                <marker date="1513433998048" expanded="true" signature="4107:4313" ph="INSERT INTO `fees_bill`... " />
+                <marker date="1513433998048" expanded="true" signature="4430:4638" ph="INSERT INTO `fees_bill`... " />
+                <marker date="1513433998048" expanded="true" signature="4750:4953" ph="INSERT INTO `fees_bill`... " />
+                <marker date="1513433998048" expanded="true" signature="5065:5268" ph="INSERT INTO `fees_bill`... " />
+                <marker date="1513433998048" expanded="true" signature="5379:5581" ph="INSERT INTO `fees_bill`... " />
+                <marker date="1513433998048" expanded="true" signature="5692:5894" ph="INSERT INTO `fees_bill`... " />
+                <marker date="1513433998048" expanded="true" signature="6007:6116" ph="SELECT * FRO... get_fees_list_continuing_student" />
+                <marker date="1513433998048" expanded="true" signature="6485:6687" ph="INSERT INTO `fees_bill`... " />
+                <marker date="1513433998048" expanded="true" signature="6799:7003" ph="INSERT INTO `fees_bill`... " />
+                <marker date="1513433998048" expanded="true" signature="7117:7323" ph="INSERT INTO `fees_bill`... " />
+                <marker date="1513433998048" expanded="true" signature="7434:7636" ph="INSERT INTO `fees_bill`... " />
+                <marker date="1513433998048" expanded="true" signature="7747:7949" ph="INSERT INTO `fees_bill`... " />
+                <marker date="1513433998048" expanded="true" signature="8286:8349" ph="SELECT * FRO... get_student_profile" />
+                <marker date="1513433998048" expanded="true" signature="8604:8952" ph="INSERT INTO fees_payment... " />
+                <marker date="1513433998048" expanded="true" signature="9123:9397" ph="INSERT INTO general_legder... " />
+                <marker date="1513433998048" expanded="true" signature="9957:10231" ph="INSERT INTO general_legder... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fees.revenue.summary.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/fees/fees.revenue.summary.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding>
+                <marker date="1511743743799" expanded="true" signature="137:171" ph="SELECT * FRO... fees_details_summary" />
+                <marker date="1511743743799" expanded="true" signature="293:618" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fees.revenue.details.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/fees/fees.revenue.details.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="108" column="34" lean-forward="false" selection-start-line="108" selection-start-column="34" selection-end-line="108" selection-end-column="34" />
+              <folding>
+                <marker date="1513436196601" expanded="true" signature="181:352" ph="SELECT fees_... fees_journal" />
+                <marker date="1513436196601" expanded="true" signature="465:522" ph="..." />
+                <marker date="1513436196601" expanded="true" signature="465:556" ph="..." />
+                <marker date="1513436196601" expanded="true" signature="560:656" ph="..." />
+                <marker date="1513436196601" expanded="true" signature="727:793" ph="SELECT * FRO... get_fees_revenu_journal" />
+                <marker date="1513436196601" expanded="true" signature="1130:1414" ph="..." />
+                <marker date="1513436196601" expanded="true" signature="1130:1447" ph="..." />
+                <marker date="1513436196601" expanded="true" signature="1852:2013" ph="..." />
+                <marker date="1513436196601" expanded="true" signature="1877:1984" ph="..." />
+                <marker date="1513436196601" expanded="true" signature="2041:2135" ph="..." />
+                <marker date="1513436196601" expanded="true" signature="2924:3245" ph="..." />
+                <marker date="1513436196601" expanded="true" signature="2949:3216" ph="..." />
+                <marker date="1513436196601" expanded="true" signature="3273:3359" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fees.ledger.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/fees/fees.ledger.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="31" column="27" lean-forward="false" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+              <folding>
+                <marker date="1513437053747" expanded="true" signature="165:230" ph="SELECT * FRO... get_fees_payment_history" />
+                <marker date="1513437053747" expanded="true" signature="602:872" ph="..." />
+                <marker date="1513437053747" expanded="true" signature="602:955" ph="..." />
+                <marker date="1513437053747" expanded="true" signature="1360:1521" ph="..." />
+                <marker date="1513437053747" expanded="true" signature="1385:1492" ph="..." />
+                <marker date="1513437053747" expanded="true" signature="1549:1656" ph="..." />
+                <marker date="1513437053747" expanded="true" signature="1574:1656" ph="..." />
+                <marker date="1513437053747" expanded="true" signature="2522:2683" ph="..." />
+                <marker date="1513437053747" expanded="true" signature="2547:2654" ph="..." />
+                <marker date="1513437053747" expanded="true" signature="2711:2821" ph="..." />
+                <marker date="1513437053747" expanded="true" signature="2736:2821" ph="..." />
+                <marker date="1513437053747" expanded="true" signature="3704:4107" ph="..." />
+                <marker date="1513437053747" expanded="true" signature="3729:4078" ph="..." />
+                <marker date="1513437053747" expanded="true" signature="4135:4215" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="transaction.inc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inc/transaction.inc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="38" column="47" lean-forward="false" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fees.ledger.book.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/ledger/fees.ledger.book.php">
+      <file leaf-file-name="get.global.function.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/get.global.function.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="61" selection-end-column="6" />
+            <state relative-caret-position="118">
+              <caret line="87" column="28" lean-forward="false" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="28" />
               <folding>
-                <marker date="1513087552310" expanded="true" signature="142:176" ph="SELECT * FRO... get_fees_ledger_book" />
-                <marker date="1513087552310" expanded="true" signature="564:782" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="post.fees.ledger.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/student/post.fees.ledger.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="21" column="148" lean-forward="false" selection-start-line="21" selection-start-column="148" selection-end-line="21" selection-end-column="148" />
-              <folding>
-                <marker date="1513077420427" expanded="true" signature="126:234" ph="SELECT FROM get_fees_bill... " />
-                <marker date="1513077420427" expanded="true" signature="126:263" ph="SELECT * FRO... get_fees_bill" />
-                <marker date="1513077420427" expanded="true" signature="452:589" ph="SELECT * FRO... get_fees_bill" />
-                <marker date="1513077420427" expanded="true" signature="766:1054" ph="INSERT INTO fees_payment... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fees.billing.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/fees/fees.billing.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-              <folding>
-                <marker date="1513088227572" expanded="true" signature="144:174" ph="SELECT * FRO... get_student_list" />
-                <marker date="1513088227572" expanded="true" signature="275:499" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="top.menu.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/top.menu.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-42">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="master.menu.top.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/template/master.menu.top.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="34" column="65" lean-forward="false" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
-              <folding>
-                <marker date="1513088390619" expanded="true" signature="426:4110" ph="..." />
-                <marker date="1513088390619" expanded="true" signature="930:1650" ph="..." />
-                <marker date="1513088390619" expanded="true" signature="1026:1632" ph="..." />
-                <marker date="1513088390619" expanded="true" signature="1683:2157" ph="..." />
-                <marker date="1513088390619" expanded="true" signature="1775:2139" ph="..." />
-                <marker date="1513088390619" expanded="true" signature="2942:3497" ph="..." />
-                <marker date="1513088390619" expanded="true" signature="3033:3479" ph="..." />
-                <marker date="1513088390619" expanded="true" signature="3530:4096" ph="..." />
-                <marker date="1513088390619" expanded="true" signature="3622:4078" ph="..." />
-                <marker date="1513088390619" expanded="true" signature="4190:5344" ph="..." />
-                <marker date="1513088390619" expanded="true" signature="4707:5326" ph="..." />
-                <marker date="1513088390619" expanded="true" signature="4807:5304" ph="..." />
-                <marker date="1513088390619" expanded="true" signature="5419:7889" ph="..." />
-                <marker date="1513088390619" expanded="true" signature="5614:6088" ph="..." />
-                <marker date="1513088390619" expanded="true" signature="5706:6070" ph="..." />
-                <marker date="1513088390619" expanded="true" signature="6719:7274" ph="..." />
-                <marker date="1513088390619" expanded="true" signature="6810:7256" ph="..." />
-                <marker date="1513088390619" expanded="true" signature="7307:7875" ph="..." />
-                <marker date="1513088390619" expanded="true" signature="7399:7857" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="alert.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/alert/alert.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-160">
-              <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="post.fees.details.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/student/post.fees.details.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3621">
-              <caret line="182" column="0" lean-forward="true" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
-              <folding>
-                <marker date="1513073947197" expanded="true" signature="176:276" ph="Select * fro... get_fees_list_for_new_student" />
-                <marker date="1513073947197" expanded="true" signature="1138:1345" ph="INSERT INTO `fees_bill`... " />
-                <marker date="1513073947197" expanded="true" signature="1475:1493" ph="INSERT INTO `fees_journal`... " />
-                <marker date="1513073947197" expanded="true" signature="1475:1687" ph="INSERT INTO `fees_bill`... " />
-                <marker date="1513073947197" expanded="true" signature="1815:2025" ph="INSERT INTO `fees_bill`... " />
-                <marker date="1513073947197" expanded="true" signature="2155:2366" ph="INSERT INTO `fees_bill`... " />
-                <marker date="1513073947197" expanded="true" signature="2494:2704" ph="INSERT INTO `fees_bill`... " />
-                <marker date="1513073947197" expanded="true" signature="2829:3036" ph="INSERT INTO `fees_bill`... " />
-                <marker date="1513073947197" expanded="true" signature="3158:3363" ph="INSERT INTO `fees_bill`... " />
-                <marker date="1513073947197" expanded="true" signature="3488:3696" ph="INSERT INTO `fees_bill`... " />
-                <marker date="1513073947197" expanded="true" signature="3819:4025" ph="INSERT INTO `fees_bill`... " />
-                <marker date="1513073947197" expanded="true" signature="4152:4362" ph="INSERT INTO `fees_bill`... " />
-                <marker date="1513073947197" expanded="true" signature="4492:4704" ph="INSERT INTO `fees_bill`... " />
-                <marker date="1513073947197" expanded="true" signature="4829:5036" ph="INSERT INTO `fees_bill`... " />
-                <marker date="1513073947197" expanded="true" signature="5161:5368" ph="INSERT INTO `fees_bill`... " />
-                <marker date="1513073947197" expanded="true" signature="5491:5697" ph="INSERT INTO `fees_bill`... " />
-                <marker date="1513073947197" expanded="true" signature="5820:6026" ph="INSERT INTO `fees_bill`... " />
-                <marker date="1513073947197" expanded="true" signature="6139:6239" ph="Select * fro... get_fees_list_for_new_student" />
-                <marker date="1513073947197" expanded="true" signature="6707:6914" ph="INSERT INTO `fees_bill`... " />
-                <marker date="1513073947197" expanded="true" signature="7037:7243" ph="INSERT INTO `fees_bill`... " />
-                <marker date="1513073947197" expanded="true" signature="7368:7576" ph="INSERT INTO `fees_bill`... " />
-                <marker date="1513073947197" expanded="true" signature="7703:7913" ph="INSERT INTO `fees_bill`... " />
-                <marker date="1513073947197" expanded="true" signature="8036:8242" ph="INSERT INTO `fees_bill`... " />
-                <marker date="1513073947197" expanded="true" signature="8365:8571" ph="INSERT INTO `fees_bill`... " />
-                <marker date="1513073947197" expanded="true" signature="8386:8571" ph="INSERT INTO `fees_journal`... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="student.data.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/student/student.data.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="84" column="52" lean-forward="false" selection-start-line="84" selection-start-column="52" selection-end-line="84" selection-end-column="52" />
-              <folding>
-                <marker date="1513076401570" expanded="true" signature="1650:1705" ph="select * fro... get_course_list" />
-                <marker date="1513076401570" expanded="true" signature="1914:1981" ph="SELECT * FRO... student_profile" />
-                <marker date="1513076401570" expanded="true" signature="2337:2416" ph="select * fro... student_profile" />
-                <marker date="1513076401570" expanded="true" signature="2679:2934" ph="INSERT INTO `student_profile`... " />
-                <marker date="1513076401570" expanded="true" signature="3089:3160" ph="select * fro... student_profile" />
-                <marker date="1513076401570" expanded="true" signature="3538:3793" ph="INSERT INTO `student_profile`... " />
+                <marker date="1513419367934" expanded="true" signature="1252:1286" ph="SELECT * FRO... get_expenditure_list" />
+                <marker date="1513419367934" expanded="true" signature="1545:1576" ph="SELECT * FRO... expenses_pay_list" />
+                <marker date="1513419367934" expanded="true" signature="1803:1823" ph="SELECT * FRO... school" />
+                <marker date="1513419367934" expanded="true" signature="2040:2060" ph="SELECT * FRO... course" />
+                <marker date="1513419367934" expanded="true" signature="2298:2318" ph="SELECT * FRO... course" />
+                <marker date="1513419367934" expanded="true" signature="2557:2586" ph="SELECT * FRO... student_profile" />
+                <marker date="1513419367934" expanded="true" signature="2832:2853" ph="SELECT * FRO... session" />
+                <marker date="1513419367934" expanded="true" signature="3080:3107" ph="SELECT * FRO... get_bank_list" />
+                <marker date="1513419367934" expanded="true" signature="3330:3361" ph="SELECT * FRO... get_position_list" />
+                <marker date="1513419367934" expanded="true" signature="3621:3657" ph="SELECT * FRO... get_staff_profile_list" />
+                <marker date="1513419367934" expanded="true" signature="3925:3950" ph="SELECT * FRO... get_session" />
+                <marker date="1513419367934" expanded="true" signature="4377:4415" ph="SELECT * FRO... get_count_course_for_sch" />
+                <marker date="1513419367934" expanded="true" signature="4526:4658" ph="..." />
               </folding>
             </state>
           </provider>
@@ -311,8 +287,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>search</find>
-      <find>searc</find>
       <find>paid</find>
       <find>cash</find>
       <find>del</find>
@@ -332,26 +306,30 @@
       <find>main</find>
       <find>exp</find>
       <find>expendit</find>
-      <find>\&quot;</find>
       <find>staff</find>
       <find>2017-11-25</find>
       <find>src</find>
       <find>fees.r</find>
       <find>isset($_GET</find>
       <find>fees.ledger</find>
-      <find>fees_journal</find>
       <find>$bill-&gt;</find>
+      <find>fees_journal</find>
+      <find>\&quot;</find>
+      <find>`amount`</find>
+      <find>`paid`</find>
     </findStrings>
     <replaceStrings>
       <replace>data</replace>
       <replace>&amp;alert=1</replace>
       <replace>GET</replace>
-      <replace>'</replace>
       <replace>$date</replace>
       <replace>$tranDate</replace>
       <replace>isset($r</replace>
-      <replace>fees_bill</replace>
       <replace>$</replace>
+      <replace>fees_bill</replace>
+      <replace>'</replace>
+      <replace>`paid`</replace>
+      <replace>`revenueID`,`paid`</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\usbserver\root\account\modules\profile</dir>
@@ -363,14 +341,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/modules/fees/search.fees.history.php" />
-        <option value="$PROJECT_DIR$/modules/expenditure/add.expenditure.record.php" />
-        <option value="$PROJECT_DIR$/views/book/expenditure.details.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/9c8e0298-90e7-41e2-8e0f-93280a20f70f/console.sql" />
-        <option value="$PROJECT_DIR$/config/setup.php" />
-        <option value="$PROJECT_DIR$/modules/payroll/calculate.payroll.php" />
-        <option value="$PROJECT_DIR$/modules/salary_control/salary.control.cost.php" />
-        <option value="$PROJECT_DIR$/views/payroll/salary.control.php" />
         <option value="$PROJECT_DIR$/views/payroll/staff.payroll.php" />
         <option value="$PROJECT_DIR$/modules/payment/add.pay.voucher.php" />
         <option value="$PROJECT_DIR$/views/ledger/salary.control.ledger.php" />
@@ -378,8 +348,6 @@
         <option value="$PROJECT_DIR$/views/payroll/staff.loan.php" />
         <option value="$PROJECT_DIR$/modules/payroll/add.staff.pay.loan.php" />
         <option value="$PROJECT_DIR$/views/payroll/staff.profile.php" />
-        <option value="$PROJECT_DIR$/views/fees/fees.payment.php" />
-        <option value="$PROJECT_DIR$/modules/fees/add.fees.payment.php" />
         <option value="$PROJECT_DIR$/views/fees/fees.revenue.summary.php" />
         <option value="$PROJECT_DIR$/views/profit_loss/profit.loss.calculate.php" />
         <option value="$PROJECT_DIR$/chart.php" />
@@ -388,7 +356,6 @@
         <option value="$PROJECT_DIR$/views/profit_loss/profit.loss.php" />
         <option value="$PROJECT_DIR$/views/ledger/general.ledger.summary.php" />
         <option value="$PROJECT_DIR$/modules/profit_loss/profit.loss.php" />
-        <option value="$PROJECT_DIR$/views/fees/fees.revenue.details.php" />
         <option value="$PROJECT_DIR$/views/expenditure/expenditure.details.php" />
         <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/template/home.php" />
@@ -398,13 +365,10 @@
         <option value="$PROJECT_DIR$/dashboard.php" />
         <option value="$PROJECT_DIR$/test2.php" />
         <option value="$PROJECT_DIR$/transaction.php" />
-        <option value="$PROJECT_DIR$/modules/injectors/fees.sql.injection.php" />
         <option value="$USER_HOME$/Downloads/faucethub.php" />
         <option value="$PROJECT_DIR$/modules/global/fees.function.inc" />
         <option value="$PROJECT_DIR$/views/course/course.php" />
-        <option value="$PROJECT_DIR$/modules/get.global.function.php" />
         <option value="$PROJECT_DIR$/views/student/student.profile.php" />
-        <option value="$PROJECT_DIR$/account.php" />
         <option value="$PROJECT_DIR$/alert/alert.php" />
         <option value="$PROJECT_DIR$/inc/delete.inc" />
         <option value="$PROJECT_DIR$/modules/global/inejector.inc" />
@@ -412,8 +376,22 @@
         <option value="$PROJECT_DIR$/modules/student/student.data.php" />
         <option value="$PROJECT_DIR$/modules/student/post.fees.ledger.php" />
         <option value="$PROJECT_DIR$/views/ledger/fees.ledger.book.php" />
-        <option value="$PROJECT_DIR$/views/fees/fees.billing.php" />
+        <option value="$PROJECT_DIR$/modules/student/student.profile.php" />
         <option value="$PROJECT_DIR$/template/master.menu.top.php" />
+        <option value="$PROJECT_DIR$/inc/dashboard.inc" />
+        <option value="$PROJECT_DIR$/modules/injectors/fees.sql.injection.php" />
+        <option value="$PROJECT_DIR$/account.php" />
+        <option value="$PROJECT_DIR$/inc/transaction.inc" />
+        <option value="$PROJECT_DIR$/inc/print.inc" />
+        <option value="$PROJECT_DIR$/views/fees/fees.billing.php" />
+        <option value="$PROJECT_DIR$/print/fees.bill.php" />
+        <option value="$PROJECT_DIR$/modules/print/print.fee.bill.php" />
+        <option value="$PROJECT_DIR$/modules/fees/fees.billing.php" />
+        <option value="$PROJECT_DIR$/modules/get.global.function.php" />
+        <option value="$PROJECT_DIR$/views/fees/fees.payment.php" />
+        <option value="$PROJECT_DIR$/modules/fees/add.fees.payment.php" />
+        <option value="$PROJECT_DIR$/views/fees/fees.revenue.details.php" />
+        <option value="$PROJECT_DIR$/views/fees/fees.ledger.php" />
       </list>
     </option>
   </component>
@@ -427,7 +405,7 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="487" />
     <option name="y" value="201" />
     <option name="width" value="825" />
@@ -451,29 +429,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="account" type="b2602c69:ProjectViewProjectNode" />
               <item name="account" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="account" type="b2602c69:ProjectViewProjectNode" />
-              <item name="account" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="alert" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="account" type="b2602c69:ProjectViewProjectNode" />
-              <item name="account" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="account" type="b2602c69:ProjectViewProjectNode" />
-              <item name="account" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="inc" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="account" type="b2602c69:ProjectViewProjectNode" />
@@ -485,17 +446,6 @@
               <item name="account" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="fees" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="account" type="b2602c69:ProjectViewProjectNode" />
-              <item name="account" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="global" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="account" type="b2602c69:ProjectViewProjectNode" />
-              <item name="account" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="account" type="b2602c69:ProjectViewProjectNode" />
@@ -518,6 +468,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -768,11 +720,15 @@
       <workItem from="1512326891591" duration="40646000" />
       <workItem from="1512780573856" duration="1669000" />
       <workItem from="1512873749916" duration="25446000" />
+      <workItem from="1513097445311" duration="1261000" />
+      <workItem from="1513178403914" duration="15061000" />
+      <workItem from="1513236012737" duration="18094000" />
+      <workItem from="1513405524530" duration="17160000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="651955000" />
+    <option name="totallyTimeSpent" value="703531000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -784,12 +740,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16490166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17170954" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20905924" sideWeight="0.5060698" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26172465" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="1366" y="0" width="1280" height="984" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14599092" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="1366" y="0" width="1280" height="984" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13504274" sideWeight="0.4939302" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -809,30 +766,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43418804" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20905924" sideWeight="0.5060698" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="605" y="350" width="444" height="168" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1358885" sideWeight="0.4939302" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24430956" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26172465" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="1366" y="0" width="1280" height="984" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43418804" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2518968" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -863,131 +796,32 @@
           <line>36</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/views/fees/fees.billing.php</url>
+          <line>34</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/inc/transaction.inc</url>
+          <line>38</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/inc/print.inc</url>
+          <line>14</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/views/fees/fees.payment.php</url>
+          <line>152</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="20" />
+      <option name="time" value="25" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/setup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/fees/add.fees.costing.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/payroll/staff.profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="160" column="57" lean-forward="false" selection-start-line="160" selection-start-column="57" selection-end-line="160" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/payroll/add.staff.profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-103">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/fees/fees.payment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3300">
-          <caret line="414" column="41" lean-forward="false" selection-start-line="414" selection-start-column="41" selection-end-line="414" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/fees/fees.ledger.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-140">
-          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/fees/fees.item.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="31" column="138" lean-forward="false" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="138" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/fees/fees.revenue.summary.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="18" column="126" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/expenditure/add.expenditure.record.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/fees/search.fees.history.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="28" column="47" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/ledger/ledger.details.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="52" column="10" lean-forward="false" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/fees/fees.revenue.details.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/profit_loss/profit.loss.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1600">
-          <caret line="49" column="76" lean-forward="false" selection-start-line="49" selection-start-column="76" selection-end-line="49" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/profit_loss/profit.loss.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="56" column="6" lean-forward="false" selection-start-line="56" selection-start-column="6" selection-end-line="56" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/profit_loss/profit.loss.calculate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="59" column="28" lean-forward="false" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/expenditure/expenditure.details.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-920">
-          <caret line="10" column="116" lean-forward="true" selection-start-line="10" selection-start-column="116" selection-end-line="10" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/dashboard.chart.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -1002,7 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1010,16 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="63" column="58" lean-forward="false" selection-start-line="63" selection-start-column="58" selection-end-line="63" selection-end-column="58" />
-          <folding>
-            <marker date="1510382353289" expanded="true" signature="433:485" ph="DELETE FROM " />
-            <marker date="1510382353289" expanded="true" signature="635:685" ph="DELETE FROM " />
-            <marker date="1510382353289" expanded="true" signature="837:885" ph="DELETE FROM " />
-            <marker date="1510382353289" expanded="true" signature="1049:1103" ph="DELETE FROM " />
-            <marker date="1510382353289" expanded="true" signature="1162:1218" ph="DELETE FROM " />
-            <marker date="1510382353289" expanded="true" signature="1346:1402" ph="DELETE FROM " />
-            <marker date="1510382353289" expanded="true" signature="1538:1585" ph="DELETE FROM " />
-            <marker date="1510382353289" expanded="true" signature="1720:1765" ph="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1027,7 +850,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1063,14 +885,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="15" column="3" lean-forward="false" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/injectors/fees.sql.injection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1078,7 +892,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
           <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1086,9 +899,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-63">
           <caret line="32" column="71" lean-forward="false" selection-start-line="32" selection-start-column="71" selection-end-line="32" selection-end-column="71" />
-          <folding>
-            <marker date="1511891783581" expanded="true" signature="701:729" ph="select * fro... general_legder" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1100,95 +910,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/global/fees.function.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="162" column="1" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="162" selection-end-column="1" />
-          <folding>
-            <marker date="1513016076853" expanded="true" signature="156:262" ph="SELECT * FRO... get_fees_list_for_new_student" />
-            <marker date="1513016076853" expanded="true" signature="998:1213" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1513016076853" expanded="true" signature="1328:1541" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1513016076853" expanded="true" signature="1658:1872" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1513016076853" expanded="true" signature="1987:2200" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1513016076853" expanded="true" signature="2312:2522" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1513016076853" expanded="true" signature="2631:2839" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1513016076853" expanded="true" signature="2951:3162" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1513016076853" expanded="true" signature="3272:3481" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1513016076853" expanded="true" signature="3595:3808" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1513016076853" expanded="true" signature="3925:4140" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1513016076853" expanded="true" signature="4252:4462" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1513016076853" expanded="true" signature="4574:4784" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1513016076853" expanded="true" signature="4895:5104" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1513016076853" expanded="true" signature="5215:5424" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1513016076853" expanded="true" signature="5537:5646" ph="SELECT * FRO... get_fees_list_continuing_student" />
-            <marker date="1513016076853" expanded="true" signature="6015:6224" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1513016076853" expanded="true" signature="6336:6547" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1513016076853" expanded="true" signature="6661:6874" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1513016076853" expanded="true" signature="6985:7194" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1513016076853" expanded="true" signature="7305:7514" ph="INSERT INTO `fees_journal`... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/student/student.data.php.old">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="57" column="56" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="57" selection-end-column="56" />
-          <folding>
-            <marker date="1512480267636" expanded="true" signature="1636:1703" ph="SELECT * FRO... student_profile" />
-            <marker date="1512480267636" expanded="true" signature="2059:2090" ph="select * fro... student_profile" />
-            <marker date="1512480267636" expanded="true" signature="2059:2130" ph="select * fro... student_profile" />
-            <marker date="1512480267636" expanded="true" signature="2348:2598" ph="INSERT INTO `student_profile`... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/course/course.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="38" column="74" lean-forward="false" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
-          <folding>
-            <marker date="1513018588609" expanded="true" signature="138:167" ph="SELECT * FRO... get_course_list" />
-            <marker date="1513018588609" expanded="true" signature="436:657" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/get.global.function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <marker date="1513013419666" expanded="true" signature="1252:1286" ph="SELECT * FRO... get_expenditure_list" />
-            <marker date="1513013419666" expanded="true" signature="1545:1576" ph="SELECT * FRO... expenses_pay_list" />
-            <marker date="1513013419666" expanded="true" signature="1803:1823" ph="SELECT * FRO... school" />
-            <marker date="1513013419666" expanded="true" signature="2040:2060" ph="SELECT * FRO... course" />
-            <marker date="1513013419666" expanded="true" signature="2298:2318" ph="SELECT * FRO... course" />
-            <marker date="1513013419666" expanded="true" signature="2557:2586" ph="SELECT * FRO... student_profile" />
-            <marker date="1513013419666" expanded="true" signature="2832:2853" ph="SELECT * FRO... session" />
-            <marker date="1513013419666" expanded="true" signature="3080:3107" ph="SELECT * FRO... get_bank_list" />
-            <marker date="1513013419666" expanded="true" signature="3330:3361" ph="SELECT * FRO... get_position_list" />
-            <marker date="1513013419666" expanded="true" signature="3621:3657" ph="SELECT * FRO... get_staff_profile_list" />
-            <marker date="1513013419666" expanded="true" signature="3925:3950" ph="SELECT * FRO... get_session" />
-            <marker date="1513013419666" expanded="true" signature="4377:4415" ph="SELECT * FRO... get_count_course_for_sch" />
-            <marker date="1513013419666" expanded="true" signature="4526:4658" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/transaction.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1720">
-          <caret line="91" column="56" lean-forward="false" selection-start-line="91" selection-start-column="56" selection-end-line="91" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/account.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1196,7 +921,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1214,9 +938,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/alert/alert.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-160">
+        <state relative-caret-position="500">
           <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1224,102 +947,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="800">
           <caret line="42" column="18" lean-forward="false" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/dashboard.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="157" column="25" lean-forward="false" selection-start-line="157" selection-start-column="14" selection-end-line="157" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/student/student.profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="36" column="166" lean-forward="false" selection-start-line="36" selection-start-column="166" selection-end-line="36" selection-end-column="166" />
-          <folding>
-            <marker date="1513019898337" expanded="true" signature="138:171" ph="SELECT * FRO... get_student_profile" />
-            <marker date="1513019898337" expanded="true" signature="567:623" ph="SELECT * FRO... get_course_list" />
-            <marker date="1513019898337" expanded="true" signature="816:1213" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/fees/add.fees.payment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1691">
-          <caret line="200" column="75" lean-forward="false" selection-start-line="200" selection-start-column="75" selection-end-line="200" selection-end-column="75" />
-          <folding>
-            <marker date="1511692593796" expanded="true" signature="676:782" ph="SELECT * FRO... get_fees_list_for_new_student" />
-            <marker date="1511692593796" expanded="true" signature="1518:1733" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1511692593796" expanded="true" signature="1848:2061" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1511692593796" expanded="true" signature="2178:2392" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1511692593796" expanded="true" signature="2507:2720" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1511692593796" expanded="true" signature="2832:3042" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1511692593796" expanded="true" signature="3151:3359" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1511692593796" expanded="true" signature="3471:3682" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1511692593796" expanded="true" signature="3792:4001" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1511692593796" expanded="true" signature="4115:4328" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1511692593796" expanded="true" signature="4445:4660" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1511692593796" expanded="true" signature="4772:4982" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1511692593796" expanded="true" signature="5094:5304" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1511692593796" expanded="true" signature="5415:5624" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1511692593796" expanded="true" signature="5735:5944" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1511692593796" expanded="true" signature="6057:6166" ph="SELECT * FRO... get_fees_list_continuing_student" />
-            <marker date="1511692593796" expanded="true" signature="6535:6744" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1511692593796" expanded="true" signature="6856:7067" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1511692593796" expanded="true" signature="7181:7394" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1511692593796" expanded="true" signature="7505:7714" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1511692593796" expanded="true" signature="7825:8034" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1511692593796" expanded="true" signature="8372:8435" ph="SELECT * FRO... get_student_profile" />
-            <marker date="1511692593796" expanded="true" signature="8660:9003" ph="INSERT INTO fees_payment... " />
-            <marker date="1511692593796" expanded="true" signature="9152:9323" ph="INSERT INTO `fees_revenue`... " />
-            <marker date="1511692593796" expanded="true" signature="9445:9706" ph="INSERT INTO general_legder... " />
-            <marker date="1511692593796" expanded="true" signature="10352:10523" ph="INSERT INTO `fees_revenue`... " />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/student/post.fees.details.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3621">
-          <caret line="182" column="0" lean-forward="true" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
-          <folding>
-            <marker date="1513073947197" expanded="true" signature="176:276" ph="Select * fro... get_fees_list_for_new_student" />
-            <marker date="1513073947197" expanded="true" signature="1138:1345" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1513073947197" expanded="true" signature="1475:1493" ph="INSERT INTO `fees_journal`... " />
-            <marker date="1513073947197" expanded="true" signature="1475:1687" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1513073947197" expanded="true" signature="1815:2025" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1513073947197" expanded="true" signature="2155:2366" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1513073947197" expanded="true" signature="2494:2704" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1513073947197" expanded="true" signature="2829:3036" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1513073947197" expanded="true" signature="3158:3363" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1513073947197" expanded="true" signature="3488:3696" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1513073947197" expanded="true" signature="3819:4025" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1513073947197" expanded="true" signature="4152:4362" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1513073947197" expanded="true" signature="4492:4704" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1513073947197" expanded="true" signature="4829:5036" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1513073947197" expanded="true" signature="5161:5368" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1513073947197" expanded="true" signature="5491:5697" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1513073947197" expanded="true" signature="5820:6026" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1513073947197" expanded="true" signature="6139:6239" ph="Select * fro... get_fees_list_for_new_student" />
-            <marker date="1513073947197" expanded="true" signature="6707:6914" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1513073947197" expanded="true" signature="7037:7243" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1513073947197" expanded="true" signature="7368:7576" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1513073947197" expanded="true" signature="7703:7913" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1513073947197" expanded="true" signature="8036:8242" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1513073947197" expanded="true" signature="8365:8571" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1513073947197" expanded="true" signature="8386:8571" ph="INSERT INTO `fees_journal`... " />
-          </folding>
+        <state relative-caret-position="3540">
+          <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/student/post.fees.ledger.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
+        <state relative-caret-position="320">
           <caret line="21" column="148" lean-forward="false" selection-start-line="21" selection-start-column="148" selection-end-line="21" selection-end-column="148" />
           <folding>
             <marker date="1513077420427" expanded="true" signature="126:234" ph="SELECT FROM get_fees_bill... " />
@@ -1338,10 +978,137 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/template/top.menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/global/fees.function.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3560">
+          <caret line="162" column="1" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="162" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/profit_loss/profit.loss.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-680">
+          <caret line="49" column="147" lean-forward="false" selection-start-line="49" selection-start-column="147" selection-end-line="49" selection-end-column="147" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/payment/add.income.capital.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-302">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1499155046896" expanded="true" signature="377:706" ph="INSERT INTO general_legder... " />
+            <marker date="1499155046896" expanded="true" signature="777:1106" ph="INSERT INTO general_legder... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/payment/add.pay.voucher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-742">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1511434143446" expanded="true" signature="423:483" ph="SELECT * FRO... get_chart_of_account" />
+            <marker date="1511434143446" expanded="true" signature="705:1059" ph="INSERT INTO general_legder... " />
+            <marker date="1511434143446" expanded="true" signature="1388:1742" ph="INSERT INTO general_legder... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/payment/drawings.income.capital.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-182">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1499156370735" expanded="true" signature="378:706" ph="INSERT INTO general_legder... " />
+            <marker date="1499156370735" expanded="true" signature="777:1105" ph="INSERT INTO general_legder... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/master.menu.top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="30" column="54" lean-forward="false" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/salary_control/salary.control.cost.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-283">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/course/course.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="38" column="74" lean-forward="false" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/student/student.data.php.bk">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/student/student.profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="150" column="18" lean-forward="true" selection-start-line="133" selection-start-column="11" selection-end-line="150" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/student/student.profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="66" column="5" lean-forward="true" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/print.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/print/fees.bill.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="35" column="43" lean-forward="false" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/injectors/fees.sql.injection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2240">
+          <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/ledger/fees.ledger.book.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="61" selection-end-column="6" />
+        <state relative-caret-position="220">
+          <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
           <folding>
             <marker date="1513087552310" expanded="true" signature="142:176" ph="SELECT * FRO... get_fees_ledger_book" />
             <marker date="1513087552310" expanded="true" signature="564:782" ph="..." />
@@ -1349,64 +1116,283 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/fees/fees.billing.php">
+    <entry file="file://$PROJECT_DIR$/inc/dashboard.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-          <folding>
-            <marker date="1513088227572" expanded="true" signature="144:174" ph="SELECT * FRO... get_student_list" />
-            <marker date="1513088227572" expanded="true" signature="275:499" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/top.menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-42">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="118" column="59" lean-forward="false" selection-start-line="117" selection-start-column="12" selection-end-line="118" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/student/student.data.php">
+    <entry file="file://$PROJECT_DIR$/modules/print/print.fee.bill.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="84" column="52" lean-forward="false" selection-start-line="84" selection-start-column="52" selection-end-line="84" selection-end-column="52" />
+        <state relative-caret-position="420">
+          <caret line="26" column="44" lean-forward="true" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
           <folding>
-            <marker date="1513076401570" expanded="true" signature="1650:1705" ph="select * fro... get_course_list" />
-            <marker date="1513076401570" expanded="true" signature="1914:1981" ph="SELECT * FRO... student_profile" />
-            <marker date="1513076401570" expanded="true" signature="2337:2416" ph="select * fro... student_profile" />
-            <marker date="1513076401570" expanded="true" signature="2679:2934" ph="INSERT INTO `student_profile`... " />
-            <marker date="1513076401570" expanded="true" signature="3089:3160" ph="select * fro... student_profile" />
-            <marker date="1513076401570" expanded="true" signature="3538:3793" ph="INSERT INTO `student_profile`... " />
+            <marker date="1513242684076" expanded="true" signature="171:285" ph="SELECT * FRO... get_print_fees_details" />
+            <marker date="1513242684076" expanded="true" signature="508:565" ph="select * fro... get_student_list" />
+            <marker date="1513242684076" expanded="true" signature="681:719" ph="..." />
+            <marker date="1513242684076" expanded="true" signature="720:781" ph="..." />
+            <marker date="1513242684076" expanded="true" signature="804:841" ph="..." />
+            <marker date="1513242684076" expanded="true" signature="842:935" ph="..." />
+            <marker date="1513242684076" expanded="true" signature="958:995" ph="..." />
+            <marker date="1513242684076" expanded="true" signature="996:1054" ph="..." />
+            <marker date="1513242684076" expanded="true" signature="1150:1264" ph="SELECT * FRO... get_print_fees_details" />
+            <marker date="1513242684076" expanded="true" signature="1387:1409" ph="..." />
+            <marker date="1513242684076" expanded="true" signature="1410:1740" ph="..." />
+            <marker date="1513242684076" expanded="true" signature="1437:1499" ph="..." />
+            <marker date="1513242684076" expanded="true" signature="1500:1554" ph="..." />
+            <marker date="1513242684076" expanded="true" signature="1585:1667" ph="..." />
+            <marker date="1513242684076" expanded="true" signature="1668:1725" ph="..." />
+            <marker date="1513242684076" expanded="true" signature="1846:1994" ph="SELECT * FRO... get_printout_total" />
+            <marker date="1513242684076" expanded="true" signature="2109:2193" ph="..." />
+            <marker date="1513242684076" expanded="true" signature="2194:2253" ph="..." />
+            <marker date="1513242684076" expanded="true" signature="2330:2400" ph="SELECT Count... get_printout_total" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/master.menu.top.php">
+    <entry file="file://$PROJECT_DIR$/modules/fees/add.fees.record.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="34" column="65" lean-forward="false" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1513088390619" expanded="true" signature="426:4110" ph="..." />
-            <marker date="1513088390619" expanded="true" signature="930:1650" ph="..." />
-            <marker date="1513088390619" expanded="true" signature="1026:1632" ph="..." />
-            <marker date="1513088390619" expanded="true" signature="1683:2157" ph="..." />
-            <marker date="1513088390619" expanded="true" signature="1775:2139" ph="..." />
-            <marker date="1513088390619" expanded="true" signature="2942:3497" ph="..." />
-            <marker date="1513088390619" expanded="true" signature="3033:3479" ph="..." />
-            <marker date="1513088390619" expanded="true" signature="3530:4096" ph="..." />
-            <marker date="1513088390619" expanded="true" signature="3622:4078" ph="..." />
-            <marker date="1513088390619" expanded="true" signature="4190:5344" ph="..." />
-            <marker date="1513088390619" expanded="true" signature="4707:5326" ph="..." />
-            <marker date="1513088390619" expanded="true" signature="4807:5304" ph="..." />
-            <marker date="1513088390619" expanded="true" signature="5419:7889" ph="..." />
-            <marker date="1513088390619" expanded="true" signature="5614:6088" ph="..." />
-            <marker date="1513088390619" expanded="true" signature="5706:6070" ph="..." />
-            <marker date="1513088390619" expanded="true" signature="6719:7274" ph="..." />
-            <marker date="1513088390619" expanded="true" signature="6810:7256" ph="..." />
-            <marker date="1513088390619" expanded="true" signature="7307:7875" ph="..." />
-            <marker date="1513088390619" expanded="true" signature="7399:7857" ph="..." />
+            <marker date="1503500980896" expanded="true" signature="594:982" ph="INSERT INTO `fees_price_list`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/fees/fees.billing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="139" column="45" lean-forward="true" selection-start-line="133" selection-start-column="8" selection-end-line="139" selection-end-column="45" />
+          <folding>
+            <marker date="1513407829576" expanded="true" signature="328:349" ph="SELECT * FRO... get_key" />
+            <marker date="1513407829576" expanded="true" signature="328:351" ph="SELECT * FRO... get_key" />
+            <marker date="1513407829576" expanded="true" signature="468:597" ph="SELECT * FRO... get_print_fees_details" />
+            <marker date="1513407829576" expanded="true" signature="864:918" ph="SELECT * FRO... get_course_list" />
+            <marker date="1513407829576" expanded="true" signature="1052:1150" ph="SELECT * FRO... get_fees_list_for_new_student" />
+            <marker date="1513407829576" expanded="true" signature="1945:2148" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513407829576" expanded="true" signature="2235:2438" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513407829576" expanded="true" signature="2523:2724" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513407829576" expanded="true" signature="2810:3025" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513407829576" expanded="true" signature="3110:3324" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513407829576" expanded="true" signature="3406:3617" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513407829576" expanded="true" signature="3696:3905" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513407829576" expanded="true" signature="3987:4199" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513407829576" expanded="true" signature="4279:4489" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513407829576" expanded="true" signature="4573:4787" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513407829576" expanded="true" signature="4874:5090" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513407829576" expanded="true" signature="5172:5383" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513407829576" expanded="true" signature="5465:5676" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513407829576" expanded="true" signature="5757:5967" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513407829576" expanded="true" signature="6048:6258" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513407829576" expanded="true" signature="6354:6688" ph="INSERT INTO `fees_payment`... " />
+            <marker date="1513407829576" expanded="true" signature="6785:7079" ph="INSERT INTO `general_legder`... " />
+            <marker date="1513407829576" expanded="true" signature="7303:7404" ph="SELECT * FRO... get_fees_list_continuing_student" />
+            <marker date="1513407829576" expanded="true" signature="7839:8045" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513407829576" expanded="true" signature="8143:8351" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513407829576" expanded="true" signature="8451:8661" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513407829576" expanded="true" signature="8758:8964" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513407829576" expanded="true" signature="9057:9263" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513407829576" expanded="true" signature="9363:9697" ph="INSERT INTO `fees_payment`... " />
+            <marker date="1513407829576" expanded="true" signature="9794:10088" ph="INSERT INTO `general_legder`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/fees/fees.billing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+          <folding>
+            <marker date="1513238675461" expanded="true" signature="145:175" ph="SELECT * FRO... get_student_list" />
+            <marker date="1513238675461" expanded="true" signature="553:802" ph="..." />
+            <marker date="1513238675461" expanded="true" signature="553:1299" ph="..." />
+            <marker date="1513238675461" expanded="true" signature="842:1281" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/get.global.function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="87" column="28" lean-forward="false" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="28" />
+          <folding>
+            <marker date="1513419367934" expanded="true" signature="1252:1286" ph="SELECT * FRO... get_expenditure_list" />
+            <marker date="1513419367934" expanded="true" signature="1545:1576" ph="SELECT * FRO... expenses_pay_list" />
+            <marker date="1513419367934" expanded="true" signature="1803:1823" ph="SELECT * FRO... school" />
+            <marker date="1513419367934" expanded="true" signature="2040:2060" ph="SELECT * FRO... course" />
+            <marker date="1513419367934" expanded="true" signature="2298:2318" ph="SELECT * FRO... course" />
+            <marker date="1513419367934" expanded="true" signature="2557:2586" ph="SELECT * FRO... student_profile" />
+            <marker date="1513419367934" expanded="true" signature="2832:2853" ph="SELECT * FRO... session" />
+            <marker date="1513419367934" expanded="true" signature="3080:3107" ph="SELECT * FRO... get_bank_list" />
+            <marker date="1513419367934" expanded="true" signature="3330:3361" ph="SELECT * FRO... get_position_list" />
+            <marker date="1513419367934" expanded="true" signature="3621:3657" ph="SELECT * FRO... get_staff_profile_list" />
+            <marker date="1513419367934" expanded="true" signature="3925:3950" ph="SELECT * FRO... get_session" />
+            <marker date="1513419367934" expanded="true" signature="4377:4415" ph="SELECT * FRO... get_count_course_for_sch" />
+            <marker date="1513419367934" expanded="true" signature="4526:4658" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/transaction.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="38" column="47" lean-forward="false" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/fees/fees.payment.php.xx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="30" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="485" selection-end-column="0" />
+          <folding>
+            <marker date="1513385979020" expanded="true" signature="913:981" ph="SELECT * FRO... get_fees_payment_history" />
+            <marker date="1513385979020" expanded="true" signature="913:1020" ph="SELECT * FRO... get_fees_payment_history" />
+            <marker date="1513385979020" expanded="true" signature="1335:2102" ph="..." />
+            <marker date="1513385979020" expanded="true" signature="1823:2069" ph="..." />
+            <marker date="1513385979020" expanded="true" signature="2175:2238" ph="SELECT * FRO... get_student_profile" />
+            <marker date="1513385979020" expanded="true" signature="2373:2427" ph="SELECT * FRO... get_course_list" />
+            <marker date="1513385979020" expanded="true" signature="2651:2711" ph="SELECT * FRO... get_fees_summary" />
+            <marker date="1513385979020" expanded="true" signature="2859:3257" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/fees/fees.payment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="142" column="69" lean-forward="false" selection-start-line="142" selection-start-column="51" selection-end-line="142" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/fees/add.fees.payment.php.xxx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="248" column="5" lean-forward="false" selection-start-line="207" selection-start-column="3" selection-end-line="248" selection-end-column="5" />
+          <folding>
+            <marker date="1513427155142" expanded="false" signature="9:93" ph=" Created by PhpStorm. ..." />
+            <marker date="1513427155142" expanded="true" signature="681:787" ph="SELECT * FRO... get_fees_list_for_new_student" />
+            <marker date="1513427155142" expanded="true" signature="1524:1542" ph="INSERT INTO `fees_journal`... " />
+            <marker date="1513427155142" expanded="true" signature="1524:1572" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513427155142" expanded="true" signature="1524:1745" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513427155142" expanded="true" signature="1860:2066" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513427155142" expanded="true" signature="2183:2390" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513427155142" expanded="true" signature="2505:2711" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513427155142" expanded="true" signature="2823:3026" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513427155142" expanded="true" signature="3135:3336" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513427155142" expanded="true" signature="3448:3652" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513427155142" expanded="true" signature="3762:3964" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513427155142" expanded="true" signature="4078:4284" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513427155142" expanded="true" signature="4401:4609" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513427155142" expanded="true" signature="4721:4924" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513427155142" expanded="true" signature="5036:5239" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513427155142" expanded="true" signature="5350:5552" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513427155142" expanded="true" signature="5663:5865" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513427155142" expanded="true" signature="5979:6088" ph="SELECT * FRO... get_fees_list_continuing_student" />
+            <marker date="1513427155142" expanded="true" signature="6457:6659" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513427155142" expanded="true" signature="6771:6975" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513427155142" expanded="true" signature="7089:7295" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513427155142" expanded="true" signature="7406:7608" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513427155142" expanded="true" signature="7719:7921" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513427155142" expanded="true" signature="7790:7921" ph="INSERT INTO `fees_journal`... " />
+            <marker date="1513427155142" expanded="true" signature="8258:8321" ph="SELECT * FRO... get_student_profile" />
+            <marker date="1513427155142" expanded="true" signature="8552:8900" ph="INSERT INTO fees_payment... " />
+            <marker date="1513427155142" expanded="true" signature="9085:9346" ph="INSERT INTO general_legder... " />
+            <marker date="1513427155142" expanded="true" signature="9982:10243" ph="INSERT INTO general_legder... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/fees/add.fees.payment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-282">
+          <caret line="239" column="44" lean-forward="false" selection-start-line="239" selection-start-column="44" selection-end-line="239" selection-end-column="44" />
+          <folding>
+            <marker date="1513433998048" expanded="true" signature="688:794" ph="SELECT * FRO... get_fees_list_for_new_student" />
+            <marker date="1513433998048" expanded="true" signature="1569:1774" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513433998048" expanded="true" signature="1889:2095" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513433998048" expanded="true" signature="2212:2419" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513433998048" expanded="true" signature="2534:2740" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513433998048" expanded="true" signature="2852:3055" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513433998048" expanded="true" signature="3164:3365" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513433998048" expanded="true" signature="3477:3681" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513433998048" expanded="true" signature="3791:3993" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513433998048" expanded="true" signature="4107:4313" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513433998048" expanded="true" signature="4430:4638" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513433998048" expanded="true" signature="4750:4953" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513433998048" expanded="true" signature="5065:5268" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513433998048" expanded="true" signature="5379:5581" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513433998048" expanded="true" signature="5692:5894" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513433998048" expanded="true" signature="6007:6116" ph="SELECT * FRO... get_fees_list_continuing_student" />
+            <marker date="1513433998048" expanded="true" signature="6485:6687" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513433998048" expanded="true" signature="6799:7003" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513433998048" expanded="true" signature="7117:7323" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513433998048" expanded="true" signature="7434:7636" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513433998048" expanded="true" signature="7747:7949" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1513433998048" expanded="true" signature="8286:8349" ph="SELECT * FRO... get_student_profile" />
+            <marker date="1513433998048" expanded="true" signature="8604:8952" ph="INSERT INTO fees_payment... " />
+            <marker date="1513433998048" expanded="true" signature="9123:9397" ph="INSERT INTO general_legder... " />
+            <marker date="1513433998048" expanded="true" signature="9957:10231" ph="INSERT INTO general_legder... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/fees/fees.revenue.summary.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <marker date="1511743743799" expanded="true" signature="137:171" ph="SELECT * FRO... fees_details_summary" />
+            <marker date="1511743743799" expanded="true" signature="293:618" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/fees/fees.revenue.details.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="108" column="34" lean-forward="false" selection-start-line="108" selection-start-column="34" selection-end-line="108" selection-end-column="34" />
+          <folding>
+            <marker date="1513436196601" expanded="true" signature="181:352" ph="SELECT fees_... fees_journal" />
+            <marker date="1513436196601" expanded="true" signature="465:522" ph="..." />
+            <marker date="1513436196601" expanded="true" signature="465:556" ph="..." />
+            <marker date="1513436196601" expanded="true" signature="560:656" ph="..." />
+            <marker date="1513436196601" expanded="true" signature="727:793" ph="SELECT * FRO... get_fees_revenu_journal" />
+            <marker date="1513436196601" expanded="true" signature="1130:1414" ph="..." />
+            <marker date="1513436196601" expanded="true" signature="1130:1447" ph="..." />
+            <marker date="1513436196601" expanded="true" signature="1852:2013" ph="..." />
+            <marker date="1513436196601" expanded="true" signature="1877:1984" ph="..." />
+            <marker date="1513436196601" expanded="true" signature="2041:2135" ph="..." />
+            <marker date="1513436196601" expanded="true" signature="2924:3245" ph="..." />
+            <marker date="1513436196601" expanded="true" signature="2949:3216" ph="..." />
+            <marker date="1513436196601" expanded="true" signature="3273:3359" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/fees/fees.ledger.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="31" column="27" lean-forward="false" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+          <folding>
+            <marker date="1513437053747" expanded="true" signature="165:230" ph="SELECT * FRO... get_fees_payment_history" />
+            <marker date="1513437053747" expanded="true" signature="602:872" ph="..." />
+            <marker date="1513437053747" expanded="true" signature="602:955" ph="..." />
+            <marker date="1513437053747" expanded="true" signature="1360:1521" ph="..." />
+            <marker date="1513437053747" expanded="true" signature="1385:1492" ph="..." />
+            <marker date="1513437053747" expanded="true" signature="1549:1656" ph="..." />
+            <marker date="1513437053747" expanded="true" signature="1574:1656" ph="..." />
+            <marker date="1513437053747" expanded="true" signature="2522:2683" ph="..." />
+            <marker date="1513437053747" expanded="true" signature="2547:2654" ph="..." />
+            <marker date="1513437053747" expanded="true" signature="2711:2821" ph="..." />
+            <marker date="1513437053747" expanded="true" signature="2736:2821" ph="..." />
+            <marker date="1513437053747" expanded="true" signature="3704:4107" ph="..." />
+            <marker date="1513437053747" expanded="true" signature="3729:4078" ph="..." />
+            <marker date="1513437053747" expanded="true" signature="4135:4215" ph="..." />
           </folding>
         </state>
       </provider>

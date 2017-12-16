@@ -6,7 +6,7 @@
  * Time: 4:48 PM
  */
 
-function new_student_fees($conn){
+function new_student_fees($conn,$cou){
     // echo "test";
     $date = $GLOBALS['date'];
     $tranDate = date("Y-m-d H:i:s");
@@ -44,70 +44,70 @@ function new_student_fees($conn){
     $other2 = $r['other2'];
 
     //matriculation
-    $fees_ledger = "INSERT INTO `fees_journal` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES('$tranDate', '$date', '$student_id', '2', '$matriculation','$school_session','$semesterID')";
+    $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES('$tranDate', '$date', '$student_id', '2', '$matriculation','$school_session','$semesterID')";
     $sql_x=$conn->query($fees_ledger);
 
     //accept-fees
-    $fees_ledger = "INSERT INTO `fees_journal` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES('$tranDate', '$date', '$student_id', '3', '$accept_fees','$school_session','$semesterID')";
+    $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES('$tranDate', '$date', '$student_id', '3', '$accept_fees','$school_session','$semesterID')";
     $sql_x=$conn->query($fees_ledger);
 
     //medical-exam
-    $fees_ledger = "INSERT INTO `fees_journal` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
+    $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
             ('$tranDate', '$date', '$student_id', '4', '$medical_exam','$school_session','$semesterID')";
     $sql_x=$conn->query($fees_ledger);
 
     //result-fees
-    $fees_ledger = "INSERT INTO `fees_journal` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
+    $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
             ('$tranDate', '$date', '$student_id', '5', '$result_fees','$school_session','$semesterID')";
     $sql_x=$conn->query($fees_ledger);
 
     //lab-fees
-    $fees_ledger = "INSERT INTO `fees_journal` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
+    $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
             ('$tranDate', '$date', '$student_id', '6', '$lab_fees','$school_session','$semesterID')";
     $sql_x=$conn->query($fees_ledger);
 
     //wasce
-    $fees_ledger = "INSERT INTO `fees_journal` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
+    $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
             ('$tranDate', '$date', '$student_id', '12', '$wasce','$school_session','$semesterID')";
     $sql_x=$conn->query($fees_ledger);
 
     //src-dues
-    $fees_ledger = "INSERT INTO `fees_journal` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
+    $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
             ('$tranDate', '$date', '$student_id', '13', '$src_dues','$school_session','$semesterID')";
     $sql_x=$conn->query($fees_ledger);
 
     //hostel
-    $fees_ledger = "INSERT INTO `fees_journal` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
+    $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
             ('$tranDate', '$date', '$student_id', '11', '$hostel','$school_session','$semesterID')";
     $sql_x=$conn->query($fees_ledger);
 
     //technology
-    $fees_ledger = "INSERT INTO `fees_journal` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
+    $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
             ('$tranDate', '$date', '$student_id', '10', '$technology','$school_session','$semesterID')";
     $sql_x=$conn->query($fees_ledger);
 
     //clinical-fees
-    $fees_ledger = "INSERT INTO `fees_journal` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
+    $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
             ('$tranDate', '$date', '$student_id', '9', '$clinical_fees','$school_session','$semesterID')";
     $sql_x=$conn->query($fees_ledger);
 
     //nmc-book
-    $fees_ledger = "INSERT INTO `fees_journal` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
+    $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
             ('$tranDate', '$date', '$student_id', '8', '$nmc_book','$school_session','$semesterID')";
     $sql_x=$conn->query($fees_ledger);
 
     //indexing
-    $fees_ledger = "INSERT INTO `fees_journal` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
+    $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
             ('$tranDate', '$date', '$student_id', '7', '$indexing','$school_session','$semesterID')";
     $sql_x=$conn->query($fees_ledger);
 
     //other-1
-    $fees_ledger = "INSERT INTO `fees_journal` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
+    $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
             ('$tranDate', '$date', '$student_id', '14', '$other1','$school_session','$semesterID')";
     $sql_x=$conn->query($fees_ledger);
 
     //other-2
-    $fees_ledger = "INSERT INTO `fees_journal` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
+    $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
             ('$tranDate', '$date', '$student_id', '15', '$other2','$school_session','$semesterID')";
     $sql_x=$conn->query($fees_ledger);
 

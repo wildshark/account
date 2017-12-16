@@ -2,10 +2,9 @@
 /**
  * Created by PhpStorm.
  * User: Andrew Quaye
- * Date: 16-Dec-17
- * Time: 12:27 PM
+ * Date: 30-Jun-17
+ * Time: 7:21 PM
  */
-
 
 $tranDate= date('Y-m-d h:i:s');
 
@@ -23,10 +22,11 @@ $semesterID= $_GET['semester'];
 $description= $_GET['description'];
 $level= $_GET['level'];
 $school_session= $_GET['session'];
-$student_category_id= $_GET['student-entry-type'];
+$student_category_id= $_GET['category-id'];
 
 //get fees for new intake and returning student
-if ($student_entry_type == 1){
+
+if ($student_entry_type == 1) {
 
     $data = $conn->query("SELECT * FROM get_fees_list_for_new_student WHERE schoolID='$schoolID' AND statusID='$student_category_id'");
     $r = $data->fetch_assoc();
@@ -49,13 +49,11 @@ if ($student_entry_type == 1){
     $other1 = $r['other1'];
     $other2 = $r['other2'];
 
-    //total fees
     $fees_cost = $tuition + $other;
 
-    //post payment break down to fees bill field paid
-
+//post payment into fees journals
     if (isset($_GET['matriculation'])){
-        $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `yearID`, `semesterID`, `studentID`, `revenueID`, `paid`) VALUES ('$tranDate', '$date', '$school_session', '$semesterID', '$student_id', '2','$matriculation')";
+        $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `yearID`, `semesterID`, `studentID`, `revenueID`, `amount`, `paid`) VALUES ('$tranDate', '$date', '$school_session', '$semesterID', '$student_id', '2', '0', '$matriculation')";
         $sql_x=$conn->query($fees_ledger);
     }
 
@@ -137,6 +135,7 @@ if ($student_entry_type == 1){
         $sql_x=$conn->query($fees_ledger);
     }
 
+
 }elseif ($student_entry_type== 2){
 
     $data=$conn->query("SELECT * FROM get_fees_list_continuing_student WHERE schoolID='$schoolID' AND statusID='$student_category_id'");
@@ -202,52 +201,49 @@ if (empty($description)){
     $description= $stName." ~ ". $admissionNo." paid ". $paid_amount ."ref.".$ref;
 }
 
-//post to fees_payment
-
 //check payment type 1. cash 2.Bank
 
 $data="INSERT INTO fees_payment(tranDate,payDate,studentID,schoolID,payTypeID,refNo,fees_amount,paid_amount,stud_level,semesterID,sch_session,main_fees,discount,tutor_materials)
 VALUES ('$tranDate','$date','$student_id','$schoolID','$payType','$ref','$fees_amount','$paid_amount','$level','$semesterID','$school_session','$fees_cost','$discount','$other')";
+    if ($conn->query($data) === TRUE) {
+        //echo "New record created successfully";
+        if ($payType == 2){
 
-if ($conn->query($data) === TRUE) {
-    //echo "New record created successfully";
-    if ($payType == 1){
+            //insert in General Ledger ~ BANK
+            $gl="INSERT INTO general_legder(tranDate,GL_date,ticketID,bookID,tranCatID,description,refNo,bankDr,tranTypeID,yearID,semesterID,profitlossID,balanceSheetID)
+VALUES ('$tranDate','$date','F','1','1','$description','$ref','$amount','2','$yearID','$semesterID','1','4')";
+            if ($conn->query($gl) === TRUE){
+                
+                $_SESSION['tranDate']=$tranDate;
+                $_SESSION['date']=$date;
+                $_SESSION['student']=$student;
+                $_SESSION['school']=$school;
+                $_SESSION['ref']=$ref;
+                $_SESSION['level']=$level;
+                $_SESSION['semester']=$semesterID;
 
-        //insert in General Ledger ~ Cash book
-        $gl="INSERT INTO general_legder(tranDate,GL_date,ticketID,bookID,tranCatID,description,refNo,cashDr,tranTypeID,yearID,semesterID,profitlossID,balanceSheetID)
-VALUES ('$tranDate','$date','F','1','1','$description','$ref','$paid_amount','1','$school_session','$semesterID','1','4')";
-        if ($conn->query($gl) === TRUE){
+                header("location: print.php?print-page=pos");
+            }else{
+                header("location: account.php?user=dashboard");
+            }
+        }elseif ($payType == 1){
+            //insert in General Ledger ~ Cash
+            $gl="INSERT INTO general_legder(tranDate,GL_date,ticketID,bookID,tranCatID,description,refNo,bankDr,tranTypeID,yearID,semesterID,profitlossID,balanceSheetID)
+VALUES ('$tranDate','$date','F','1','1','$description','$ref','$amount','2','$yearID','$semesterID','1','4')";
+            $ledger=$conn->query($gl);
+            if ($ledger == TRUE){
 
-            $_SESSION['tranDate']=$tranDate;
-            $_SESSION['date']=$date;
-            $_SESSION['student']=$student;
-            $_SESSION['school']=$school;
-            $_SESSION['ref']=$ref;
-            $_SESSION['level']=$level;
-            $_SESSION['semester']=$semesterID;
+                $_SESSION['tranDate']=$tranDate;
+                $_SESSION['date']=$date;
+                $_SESSION['student']=$student;
+                $_SESSION['school']=$school;
+                $_SESSION['ref']=$ref;
+                $_SESSION['level']=$level;
+                $_SESSION['semester']=$semesterID;
 
-            header("location: print.php?print-page=pos");
-        }else{
-            header("location: account.php?user=dashboard");
+                header("location: print.php?print-page=pos");
+            }
         }
-    }elseif ($payType == 2){
-        //insert in General Ledger ~ bank
-        $gl="INSERT INTO general_legder(tranDate,GL_date,ticketID,bookID,tranCatID,description,refNo,bankDr,tranTypeID,yearID,semesterID,profitlossID,balanceSheetID)
-VALUES ('$tranDate','$date','F','1','1','$description','$ref','$paid_amount','2','$school_session','$semesterID','1','4')";
-        $ledger=$conn->query($gl);
-        if ($ledger == TRUE){
-
-            $_SESSION['tranDate']=$tranDate;
-            $_SESSION['date']=$date;
-            $_SESSION['student']=$student;
-            $_SESSION['school']=$school;
-            $_SESSION['ref']=$ref;
-            $_SESSION['level']=$level;
-            $_SESSION['semester']=$semesterID;
-
-            header("location: print.php?print-page=pos");
-        }
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}

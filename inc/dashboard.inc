@@ -120,7 +120,15 @@ if (empty($_SESSION['userID'])){
             $page->contenttitle="Fees Entry";
             $page->views="views/fees/fees.item.php";
             include_once "template/form.validation.php";
-            break;
+        break;
+
+        case"fees.billing";
+            include_once "config/config.php";
+            include_once "modules/get.global.function.php";
+            $page->contenttitle="Fees Entry";
+            $page->views="views/fees/fees.billing.php";
+            include_once "template/form.validation.php";
+        break;
 
         case"fees.payment.details";
             include_once "config/config.php";

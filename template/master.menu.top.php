@@ -6,15 +6,11 @@
  * Time: 12:52 PM
  */
 
-
 if ( $roleID == 1){
-
     student_admission_entry($roleID);
 }elseif ( $roleID == 2){
-
     school_account_entry($roleID);
 }elseif ( $roleID == 3){
-
     administrator($roleID);
 }else{
 
@@ -32,7 +28,7 @@ function administrator($roleID){
             <li><a href='account.php?user=student-data&error=0&alert=1&c=".$roleID."'><i class='icon icon-inbox'></i> <span>Student Data</span></a> </li>
             <li class='submenu'> <a href='#'><i class='icon icon-th-list'></i> <span>School Fees</span></a>
                 <ul>
-                    <li><a href='account.php?user=student.billing&error=0&alert=1&c=".$roleID."'>Create Bill</a></li>
+                    <li><a href='account.php?user=fees.billing&error=0&alert=1&c=".$roleID."'>Create Bill</a></li>
                     <li><a href='account.php?user=fees.payment&error=0&alert=1&c=".$roleID."'>Fees Payment</a></li>
                     <li><a href='account.php?user=fees.ledger&error=0&alert=1&c=".$roleID."'>Fees Ledger</a></li>
                     <li><a href='account.php?user=fees.journal.book&error=0&alert=1&c=".$roleID."'>fees.journal.book</a> </li>

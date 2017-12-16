@@ -9,11 +9,19 @@ $student=$_GET['id'];
 
 
 function ledger($conn,$student){
-    $cash="SELECT * FROM get_fees_payment_history WHERE studentID='$student' ";
+    $cash="SELECT * FROM get_fees_payment_history WHERE studentID='$student'";
     $cash=$conn->query($cash);
     while ($c=$cash->fetch_assoc()){
 
-
+        if ($c['payTypeID']== 1){
+            $pay_type="Cash";
+        }elseif ($c['payTypeID']== 2){
+            $pay_type="Bank";
+        }elseif ($c['payTypeID']==3){
+            $pay_type="Bill";
+        }else{
+            $pay_type="Unknown";
+        }
         echo "
         <tr class='gradeX'>
             <td class='center'>".$c['payDate']."</td>
@@ -21,7 +29,8 @@ function ledger($conn,$student){
             <td>".$c['semesterID']."</td>
             <td>".$c['stud_level']."</td>
             <td>".$c['refNo']."</td>
-            <td>".$c['payTypeID']."</td>
+            <td>".$pay_type."</td>
+            <td>".$c['fees_amount']."</td>
             <td>".$c['paid_amount']."</td>
         </tr>
     ";
@@ -116,7 +125,8 @@ function ledger($conn,$student){
                         <th>Level</th>
                         <th>Ref. No#</th>
                         <th>Pay Type</th>
-                        <th>Amount</th>
+                        <th>Debit</th>
+                        <th>Credit</th>
                     </tr>
                     </thead>
                     <tbody>

@@ -13,6 +13,8 @@ if (!empty($_GET['transaction'])){
     include_once "inc/dashboard.inc";
 }elseif(!empty($_GET['delete'])){
     include_once "inc/delete.inc";
+}elseif (!empty($_GET['print'])){
+    include_once "inc/print.inc";
 }
 
 
