@@ -40,7 +40,7 @@ function data_fees_ledger($conn){
                 <h5>Fees Ledger</h5>
             </div>
             <div class="widget-content nopadding">
-                <table class="table table-bordered table-striped with-check">
+                <table class="table table-bordered data-table">
                     <thead>
                     <tr>
                         <th><i class="icon-resize-vertical"></i></th>

@@ -43,7 +43,7 @@ function payment($conn){
             <td>".$c['ticketID']."</td>
             <td>".$c['yearID']."</td>
             <td>".$c['amount']."</td>
-            <td><a href='transaction.php?transaction=delete&c=pay&data=".$c['GL_ID']."' class='tip-top' data-original-title='Delete'><i class='icon-remove'></i></a></td>
+            <td><a href='account.php?delete=pay-voucher&id=".$c['GL_ID']."' class='tip-top' data-original-title='Delete'><i class='icon-remove'></i></a></td>
         </tr>
     ";
     }
@@ -109,7 +109,7 @@ function summary_cashbook($conn){
                             <div class="control-group">
                                 <label class="control-label">Date (dd-mm-yyy)</label>
                                 <div class="controls">
-                                    <input name="date" type="text" data-date="01-02-2013" data-date-format="dd-mm-yyyy" value="<?php echo date("d-m-Y");?>" class="datepicker span11">
+                                    <input name="date" type="date" data-date="01-02-2013" data-date-format="dd-mm-yyyy" value="<?php echo date("d-m-Y");?>" class="datepicker span11">
                                 </div>
                             </div>
                             <div class="control-group">

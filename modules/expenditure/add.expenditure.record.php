@@ -27,7 +27,7 @@ $t_profit= $r['profitLossID'];
 $t_balSheet=$r['balanceSheetID'];
 
 $sql = "INSERT INTO general_legder (tranDate,GL_date,ticketID,tranCatID,description,refNo,semesterID,yearID,bookID,tranTypeID,profitlossID,balanceSheetID,qouteDr)
-VALUES ('$tranDate','$date','$ticketID','$tranID', '$details','$ref','$semester','$yearId','$t_book','3','$t_profit','$t_balSheet','$amount')";
+VALUES ('$tranDate','$date','$ticketID','$tranID', '$details','$ref','$semester','$yearId','$t_book','4','$t_profit','$t_balSheet','$amount')";
 if ($conn->query($sql) === TRUE) {
     //echo "New record created successfully";
     header("location: account.php?user=expenditure&error=2&alert=2");

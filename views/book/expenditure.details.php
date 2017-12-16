@@ -50,12 +50,12 @@ function get_expenditure_book($conn){
         echo "
         <tr class='gradeX'>
             <td class='center'>".$c['GL_date']."</td>
+            <td>".$c['ticketID']."</td>
             <td>".$c['description']."</td>
             <td>".$c['refNo']."</td>
-            <td>".$c['ticketID']."</td>
             <td>".$c['yearID']."</td>
             <td>".$c['qouteDr']."</td>
-            <td><a href='' class ='btn btn-mini btn-primary'>Remove</a></td>
+            <td><a href='account.php?delete=expenditures-book&id={$c['GL_ID']}' class ='btn btn-mini btn-primary'>Remove</a></td>
         </tr>
     ";
     }
@@ -165,9 +165,12 @@ function get_expenditure_ledger_summary($conn){
                             <thead>
                             <tr>
                                 <th>Date</th>
+                                <th>Details</th>
                                 <th>Transaction</th>
                                 <th>Ref. No#</th>
+                                <th>year</th>
                                 <th>Amount</th>
+                                <th></th>
                             </tr>
                             </thead>
                             <tbody>
@@ -190,8 +193,11 @@ function get_expenditure_ledger_summary($conn){
                         <tr>
                             <th>Date</th>
                             <th>Transaction</th>
+                            <th>Details</th>
                             <th>Ref. No#</th>
+                            <th>Year</th>
                             <th>Amount</th>
+                            <th></th>
                         </tr>
                         </thead>
                         <tbody>

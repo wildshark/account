@@ -11,6 +11,7 @@ $category_id = $_GET['category'];
 $status_id = $_GET['status'];
 $course=$_GET['course'];
 $schoolID=$_GET['school'];
+$student_level=$_GET['level'];
 
 $date = $GLOBALS['date'];
 $tranDate = date("Y-m-d H:i:s");
@@ -132,7 +133,7 @@ if ($c=$check->fetch_assoc() == TRUE){
         $sql_x=$conn->query($fees_ledger);
 
         //post to payment
-        $fees_payment="INSERT INTO `fees_payment` (`tranDate`, `payDate`, `studentID`, `schoolID`, `payTypeID`, `stud_level`, `semesterID`, `sch_session`, `refNo`, `main_fees`, `tutor_materials`, `fees_amount`) VALUES ('$tranDate', '$date', '$student_id', '$schoolID', '1', '1', '$semesterID', '$school_session', '$ref', '$tuition', '$other', '$total_fees')";
+        $fees_payment="INSERT INTO `fees_payment` (`tranDate`, `payDate`, `studentID`, `schoolID`, `payTypeID`, `stud_level`, `semesterID`, `sch_session`, `refNo`, `main_fees`, `tutor_materials`, `fees_amount`) VALUES ('$tranDate', '$date', '$student_id', '$schoolID', '1', '$student_level', '$semesterID', '$school_session', '$ref', '$tuition', '$other', '$total_fees')";
         $fees_payment=$conn->query($fees_payment);
 
         //post to ledger
@@ -184,7 +185,7 @@ if ($c=$check->fetch_assoc() == TRUE){
             $sql_x=$conn->query($fees_ledger);
 
         //post to payment
-        $fees_payment="INSERT INTO `fees_payment` (`tranDate`, `payDate`, `studentID`, `schoolID`, `payTypeID`, `stud_level`, `semesterID`, `sch_session`, `refNo`, `main_fees`, `tutor_materials`, `fees_amount`) VALUES ('$tranDate', '$date', '$student_id', '$schoolID', '1', '1', '$semesterID', '$school_session', '$ref', '$tuition', '$other', '$total_fees')";
+        $fees_payment="INSERT INTO `fees_payment` (`tranDate`, `payDate`, `studentID`, `schoolID`, `payTypeID`, `stud_level`, `semesterID`, `sch_session`, `refNo`, `main_fees`, `tutor_materials`, `fees_amount`) VALUES ('$tranDate', '$date', '$student_id', '$schoolID', '1', '$student_level', '$semesterID', '$school_session', '$ref', '$tuition', '$other', '$total_fees')";
         $fees_payment=$conn->query($fees_payment);
 
         //post to ledger

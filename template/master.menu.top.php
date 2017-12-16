@@ -31,7 +31,7 @@ function administrator($roleID){
                     <li><a href='account.php?user=fees.billing&error=0&alert=1&c=".$roleID."'>Create Bill</a></li>
                     <li><a href='account.php?user=fees.payment&error=0&alert=1&c=".$roleID."'>Fees Payment</a></li>
                     <li><a href='account.php?user=fees.ledger&error=0&alert=1&c=".$roleID."'>Fees Ledger</a></li>
-                    <li><a href='account.php?user=fees.journal.book&error=0&alert=1&c=".$roleID."'>fees.journal.book</a> </li>
+                    <li><a href='account.php?user=fees.journal.book&error=0&alert=1&c=".$roleID."'>Fees Book</a> </li>
                     <li><a href='account.php?user=fees.costing&error=0&alert=1&c=".$roleID."'>Setup</a></li>
                 </ul>
             </li>
@@ -71,14 +71,15 @@ function student_admission_entry($roleID){
     echo"
             <ul>
                 <li class='active'><a href='account.php?user=dashboard&error=0&alert=1&c=".$roleID."'><i class='icon icon-home'></i> <span>Dashboard</span></a> </li>
+                <li><a href='account.php?user=fees.costing&error=0&alert=1&c=".$roleID."'><i class='icon icon-inbox'></i> <span>Fees Setup</span></a> </li>
                 <li><a href='account.php?user=course-data&error=0&alert=1&c=".$roleID."'><i class='icon icon-inbox'></i> <span>Course List</span></a> </li>
                 <li><a href='account.php?user=student-data&error=0&alert=1&c=".$roleID."'><i class='icon icon-inbox'></i> <span>Student Data</span></a> </li>
                 <li class='submenu'> <a href='#'><i class='icon icon-th-list'></i> <span>School Fees</span></a>
                     <ul>
+                        <li><a href='account.php?user=fees.billing&error=0&alert=1&c=".$roleID."'>Create Bill</a></li>
                         <li><a href='account.php?user=fees.payment&error=0&alert=1&c=".$roleID."'>Fees Payment</a></li>
                         <li><a href='account.php?user=fees.ledger&error=0&alert=1&c=".$roleID."'>Fees Ledger</a></li>
-                        <li><a href='account.php?user=fees.revenue&error=0&alert=1&c=".$roleID."'>Fees Revenue</a></li>
-                        <li><a href='account.php?user=fees.costing&error=0&alert=1&c=".$roleID."'>Setup</a></li>
+                        <li><a href='account.php?user=fees.journal.book&error=0&alert=1&c=".$roleID."'>Fees Book</a> </li>
                     </ul>
                 </li>
             </ul>

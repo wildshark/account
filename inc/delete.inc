@@ -19,19 +19,34 @@ if (empty($_SESSION['userID'])){
 
             $id=$_GET['id'];
             $del_student="DELETE FROM `student_profile` WHERE (`studentID`='$id')";
-            if ($del=$conn->query($del_student) == TRUE){
+            if ($del=$conn->query($del_student) == TRUE) {
 
-                $del_fees_bill="DELETE FROM `fees_journal` WHERE (`studentID`='$id')";
-                $del=$conn->query($del_fees_bill);
+                $del_fees_bill = "DELETE FROM `fees_bill` WHERE (`studentID`='$id')";
+                $del = $conn->query($del_fees_bill);
 
-                $del_fees_payment="DELETE FROM `fees_payment` WHERE (`studentID`='$id')";
-                $del=$conn->query($del_fees_payment);
+                $del_fees_payment = "DELETE FROM `fees_payment` WHERE (`studentID`='$id')";
+                $del = $conn->query($del_fees_payment);
 
                 header("location: account.php?user=student-data&error=4&alert=2&c={$roleID}");
 
             }
         break;
+        case"expenditures-book";
+            $id=$_GET['id'];
+            $del_expenses="DELETE FROM `general_legder` WHERE (`GL_ID`='$id')";
+            $del=$conn->query($del_expenses);
 
+            header("location: account.php?user=expenditure&error=4&alert=2&c={$roleID}");
+        break;
+
+        case"pay-voucher";
+            $id=$_GET['id'];
+            $del_voucher="DELETE FROM `general_legder` WHERE (`GL_ID`='$id')";
+            $del=$conn->query($del_voucher);
+
+            header("location: account.php?user=pay.voucher&error=4&alert=2&c={$roleID}");
+
+        break;
 
 
     }

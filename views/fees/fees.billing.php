@@ -34,8 +34,16 @@ function data_fees_ledger($conn){
                <td>".$r['course']."</td>
                <td>".$r['prefix']."</td>
                <td>
-                    <a href='account.php?transaction=fees.bill&id=".$r['studentID']."&category={$r['categoryID']}&status={$r['statusID']}&course={$r['courseID']}&school={$r['schoolID']}error=0&alert=1' class='btn btn-mini btn-primary'>Bill Student</a>
-                    <a href='account.php?user=fees.payment.details&id=".$r['studentID']."&error=0&alert=1' class='btn btn-mini btn-primary'>Print</a>                
+                    <div class='btn-group'>
+					    <button data-toggle='dropdown' class='btn btn-primary dropdown-toggle'>Action <span class='caret'></span></button>
+		                    <ul class='dropdown-menu'>
+							    <li><a href='account.php?transaction=fees.bill&id=".$r['studentID']."&category={$r['categoryID']}&status={$r['statusID']}&course={$r['courseID']}&school={$r['schoolID']}&level=100&error=0&alert=1'>Level 100</a></li>
+							    <li><a href='account.php?transaction=fees.bill&id=".$r['studentID']."&category={$r['categoryID']}&status={$r['statusID']}&course={$r['courseID']}&school={$r['schoolID']}&level=200&error=0&alert=1'>Level 200</a></li>
+							    <li><a href='account.php?transaction=fees.bill&id=".$r['studentID']."&category={$r['categoryID']}&status={$r['statusID']}&course={$r['courseID']}&school={$r['schoolID']}&level=300&error=0&alert=1'>Level 300</a></li>
+							    <li class='divider'></li>
+							    <li><a href='account.php?transaction=fees.bill&id=".$r['studentID']."&category={$r['categoryID']}&status={$r['statusID']}&course={$r['courseID']}&school={$r['schoolID']}&level=400&error=0&alert=1'>Level 400</a></li>
+							</ul>
+					</div>
                </td>
             </tr>
         ";

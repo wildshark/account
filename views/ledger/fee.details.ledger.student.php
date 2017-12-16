@@ -53,8 +53,8 @@ function fees_details($conn,$student){
         <tr class='gradeX'>
             <td class='center'>".$c['payDate']."</td>
             <td>".$c['course']."</td>
-            <td>".$c['stud_level']."</td>
             <td>".$c['sch_session']."</td>
+            <td>".$c['stud_level']."</td>
             <td>".$c['refNo']."</td>
             <td>".$payType."</td>
             <td>".$c['paid_amount']."</td>

@@ -13,6 +13,12 @@ function ledger($conn,$student){
     $cash=$conn->query($cash);
     while ($c=$cash->fetch_assoc()){
 
+        if ($c['semesterID'] == 1){
+            $semester= "1st Semester";
+        }elseif ($c['semesterID'] == 2){
+            $semester= "2nd Semester";
+        }
+
         if ($c['payTypeID']== 1){
             $pay_type="Cash";
         }elseif ($c['payTypeID']== 2){
@@ -26,7 +32,7 @@ function ledger($conn,$student){
         <tr class='gradeX'>
             <td class='center'>".$c['payDate']."</td>
             <td>".$c['sch_session']."</td>
-            <td>".$c['semesterID']."</td>
+            <td>".$semester."</td>
             <td>".$c['stud_level']."</td>
             <td>".$c['refNo']."</td>
             <td>".$pay_type."</td>
