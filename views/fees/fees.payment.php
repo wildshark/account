@@ -245,7 +245,7 @@
                         <input type="hidden" name="category-id" value="<?php echo $student_category;?>">
                         <input type="hidden" name="transaction" value="fees.payment">
                         <input type="hidden" name="student-entry-type" value="2">
-                        <button type="submit" class="btn btn-success">Add</button>
+                        <button type="submit" class="btn btn-success pull-right">Add</button>
                     </div>
                 </form>
             </div>

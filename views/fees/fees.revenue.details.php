@@ -8,8 +8,7 @@
 $revenueID=$_GET['data'];
 
 function ledger_summary($conn,$revenueID){
-    $revenue="SELECT fees_bill.revenueID, Sum(fees_bill.amount) AS cost, Sum(fees_bill.paid) AS paid FROM fees_bill
-WHERE fees_bill.revenueID = '$revenueID' GROUP BY fees_bill.revenueID";
+    $revenue="SELECT fees_bill.revenueID, Sum(fees_bill.amount) AS cost, Sum(fees_bill.paid) AS paid FROM fees_bill WHERE fees_bill.revenueID = '$revenueID' GROUP BY fees_bill.revenueID";
     $revenue=$conn->query($revenue);
     while ($r=$revenue->fetch_assoc()){
 

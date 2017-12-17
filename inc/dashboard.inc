@@ -219,6 +219,14 @@ if (empty($_SESSION['userID'])){
             include_once "template/form.validation.php";
         break;
 
+        case"user-profile";
+            include_once "config/config.php";
+            //include_once "modules/userprofile/user.profile.php";
+            $page->contenttitle="User Profile";
+            $page->views="views/userprofile/user.profile.php";
+            include_once "template/form.validation.php";
+        break;
+
         case'print';
             include_once "config/config.php";
             include_once "modules/get.global.function.php";

@@ -38,7 +38,7 @@
                             <span class="help-block">Date with Formate of  (dd-mm-yy)</span> </div>
                     </div>
                     <div class="form-actions">
-                        <button type="submit" name="submit" value="pl" class="btn btn-success">Query</button>
+                        <button type="submit" name="submit" value="pl" class="btn btn-success pull-right">Query</button>
                     </div>
                 </form>
             </div>

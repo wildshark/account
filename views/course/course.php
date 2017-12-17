@@ -53,7 +53,7 @@ function course_data($conn){
                         </div>
                     </div>
                     <div class="form-actions">
-                        <input type="submit"  name="submit" value="validate" class="btn btn-success">
+                        <input type="submit"  name="submit" value="validate" class="btn btn-success pull-right">
                     </div>
                 </form>
             </div>
