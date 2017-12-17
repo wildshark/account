@@ -170,7 +170,7 @@ function summary_cashbook($conn){
                             <div class="form-actions">
                                 <input type="hidden" name="ticket" value="<?php echo $x=ticket_generator($length=4)."-".date('Y')."-".date('dm');?>">
                                 <input type="hidden" name="transaction" value="voucher">
-                                <button type="submit" class="btn btn-success">Save</button>
+                                <button type="submit" class="btn btn-success pull-right">Save</button>
                             </div>
                         </form>
                     </div>

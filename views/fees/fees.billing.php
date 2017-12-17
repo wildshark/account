@@ -34,16 +34,64 @@ function data_fees_ledger($conn){
                <td>".$r['course']."</td>
                <td>".$r['prefix']."</td>
                <td>
-                    <div class='btn-group'>
-					    <button data-toggle='dropdown' class='btn btn-primary dropdown-toggle'>Action <span class='caret'></span></button>
-		                    <ul class='dropdown-menu'>
-							    <li><a href='account.php?transaction=fees.bill&id=".$r['studentID']."&category={$r['categoryID']}&status={$r['statusID']}&course={$r['courseID']}&school={$r['schoolID']}&level=100&error=0&alert=1'>Level 100</a></li>
-							    <li><a href='account.php?transaction=fees.bill&id=".$r['studentID']."&category={$r['categoryID']}&status={$r['statusID']}&course={$r['courseID']}&school={$r['schoolID']}&level=200&error=0&alert=1'>Level 200</a></li>
-							    <li><a href='account.php?transaction=fees.bill&id=".$r['studentID']."&category={$r['categoryID']}&status={$r['statusID']}&course={$r['courseID']}&school={$r['schoolID']}&level=300&error=0&alert=1'>Level 300</a></li>
-							    <li class='divider'></li>
-							    <li><a href='account.php?transaction=fees.bill&id=".$r['studentID']."&category={$r['categoryID']}&status={$r['statusID']}&course={$r['courseID']}&school={$r['schoolID']}&level=400&error=0&alert=1'>Level 400</a></li>
-							</ul>
-					</div>
+                    <a href='#myAlert' data-toggle='modal' class='btn btn-warning'>Alert</a>
+                        <div id='myAlert' class='modal hide'>
+                          <div class='modal-header'>
+                            <button data-dismiss='modal' class='close' type='button'>×</button>
+                            <h3>Alert modal</h3>
+                          </div>
+                          <div class='modal-body'>
+                            <form class='form-horizontal' method='get' action='account.php' name='number_validate' id='number_validate'>
+                            <p>Lorem ipsum dolor sit amet...</p>
+                                <div>
+                                            <input type='hidden' name='transaction' required='required' value='fees.bill'>
+                                            <input type='hidden' name='id' required='required' value='{$r['studentID']}'>
+                                            <input type='hidden' name='category' required='required' value='{$r['categoryID']}'>
+                                            <input type='hidden' name='course' required='required' value='{$r['courseID']}'>
+                                            <input type='hidden' name='school' required='required' value='{$r['schoolID']}'>
+                                </div>
+                                <div class='control-group'>
+                                            <label class='control-label'>Your Name</label>
+                                            <div class='controls'>
+                                                <input type='text' readonly name='name' value='{$r['studentName']}' id='required'>
+                                            </div>
+                                        </div>
+                                        <div class='control-group'>
+                                            <label class='control-label'>Index Number</label>
+                                            <div class='controls'>
+                                                <input type='text' readonly name='admission-no' id='required' value='{$r['admissionNo']}'>
+                                            </div>
+                                        </div> 
+                                        <div class='control-group'>
+                                            <label class='control-label'>Level</label>
+                                            <div class='controls'>
+                                                <input type='number' name='level' id='number' required='required' value=''>
+                                            </div>
+                                        </div>
+                                        <div class='control-group'>
+                                            <label class='control-label'>Student Type</label>
+                                            <div class='controls'>
+                                                  <label>
+                                                    <input type='radio' name='status-new-student' />
+                                                    New Student</label>
+                                                  <label>
+                                                    <input type='radio' name='status-cont-student' />
+                                                    Cont. Student</label>
+                                                  <label>
+                                                    <input type='radio' name='status-auto' />
+                                                    Auto-Check</label>
+                                            </div>
+                                        </div> 
+                                        
+                            
+                          </div>
+                          <div class='modal-footer'> 
+                            
+                            <button name='submit' type='submit' value='submit' class='btn btn-primary'>Confirm</BUTTON> 
+                            <a data-dismiss='modal' class='btn' href='#'>Cancel</a>
+                            </form> 
+                          </div>
+                        </div>
                </td>
             </tr>
         ";

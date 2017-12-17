@@ -9,6 +9,11 @@
 
 switch ($_GET["transaction"]){
 
+    case"user.profile";
+        include_once "config/config.php";
+        include_once "modules/user/user.profile.php";
+    break;
+
     case "expenditure";
         include_once "config/config.php";
         include_once "modules/expenditure/add.expenditure.record.php";
@@ -35,8 +40,8 @@ switch ($_GET["transaction"]){
         break;
 
     case "fees.bill";
-        include_once "config/config.php";
-        include_once "modules/fees/fees.billing.php";
+       include_once "config/config.php";
+       include_once "modules/fees/fees.billing.php";
     break;
 
     case"capital";

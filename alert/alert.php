@@ -29,6 +29,12 @@ switch ($error){
     case 6:
         $msg="Missing details can't post salary Cost to salary control ledger";
     break;
+    case 7:
+        $msg="Wrong input";
+    break;
+    case 8:
+        $msg="update record was successfully";
+    break;
     default:
        $msg ="Fill in all text field";
 }

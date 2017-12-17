@@ -71,6 +71,8 @@ if ($_GET['submit']== 'pl'){
             $expenses = $total_expenses->fetch_assoc();
             if ($expenses['total_exp'] == 0.00 || empty($expenses['total_exp'])){
                 $expenses="0.00";
+            }elseif(is_null($expenses['total_exp'])) {
+                $expenses="0.00";
             }else{
                 $expenses=$expenses['total_exp'];
             }
