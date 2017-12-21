@@ -29,7 +29,7 @@ function get_fees_list_international($conn){
                <td>".$r['other1']."</td>
                <td>".$r['other2']."</td>
                <td>".number_format($r['total_fees'],2)."</td>
-               <td><a href='transaction.php?transaction=delete&c=fees&data=".$r['feesID']."' class='tip-top' data-original-title='Delete'><i class='icon-remove'></i></a></td>
+               <td><a href='account.php?transaction=delete&c=fees&data=".$r['feesID']."' class='tip-top' data-original-title='Delete'><i class='icon-remove'></i></a></td>
             </tr>
         ";
     }
@@ -58,7 +58,7 @@ function get_fees_list_local($conn){
                <td>".$r['other1']."</td>
                <td>".$r['other2']."</td>
                <td>".$r['total_fees']."</td>
-               <td><a href='transaction.php?transaction=delete&c=fees&data=".$r['feesID']."' class='tip-top' data-original-title='Delete'><i class='icon-remove'></i></a></td>
+               <td><a href='account.php?transaction=delete&c=fees&data=".$r['feesID']."' class='tip-top' data-original-title='Delete'><i class='icon-remove'></i></a></td>
             </tr>
         ";
     }
@@ -81,7 +81,7 @@ function get_fees_list_local($conn){
                             <h5>Personal-info</h5>
                         </div>
                         <div class="widget-content nopadding">
-                            <form class="form-horizontal" method="get" action="transaction.php">
+                            <form class="form-horizontal" method="get" action="account.php">
                                 <div class="control-group">
                                     <label class="control-label">School </label>
                                     <div class="controls">
@@ -91,7 +91,7 @@ function get_fees_list_local($conn){
                                     </div>
                                 </div>
                                 <div class="control-group">
-                                    <label class="control-label">School </label>
+                                    <label class="control-label">Category </label>
                                     <div class="controls">
                                         <select name="student-cat">
                                             <option value="1">local Student</option>

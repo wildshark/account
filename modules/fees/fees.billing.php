@@ -8,11 +8,23 @@
 
 $student_id = $_GET['id'];
 $category_id = $_GET['category'];
-//$status_id = $_GET['status'];
+$school_id = $_GET['school'];
 $course=$_GET['course'];
+$school_session=$_GET['session'];
 $schoolID=$_GET['school'];
 $student_level=$_GET['level'];
+$semesterID= $_GET['semester'];
+$student_level = $_GET['student-level'];
+$discount = $_GET['discount'];
+$Hostel_fees_paid=$_GET['hostel-fees-paid'];
+$hostel_bill_status=$_GET['hostel-bill-status'];
 
+//other information
+
+$previous_bal= $_SESSION['balance'];
+$tuition =$_SESSION['tuition'];
+$total_fees=$_SESSION['total_fees'];
+$hostel_fees= $_SESSION['hostel'];
 
 if(!isset($student_level)){
 header("location: account.php?user=fees.billing&error=7&alert=3&c={$roleID}");
@@ -25,48 +37,37 @@ header("location: account.php?user=fees.billing&error=7&alert=3&c={$roleID}");
 }elseif (!$student_level == 400){
     header("location: account.php?user=fees.billing&error=7&alert=3&c={$roleID}");
 }else {
-    if (isset($_GET['status-new-student'])) {
-        $status_id = "1";
-    } elseif (isset($_GET['status-cont-student'])) {
-        $status_id = "2";
-    } else {
 
-        //get the student status
+        //get the student status if new or cont. student
         $student_status = "SELECT * FROM get_student_list WHERE studentID='$student_id'";
         $student_status = $conn->query($student_status);
         $status = $student_status->fetch_assoc();
 
         $status_id = $status['statusID'];
-    }
 
-    $date = $GLOBALS['date'];
-    $tranDate = date("Y-m-d H:i:s");
+        $date = $GLOBALS['date'];
+        $tranDate = date("Y-m-d H:i:s");
 
-//key
-    $key = $conn->query("SELECT * FROM get_key");
-    $r = $key->fetch_assoc();
-    $school_session = $r['year_id'];
-    $semesterID = $r['semester_id'];
 
 //run check
-    $check = "SELECT * FROM `get_print_fees_details`  WHERE yearID = '$school_session' and semesterID='$semesterID' and studentID='$student_id'";
-    $check = $conn->query($check);
-    if ($c = $check->fetch_assoc() == TRUE) {
-        header("location: account.php?print=print.bill&s={$student_id}&y={$school_session}&ss={$semesterID}");
-    } else {
+        $check = "SELECT * FROM `get_print_fees_details`  WHERE yearID = '$school_session' and semesterID='$semesterID' and studentID='$student_id'";
+        $check = $conn->query($check);
+        if ($c = $check->fetch_assoc() == TRUE) {
+            header("location: account.php?print=print.bill&s={$student_id}&y={$school_session}&ss={$semesterID}");
+        } else {
 
-        if ($category_id == 1) {
-            //get school
-            $data = $conn->query("SELECT * FROM get_course_list WHERE courseID='$course'");
-            $r = $data->fetch_assoc();
-            $schoolID = $r['schoolID'];
+            if ($category_id == 1) {//new student 
+                //get school
+                $data = $conn->query("SELECT * FROM get_course_list WHERE courseID='$course'");
+                $r = $data->fetch_assoc();
+                $schoolID = $r['schoolID'];
 
-//get fees and fees details
-            $data = $conn->query("SELECT * FROM get_fees_list_for_new_student WHERE schoolID='$schoolID' AND statusID='$category_id'");
-            $r = $data->fetch_assoc();
-            $tuition = $r['tuition'];
-            $other = $r['other_fees'];
-            $school = $r['prefix'];
+                //get fees and fees details
+                $data = $conn->query("SELECT * FROM get_fees_list_for_new_student WHERE schoolID='$schoolID' AND statusID='$category_id'");
+                $r = $data->fetch_assoc();
+                $tuition = $r['tuition'];
+                $other = $r['other_fees'];
+                $school = $r['prefix'];
 
             $total_fees = $tuition + $other;
             $ref = "FE" . date('ymdhis');

@@ -15,6 +15,8 @@ if (!empty($_GET['transaction'])){
     include_once "inc/delete.inc";
 }elseif (!empty($_GET['print'])){
     include_once "inc/print.inc";
+}elseif (!empty($_GET['edit'])){
+    include_once "inc/edit.inc";
 }
 
 
