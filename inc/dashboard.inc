@@ -87,7 +87,7 @@ if (empty($_SESSION['userID'])){
             $page->contenttitle="Fees Entry";
             $page->views="views/fees/fees.payment.php";
             include_once "template/form.validation.php";
-            break;
+        break;
 
         case"fees.revenue";
             include_once "config/config.php";
@@ -130,10 +130,19 @@ if (empty($_SESSION['userID'])){
             include_once "template/form.validation.php";
         break;
 
+        case"fees.bill.summary";
+            include_once "config/config.php";
+            include_once "modules/get.global.function.php";
+            $page->contenttitle="Fees Bill :". $_GET['student'];
+            $page->views="views/ledger/fees.bill.summary.php";
+            include_once "template/form.validation.php";
+        break;
+
+
         case"fees.payment.details";
             include_once "config/config.php";
             include_once "modules/get.global.function.php";
-            $page->contenttitle="Fees Payment : ".$_SESSION['student_name'];
+            $page->contenttitle="Fees Payment : ".$_GET['student'];
             $page->views="views/fees/fees.ledger.php";
             include_once "template/form.validation.php";
         break;

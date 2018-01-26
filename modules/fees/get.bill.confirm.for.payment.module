@@ -1,0 +1,54 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Andrew Quaye
+ * Date: 04-Jan-18
+ * Time: 7:28 AM
+ */
+
+if ($_GET['submit'] == 'submit') {
+
+    $date = $_GET['date'];
+    $admissionNo = $_GET['admission-number'];
+    $billRef = $_GET['bill-serial-number'];
+    //$semester = $_GET['semester'];
+    $year = $_GET['session'];
+
+
+    $data_check = "SELECT * FROM get_fees_bill_summary where admissionNo='$admissionNo' and refNo='$billRef' and sch_session='$year'";
+    $data_check = $conn->query($data_check);
+    $bill = $data_check->fetch_assoc();
+    if ($bill == null) {
+        header("location: account.php?user=fees.billing&error=9&alert=3&c={$roleID}");
+   }else{
+        $id = $bill['studentID'];
+        $name = $bill['studentName'];
+        $admissionNo = $bill['admissionNo'];
+        $semester = $bill['semesterID'];
+        $year = $bill['sch_session'];
+        $schoolID = $bill['schoolID'];
+
+        $previous_bal = $bill['previous_bal'];
+        $main_tutor = $bill['main_fees'];
+        $other_tutor = $bill['tutor_materials'];
+        $hostel = $bill['hostel_fees'];
+        $discount = $bill['discount'];
+        $amount = $bill['amount'];
+
+        $school = $bill['school'];
+        $prefix = $bill['prefix'];
+
+        $date = $bill['payDate'];
+        $ref = $bill['refNo'];
+
+        $url_path = "user=fees.payment";
+        $data = "&id={$id}&name={$name}&admission={$admissionNo}&semester={$semester}&year={$year}";
+        $data = $data ."&school={$school}&main={$main_tutor}&other={$other_tutor}&hostel={$hostel}";
+        $data = $data ."&discount={$discount}&bill={$amount}&balance={$previous_bal}";
+        $alert="&error=0&alert=1&c={$roleID}";
+
+        header("location: account.php?". $url_path ."". $data ."". $alert);
+    }
+
+
+}

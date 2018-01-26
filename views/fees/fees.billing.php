@@ -14,10 +14,14 @@ function data_fees_ledger($conn){
 
         $schoolID = $r['schoolID'];
         $studentID = $r['studentID'];
+        $categoryID = $r['categoryID'];
+        $student_status = $r['statusID'];
 
         $fees_balance="SELECT * FROM get_student_fees_balance WHERE studentID='$studentID'";
         $fees_balance=$conn->query($fees_balance);
         $bal=$fees_balance->fetch_assoc();
+
+
         if (empty($bal['balance']) || $bal['balance'] == 0 || is_null($bal['balance'])){
             $_SESSION['balance']="0.00";
             $bal="0.00";
@@ -34,10 +38,10 @@ function data_fees_ledger($conn){
             $cate = "Unknown ***";
         }
 
-        if ($r['statusID'] == 1) {
+        if ($student_status == 1) {
             $status = "New Student";
 
-            $fees_bill = "SELECT * FROM get_fees_list_for_new_student WHERE schoolID='$schoolID'";
+             $fees_bill = "SELECT * FROM get_fees_list_for_new_student WHERE schoolID='$schoolID' and categoryID='$categoryID'";
             $fees_bill = $conn->query($fees_bill);
             $bill = $fees_bill->fetch_assoc();
 
@@ -48,12 +52,13 @@ function data_fees_ledger($conn){
             $_SESSION['tuition'] = $tuition;
             $_SESSION['other_tuition'] = $other_tuition;
 
-            $_SESSION['total_fees'] = $tuition + $other_tuition +  $_SESSION['balance'] ;
+            $total_fees = $tuition + $other_tuition ;
+            $_SESSION['total_fees'] = $total_fees;
 
-        } elseif ($r['statusID'] == 2) {
+        } elseif ($student_status == 2) {
             $status = "Continuing Student";
 
-            $fees_bill = "SELECT * FROM get_fees_list_continuing_student WHERE schoolID='$schoolID'";
+            $fees_bill = "SELECT * FROM get_fees_list_continuing_student WHERE schoolID='$schoolID' and categoryID='$categoryID'";
             $fees_bill = $conn->query($fees_bill);
             $bill = $fees_bill->fetch_assoc();
 
@@ -63,8 +68,8 @@ function data_fees_ledger($conn){
             $_SESSION['hostel'] = $bill['hostel'];
             $_SESSION['tuition'] = $tuition;
             $_SESSION['other_tuition'] = $other_tuition;
-            $_SESSION['total_fees'] = $tuition + $other_tuition +  $_SESSION['balance'];
-
+            $total_fees = $tuition + $other_tuition;
+            $_SESSION['total_fees'] = $total_fees;
 
 
         } else {
@@ -87,7 +92,7 @@ function data_fees_ledger($conn){
                             <button data-dismiss='modal' class='close' type='button'>×</button>
                             <h3>Creat school fees bill for name : {$r['studentName']}</h3>
                           </div>
-                          <form class='form-horizontal' method='get' action='account##.php' name='number_validate' id='number_validate'>
+                          <form class='form-horizontal' method='get' action='account.php' name='number_validate' id='number_validate'>
                           <div class='modal-body'>
                           <div class='widget-box'>
                             <div class='widget-title'>
@@ -103,6 +108,7 @@ function data_fees_ledger($conn){
                                 <input type='hidden' name='category' required='required' value='{$r['categoryID']}'>
                                 <input type='hidden' name='course' required='required' value='{$r['courseID']}'>
                                 <input type='hidden' name='school' required='required' value='{$r['schoolID']}'>
+                                <input type='hidden' name='student-status' required='required' value='{$r['statusID']}'>
                             </div>
                             
                             <div class='widget-content tab-content'>
@@ -111,7 +117,7 @@ function data_fees_ledger($conn){
                   					<div class='control-group'>
                                         <label class='control-label'>Session</label>
                                         <div class='controls'>
-                                            <input type='number'  name='session' required='required' id='required' placeholder='2017'>
+                                            <input type='number'  name='school-session' required='required' id='required' placeholder='2017'>
                                         </div>
                                     </div> 
                                     

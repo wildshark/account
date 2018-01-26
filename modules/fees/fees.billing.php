@@ -6,25 +6,27 @@
  * Time: 12:04 AM
  */
 
-$student_id = $_GET['id'];
-$category_id = $_GET['category'];
-$school_id = $_GET['school'];
-$course=$_GET['course'];
-$school_session=$_GET['session'];
-$schoolID=$_GET['school'];
-$student_level=$_GET['level'];
-$semesterID= $_GET['semester'];
-$student_level = $_GET['student-level'];
-$discount = $_GET['discount'];
-$Hostel_fees_paid=$_GET['hostel-fees-paid'];
-$hostel_bill_status=$_GET['hostel-bill-status'];
-
+$student_id = $_GET['id']; //student id
+$category_id = $_GET['category']; // if foreign or local student
+$school_id = $_GET['school']; //school id
+$course=$_GET['course']; //curse id
+$school_session=$_GET['school-session']; //school session
+$semesterID= $_GET['semester']; //semester 1 or 2
+$student_level=$_GET['student-level']; // student level
+$discount = $_GET['discount']; //student discount
+$hostel_fees_paid = $_GET['hostel-fees-paid']; // hostel fees payable amount by student
+$hostel_bill_status = $_GET['hostel-bill-status']; // include or exclude hostel fees to bill
+$student_status = $_GET['student-status'];
 //other information
 
-$previous_bal= $_SESSION['balance'];
-$tuition =$_SESSION['tuition'];
-$total_fees=$_SESSION['total_fees'];
-$hostel_fees= $_SESSION['hostel'];
+$previous_bal = $_SESSION['balance']; //old bal
+$tuition = $_SESSION['tuition'];
+$total_fees = $_SESSION['total_fees'];
+$hostel_fees = $_SESSION['hostel'];
+
+$_SESSION['hostel_paid_amount'] = $hostel_fees_paid;
+
+$tranDate = date("Y-m-d H:i:s");
 
 if(!isset($student_level)){
 header("location: account.php?user=fees.billing&error=7&alert=3&c={$roleID}");
@@ -38,189 +40,38 @@ header("location: account.php?user=fees.billing&error=7&alert=3&c={$roleID}");
     header("location: account.php?user=fees.billing&error=7&alert=3&c={$roleID}");
 }else {
 
-        //get the student status if new or cont. student
-        $student_status = "SELECT * FROM get_student_list WHERE studentID='$student_id'";
-        $student_status = $conn->query($student_status);
-        $status = $student_status->fetch_assoc();
+    //get the student status if new or cont. student
+   $student_data = "SELECT * FROM get_student_list WHERE studentID='$student_id'";
+    $student_data = $conn->query($student_data);
+    $student = $student_data->fetch_assoc();
 
-        $status_id = $status['statusID'];
+    // $student['studentID'];
+    //$student['statusID'];
 
-        $date = $GLOBALS['date'];
-        $tranDate = date("Y-m-d H:i:s");
-
-
-//run check
-        $check = "SELECT * FROM `get_print_fees_details`  WHERE yearID = '$school_session' and semesterID='$semesterID' and studentID='$student_id'";
-        $check = $conn->query($check);
-        if ($c = $check->fetch_assoc() == TRUE) {
-            header("location: account.php?print=print.bill&s={$student_id}&y={$school_session}&ss={$semesterID}");
-        } else {
-
-            if ($category_id == 1) {//new student 
-                //get school
-                $data = $conn->query("SELECT * FROM get_course_list WHERE courseID='$course'");
-                $r = $data->fetch_assoc();
-                $schoolID = $r['schoolID'];
-
-                //get fees and fees details
-                $data = $conn->query("SELECT * FROM get_fees_list_for_new_student WHERE schoolID='$schoolID' AND statusID='$category_id'");
-                $r = $data->fetch_assoc();
-                $tuition = $r['tuition'];
-                $other = $r['other_fees'];
-                $school = $r['prefix'];
-
-            $total_fees = $tuition + $other;
-            $ref = "FE" . date('ymdhis');
-
-            $matriculation = $r['matriculation'];
-            $accept_fees = $r['accept_fees'];
-            $medical_exam = $r['medical_examin'];
-            $result_fees = $r['result_fees'];
-            $lab_fees = $r['lab_fees'];
-            $wasce = $r['wasce'];
-            $src_dues = $r['src_dues'];
-            $hostel = $r['hostel'];
-            $technology = $r['technology'];
-            $clinical_fees = $r['clinical_fees'];
-            $nmc_book = $r['nmc_book'];
-            $indexing = $r['indexing'];
-            $other1 = $r['other1'];
-            $other2 = $r['other2'];
-
-            //tutor fees
-            $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES('$tranDate', '$date', '$student_id', '2', '$matriculation','$school_session','$semesterID')";
-            $sql_x = $conn->query($fees_ledger);
-
-//matriculation
-            $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES('$tranDate', '$date', '$student_id', '2', '$matriculation','$school_session','$semesterID')";
-            $sql_x = $conn->query($fees_ledger);
-
-//accept-fees
-            $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES('$tranDate', '$date', '$student_id', '3', '$accept_fees','$school_session','$semesterID')";
-            $sql_x = $conn->query($fees_ledger);
-
-//medical-exam
-            $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
-            ('$tranDate', '$date', '$student_id', '4', '$medical_exam','$school_session','$semesterID')";
-            $sql_x = $conn->query($fees_ledger);
-
-//result-fees
-            $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
-            ('$tranDate', '$date', '$student_id', '5', '$result_fees','$school_session','$semesterID')";
-            $sql_x = $conn->query($fees_ledger);
-
-//lab-fees
-            $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
-            ('$tranDate', '$date', '$student_id', '6', '$lab_fees','$school_session','$semesterID')";
-            $sql_x = $conn->query($fees_ledger);
-
-//wasce
-            $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
-            ('$tranDate', '$date', '$student_id', '12', '$wasce','$school_session','$semesterID')";
-            $sql_x = $conn->query($fees_ledger);
-
-//src-dues
-            $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
-            ('$tranDate', '$date', '$student_id', '13', '$src_dues','$school_session','$semesterID')";
-            $sql_x = $conn->query($fees_ledger);
-
-//hostel
-            $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
-            ('$tranDate', '$date', '$student_id', '11', '$hostel','$school_session','$semesterID')";
-            $sql_x = $conn->query($fees_ledger);
-
-//technology
-            $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
-            ('$tranDate', '$date', '$student_id', '10', '$technology','$school_session','$semesterID')";
-            $sql_x = $conn->query($fees_ledger);
-
-//clinical-fees
-            $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
-            ('$tranDate', '$date', '$student_id', '9', '$clinical_fees','$school_session','$semesterID')";
-            $sql_x = $conn->query($fees_ledger);
-
-//nmc-book
-            $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
-            ('$tranDate', '$date', '$student_id', '8', '$nmc_book','$school_session','$semesterID')";
-            $sql_x = $conn->query($fees_ledger);
-
-//indexing
-            $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
-            ('$tranDate', '$date', '$student_id', '7', '$indexing','$school_session','$semesterID')";
-            $sql_x = $conn->query($fees_ledger);
-
-//other-1
-            $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
-            ('$tranDate', '$date', '$student_id', '14', '$other1','$school_session','$semesterID')";
-            $sql_x = $conn->query($fees_ledger);
-
-//other-2
-            $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
-            ('$tranDate', '$date', '$student_id', '15', '$other2','$school_session','$semesterID')";
-            $sql_x = $conn->query($fees_ledger);
-
-            //post to payment
-            $fees_payment = "INSERT INTO `fees_payment` (`tranDate`, `payDate`, `studentID`, `schoolID`, `payTypeID`, `stud_level`, `semesterID`, `sch_session`, `refNo`, `main_fees`, `tutor_materials`, `fees_amount`) VALUES ('$tranDate', '$date', '$student_id', '$schoolID', '1', '$student_level', '$semesterID', '$school_session', '$ref', '$tuition', '$other', '$total_fees')";
-            $fees_payment = $conn->query($fees_payment);
-
-            //post to ledger
-            $update = "INSERT INTO `general_legder` (`tranDate`, `GL_date`, `ticketID`, `bookID`, `tranCatID`, `description`, `refNo`, `qouteDr`, `qouteCr`, `tranTypeID`, `yearID`, `semesterID`) VALUES ('$tranDate', '$date', '1', '1', '3', 'Fees Bill', '$ref', '$total_fees', '0','3','$school_session', '$semesterID')";
-            $update_ledger = $conn->query($update);
-
-            header("location: account.php?print=print.bill&s={$student_id}&y={$school_session}&ss={$semesterID}");
-        } elseif ($category_id == 2) {
-
-
-            $data = $conn->query("SELECT * FROM get_fees_list_continuing_student WHERE schoolID='$schoolID' AND statusID='$category_id'");
-            $r = $data->fetch_assoc();
-            $tuition = $r['tuition'];
-            $other = $r['other_fees'];
-            $school = $r['prefix'];
-
-            $total_fees = $tuition + $other;
-            $ref = "FE" . date('ymdhis');
-
-            $hostel = $r['hostel'];
-            $src_dues = $r['src_dues'];
-            $technology = $r['technology'];
-            $other1 = $r['other1'];
-            $other2 = $r['other2'];
-
-            //hostel
-            $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
-        ('$tranDate', '$date', '$student_id', '11', '$hostel','$school_session','$semesterID')";
-            $sql_x = $conn->query($fees_ledger);
-
-            //src-dues
-            $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
-        ('$tranDate', '$date', '$student_id', '13', '$src_dues','$school_session','$semesterID')";
-            $sql_x = $conn->query($fees_ledger);
-
-            //technology
-            $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
-        ('$tranDate', '$date', '$student_id', '10', '$technology','$school_session','$semesterID')";
-            $sql_x = $conn->query($fees_ledger);
-
-            //other-1
-            $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
-        ('$tranDate', '$date', '$student_id', '14', '$other1','$school_session','$semesterID')";
-            $sql_x = $conn->query($fees_ledger);
-
-            //other-2
-            $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`) VALUES
-        ('$tranDate', '$date', '$student_id', '15', '$other2','$school_session','$semesterID')";
-            $sql_x = $conn->query($fees_ledger);
-
-            //post to payment
-            $fees_payment = "INSERT INTO `fees_payment` (`tranDate`, `payDate`, `studentID`, `schoolID`, `payTypeID`, `stud_level`, `semesterID`, `sch_session`, `refNo`, `main_fees`, `tutor_materials`, `fees_amount`) VALUES ('$tranDate', '$date', '$student_id', '$schoolID', '1', '$student_level', '$semesterID', '$school_session', '$ref', '$tuition', '$other', '$total_fees')";
-            $fees_payment = $conn->query($fees_payment);
-
-            //post to ledger
-            $update = "INSERT INTO `general_legder` (`tranDate`, `GL_date`, `ticketID`, `bookID`, `tranCatID`, `description`, `refNo`, `qouteDr`, `qouteCr`, `tranTypeID`, `yearID`, `semesterID`) VALUES ('$tranDate', '$date', '1', '1', '3', 'Fees Bill', '$ref', '$total_fees', '0','3','$school_session', '$semesterID')";
-            $update_ledger = $conn->query($update);
-
-            header("location: account.php?print=print.bill&s={$student_id}&y={$school_session}&ss={$semesterID}");
+    //check if student id exist
+    if ($student['studentID'] == $student_id ) {
+        if ($student_status == 1 and $category_id == 1) {
+            //echo "new student & local";
+            require_once "bill_models/start.bill.inc";
+            require_once "bill_models/new_student/new.local.student.billing.module";
+        } elseif ($student_status == 1 and $category_id == 2) {
+            //echo "new student & foreign";
+            require_once "bill_models/start.bill.inc";
+            require_once "bill_models/new_student/new.foreign.student.billing.module";
+        } elseif ($student_status == 2 and $category_id == 1) {
+           //echo "cont. student & local";
+            require_once "bill_models/start.bill.inc";
+            require_once "bill_models/cont_student/cont.local.student.billing.module";
+        } elseif ($student_status == 2 and $category_id == 2){
+            //echo "cont. student & Foreign";
+            require_once "bill_models/start.bill.inc";
+            require_once "bill_models/cont_student/cont.foreign.student.billing.module";
+        }else{
+             header("location: account.php?user=fees.billing&error=100&alert=4&c={$roleID}");
         }
 
+    } else {
+        //echo "error";
+       header("location: account.php?user=fees.billing&error=100&alert=4&c={$roleID}");
     }
 }

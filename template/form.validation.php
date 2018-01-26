@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="template/css/maruti-style.css" />
     <link rel="stylesheet" href="template/css/maruti-media.css" class="skin-color" />
 </head>
+<!--body oncontextmenu="return false"-->
 <body>
-
 <!--Header-part-->
 <div id="header">
     <h1><a href="dashboard.html">Maruti Admin</a></h1>
@@ -78,7 +78,7 @@
 <script src="template/js/maruti.form_validation.js"></script>
 <script src="template/js/jquery.dataTables.min.js"></script>
 <script src="template/js/maruti.tables.js"></script>
-</body>
+</>
 
 </html>
 

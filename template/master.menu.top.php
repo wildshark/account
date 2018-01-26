@@ -6,6 +6,9 @@
  * Time: 12:52 PM
  */
 
+include_once "dialogbox/fees.payment.inc";
+
+
 if ( $roleID == 1){
     student_admission_entry($roleID);
 }elseif ( $roleID == 2){
@@ -13,7 +16,6 @@ if ( $roleID == 1){
 }elseif ( $roleID == 3){
     administrator($roleID);
 }else{
-
     session_unset();
     session_destroy();
     header("location: ../index.php");
@@ -28,10 +30,10 @@ function administrator($roleID){
             <li><a href='account.php?user=student-data&error=0&alert=1&c=".$roleID."'><i class='icon icon-inbox'></i> <span>Student Data</span></a> </li>
             <li class='submenu'> <a href='#'><i class='icon icon-th-list'></i> <span>School Fees</span></a>
                 <ul>
-                    <li><a href='account.php?user=fees.billing&error=0&alert=1&c=".$roleID."'>Create Bill</a></li>
-                    <li><a href='account.php?user=fees.payment&error=0&alert=1&c=".$roleID."'>Fees Payment</a></li>
-                    <li><a href='account.php?user=fees.ledger&error=0&alert=1&c=".$roleID."'>Fees Ledger</a></li>
-                    <li><a href='account.php?user=fees.journal.book&error=0&alert=1&c=".$roleID."'>Fees Book</a> </li>
+                    <li><a href='account.php?user=fees.billing&error=0&alert=1&c=".$roleID."'>Create Bill</a></li>                  
+                    <li><a href='account.php?user=fees.payment&error=0&alert=1&c=".$roleID."#myAlert' data-toggle=\"modal\">Payment</a></li>
+                    <li><a href='account.php?user=fees.ledger&error=0&alert=1&c=".$roleID."'>Ledger</a></li>
+                    <li><a href='account.php?user=fees.journal.book&error=0&alert=1&c=".$roleID."'>Revenue</a> </li>
                     <li><a href='account.php?user=fees.costing&error=0&alert=1&c=".$roleID."'>Setup</a></li>
                 </ul>
             </li>
@@ -60,7 +62,7 @@ function administrator($roleID){
                     <li><a href='account.php?user=capital.investments&error=0&alert=1&c=".$roleID."'>Capital & Investments</a></li>
                     <li><a href='account.php?user=profit.loss&error=0&alert=1&c=".$roleID."'>Profit & Loss</a></li>
                     <li><a href='account.php?user=investment&error=0&alert=1&c=".$roleID."'>Investment</a></li>
-                    <li><a href='form-wizard.html'>Trial Balance</a></li>
+                    <li><a href='account.php?user=trial.balance&error=0&alert=1&c=".$roleID."'>Trial Balance</a></li>
                 </ul>
             </li>
         </ul>
@@ -119,7 +121,10 @@ function school_account_entry($roleID){
                 </ul>
             </li>
         </ul>
+        
+        
     ";
 }
+?>
 
 

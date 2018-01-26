@@ -25,7 +25,7 @@ if ($_GET['submit'] == 'save'){
     $other1=$_GET['other1'];
     $other2=$_GET['other2'];
 
-    $data="INSERT INTO `fees_price_list` (`schoolID`,`statusID`, `tuition`, `matriculation`, `accept_fees`, `medical_examin`, `result_fees`, `lab_fees`, `indexing`, `nmc_book`, `clinical_fees`, `wasce`,`hostel`,`technology`,`other1`,`other2`)
+    $data="INSERT INTO `fees_price_list` (`schoolID`,`categoryID`, `tuition`, `matriculation`, `accept_fees`, `medical_examin`, `result_fees`, `lab_fees`, `indexing`, `nmc_book`, `clinical_fees`, `wasce`,`hostel`,`technology`,`other1`,`other2`)
 VALUES ('$school', '$category', '$tuition', '$matriculation', '$acceptance', '$medical', '$result','$lab', '$indexing', '$nmc', '$clinical', '$wasce','$hostel','$technology','$other1','$other2')";
     $data=$conn->query($data);
 

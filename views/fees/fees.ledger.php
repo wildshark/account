@@ -7,6 +7,48 @@
  */
 $student=$_GET['id'];
 
+function calculation_summary($conn,$student){
+    $data="SELECT * FROM get_fees_ledger_book WHEre studentID ='$student'";
+    $data=$conn->query($data);
+    $cal=$data->fetch_assoc();
+    $balance = $cal['amount'] - $cal['paid'];
+    echo"
+        <tr>
+        <td>Total Fees</td>
+        <td>{$cal['amount']}</td>
+        </tr>
+        <tr>
+        <td>Total Payment</td>
+        <td>{$cal['paid']}</td>
+        </tr>
+        <tr>
+        <td>Balance</td>
+        <td>{$balance}</td>
+        </tr>
+    ";
+}
+
+function student_data($conn,$student){
+    $data="SELECT * FROM get_student_list WHERE studentID='$student'";
+    $data=$conn->query($data);
+    $student=$data->fetch_assoc();
+
+    echo "
+        <tr>
+            <td>Student</td>
+            <td>{$student['studentName']}</td>
+        </tr>
+        <tr>
+            <td>Admission No#</td>
+            <td>{$student['admissionNo']}</td>
+        </tr>
+        <tr>
+            <td>School </td>
+            <td>{$student['prefix']}</td>
+        </tr>
+    ";
+
+}
 
 function ledger($conn,$student){
     $cash="SELECT * FROM get_fees_payment_history WHERE studentID='$student'";
@@ -62,18 +104,7 @@ function ledger($conn,$student){
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>Student</td>
-                        <td><?php echo $_SESSION['student_name'];?></td>
-                    </tr>
-                    <tr>
-                        <td>Admission No#</td>
-                        <td><?php echo $_SESSION['admissionNo'];?></td>
-                    </tr>
-                    <tr>
-                        <td>School </td>
-                        <td><?php echo $_SESSION['amount']-$_SESSION['paid'] ?></td>
-                    </tr>
+                        <?php student_data($conn,$student);?>
                     </tbody>
                 </table>
             </div>
@@ -96,18 +127,7 @@ function ledger($conn,$student){
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>Total Fees</td>
-                        <td><?php echo $_SESSION['amount'];?></td>
-                    </tr>
-                    <tr>
-                        <td>Total Payment</td>
-                        <td><?php echo $_SESSION['paid'];?></td>
-                    </tr>
-                    <tr>
-                        <td>Balance</td>
-                        <td><?php echo $_SESSION['amount']-$_SESSION['paid'] ?></td>
-                    </tr>
+                        <?php calculation_summary($conn,$student);?>
                     </tbody>
                 </table>
             </div>

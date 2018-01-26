@@ -21,10 +21,12 @@ function data_fees_ledger($conn){
                <td></td>
                <td>".$r['studentName']."</td>
                <td>".$r['admissionNo']."</td>
+           
                <td>".$r['amount']."</td>
                <td>".$r['paid']."</td>
                <td>".$r=$r['amount']-$r['paid']."</td>
-               <td><a href='account.php?user=fees.payment.details&id=".$r['studentID']."&error=0&alert=1' class='btn btn-mini btn-primary'>view</a> </td>
+               <td><a href='account.php?user=fees.payment.details&id=".$r['studentID']."&student=".$r['studentName']."&error=0&alert=1' class='btn btn-mini btn-primary'>View ledger</a>
+               <a href='account.php?user=fees.bill.summary&id=".$r['studentID']."&student=".$r['studentName']."&error=0&alert=1' class='btn btn-mini btn-primary'>View Bills</a>               
             </tr>
         ";
     }

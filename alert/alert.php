@@ -35,6 +35,12 @@ switch ($error){
     case 8:
         $msg="update record was successfully";
     break;
+    case 9:
+        $msg="Student bill not found. Please check if bill is created";
+    break;
+    case 100:
+        $msg="Terminal Script Error 100. Contact system administrator";
+    break;
     default:
        $msg ="Fill in all text field";
 }
@@ -47,6 +53,8 @@ function alert_box_type($alert,$msg){
         $alert_box="alert alert-success alert-block";
     }elseif ($alert == 3){ //error
         $alert_box="alert alert-error alert-block";
+    }elseif ($alert == 4){//danger
+        $alert_box="alert alert-danger alert-block";
     }
 
     if ($alert== 1){ //information
@@ -55,6 +63,8 @@ function alert_box_type($alert,$msg){
         $alert_label="Success";
     }elseif ($alert == 3){ //error
         $alert_label="Error";
+    }elseif ($alert == 4){
+        $alert_label ="Terminal Failure";
     }
 
     return "<div class='".$alert_box."'> <a class='close' data-dismiss='alert' href='#'>×</a>

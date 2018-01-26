@@ -28,7 +28,7 @@ $student_category_id= $_GET['student-entry-type'];
 //get fees for new intake and returning student
 if ($student_entry_type == 1){
 
-    $data = $conn->query("SELECT * FROM get_fees_list_for_new_student WHERE schoolID='$schoolID' AND statusID='$student_category_id'");
+    $data = $conn->query("SELECT * FROM get_fees_list_for_new_student WHERE schoolID='$schoolID' AND categoryID='$student_category_id'");
     $r = $data->fetch_assoc();
     $tuition = $r['tuition'];
     $other = $r['other_fees'];

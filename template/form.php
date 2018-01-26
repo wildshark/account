@@ -22,8 +22,8 @@
     <link rel="stylesheet" href="template/css/maruti-style.css" />
     <link rel="stylesheet" href="template/css/maruti-media.css" class="skin-color" />
 </head>
+<!--body oncontextmenu="return false"-->
 <body>
-
 <!--Header-part-->
 <div id="header">
     <h1><a href="dashboard.html">Qua Account</a></h1>

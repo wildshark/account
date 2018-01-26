@@ -48,6 +48,19 @@ if (empty($_SESSION['userID'])){
 
         break;
 
+        case "fees-ledger";
+            $id=$_GET['id'];
+            $semester=$_GET['semester'];
+            $year=$_GET['year'];
+
+            $del_fees_ledger="DELETE FROM `fees_payment` WHERE (studentID ='$id')";
+            $del=$conn->query($del_fees_ledger);
+            if ($del === TRUE){
+                $del_bill = "DELETE FROM fees_bill WHERE ( studentID= '$id' and semesterID='$semester' and yearID ='$year')";
+                $del=$conn->query($del_bill);
+                header("location: account.php?user=fees.ledger&error=4&alert=2&c='$roleID'");
+            }
+        break;
 
     }
 }

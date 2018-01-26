@@ -127,4 +127,9 @@ switch ($_GET["transaction"]){
         include_once "template/form.php";
     break;
 
+    case"fees.confirmation.check";
+        include_once "config/config.php";
+        include_once "modules/fees/get.bill.confirm.for.payment.module";
+    break;
+
 }

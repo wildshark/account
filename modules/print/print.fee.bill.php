@@ -6,9 +6,10 @@
  * Time: 12:59 AM
  */
 
-$year=$_GET['y'];
-$semester=$_GET['ss'];
-$student=$_GET['s'];
+echo $student = $_GET['s'];
+$year = $_GET['y'];
+$semester = $_GET['ss'];
+$billNo = $_GET['or'];
 
 $check = "SELECT * FROM `get_print_fees_details`  WHERE yearID = '$year' and semesterID='$semester' and studentID='$student'";
 $check = $conn->query($check);
