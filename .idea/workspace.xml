@@ -2,38 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c504eb96-3b0a-4d1b-9d60-133f7fab0fe0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/license/license.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/fees/bill_models/start.bill.inc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/fees/get.bill.confirm.for.payment.module" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/dialogbox/fees.payment.inc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test3.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/ledger/fees.bill.summary.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/fees/add.fees.payment.php.xxx" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.keystream" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.keystream" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.keystream.len" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.keystream.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.len" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata_i" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_metadata_/metadata_i" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_src_/schema/ghanacu_account.zip" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f/_src_/schema/ghanacu_account.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/9c8e0298-90e7-41e2-8e0f-93280a20f70f.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alert/alert.php" afterPath="$PROJECT_DIR$/alert/alert.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/dashboard.inc" afterPath="$PROJECT_DIR$/inc/dashboard.inc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/delete.inc" afterPath="$PROJECT_DIR$/inc/delete.inc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/transaction.inc" afterPath="$PROJECT_DIR$/inc/transaction.inc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/fees/add.fees.costing.php" afterPath="$PROJECT_DIR$/modules/fees/add.fees.costing.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/fees/add.fees.payment.php" afterPath="$PROJECT_DIR$/modules/fees/add.fees.payment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/fees/fees.billing.php" afterPath="$PROJECT_DIR$/modules/fees/fees.billing.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/fees/bill_models/cont_student/cont.foreign.student.billing.module" afterPath="$PROJECT_DIR$/modules/fees/bill_models/cont_student/cont.foreign.student.billing.module" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/fees/bill_models/cont_student/cont.local.student.billing.module" afterPath="$PROJECT_DIR$/modules/fees/bill_models/cont_student/cont.local.student.billing.module" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/fees/bill_models/new_student/new.foreign.student.billing.module" afterPath="$PROJECT_DIR$/modules/fees/bill_models/new_student/new.foreign.student.billing.module" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/fees/bill_models/new_student/new.local.student.billing.module" afterPath="$PROJECT_DIR$/modules/fees/bill_models/new_student/new.local.student.billing.module" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/print/print.fee.bill.php" afterPath="$PROJECT_DIR$/modules/print/print.fee.bill.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/form.php" afterPath="$PROJECT_DIR$/template/form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/form.validation.php" afterPath="$PROJECT_DIR$/template/form.validation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/master.menu.top.php" afterPath="$PROJECT_DIR$/template/master.menu.top.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/fees/fees.billing.php" afterPath="$PROJECT_DIR$/views/fees/fees.billing.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/fees/fees.ledger.php" afterPath="$PROJECT_DIR$/views/fees/fees.ledger.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/fees/fees.payment.php" afterPath="$PROJECT_DIR$/views/fees/fees.payment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/ledger/fees.ledger.book.php" afterPath="$PROJECT_DIR$/views/ledger/fees.ledger.book.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/print/fees.bill.php" afterPath="$PROJECT_DIR$/print/fees.bill.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,26 +43,6 @@
     </expand>
     <select />
   </component>
-  <component name="DockManager">
-    <window id="2">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="transaction.inc" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/inc/transaction.inc">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="11">
-                    <caret line="111" column="44" lean-forward="false" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="44" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FavoritesManager">
     <favorites_list name="account" />
   </component>
@@ -104,7 +58,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fes</find>
       <find>school_li</find>
       <find>fee</find>
       <find>sea</find>
@@ -134,6 +87,7 @@
       <find>\&quot;</find>
       <find>fees.co</find>
       <find>) VALUES</find>
+      <find>)&quot;;</find>
     </findStrings>
     <replaceStrings>
       <replace>data</replace>
@@ -148,6 +102,7 @@
       <replace>`revenueID`,`paid`</replace>
       <replace>'</replace>
       <replace>,`bill_ref`) VALUES</replace>
+      <replace>,'$ref')&quot;;</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\usbserver\root\account\modules\profile</dir>
@@ -159,7 +114,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/views/userprofile/user.profile.php" />
         <option value="$PROJECT_DIR$/views/profit_loss/profit.loss.php" />
         <option value="$PROJECT_DIR$/modules/profit_loss/profit.loss.php" />
         <option value="$PROJECT_DIR$/views/fees/fees.item.php" />
@@ -205,10 +159,11 @@
         <option value="$PROJECT_DIR$/modules/fees/bill_models/new.local.student.billing.module" />
         <option value="$PROJECT_DIR$/modules/fees/bill_models/start.bill.inc" />
         <option value="$PROJECT_DIR$/modules/fees/fees.billing.php" />
-        <option value="$PROJECT_DIR$/modules/fees/bill_models/new_student/new.foreign.student.billing.module" />
         <option value="$PROJECT_DIR$/modules/fees/bill_models/new_student/new.local.student.billing.module" />
         <option value="$PROJECT_DIR$/modules/fees/bill_models/cont_student/cont.local.student.billing.module" />
         <option value="$PROJECT_DIR$/modules/fees/bill_models/cont_student/cont.foreign.student.billing.module" />
+        <option value="$PROJECT_DIR$/modules/fees/bill_models/new_student/new.foreign.student.billing.module" />
+        <option value="$PROJECT_DIR$/print/fees.bill.php" />
         <option value="$PROJECT_DIR$/modules/print/print.fee.bill.php" />
       </list>
     </option>
@@ -256,56 +211,6 @@
             <path>
               <item name="account" type="b2602c69:ProjectViewProjectNode" />
               <item name="account" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="account" type="b2602c69:ProjectViewProjectNode" />
-              <item name="account" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="db" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="account" type="b2602c69:ProjectViewProjectNode" />
-              <item name="account" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="account" type="b2602c69:ProjectViewProjectNode" />
-              <item name="account" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="fees" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="account" type="b2602c69:ProjectViewProjectNode" />
-              <item name="account" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="fees" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="bill_models" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="account" type="b2602c69:ProjectViewProjectNode" />
-              <item name="account" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="fees" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="bill_models" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="cont_student" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="account" type="b2602c69:ProjectViewProjectNode" />
-              <item name="account" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="fees" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="bill_models" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="new_student" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="account" type="b2602c69:ProjectViewProjectNode" />
-              <item name="account" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="print" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="account" type="b2602c69:ProjectViewProjectNode" />
-              <item name="account" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="print" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -604,12 +509,12 @@
       <workItem from="1516294040447" duration="887000" />
       <workItem from="1516308937885" duration="6000" />
       <workItem from="1516819030213" duration="1280000" />
-      <workItem from="1516986870380" duration="9109000" />
+      <workItem from="1516986870380" duration="11971000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="880802000" />
+    <option name="totallyTimeSpent" value="883664000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -947,14 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inc/transaction.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11">
-          <caret line="111" column="44" lean-forward="false" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/fees/add.fees.costing.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -1079,113 +976,116 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/print/print.fee.bill.php">
+    <entry file="file://$PROJECT_DIR$/modules/fees/get.bill.confirm.for.payment.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        <state relative-caret-position="-307">
+          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
           <folding>
-            <marker date="1516996940474" expanded="true" signature="205:319" ph="SELECT * FRO... get_print_fees_details" />
-            <marker date="1516996940474" expanded="true" signature="542:599" ph="select * fro... get_student_list" />
-            <marker date="1516996940474" expanded="false" signature="715:753" ph="..." />
-            <marker date="1516996940474" expanded="true" signature="754:815" ph="..." />
-            <marker date="1516996940474" expanded="false" signature="838:875" ph="..." />
-            <marker date="1516996940474" expanded="true" signature="876:969" ph="..." />
-            <marker date="1516996940474" expanded="false" signature="992:1029" ph="..." />
-            <marker date="1516996940474" expanded="true" signature="1030:1088" ph="..." />
-            <marker date="1516996940474" expanded="true" signature="1184:1298" ph="SELECT * FRO... get_print_fees_details" />
-            <marker date="1516996940474" expanded="false" signature="1421:1443" ph="..." />
-            <marker date="1516996940474" expanded="true" signature="1444:1774" ph="..." />
-            <marker date="1516996940474" expanded="false" signature="1471:1533" ph="..." />
-            <marker date="1516996940474" expanded="true" signature="1534:1588" ph="..." />
-            <marker date="1516996940474" expanded="false" signature="1619:1701" ph="..." />
-            <marker date="1516996940474" expanded="true" signature="1702:1759" ph="..." />
-            <marker date="1516996940474" expanded="true" signature="1880:2028" ph="SELECT * FRO... get_printout_total" />
-            <marker date="1516996940474" expanded="false" signature="2143:2227" ph="..." />
-            <marker date="1516996940474" expanded="true" signature="2228:2287" ph="..." />
-            <marker date="1516996940474" expanded="true" signature="2364:2434" ph="SELECT Count... get_printout_total" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/print/fees.bill.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/fees/bill_models/new_student/new.local.student.billing.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="131" column="107" lean-forward="true" selection-start-line="131" selection-start-column="107" selection-end-line="131" selection-end-column="107" />
-          <folding>
-            <marker date="1516996546635" expanded="true" signature="138:267" ph="SELECT * FRO... get_print_fees_details" />
-            <marker date="1516996546635" expanded="true" signature="518:608" ph="SELECT * FRO... get_fees_list_for_new_student" />
-            <marker date="1516996546635" expanded="true" signature="1319:1533" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546635" expanded="true" signature="1660:1886" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546635" expanded="true" signature="2010:2228" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546635" expanded="true" signature="2323:2537" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546635" expanded="true" signature="2620:2832" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546635" expanded="true" signature="2916:3142" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546635" expanded="true" signature="3225:3450" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546635" expanded="true" signature="3530:3752" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546635" expanded="true" signature="3829:4049" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546635" expanded="true" signature="4129:4352" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546635" expanded="true" signature="4431:4656" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546635" expanded="true" signature="4737:4964" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546635" expanded="true" signature="5040:5262" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546635" expanded="true" signature="5338:5560" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546635" expanded="true" signature="5635:5856" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546635" expanded="true" signature="5931:6152" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546635" expanded="true" signature="6212:6679" ph="INSERT INTO `fees_payment`... " />
+            <marker date="1515713864611" expanded="true" signature="338:451" ph="SELECT * FRO... get_fees_bill_summary" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/fees/bill_models/cont_student/cont.local.student.billing.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        <state relative-caret-position="160">
+          <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
           <folding>
-            <marker date="1516996577576" expanded="true" signature="138:267" ph="SELECT * FRO... get_print_fees_details" />
-            <marker date="1516996577576" expanded="true" signature="516:609" ph="SELECT * FRO... get_fees_list_continuing_student" />
-            <marker date="1516996577576" expanded="true" signature="1048:1271" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996577576" expanded="true" signature="1414:1640" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996577576" expanded="true" signature="1776:1994" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996577576" expanded="true" signature="2100:2319" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996577576" expanded="true" signature="2413:2634" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996577576" expanded="true" signature="2725:2942" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996577576" expanded="true" signature="3033:3250" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996577576" expanded="true" signature="3317:3784" ph="INSERT INTO `fees_payment`... " />
-            <marker date="1516996577576" expanded="true" signature="3870:4164" ph="INSERT INTO `general_legder`... " />
+            <marker date="1516997837102" expanded="true" signature="138:267" ph="SELECT * FRO... get_print_fees_details" />
+            <marker date="1516997837102" expanded="true" signature="516:609" ph="SELECT * FRO... get_fees_list_continuing_student" />
+            <marker date="1516997837102" expanded="true" signature="1050:1280" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997837102" expanded="true" signature="1050:1326" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997837102" expanded="true" signature="1423:1656" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997837102" expanded="true" signature="1792:2017" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997837102" expanded="true" signature="2123:2349" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997837102" expanded="true" signature="2443:2671" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997837102" expanded="true" signature="2762:2986" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997837102" expanded="true" signature="3077:3301" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997837102" expanded="true" signature="3368:3835" ph="INSERT INTO `fees_payment`... " />
+            <marker date="1516997837102" expanded="true" signature="3921:4215" ph="INSERT INTO `general_legder`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/fees/bill_models/new_student/new.local.student.billing.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-580">
+          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <marker date="1516997816171" expanded="true" signature="138:267" ph="SELECT * FRO... get_print_fees_details" />
+            <marker date="1516997816171" expanded="true" signature="518:608" ph="SELECT * FRO... get_fees_list_for_new_student" />
+            <marker date="1516997816171" expanded="true" signature="1321:1542" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997816171" expanded="true" signature="1669:1902" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997816171" expanded="true" signature="2026:2251" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997816171" expanded="true" signature="2346:2567" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997816171" expanded="true" signature="2650:2869" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997816171" expanded="true" signature="2953:3186" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997816171" expanded="true" signature="3269:3501" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997816171" expanded="true" signature="3581:3810" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997816171" expanded="true" signature="3887:4114" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997816171" expanded="true" signature="4194:4424" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997816171" expanded="true" signature="4503:4735" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997816171" expanded="true" signature="4816:5050" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997816171" expanded="true" signature="5126:5355" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997816171" expanded="true" signature="5431:5660" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997816171" expanded="true" signature="5735:5963" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997816171" expanded="true" signature="6038:6266" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997816171" expanded="true" signature="6326:6793" ph="INSERT INTO `fees_payment`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/fees/bill_models/new_student/new.foreign.student.billing.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+          <folding>
+            <marker date="1516997863265" expanded="true" signature="138:267" ph="SELECT * FRO... get_print_fees_details" />
+            <marker date="1516997863265" expanded="true" signature="526:616" ph="SELECT * FRO... get_fees_list_for_new_student" />
+            <marker date="1516997863265" expanded="true" signature="1409:1630" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997863265" expanded="true" signature="1768:2001" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997863265" expanded="true" signature="2137:2362" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997863265" expanded="true" signature="2473:2694" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997863265" expanded="true" signature="2789:3008" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997863265" expanded="true" signature="3104:3337" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997863265" expanded="true" signature="3432:3664" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997863265" expanded="true" signature="3756:3985" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997863265" expanded="true" signature="4074:4301" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997863265" expanded="true" signature="4393:4623" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997863265" expanded="true" signature="4710:4942" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997863265" expanded="true" signature="5031:5265" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997863265" expanded="true" signature="5349:5578" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997863265" expanded="true" signature="5662:5891" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997863265" expanded="true" signature="5974:6202" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997863265" expanded="true" signature="6285:6513" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997863265" expanded="true" signature="6576:7043" ph="INSERT INTO `fees_payment`... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/fees/bill_models/cont_student/cont.foreign.student.billing.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="7" column="28" lean-forward="false" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        <state relative-caret-position="340">
+          <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
           <folding>
-            <marker date="1516996577490" expanded="true" signature="137:266" ph="SELECT * FRO... get_print_fees_details" />
-            <marker date="1516996577490" expanded="true" signature="515:619" ph="SELECT * FRO... get_fees_list_continuing_student" />
-            <marker date="1516996577490" expanded="true" signature="1115:1329" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996577490" expanded="true" signature="1410:1636" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996577490" expanded="true" signature="1772:1990" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996577490" expanded="true" signature="2096:2315" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996577490" expanded="true" signature="2409:2630" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996577490" expanded="true" signature="2721:2938" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996577490" expanded="true" signature="3029:3246" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996577490" expanded="true" signature="3376:3843" ph="INSERT INTO `fees_payment`... " />
-            <marker date="1516996577490" expanded="true" signature="3930:4224" ph="INSERT INTO `general_legder`... " />
+            <marker date="1516997852026" expanded="true" signature="137:266" ph="SELECT * FRO... get_print_fees_details" />
+            <marker date="1516997852026" expanded="true" signature="515:619" ph="SELECT * FRO... get_fees_list_continuing_student" />
+            <marker date="1516997852026" expanded="true" signature="1117:1338" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997852026" expanded="true" signature="1419:1652" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997852026" expanded="true" signature="1788:2013" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997852026" expanded="true" signature="2119:2345" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997852026" expanded="true" signature="2439:2667" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997852026" expanded="true" signature="2758:2982" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997852026" expanded="true" signature="3073:3297" ph="INSERT INTO `fees_bill`... " />
+            <marker date="1516997852026" expanded="true" signature="3427:3894" ph="INSERT INTO `fees_payment`... " />
+            <marker date="1516997852026" expanded="true" signature="3981:4275" ph="INSERT INTO `general_legder`... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/fees/bill_models/start.bill.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
+        <state relative-caret-position="240">
           <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
           <folding>
             <marker date="1516994766435" expanded="true" signature="155:256" ph="SELECT * FRO... get_fees_list_for_new_student" />
@@ -1194,41 +1094,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/fees/bill_models/new_student/new.foreign.student.billing.module">
+    <entry file="file://$PROJECT_DIR$/print/fees.bill.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2460">
-          <caret line="124" column="264" lean-forward="false" selection-start-line="124" selection-start-column="256" selection-end-line="124" selection-end-column="264" />
+        <state relative-caret-position="313">
+          <caret line="45" column="105" lean-forward="true" selection-start-line="45" selection-start-column="105" selection-end-line="45" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/print/print.fee.bill.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="80" column="16" lean-forward="true" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
           <folding>
-            <marker date="1516996546541" expanded="true" signature="138:267" ph="SELECT * FRO... get_print_fees_details" />
-            <marker date="1516996546541" expanded="true" signature="526:616" ph="SELECT * FRO... get_fees_list_for_new_student" />
-            <marker date="1516996546541" expanded="true" signature="1407:1621" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546541" expanded="true" signature="1759:1985" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546541" expanded="true" signature="2121:2339" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546541" expanded="true" signature="2450:2664" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546541" expanded="true" signature="2759:2971" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546541" expanded="true" signature="3067:3293" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546541" expanded="true" signature="3388:3613" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546541" expanded="true" signature="3705:3927" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546541" expanded="true" signature="4016:4236" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546541" expanded="true" signature="4328:4551" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546541" expanded="true" signature="4638:4863" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546541" expanded="true" signature="4952:5179" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546541" expanded="true" signature="5263:5485" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546541" expanded="true" signature="5569:5791" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546541" expanded="true" signature="5874:6095" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546541" expanded="true" signature="6178:6399" ph="INSERT INTO `fees_bill`... " />
-            <marker date="1516996546541" expanded="true" signature="6462:6929" ph="INSERT INTO `fees_payment`... " />
+            <marker date="1517029628324" expanded="true" signature="200:314" ph="SELECT * FRO... get_print_fees_details" />
+            <marker date="1517029628324" expanded="true" signature="537:594" ph="select * fro... get_student_list" />
+            <marker date="1517029628324" expanded="false" signature="710:748" ph="..." />
+            <marker date="1517029628324" expanded="true" signature="749:810" ph="..." />
+            <marker date="1517029628324" expanded="false" signature="833:870" ph="..." />
+            <marker date="1517029628324" expanded="true" signature="871:964" ph="..." />
+            <marker date="1517029628324" expanded="false" signature="987:1024" ph="..." />
+            <marker date="1517029628324" expanded="true" signature="1025:1083" ph="..." />
+            <marker date="1517029628324" expanded="true" signature="1179:1293" ph="SELECT * FRO... get_print_fees_details" />
+            <marker date="1517029628324" expanded="false" signature="1416:1438" ph="..." />
+            <marker date="1517029628324" expanded="true" signature="1439:1769" ph="..." />
+            <marker date="1517029628324" expanded="false" signature="1466:1528" ph="..." />
+            <marker date="1517029628324" expanded="true" signature="1529:1583" ph="..." />
+            <marker date="1517029628324" expanded="false" signature="1614:1696" ph="..." />
+            <marker date="1517029628324" expanded="true" signature="1697:1754" ph="..." />
+            <marker date="1517029628324" expanded="true" signature="1875:2023" ph="SELECT * FRO... get_printout_total" />
+            <marker date="1517029628324" expanded="false" signature="2138:2222" ph="..." />
+            <marker date="1517029628324" expanded="true" signature="2223:2282" ph="..." />
+            <marker date="1517029628324" expanded="true" signature="2359:2429" ph="SELECT Count... get_printout_total" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/fees/get.bill.confirm.for.payment.module">
+    <entry file="file://$PROJECT_DIR$/inc/transaction.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-307">
-          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-          <folding>
-            <marker date="1515713864611" expanded="true" signature="338:451" ph="SELECT * FRO... get_fees_bill_summary" />
-          </folding>
+        <state relative-caret-position="11">
+          <caret line="111" column="44" lean-forward="false" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>

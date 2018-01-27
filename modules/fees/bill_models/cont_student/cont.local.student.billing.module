@@ -23,7 +23,7 @@ if ($c = $check->fetch_assoc() == TRUE) {
         $school = $r['prefix'];
 
         $total_fees = $tuition + $other;
-        $ref = "FE" . date('ymdhis');
+       // $ref = "FE" . date('ymdhis');
 
         $hostel = $r['hostel'];
         $src_dues = $r['src_dues'];
@@ -34,41 +34,41 @@ if ($c = $check->fetch_assoc() == TRUE) {
 
          //src-dues
         $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`,`bill_ref`) VALUES
-        ('$tranDate', '$date', '$student_id', '1', '$discount_fees','$school_session','$semesterID')";
+        ('$tranDate', '$date', '$student_id', '1', '$discount_fees','$school_session','$semesterID','$ref')";
         $sql_x = $conn->query($fees_ledger);
 
         //hostel
         if ($hostel_bill_status == 'include') {
 
             $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`,`bill_ref`) VALUES
-            ('$tranDate', '$date', '$student_id', '11', '$hostel_fees','$school_session','$semesterID')";
+            ('$tranDate', '$date', '$student_id', '11', '$hostel_fees','$school_session','$semesterID','$ref')";
             $sql_x = $conn->query($fees_ledger);
 
         } elseif ($hostel_bill_status == 'exclude') {
 
             $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`,`bill_ref`) VALUES
-            ('$tranDate', '$date', '$student_id', '11', '0.00','$school_session','$semesterID')";
+            ('$tranDate', '$date', '$student_id', '11', '0.00','$school_session','$semesterID','$ref')";
             $sql_x = $conn->query($fees_ledger);
         }
 
         //src-dues
         $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`,`bill_ref`) VALUES
-        ('$tranDate', '$date', '$student_id', '13', '$src_dues','$school_session','$semesterID')";
+        ('$tranDate', '$date', '$student_id', '13', '$src_dues','$school_session','$semesterID','$ref')";
         $sql_x = $conn->query($fees_ledger);
 
         //technology
         $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`,`bill_ref`) VALUES
-        ('$tranDate', '$date', '$student_id', '10', '$technology','$school_session','$semesterID')";
+        ('$tranDate', '$date', '$student_id', '10', '$technology','$school_session','$semesterID','$ref')";
         $sql_x = $conn->query($fees_ledger);
 
         //other-1
         $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`,`bill_ref`) VALUES
-        ('$tranDate', '$date', '$student_id', '14', '$other1','$school_session','$semesterID')";
+        ('$tranDate', '$date', '$student_id', '14', '$other1','$school_session','$semesterID','$ref')";
         $sql_x = $conn->query($fees_ledger);
 
         //other-2
         $fees_ledger = "INSERT INTO `fees_bill` (`transDate`, `jDate`, `studentID`, `revenueID`, `amount`,`yearID`,`semesterID`,`bill_ref`) VALUES
-        ('$tranDate', '$date', '$student_id', '15', '$other2','$school_session','$semesterID')";
+        ('$tranDate', '$date', '$student_id', '15', '$other2','$school_session','$semesterID','$ref')";
         $sql_x = $conn->query($fees_ledger);
 
 

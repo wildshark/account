@@ -6,7 +6,7 @@
  * Time: 12:59 AM
  */
 
-echo $student = $_GET['s'];
+$student = $_GET['s'];
 $year = $_GET['y'];
 $semester = $_GET['ss'];
 $billNo = $_GET['or'];

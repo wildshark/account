@@ -35,6 +35,9 @@
             <span style="font-size:14px;float:right;  padding:10px; text-align:right;">
                <b>Invoice# : </b>SDO-<?php print_invoice_no($conn);?>
             </span>
+            <span style="font-size:14px;float:right;  padding:10px; text-align:right;">
+               <b>Bill Code# : </b><?php echo $_GET['or'];?>
+            </span>
         </div>
     </div>
      
