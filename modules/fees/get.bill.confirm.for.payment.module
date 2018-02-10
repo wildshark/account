@@ -27,6 +27,8 @@ if ($_GET['submit'] == 'submit') {
         $semester = $bill['semesterID'];
         $year = $bill['sch_session'];
         $schoolID = $bill['schoolID'];
+        $categoryID = $bill['categoryID'];
+
 
         $previous_bal = $bill['previous_bal'];
         $main_tutor = $bill['main_fees'];
@@ -44,7 +46,7 @@ if ($_GET['submit'] == 'submit') {
         $url_path = "user=fees.payment";
         $data = "&id={$id}&name={$name}&admission={$admissionNo}&semester={$semester}&year={$year}";
         $data = $data ."&school={$school}&main={$main_tutor}&other={$other_tutor}&hostel={$hostel}";
-        $data = $data ."&discount={$discount}&bill={$amount}&balance={$previous_bal}";
+        $data = $data ."&discount={$discount}&bill={$amount}&balance={$previous_bal}&ref={$ref}&student-type={$categoryID}";
         $alert="&error=0&alert=1&c={$roleID}";
 
         header("location: account.php?". $url_path ."". $data ."". $alert);

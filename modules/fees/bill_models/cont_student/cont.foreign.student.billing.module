@@ -10,7 +10,13 @@ $ref = "BL". date('YmdHis');
 $check = "SELECT * FROM `get_print_fees_details`  WHERE yearID = '$school_session' and semesterID='$semesterID' and studentID='$student_id'";
 $check = $conn->query($check);
 if ($c = $check->fetch_assoc() == TRUE) {
-    header("location: account.php?print=print.bill&s={$student_id}&y={$school_session}&ss={$semesterID}");
+
+    $bill_no = "SELECT * FROM get_bill_ref_number WHERE yearID = '$school_session' and semesterID='$semesterID' and studentID='$student_id'";
+    $bill_no = $conn->query($bill_no);
+    $b = $bill_no->fetch_assoc();
+
+    $bill_ref_no = $b['bill_ref'];
+    header("location: account.php?print=print.bill&s={$student_id}&y={$school_session}&ss={$semesterID}&or={$bill_ref_no}");
 } else {
 
     if($status_id == 2){
